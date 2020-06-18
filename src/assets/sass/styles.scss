@@ -1,0 +1,11 @@
+@import "variables";
+@import "classes";
+
+*{
+  box-sizing: border-box;
+}
+
+body{
+  background-color: $black;
+  color: $white;
+}
