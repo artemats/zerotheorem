@@ -9,4 +9,31 @@
 body{
   background-color: $black;
   color: $grey-light;
+  @extend .light;
+  font-size: 14px;
+}
+
+h1{
+  font-size: 42px;
+  @extend .bold;
+  text-transform: uppercase;
+}
+
+h2{
+  font-size: 32px;
+  @extend .bold;
+  text-transform: uppercase;
+  color: $yellow;
+}
+
+h3{
+  font-size: 24px;
+  @extend .regular;
+  color: $yellow;
+}
+
+p, li{
+  font-size: inherit;
+  font-family: inherit;
+  line-height: 2.571em;
 }
