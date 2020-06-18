@@ -1,5 +1,10 @@
-@import "base";
 @import "variables";
+@import "../../../node_modules/bootstrap/scss/functions";
+@import "../../../node_modules/bootstrap/scss/variables";
+@import "../../../node_modules/bootstrap/scss/mixins";
+@import "../../../node_modules/bootstrap/scss/grid";
+@import "base";
+//@import "grid.min.css";
 @import "classes";
 
 *{
@@ -36,4 +41,15 @@ p, li{
   font-size: inherit;
   font-family: inherit;
   line-height: 2.571em;
+}
+
+#wrapper{
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.container{
+  max-width: 1668px;
+  width: 100%;
 }
