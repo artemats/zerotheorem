@@ -1,3 +1,4 @@
+@import "base";
 @import "variables";
 @import "classes";
 
@@ -7,5 +8,5 @@
 
 body{
   background-color: $black;
-  color: $white;
+  color: $grey-light;
 }
