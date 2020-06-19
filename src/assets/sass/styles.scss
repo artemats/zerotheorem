@@ -4,6 +4,7 @@
 @import "../../../node_modules/bootstrap/scss/mixins";
 @import "../../../node_modules/bootstrap/scss/grid";
 @import "base";
+@import "mixins";
 //@import "grid.min.css";
 @import "classes";
 
@@ -50,6 +51,91 @@ p, li{
 }
 
 .container{
-  max-width: 1668px;
+  max-width: 1680px;
+  width: 96%;
+}
+
+.link{
+  font-size: 12px;
+  @extend .regular;
+  line-height: 2em;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  color: $white;
+  position: relative;
+  letter-spacing: .01em;
+    &-icon{
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      overflow: hidden;
+      background-repeat: no-repeat;
+      background-size: 20px;
+      background-position: center;
+        &:before{
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          border-radius: 50%;
+          background-color: $yellow-button;
+          opacity: .3;
+        }
+        &.login{
+          background-image: url(../images/icons/login.svg);
+        }
+    }
+    &.icon-after{
+      padding-right: 42px;
+        .link-icon{
+          right: 0;
+          left: auto;
+        }
+    }
+}
+
+.btn{
+  height: 70px;
+  line-height: 70px;
+  border: 1px $white solid;
+  font-size: 14px;
+  @extend .medium;
+  background-color: transparent;
+  color: $grey-button;
+  padding: 0;
+  text-align: center;
+  max-width: 310px;
   width: 100%;
+  position: relative;
+  white-space: nowrap;
+  overflow: hidden;
+    &-title{
+      position: relative;
+      z-index: 1;
+    }
+    &:before{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: $yellow-button;
+      opacity: .1;
+      transition: opacity .2s ease;
+    }
+    @include hover(991){
+      &:hover{
+        &:before{
+          opacity: .3;
+        }
+      }
+    }
 }
