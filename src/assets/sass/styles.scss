@@ -23,6 +23,8 @@ h1{
   font-size: 42px;
   @extend .bold;
   text-transform: uppercase;
+  letter-spacing: .36em;
+  line-height: 1.2em;
 }
 
 h2{
@@ -64,7 +66,7 @@ p, li{
   padding: 0;
   color: $white;
   position: relative;
-  letter-spacing: .01em;
+  letter-spacing: .03em;
     &-icon{
       position: absolute;
       top: 50%;
@@ -98,6 +100,11 @@ p, li{
           right: 0;
           left: auto;
         }
+    }
+    @include hover(991){
+      &:hover{
+        color: $yellow;
+      }
     }
 }
 

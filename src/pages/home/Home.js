@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { Fragment } from 'react';
+import './home.scss';
 
 const Home = () => {
 
@@ -18,9 +19,19 @@ const Home = () => {
     // });
 
     return(
-        <div>
-            <h1>Home page</h1>
-        </div>
+        <Fragment>
+            <section className="section folder">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-12">
+                            <div className="folder-title">
+                                <h1 className="title-1">Quant lab</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </Fragment>
     )
 
 };
