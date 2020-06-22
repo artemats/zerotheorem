@@ -1,19 +1,5 @@
-@import "variables";
-@import "../../../node_modules/bootstrap/scss/functions";
-@import "../../../node_modules/bootstrap/scss/variables";
-@import "../../../node_modules/bootstrap/scss/mixins";
-@import "../../../node_modules/bootstrap/scss/grid";
-@import "base";
-@import "mixins";
-//@import "grid.min.css";
-@import "classes";
-
-*{
-  box-sizing: border-box;
-}
-
 body{
-  background-color: $black;
+  background-color: #00030a;
   color: $grey-light;
   @extend .light;
   font-size: 14px;
@@ -32,18 +18,21 @@ h2{
   @extend .bold;
   text-transform: uppercase;
   color: $yellow;
+  letter-spacing: .36em;
 }
 
 h3{
   font-size: 24px;
   @extend .regular;
   color: $yellow;
+  line-height: 1.542em;
 }
 
 p, li{
   font-size: inherit;
   font-family: inherit;
-  line-height: 2.571em;
+  line-height: 2.6em;
+  letter-spacing: .03em;
 }
 
 #wrapper{
@@ -53,8 +42,12 @@ p, li{
 }
 
 .container{
-  max-width: 1680px;
+  max-width: 1670px;
   width: 96%;
+}
+
+.section{
+  position: relative;
 }
 
 .link{
@@ -67,6 +60,7 @@ p, li{
   color: $white;
   position: relative;
   letter-spacing: .03em;
+  transition: color .2s ease;
     &-icon{
       position: absolute;
       top: 50%;
@@ -79,27 +73,27 @@ p, li{
       background-repeat: no-repeat;
       background-size: 20px;
       background-position: center;
-        &:before{
-          content: '';
-          position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          border-radius: 50%;
-          background-color: $yellow-button;
-          opacity: .3;
-        }
-        &.login{
-          background-image: url(../images/icons/login.svg);
-        }
+      &:before{
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 50%;
+        background-color: $yellow-button;
+        opacity: .3;
+      }
+      &.login{
+        background-image: url(../images/icons/login.svg);
+      }
     }
     &.icon-after{
       padding-right: 42px;
-        .link-icon{
-          right: 0;
-          left: auto;
-        }
+      .link-icon{
+        right: 0;
+        left: auto;
+      }
     }
     @include hover(991){
       &:hover{
@@ -127,6 +121,12 @@ p, li{
       position: relative;
       z-index: 1;
     }
+    &.__border{
+      border-radius: 4px;
+      &:before{
+        opacity: 0;
+      }
+    }
     &:before{
       content: '';
       position: absolute;
@@ -138,6 +138,11 @@ p, li{
       opacity: .1;
       transition: opacity .2s ease;
     }
+    &.lg{
+      height: 60px;
+      line-height: 60px;
+      max-width: 265px;
+    }
     @include hover(991){
       &:hover{
         &:before{
@@ -145,4 +150,46 @@ p, li{
         }
       }
     }
+}
+
+.subtitle{
+  text-transform: uppercase;
+  color: $grey;
+  @extend .regular;
+  letter-spacing: .75em;
+  font-size: 12px;
+  margin-bottom: 17px;
+}
+
+.title-border{
+  position: relative;
+  display: inline-block;
+    &:before{
+      content: '';
+      position: absolute;
+      background-color: $yellow-button;
+      width: 331px;
+      height: 12px;
+      opacity: .1;
+      top: 22px;
+      right: 54%;
+    }
+}
+
+.with-border{
+  display: inline-block;
+  position: relative;
+    &:before{
+      content: '';
+      position: absolute;
+      bottom: -8px;
+      right: 17px;
+      left: 17px;
+      height: 1px;
+      background-color: #2b2e33;
+    }
+}
+
+.copyright{
+  opacity: .5;
 }

@@ -1,0 +1,22 @@
+.research{
+  padding: 136px 0 48px;
+    &-list{
+      display: flex;
+      margin: 0 -8px;
+      padding: 112px 0;
+        &-item{
+          padding: 0 8px;
+        }
+    }
+    .subtitle{
+      margin-bottom: 27px;
+    }
+    .title-border{
+      &:before{
+        height: 43px;
+        width: 468px;
+        top: 18px;
+        right: -45px;
+      }
+    }
+}

@@ -1,4 +1,114 @@
 .folder{
   text-align: center;
-  padding: 282px 0;
+  padding: 282px 0 200px;
+    &-title{
+      margin-bottom: 55px;
+        .title-1{
+            &:before{
+              right: 37px;
+              left: 17px;
+            }
+        }
+    }
+    .counter{
+      margin-bottom: 218px;
+    }
+}
+
+.content{
+  padding: 56px 0;
+    &-preview{
+      height: 565px;
+      overflow: hidden;
+        img{
+          min-height: 100%;
+          max-width: max-content;
+        }
+    }
+    &-description{
+      margin-top: -7px;
+      max-width: 510px;
+        &-title{
+          margin-bottom: 41px;
+        }
+        &-text{
+          p{
+            margin-bottom: 36px;
+              &:last-child{
+                margin-bottom: 0;
+              }
+              &:empty{
+                display: none;
+              }
+          }
+        }
+        &-action{
+          margin-top: 98px;
+        }
+    }
+    &.__right{
+      .content-description{
+        text-align: right;
+        margin: -7px -20px 0 auto;
+      }
+    }
+}
+
+.forecast{
+  background-color: #080b12;
+  margin: 135px 0 0;
+  padding: 170px 0 146px;
+    &-content{
+      margin: 0 -70px 0 54px;
+      padding: 28px 0;
+        .btn{
+          margin-top: 57px;
+        }
+    }
+    &-preview{
+      height: 490px;
+        img{
+          min-height: 100%;
+          max-width: max-content;
+        }
+    }
+    .counter{
+      justify-content: flex-start;
+      margin: 46px 0 15px;
+    }
+}
+
+.quant{
+  padding: 127px 0 120px;
+    &-preview{
+      height: 512px;
+      overflow: hidden;
+        img{
+          min-height: 100%;
+          max-width: max-content;
+        }
+    }
+    &-description{
+      padding: 58px 0;
+      max-width: 505px;
+        &-title{
+          margin-bottom: 42px;
+        }
+        &-text{
+          p{
+            margin-bottom: 36px;
+              &:last-child{
+                margin-bottom: 0;
+              }
+          }
+        }
+        &-action{
+          margin-top: 50px;
+        }
+    }
+    .title-border{
+      &:before{
+        right: 0;
+      }
+    }
 }
