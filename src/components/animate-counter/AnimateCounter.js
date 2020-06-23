@@ -5,7 +5,7 @@ import './animate-counter.scss';
 const AnimateCounter = ({ value = 1000, currency = '$' }) => {
 
     function numberWithDot(x) {
-        return x.toString().replace(/\B(?<!\.\d*)(?=(\d{3})+(?!\d))/g, ".");
+        return x.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')
     }
 
     return(

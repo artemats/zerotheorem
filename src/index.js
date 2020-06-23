@@ -12,7 +12,8 @@ import {composeWithDevTools} from "redux-devtools-extension";
 import ErrorBoundry from "./components/error-boundry/ErrorBoundry";
 
 const api = new ApiClient();
-const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk)));
+// const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk)));
+const store = createStore(rootReducer);
 
 ReactDOM.render(
     <Provider store={store}>
