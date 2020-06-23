@@ -1,7 +1,7 @@
 const path = require('path');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const PreloadWebpackPlugin = require('preload-webpack-plugin');
+// const PreloadWebpackPlugin = require('preload-webpack-plugin');
 
 module.exports = {
     entry: ["babel-polyfill", "./src/index.js"],
@@ -89,9 +89,9 @@ module.exports = {
             template: path.join(__dirname, "./src/index.html"),
             // favicon: './src/favicon.ico'
         }),
-        new PreloadWebpackPlugin({
-            rel: 'preload',
-            include: 'allAssets'
-        })
+        // new PreloadWebpackPlugin({
+        //     rel: 'preload',
+        //     include: 'allAssets'
+        // })
     ]
 };

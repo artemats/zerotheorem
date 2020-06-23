@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../../assets/images/zerOtheorem_logo.png';
+import logo from '../../assets/images/zerOtheorem_logo.svg';
 import './footer.scss';
 
 const Footer = () => {

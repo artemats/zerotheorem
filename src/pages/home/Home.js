@@ -46,12 +46,12 @@ const Home = () => {
             <section className="section content">
                 <div className="container">
                     <div className="row">
-                        <div className="col-lg-6">
+                        <div className="col-xl-6 col-lg-6">
                             <div className="content-preview">
                                 <img src={wtfBanner} alt="WTF...IS ZT?" />
                             </div>
                         </div>
-                        <div className="col-lg-5 offset-lg-1">
+                        <div className="col-xl-5 offset-xl-1 col-lg-6">
                             <div className="content-description">
                                 <div className="content-description-title">
                                     <p className="subtitle">Information</p>
@@ -75,12 +75,12 @@ const Home = () => {
             <section className="section content __right">
                 <div className="container">
                     <div className="row">
-                        <div className="col-lg-6 offset-lg-1 order-lg-2">
+                        <div className="col-xl-6 offset-xl-1 order-lg-2 col-lg-6">
                             <div className="content-preview">
                                 <img src={aboutBanner} alt="Back testing" />
                             </div>
                         </div>
-                        <div className="col-lg-5 order-lg-1">
+                        <div className="col-xl-5 order-lg-1 col-lg-6">
                             <div className="content-description">
                                 <div className="content-description-title">
                                     <p className="subtitle">About</p>
@@ -103,7 +103,12 @@ const Home = () => {
             <section className="section forecast">
                 <div className="container">
                     <div className="row">
-                        <div className="col-lg-3 offset-lg-1">
+                        <div className="col-xl-7 offset-xl-1 order-lg-2 col-lg-7">
+                            <div className="forecast-preview">
+                                <img src={forecastBanner} alt="Forecast" />
+                            </div>
+                        </div>
+                        <div className="col-xl-3 offset-xl-1 order-lg-1 col-lg-5">
                             <div className="forecast-content">
                                 <p className="title-1 with-border">Forecast</p>
                                 <AnimateCounter value={1000} currency="$" />
@@ -113,23 +118,18 @@ const Home = () => {
                                 </Link>
                             </div>
                         </div>
-                        <div className="col-lg-7 offset-lg-1">
-                            <div className="forecast-preview">
-                                <img src={forecastBanner} alt="Forecast" />
-                            </div>
-                        </div>
                     </div>
                 </div>
             </section>
             <section className="section quant">
                 <div className="container">
                     <div className="row">
-                        <div className="col-lg-5 offset-lg-1">
+                        <div className="col-xl-5 offset-xl-1 col-lg-6">
                             <div className="quant-preview">
                                 <img src={quantBanner} alt="Quant Lab" />
                             </div>
                         </div>
-                        <div className="col-lg-5 offset-lg-1">
+                        <div className="col-xl-5 offset-xl-1 col-lg-6">
                             <div className="quant-description">
                                 <div className="quant-description-title">
                                     <h2 className="title-2 title-border">Quant Lab</h2>

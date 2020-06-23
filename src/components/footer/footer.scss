@@ -2,8 +2,12 @@
   background-color: #000922;
   padding: 27px 0 0;
     &-logo{
-      max-width: 234px;
+      width: 234px;
       margin-top: 7px;
+        @media only screen and (max-width: 1200px) {
+          width: 200px;
+          margin-top: 0;
+        }
     }
     &-copyright{
       text-align: center;
@@ -20,6 +24,9 @@
           }
           @media only screen and (max-width: 1440px) {
             margin-left: 100px;
+          }
+          @media only screen and (max-width: 1200px) {
+            margin-left: 80px;
           }
       }
     }

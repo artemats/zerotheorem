@@ -8,6 +8,9 @@
     &-logo{
      display: inline-block;
       width: 234px;
+        @media only screen and (max-width: 1200px) {
+          width: 200px;
+        }
     }
     .container{
       max-width: 1680px;
@@ -21,7 +24,7 @@
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding: 10px 0;
+  padding: 11px 0;
     .link{
       margin-left: 120px;
         &:nth-child(1){
@@ -30,5 +33,14 @@
         @media only screen and (max-width: 1440px) {
           margin-left: 100px;
         }
+        @media only screen and (max-width: 1300px) {
+          margin-left: 80px;
+        }
+        @media only screen and (max-width: 1200px) {
+          margin-left: 60px;
+        }
+    }
+    @media only screen and (max-width: 1200px) {
+      padding: 7px 0;
     }
 }
