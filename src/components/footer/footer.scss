@@ -1,0 +1,26 @@
+.footer{
+  background-color: #000922;
+  padding: 27px 0 0;
+    &-logo{
+      max-width: 234px;
+      margin-top: 7px;
+    }
+    &-copyright{
+      text-align: center;
+      background-color: #000217;
+      font-size: 12px;
+      margin-top: 20px;
+      padding: 6px 0;
+    }
+    .nav{
+      .link{
+        margin-left: 115px;
+          &:nth-child(1){
+            margin-left: 0;
+          }
+          @media only screen and (max-width: 1440px) {
+            margin-left: 100px;
+          }
+      }
+    }
+}
