@@ -15,6 +15,12 @@
     .nav{
       .link{
         margin-left: 115px;
+          &:nth-child(1){
+            margin-left: 0;
+          }
+          @media only screen and (max-width: 1440px) {
+            margin-left: 100px;
+          }
       }
     }
 }

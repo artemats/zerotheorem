@@ -12,6 +12,9 @@
           object-fit: cover;
           object-position: center;
         }
+        @media only screen and (max-width: 1440px) {
+          height: 232px;
+        }
     }
     &-content{
       padding: 45px 35px 45px 55px;
@@ -31,10 +34,19 @@
           -webkit-line-clamp: 3;
           overflow: hidden;
           margin-top: 22px;
+            @media only screen and (max-width: 1440px) {
+              margin-top: 12px;
+            }
+        }
+        @media only screen and (max-width: 1440px) {
+          padding: 40px 35px 35px 40px;
         }
     }
     .btn{
       max-width: 272px;
       margin-top: 42px;
+    }
+    @media only screen and (max-width: 1440px) {
+      margin-top: 30px;
     }
 }
