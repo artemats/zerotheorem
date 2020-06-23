@@ -9,12 +9,12 @@ const Header = () => {
         <header className="header">
             <div className="container">
                 <div className="row">
-                    <div className="col-lg-3">
+                    <div className="col-lg-3 col-md-6">
                         <Link to="/" className="header-logo">
                             <img src={logo} alt="ZeroTheorem" />
                         </Link>
                     </div>
-                    <div className="col-lg-9">
+                    <div className="col-lg-9 col-md-6">
                         <div className="header-nav">
                             <nav className="nav">
                                 <Link to="/about" className="link">About</Link>
