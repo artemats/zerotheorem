@@ -7,6 +7,16 @@
         &-item{
           padding: 0 8px;
           width: 33.33%;
+            @media only screen and (max-width: 991px) {
+              display: inline-block;
+              width: 360px;
+            }
+            @media only screen and (max-width: 767px) {
+              width: 320px;
+            }
+            @media only screen and (max-width: 480px) {
+              width: 85vw;
+            }
         }
         @media only screen and (max-width: 1300px) {
           padding: 80px 0 30px;
@@ -14,16 +24,42 @@
         @media only screen and (max-width: 1200px) {
           padding: 50px 0 30px;
         }
+        @media only screen and (max-width: 991px) {
+          display: block;
+          white-space: nowrap;
+          overflow-x: auto;
+          margin-right: -28px;
+          padding-right: 20px;
+        }
+        @media only screen and (max-width: 991px) {
+          margin-right: -14px;
+          padding-right: 6px;
+        }
     }
     .subtitle{
       margin-bottom: 27px;
     }
     .title-border{
-      &:before{
-        height: 43px;
-        width: 468px;
-        top: 18px;
-        right: -45px;
+        &:before{
+          height: 43px;
+          width: 468px;
+          top: 18px;
+          right: -45px;
+        }
+    }
+    @media only screen and (max-width: 575px) {
+      .title-border{
+        &:before{
+          top: 50%;
+        }
       }
+    }
+    @media only screen and (max-width: 575px) {
+      padding: 80px 0 40px;
+        .title-border{
+          &:before{
+            height: 23px;
+          }
+        }
     }
 }

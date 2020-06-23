@@ -9,12 +9,12 @@ const Footer = () => {
         <footer className="footer">
             <div className="container">
                 <div className="row">
-                    <div className="col-lg-4">
+                    <div className="col-sm-4">
                         <Link to="/" className="footer-logo">
                             <img src={logo} alt="ZeroTheorem" />
                         </Link>
                     </div>
-                    <div className="col-lg-8">
+                    <div className="col-sm-8">
                         <div className="footer-nav">
                             <nav className="nav">
                                 <Link to="/about" className="link">About</Link>

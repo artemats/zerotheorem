@@ -17,6 +17,15 @@ h1{
     @include d(1200){
       font-size: 38px;
     }
+    @include d(767){
+      font-size: 34px;
+    }
+    @include d(575){
+      font-size: 32px;
+    }
+    @include d(480){
+      font-size: 28px;
+    }
 }
 
 h2{
@@ -31,6 +40,12 @@ h2{
     @include d(1200){
       font-size: 28px;
     }
+    @include d(767){
+      font-size: 24px;
+    }
+    @include d(480){
+      font-size: 22px;
+    }
 }
 
 h3{
@@ -43,6 +58,9 @@ h3{
     }
     @include d(1200){
       font-size: 20px;
+    }
+    @include d(480){
+      font-size: 18px;
     }
 }
 
@@ -62,6 +80,15 @@ p, li{
 .container{
   max-width: 1670px;
   width: 96%;
+    @media only screen and (max-width: 991px) {
+      width: 100%;
+      padding-right: 28px;
+      padding-left: 28px;
+    }
+    @media only screen and (max-width: 767px) {
+      padding-right: 14px;
+      padding-left: 14px;
+    }
 }
 
 .section{
@@ -118,6 +145,9 @@ p, li{
         color: $yellow;
       }
     }
+    &.active{
+      color: $yellow;
+    }
 }
 
 .btn{
@@ -155,11 +185,22 @@ p, li{
       background-color: $yellow-button;
       opacity: .1;
       transition: opacity .2s ease;
+      pointer-events: none;
     }
     &.lg{
       height: 60px;
       line-height: 60px;
       max-width: 265px;
+        @include d(575){
+          height: 58px;
+          line-height: 58px;
+          max-width: 250px;
+        }
+        @include d(480){
+          height: 54px;
+          line-height: 54px;
+          max-width: 240px;
+        }
     }
     @include hover(991){
       &:hover{
@@ -172,6 +213,21 @@ p, li{
       height: 66px;
       line-height: 66px;
       max-width: 280px;
+    }
+    @include d(767){
+      height: 62px;
+      line-height: 62px;
+      max-width: 260px;
+    }
+    @include d(575){
+      height: 58px;
+      line-height: 58px;
+      max-width: 250px;
+    }
+    @include d(480){
+      height: 54px;
+      line-height: 54px;
+      max-width: 240px;
     }
 }
 
@@ -200,6 +256,11 @@ p, li{
       top: 22px;
       right: 54%;
     }
+    @include d(991){
+      &:before{
+        top: 50%;
+      }
+    }
 }
 
 .with-border{
@@ -218,4 +279,51 @@ p, li{
 
 .copyright{
   opacity: .5;
+}
+
+.burger{
+  position: relative;
+  padding: 5px;
+  margin: -5px -5px -5px 55px;
+    &-box{
+      position: relative;
+      width: 24px;
+      height: 18px;
+        &-arrow{
+          position: absolute;
+          width: 100%;
+          height: 2px;
+          right: 0;
+          background-color: $grey-light;
+          transition: all .2s ease;
+            &:nth-child(1){
+              top: 0;
+            }
+            &:nth-child(2){
+              top: 50%;
+              margin-top: -1px;
+            }
+            &:nth-child(3){
+              bottom: 0;
+            }
+        }
+    }
+    &.is-active{
+      .burger-box-arrow{
+        &:nth-child(1){
+          transform: rotate(45deg);
+          top: 8px;
+        }
+        &:nth-child(2){
+          width: 0;
+        }
+        &:nth-child(3){
+          transform: rotate(-45deg);
+          bottom: 8px;
+        }
+      }
+    }
+    @include d(480){
+      margin: -5px -5px -5px 20px;
+    }
 }

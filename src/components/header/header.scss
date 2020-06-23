@@ -8,8 +8,26 @@
     &-logo{
      display: inline-block;
       width: 234px;
+      position: relative;
+      z-index: 1;
         @media only screen and (max-width: 1200px) {
           width: 200px;
+        }
+    }
+    &-nav{
+        &-mobile{
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          padding: 9px 0;
+            @media only screen and (min-width: 992px) {
+              display: none;
+            }
+            @media only screen and (max-width: 480px) {
+              .link{
+                display: none;
+              }
+            }
         }
     }
     .container{
@@ -18,13 +36,60 @@
     @media only screen and (max-width: 1440px) {
       padding: 55px 0 20px;
     }
+    @media only screen and (max-width: 1200px) {
+      padding: 35px 0 20px;
+    }
+    @media only screen and (max-width: 991px) {
+      .nav{
+        display: flex;
+        position: fixed;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        background-color: #00030a;
+        align-items: flex-start;
+        padding: 100px 28px;
+        opacity: 0;
+        pointer-events: none;
+        z-index: -9;
+        transition: opacity .2s ease;
+          .link{
+            margin-left: 0;
+            font-size: 14px;
+            margin-bottom: 20px;
+              &.icon-after{
+                display: none;
+              }
+              &:last-child{
+                margin-bottom: 0;
+              }
+          }
+          &.is-active{
+            opacity: 1;
+            z-index: 0;
+            pointer-events: auto;
+          }
+      }
+    }
+    @media only screen and (max-width: 767px) {
+      .nav{
+        padding: 100px 14px;
+      }
+    }
+    @media only screen and (max-width: 480px) {
+      .nav{
+          .link{
+            &.icon-after{
+              display: inline-block;
+            }
+          }
+      }
+    }
 }
 
 .nav{
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-  padding: 11px 0;
     .link{
       margin-left: 120px;
         &:nth-child(1){
@@ -39,6 +104,12 @@
         @media only screen and (max-width: 1200px) {
           margin-left: 60px;
         }
+    }
+    @media only screen and (min-width: 992px) {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding: 11px 0;
     }
     @media only screen and (max-width: 1200px) {
       padding: 7px 0;
