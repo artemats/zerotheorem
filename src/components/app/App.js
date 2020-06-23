@@ -12,10 +12,10 @@ import Footer from "../footer/Footer";
 class App extends Component {
 
     render() {
-        // const { api } = this.props;
-        // api.getTrend()
-        //     .then(data => console.log(data));
-        //
+        const { api } = this.props;
+        api.getTrend()
+            .then(data => console.log(data));
+
         return(
             <div id="wrapper">
                 <Router>

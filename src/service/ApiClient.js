@@ -24,7 +24,8 @@ export default class ApiClient {
 
     getTrend = async () => {
 
-        return await this.getSources('/trend')
+        // return await this.getSources('/trend')
+        return await this.getSources('/residual-histogram')
 
     }
 
