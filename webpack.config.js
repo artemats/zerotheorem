@@ -87,7 +87,7 @@ module.exports = {
             },
             hash: true,
             template: path.join(__dirname, "./src/index.html"),
-            // favicon: './src/favicon.ico'
+            favicon: './src/favicon.ico'
         }),
         // new PreloadWebpackPlugin({
         //     rel: 'preload',

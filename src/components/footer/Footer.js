@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 import logo from '../../assets/images/zerOtheorem_logo.svg';
 import './footer.scss';
 
@@ -17,10 +17,10 @@ const Footer = () => {
                     <div className="col-sm-8">
                         <div className="footer-nav">
                             <nav className="nav">
-                                <Link to="/about" className="link">About</Link>
-                                <Link to="/wtf" className="link ttu">Wtf...is zt?</Link>
-                                <Link to="/resources" className="link">Resources</Link>
-                                <Link to="/forecast" className="link">Forecast</Link>
+                                <NavLink to="/about" className="link">About</NavLink>
+                                <NavLink to="/wtf" className="link ttu">Wtf...is zt?</NavLink>
+                                <NavLink to="/resources" className="link">Resources</NavLink>
+                                <NavLink to="/forecast" className="link">Forecast</NavLink>
                             </nav>
                         </div>
                     </div>

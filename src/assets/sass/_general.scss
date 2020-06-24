@@ -1,5 +1,5 @@
 body{
-  background-color: #00030a;
+  background-color: $black;
   color: $grey-light;
   @extend .light;
   font-size: 14px;
@@ -326,4 +326,56 @@ p, li{
     @include d(480){
       margin: -5px -5px -5px 20px;
     }
+}
+
+.dashboard{
+  padding: 100px 0 100px;
+  margin-top: 100px;
+    &:before{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      pointer-events: none;
+      background-repeat: no-repeat;
+      background-size: 100% auto;
+      background-position: center bottom;
+      background-image: url(../images/dashboard/bg.png);
+    }
+    &-title{
+      &-item{
+        font-size: 36px;
+      }
+    }
+    &-timer{
+      text-align: right;
+    }
+    &-box{
+      position: relative;
+      border-radius: 5px;
+      overflow: hidden;
+      height: 320px;
+      margin: 14px 0;
+        &:before{
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background-color: $white;
+          opacity: .03;
+        }
+        &.__lg{
+
+        }
+    }
+}
+
+.timer{
+  color: #0f58b3;
+  font-size: 36px;
+  @extend .bold;
 }

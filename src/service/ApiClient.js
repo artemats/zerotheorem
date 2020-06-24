@@ -26,6 +26,18 @@ export default class ApiClient {
 
         return await this.getSources('/trend');
 
-    }
+    };
+
+    getResidual = async () => {
+
+        return await this.getSources('/residual');
+
+    };
+
+    getResidualHistogram = async () => {
+
+        return await this.getSources('/residual-histogram');
+
+    };
 
 }

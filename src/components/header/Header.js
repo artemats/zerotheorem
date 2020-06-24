@@ -1,21 +1,37 @@
 import React, { useState, useEffect } from 'react';
-import { withRouter } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 import { Link, NavLink } from 'react-router-dom';
 import logo from '../../assets/images/zerOtheorem_logo.svg';
 import './header.scss';
 
-const Header = ({ history }) => {
+const Header = () => {
 
     const [isOpenNav, setIsOpenNav] = useState(false);
+    const [isInnerPage, setIsInnerPage] = useState(false);
 
-    history.listen(() => setIsOpenNav(false));
+    const history = useHistory();
 
     const onToggleNav = () => {
         setIsOpenNav(!isOpenNav);
     };
 
+    const detectHeaderTheme = location => {
+        location === '/' ? setIsInnerPage(false) : setIsInnerPage(true);
+    };
+
+    useEffect(() => {
+        history.listen((location) => {
+            setIsOpenNav(false);
+            detectHeaderTheme(location.pathname);
+        });
+
+        detectHeaderTheme(history.location.pathname);
+
+        window.addEventListener('scroll', () => setIsOpenNav(false));
+    },[history]);
+
     return(
-        <header className="header">
+        <header className={`header ${isInnerPage ? 'inner-theme' : ''}`}>
             <div className="container">
                 <div className="row">
                     <div className="col-lg-3 col-6">
@@ -26,10 +42,10 @@ const Header = ({ history }) => {
                     <div className="col-lg-9 col-6">
                         <div className="header-nav">
                             <nav className={`nav ${isOpenNav ? 'is-active' : ''}`}>
-                                <NavLink to="/about" activeClassName="active" className="link">About</NavLink>
-                                <NavLink to="/wtf" activeClassName="active" className="link ttu">Wtf...is zt?</NavLink>
-                                <NavLink to="/resources" activeClassName="active" className="link">Resources</NavLink>
-                                <NavLink to="/forecast" activeClassName="active" className="link">Forecast</NavLink>
+                                <NavLink to="/about" className="link">About</NavLink>
+                                <NavLink to="/wtf" className="link ttu">Wtf...is zt?</NavLink>
+                                <NavLink to="/resources" className="link">Resources</NavLink>
+                                <NavLink to="/forecast" className="link">Forecast</NavLink>
                                 <a href="#" className="link icon-after">
                                     Login
                                     <span className="link-icon login"></span>
@@ -57,4 +73,4 @@ const Header = ({ history }) => {
 
 };
 
-export default withRouter(Header);
+export default Header;
