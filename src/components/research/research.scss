@@ -1,5 +1,21 @@
 .research{
   padding: 136px 0 48px;
+    &-title{
+      position: relative;
+        .title-plus{
+          left: -55px;
+          top: 33%;
+            @media only screen and (max-width: 1700px) {
+              left: -35px;
+            }
+            @media only screen and (max-width: 991px) {
+              left: -25px;
+            }
+            @media only screen and (max-width: 767px) {
+              left: -15px;
+            }
+        }
+    }
     &-list{
       display: flex;
       margin: 0 -8px;

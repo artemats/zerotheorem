@@ -42,6 +42,7 @@ const Home = () => {
                         <div className="col-xl-5 offset-xl-1 col-md-6">
                             <div className="content-description">
                                 <div className="content-description-title">
+                                    <div className="title-plus" />
                                     <p className="subtitle">Information</p>
                                     <h2 className="title-2 title-border">WTF...IS ZT?</h2>
                                 </div>

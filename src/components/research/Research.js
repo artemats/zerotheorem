@@ -27,11 +27,15 @@ const Research = () => {
 
     return(
         <section className="section research">
+            <div className="abstract __3" />
             <div className="container">
                 <div className="row">
                     <div className="col-12">
-                        <p className="subtitle">useful</p>
-                        <h2 className="title-2 title-border">Research</h2>
+                        <div className="research-title">
+                            <div className="title-plus" />
+                            <p className="subtitle">useful</p>
+                            <h2 className="title-2 title-border">Research</h2>
+                        </div>
                     </div>
                 </div>
                 <div className="row">
