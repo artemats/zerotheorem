@@ -48,19 +48,19 @@ const Header = () => {
                                 <NavLink to="/forecast" className="link">Forecast</NavLink>
                                 <a href="#" className="link icon-after">
                                     Login
-                                    <span className="link-icon login"></span>
+                                    <span className="link-icon login" />
                                 </a>
                             </nav>
                             <div className="header-nav-mobile">
                                 <a href="#" className="link icon-after">
                                     Login
-                                    <span className="link-icon login"></span>
+                                    <span className="link-icon login" />
                                 </a>
                                 <div className={`burger ${isOpenNav ? 'is-active' : ''}`} onClick={onToggleNav}>
                                     <div className="burger-box">
-                                        <div className="burger-box-arrow"></div>
-                                        <div className="burger-box-arrow"></div>
-                                        <div className="burger-box-arrow"></div>
+                                        <div className="burger-box-arrow" />
+                                        <div className="burger-box-arrow" />
+                                        <div className="burger-box-arrow" />
                                     </div>
                                 </div>
                             </div>

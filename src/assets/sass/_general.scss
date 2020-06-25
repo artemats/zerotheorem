@@ -379,3 +379,36 @@ p, li{
   font-size: 36px;
   @extend .bold;
 }
+
+.abstract{
+  position: absolute;
+  background-repeat: no-repeat;
+  pointer-events: none;
+    &.__1{
+      top: 0;
+      left: -150px;
+      right: -96px;
+      bottom: 86px;
+      background-position: center;
+      background-size: contain;
+      background-image: url(../images/abstract/abstract-1.png);
+        @include d(1700){
+          background-size: auto 45%;
+        }
+        @include d(1440){
+          bottom: 55px;
+        }
+    }
+    &.__2{
+      top: -70px;
+      right: -320px;
+      bottom: 64px;
+      left: 0;
+      background-position: bottom right;
+      background-image: url(../images/abstract/abstract-2.png);
+      background-size: auto 150%;
+        @include d(1440){
+          background-size: auto 120%;
+        }
+    }
+}

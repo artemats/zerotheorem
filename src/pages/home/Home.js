@@ -13,6 +13,7 @@ const Home = () => {
     return(
         <Fragment>
             <section className="section folder">
+                <div className="abstract __1" />
                 <div className="container">
                     <div className="row">
                         <div className="col-12">
@@ -30,6 +31,7 @@ const Home = () => {
                 </div>
             </section>
             <section className="section content">
+                <div className="abstract __2" />
                 <div className="container">
                     <div className="row">
                         <div className="col-xl-6 col-md-6">
