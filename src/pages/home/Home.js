@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect } from 'react';
+import React, { Fragment, lazy, Suspense } from 'react';
 import { Link } from 'react-router-dom';
 import AnimateCounter from "../../components/animate-counter/AnimateCounter";
 import './home.scss';
@@ -6,12 +6,14 @@ import wtfBanner from '../../assets/images/home/wtf-banner.jpg';
 import aboutBanner from '../../assets/images/home/about-banner.jpg';
 import forecastBanner from '../../assets/images/home/forecast-banner.jpg';
 import quantBanner from '../../assets/images/home/quant-banner.jpg';
-import Research from "../../components/research/Research";
+const Research = lazy(() => import ("../../components/research/Research"));
+
+const renderLoader = () => <p>Loading</p>;
 
 const Home = () => {
 
     return(
-        <Fragment>
+        <Suspense fallback={renderLoader()}>
             <section className="section folder">
                 <div className="abstract __1" />
                 <div className="container">
@@ -62,6 +64,7 @@ const Home = () => {
             </section>
             <Research />
             <section className="section content __right">
+                <div className="abstract __4" />
                 <div className="container">
                     <div className="row">
                         <div className="col-xl-6 offset-xl-1 order-md-2 col-md-6">
@@ -90,6 +93,7 @@ const Home = () => {
                 </div>
             </section>
             <section className="section forecast">
+                <div className="abstract __5" />
                 <div className="container">
                     <div className="row">
                         <div className="col-xl-7 offset-xl-1 order-md-2 col-lg-7 col-md-6">
@@ -137,7 +141,7 @@ const Home = () => {
                     </div>
                 </div>
             </section>
-        </Fragment>
+        </Suspense>
     )
 
 };

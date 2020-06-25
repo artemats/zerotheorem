@@ -457,6 +457,7 @@ p, li{
       background-position: left top;
       background-size: 100% auto;
       background-image: url(../images/abstract/abstract-3.png);
+      z-index: 1;
         @include d(1700){
           background-position: left 30px;
         }
@@ -468,6 +469,50 @@ p, li{
           background-size: 170% auto;
           left: 37%;
           top: 93px;
+        }
+        @include d(575){
+          top: 0;
+        }
+    }
+    &.__4{
+      top: 37px;
+      left: 1%;
+      right: 0;
+      height: 142%;
+      background-position: left top;
+      background-size: contain;
+      background-image: url(../images/abstract/abstract-4.png);
+        @include d(767){
+          background-position: center bottom;
+          background-size: 100% auto;
+          height: 100%;
+        }
+        @include d(575){
+          background-size: 570px auto;
+        }
+    }
+    &.__5{
+      top: -17%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 2542px;
+      height: 1549px;
+      background-position: left top;
+      background-size: contain;
+      background-image: url(../images/abstract/abstract-6.png);
+        @include d(1700){
+          width: 2442px;
+          height: 1449px;
+        }
+        @include d(767){
+          width: 1942px;
+          height: 949px;
+          top: 250px;
+        }
+        @include d(480){
+          width: 1042px;
+          height: 549px;
+          top: 160px;
         }
     }
 }
