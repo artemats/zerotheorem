@@ -6,14 +6,12 @@ import wtfBanner from '../../assets/images/home/wtf-banner.jpg';
 import aboutBanner from '../../assets/images/home/about-banner.jpg';
 import forecastBanner from '../../assets/images/home/forecast-banner.jpg';
 import quantBanner from '../../assets/images/home/quant-banner.jpg';
-const Research = lazy(() => import ("../../components/research/Research"));
-
-const renderLoader = () => <p>Loading</p>;
+import Research from "../../components/research/Research";
 
 const Home = () => {
 
     return(
-        <Suspense fallback={renderLoader()}>
+        <Fragment>
             <section className="section folder">
                 <div className="abstract __1" />
                 <div className="container">
@@ -141,7 +139,7 @@ const Home = () => {
                     </div>
                 </div>
             </section>
-        </Suspense>
+        </Fragment>
     )
 
 };
