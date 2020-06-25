@@ -36,17 +36,59 @@ class ResidualHistogram extends Component {
                         x: x,
                         y: y,
                         marker: {
-                            color: '#a78814'
+                            color: '#a78814',
+                            line: {
+                                color: 'red'
+                            }
                         }
                     }
                 ]}
                 layout={ {
-                    title: 'Residual Histogram',
-                    width: 390,
-                    height: 320
+                    title: {
+                        text: 'Residual Histogram',
+                        font: {
+                            size: 14,
+                            color: '#ffffff',
+                            family: 'Rubik'
+                        },
+                    },
+                    autosize: true,
+                    margin: {
+                        l: 30,
+                        r: 30,
+                        t: 80,
+                        b: 30
+                    },
+                    xaxis: {
+                        color: '#8f8f8f',
+                        tickfont: {
+                            size: 9,
+                            color: '#8f8f8f',
+                            family: 'Rubik'
+                        },
+                        showline: true,
+                        linecolor: '#555456',
+                        showgrid: true,
+                        gridcolor: '#211e22',
+                    },
+                    yaxis: {
+                        color: '#8f8f8f',
+                        tickfont: {
+                            size: 9,
+                            color: '#8f8f8f',
+                            family: 'Rubik'
+                        },
+                        showline: true,
+                        linecolor: '#555456',
+                        gridcolor: '#211e22'
+                    },
+                    paper_bgcolor: 'transparent',
+                    plot_bgcolor: 'transparent'
                 } }
-                config={{
-                    responsive: true
+                useResizeHandler={true}
+                style={{
+                    width: "100%",
+                    height: "100%"
                 }}
             />
         )

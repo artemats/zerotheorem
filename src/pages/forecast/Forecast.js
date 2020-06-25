@@ -1,7 +1,6 @@
 import React, { Fragment } from 'react';
-import CountdownTimer from "../../components/countdownTimer/CountdownTimer";
 import ResidualHistogram from "../../components/residualHistogram/ResudualHistogram";
-import Countdown from "react-countdown";
+import CountdownTimer from "../../components/countdownTimer/CountdownTimer";
 
 const Forecast = () => {
 
@@ -19,10 +18,7 @@ const Forecast = () => {
                         <div className="col-xl-5">
                             <div className="dashboard-timer">
                                 <p className="subtitle">Time to next update</p>
-                                {/*<CountdownTimer />*/}
-                                <div className="timer">
-                                    <Countdown date="2020-06-25T09:20:03" daysInHours={true} />
-                                </div>
+                                <CountdownTimer />
                             </div>
                         </div>
                     </div>

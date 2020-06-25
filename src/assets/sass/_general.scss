@@ -355,7 +355,6 @@ p, li{
     &-box{
       position: relative;
       border-radius: 5px;
-      overflow: hidden;
       height: 320px;
       margin: 14px 0;
         &:before{
@@ -367,6 +366,7 @@ p, li{
           bottom: 0;
           background-color: $white;
           opacity: .03;
+          border-radius: 5px;
         }
         &.__lg{
 
