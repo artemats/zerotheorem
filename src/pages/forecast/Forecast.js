@@ -2,6 +2,7 @@ import React, { Fragment, lazy, Suspense } from 'react';
 const ResidualHistogram = lazy(() => import("../../components/residualHistogram/ResudualHistogram"));
 import CountdownTimer from "../../components/countdownTimer/CountdownTimer";
 import LoadingIndicator from "../../components/loadingIndicator/LoadingIndicator";
+import ErrorBoundry from "../../components/error-boundry/ErrorBoundry";
 
 const Forecast = () => {
 
@@ -36,9 +37,11 @@ const Forecast = () => {
                         </div>
                         <div className="col-xl-3">
                             <div className="dashboard-box">
-                                <Suspense fallback={<LoadingIndicator />}>
-                                    <ResidualHistogram />
-                                </Suspense>
+                                <ErrorBoundry>
+                                    <Suspense fallback={<LoadingIndicator />}>
+                                        <ResidualHistogram />
+                                    </Suspense>
+                                </ErrorBoundry>
                             </div>
                         </div>
                     </div>
