@@ -1,7 +1,7 @@
 const path = require('path');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-// const PreloadWebpackPlugin = require('preload-webpack-plugin');
+const TerserPlugin = require('terser-webpack-plugin');
 
 module.exports = {
     entry: ["babel-polyfill", "./src/index.js"],
@@ -97,5 +97,9 @@ module.exports = {
         //     rel: 'preload',
         //     include: 'allAssets'
         // })
-    ]
+    ],
+    mode: 'production',
+    optimization: {
+        minimizer: [new TerserPlugin({ /* additional options here */ })],
+    },
 };
