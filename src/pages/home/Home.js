@@ -6,8 +6,10 @@ import wtfBanner from '../../assets/images/home/wtf-banner.jpg';
 import aboutBanner from '../../assets/images/home/about-banner.jpg';
 import forecastBanner from '../../assets/images/home/forecast-banner.jpg';
 import quantBanner from '../../assets/images/home/quant-banner.jpg';
+import wtfSun from '../../assets/images/wtf-planet.png';
 import Research from "../../components/research/Research";
 import LoadingIndicator from "../../components/loadingIndicator/LoadingIndicator";
+import Planets from "../../components/planets/Planets";
 const HeroVideo = lazy(() => import("../../components/heroVideo/HeroVideo"));
 
 const Home = () => {
@@ -35,8 +37,9 @@ const Home = () => {
                     </div>
                 </div>
             </section>
-            <section className="section content">
+            <section className="section content __wtf">
                 <div className="abstract __2" />
+                <Planets width={281} height={275} sun={wtfSun} />
                 <div className="container">
                     <div className="row">
                         <div className="col-xl-6 col-md-6">

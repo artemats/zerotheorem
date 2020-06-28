@@ -546,11 +546,11 @@ p, li{
       transform: translate(-50%,-50%);
       opacity: 0;
       z-index: -1;
-      transition: opacity .2s ease;
+      transition: opacity .4s ease;
         &.is-visible{
-          opacity: .1;
+          opacity: .2;
             @include d(767){
-              opacity: .2;
+              opacity: .3;
             }
         }
         @include d(1300){
