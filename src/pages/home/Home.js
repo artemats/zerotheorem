@@ -7,6 +7,7 @@ import aboutBanner from '../../assets/images/home/about-banner.jpg';
 import forecastBanner from '../../assets/images/home/forecast-banner.jpg';
 import quantBanner from '../../assets/images/home/quant-banner.jpg';
 import Research from "../../components/research/Research";
+import LoadingIndicator from "../../components/loadingIndicator/LoadingIndicator";
 const HeroVideo = lazy(() => import("../../components/heroVideo/HeroVideo"));
 
 const Home = () => {
@@ -14,7 +15,7 @@ const Home = () => {
     return(
         <Fragment>
             <section className="section folder">
-                <Suspense fallback={<div>Loading...</div>}>
+                <Suspense fallback={<LoadingIndicator />}>
                     <HeroVideo />
                 </Suspense>
                 <div className="abstract __1" />

@@ -544,8 +544,15 @@ p, li{
       left: 50%;
       top: 42%;
       transform: translate(-50%,-50%);
-      opacity: .2;
+      opacity: 0;
       z-index: -1;
+      transition: opacity .2s ease;
+        &.is-visible{
+          opacity: .1;
+            @include d(767){
+              opacity: .2;
+            }
+        }
         @include d(1300){
           height: 175%;
           top: 40%;
