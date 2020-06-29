@@ -359,8 +359,8 @@ p, li{
 }
 
 .dashboard{
-  padding: 100px 0 100px;
-  margin-top: 100px;
+  padding: 90px 0;
+  margin-top: 112px;
     &:before{
       content: '';
       position: absolute;
@@ -375,12 +375,23 @@ p, li{
       background-image: url(../images/dashboard/bg.png);
     }
     &-title{
-      &-item{
-        font-size: 36px;
-      }
+      padding-bottom: 27px;
+        &-item{
+          font-size: 36px;
+            @include d(1400){
+              font-size: 32px;
+            }
+        }
+        .subtitle{
+          margin-bottom: 21px;
+        }
     }
     &-timer{
       text-align: right;
+      padding-bottom: 27px;
+        .subtitle{
+          margin-bottom: 21px;
+        }
     }
     &-box{
       position: relative;
@@ -408,6 +419,9 @@ p, li{
   color: #0f58b3;
   font-size: 36px;
   @extend .bold;
+    @include d(1400){
+      font-size: 32px;
+    }
 }
 
 .abstract{

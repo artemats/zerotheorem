@@ -1,4 +1,4 @@
-import {_baseURI} from "../apiSettings";
+import {_baseURI, _token} from "../apiSettings";
 
 export default class ApiClient {
 
@@ -8,7 +8,7 @@ export default class ApiClient {
             method: 'GET',
             redirect: 'follow',
             headers: {
-                'Authorization': 'Token b962c604470dd3c484f245810b57098026fffa21',
+                'Authorization': `Token ${_token}`,
                 'Content-Type': 'application/json'
             }
         });

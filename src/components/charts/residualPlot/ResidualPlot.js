@@ -1,54 +1,69 @@
 import React, { Component } from 'react';
 import WithApiService from '../../hoc/WithApiService';
-import Plot from '../../../../node_modules/react-plotly.js/react-plotly';
 import LoadingIndicator from "../../loadingIndicator/LoadingIndicator";
+import Plot from '../../../../node_modules/react-plotly.js/react-plotly';
 import {viewSettings} from "../ChartViewSettins";
 
-class ResidualHistogram extends Component {
+class ResidualPlot extends Component {
 
     state = {
         isLoading: true,
-        x: [],
-        y: []
+        date: [],
+        residual: []
     };
 
     componentDidMount() {
+
         const { api } = this.props;
-        api.getResidualHistogram()
+        const date = [];
+        const residual = [];
+
+        api.getResidual()
             .then(data => {
+                data.data.map(point => {
+                    date.push(point.date);
+                    residual.push(point.residual);
+                });
+            })
+            .then(() => {
                 this.setState({
                     isLoading: false,
-                    x: data.data.bins,
-                    y: data.data.frecuencies
-                })
+                    date,
+                    residual
+                });
             })
             .catch(error => console.error(error));
+
     }
 
     render() {
-        const { isLoading, x, y } = this.state;
+
+        const { isLoading, date, residual } = this.state;
+
         if(isLoading) {
             return <LoadingIndicator />
         }
+
         return(
             <Plot
                 data={[
                     {
                         type: 'bar',
-                        x: x,
-                        y: y,
+                        x: date,
+                        y: residual,
                         marker: {
-                            color: '#a78814',
+                            color: '#0f4487'
                         }
                     }
                 ]}
-                layout={viewSettings('Residual Histogram', false, {l: 30, r: 30, t: 45, b: 30} ).layout}
+                layout={viewSettings('Residual Plot', false, {l: 30, r: 30, t: 45, b: 30}, '%y/%d/%m', '', 0).layout}
                 useResizeHandler={viewSettings().useResizeHandler}
                 style={viewSettings().style}
             />
         )
+
     }
 
 }
 
-export default WithApiService()(ResidualHistogram);
+export default WithApiService()(ResidualPlot);

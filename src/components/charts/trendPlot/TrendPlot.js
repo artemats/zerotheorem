@@ -97,7 +97,7 @@ class TrendPlot extends Component {
                         y: lower_band,
                         name: 'Lower band',
                         line: {
-                            color: '#deb513',
+                            color: '#FF4000',
                             width: 1
                         },
                         type: 'scatter',

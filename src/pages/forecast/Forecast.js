@@ -4,6 +4,7 @@ const ResidualHistogram = lazy(() => import("../../components/charts/residualHis
 import CountdownTimer from "../../components/countdownTimer/CountdownTimer";
 import LoadingIndicator from "../../components/loadingIndicator/LoadingIndicator";
 import ErrorBoundry from "../../components/error-boundry/ErrorBoundry";
+import ResidualPlot from "../../components/charts/residualPlot/ResidualPlot";
 
 const Forecast = () => {
 
@@ -30,14 +31,16 @@ const Forecast = () => {
                             <div className="dashboard-box">
                                 <ErrorBoundry>
                                     <Suspense fallback={<LoadingIndicator />}>
-                                    <TrendPlot />
+                                        <TrendPlot />
                                     </Suspense>
                                 </ErrorBoundry>
                             </div>
                         </div>
                         <div className="col-xl-3">
                             <div className="dashboard-box">
-
+                                <ErrorBoundry>
+                                    <ResidualPlot />
+                                </ErrorBoundry>
                             </div>
                         </div>
                         <div className="col-xl-3">

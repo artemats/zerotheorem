@@ -5,7 +5,7 @@
   left: 0;
   width: 100%;
   z-index: 3;
-  transition: background-color .2s ease, padding .2s ease;
+  transition: background-color .2s ease, padding .4s ease;
     &-logo{
      display: inline-block;
       width: 234px;
@@ -33,6 +33,7 @@
     }
     &.inner-theme{
       background-color: #000410;
+      padding: 34px 0 32px;
     }
     .container{
       max-width: 1680px;

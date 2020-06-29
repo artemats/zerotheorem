@@ -1,6 +1,6 @@
 const initialMargin = {l: 30, r: 30, t: 80, b: 30};
 
-export const viewSettings = (chartTitle, showLegend, margin = initialMargin, xTickFormat, yTickFormat) => {
+export const viewSettings = (chartTitle, showLegend, margin = initialMargin, xTickFormat, yTickFormat, bargap = 3) => {
     return {
         layout: {
             width: null,
@@ -33,6 +33,15 @@ export const viewSettings = (chartTitle, showLegend, margin = initialMargin, xTi
             margin: margin,
             xaxis: {
                 color: '#8f8f8f',
+                title: {
+                    text: '',
+                    font: {
+                        family: 'Rubik',
+                        size: 10,
+                        color: '#f1f1f1'
+                    },
+                    standoff: 0
+                },
                 tickfont: {
                     size: 9,
                     color: '#8f8f8f',
@@ -46,6 +55,15 @@ export const viewSettings = (chartTitle, showLegend, margin = initialMargin, xTi
             },
             yaxis: {
                 color: '#8f8f8f',
+                title: {
+                    text: '',
+                    font: {
+                        family: 'Rubik',
+                        size: 10,
+                        color: '#f1f1f1'
+                    },
+                    standoff: 0,
+                },
                 tickfont: {
                     size: 9,
                     color: '#8f8f8f',
@@ -58,6 +76,8 @@ export const viewSettings = (chartTitle, showLegend, margin = initialMargin, xTi
             },
             paper_bgcolor: 'transparent',
             plot_bgcolor: 'transparent',
+            bargroupgap: false,
+            bargap: bargap
         },
         useResizeHandler: true,
         style: {
