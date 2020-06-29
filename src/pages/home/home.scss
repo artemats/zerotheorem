@@ -138,7 +138,21 @@
           .earth{
             width: 96px;
             height: 100px;
+            top: auto;
+            bottom: 0;
           }
+      }
+    }
+    &.__about{
+      .planets{
+        top: 19%;
+        left: -220px;
+      }
+      .orbit{
+        &-earth{
+          top: -48%;
+          left: -45%;
+        }
       }
     }
 }

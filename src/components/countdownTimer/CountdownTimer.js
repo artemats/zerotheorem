@@ -11,7 +11,7 @@ const CountdownTimer = () => {
 
     return (
         <div className="timer">
-            <Countdown date="2020-06-28T07:55:03" daysInHours={true} onComplete={onCompleteTimer} />
+            <Countdown date="2020-06-30T07:55:03" daysInHours={true} onComplete={onCompleteTimer} />
         </div>
     )
 

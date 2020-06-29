@@ -1,5 +1,6 @@
 .planets{
   position: absolute;
+  display: none;
     &-item{
       will-change: transform;
     }
@@ -11,6 +12,9 @@
         }
       }
     }
+    @media only screen and (min-width: 768px) {
+      display: block;
+    }
 }
 
 .orbit{
@@ -19,8 +23,10 @@
       top: -65%;
       left: -70%;
       transform-origin: center;
-      animation: spin-right 7s linear infinite;
-      animation-play-state: paused;
+        @media only screen and (min-width: 768px) {
+          animation: spin-right 7s linear infinite;
+          animation-play-state: paused;
+        }
     }
     &-moon{
       position: absolute;
@@ -29,13 +35,11 @@
       width: calc(100% + 120px);
       height: calc(100% + 120px);
       transform-origin: center;
-      animation: spin-right 10s linear infinite;
-      animation-play-state: paused;
+        @media only screen and (min-width: 768px) {
+          animation: spin-right 10s linear infinite;
+          animation-play-state: paused;
+        }
     }
-}
-
-.sun{
-
 }
 
 .earth{
@@ -48,6 +52,14 @@
   position: absolute;
   left: 50%;
   top: 0;
+}
+
+.space{
+  //position: absolute;
+  //top: 0;
+  //left: 0;
+  //right: 0;
+  //bottom: 0;
 }
 
 @keyframes spin-right {

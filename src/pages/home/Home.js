@@ -7,6 +7,7 @@ import aboutBanner from '../../assets/images/home/about-banner.jpg';
 import forecastBanner from '../../assets/images/home/forecast-banner.jpg';
 import quantBanner from '../../assets/images/home/quant-banner.jpg';
 import wtfSun from '../../assets/images/wtf-planet.png';
+import aboutSun from '../../assets/images/about-planet.png';
 import Research from "../../components/research/Research";
 import LoadingIndicator from "../../components/loadingIndicator/LoadingIndicator";
 import Planets from "../../components/planets/Planets";
@@ -69,8 +70,9 @@ const Home = () => {
                 </div>
             </section>
             <Research />
-            <section className="section content __right">
+            <section className="section content __right __about">
                 <div className="abstract __4" />
+                <Planets width={468} height={458} sun={aboutSun} />
                 <div className="container">
                     <div className="row">
                         <div className="col-xl-6 offset-xl-1 order-md-2 col-md-6">

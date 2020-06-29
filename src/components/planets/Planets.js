@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import earth from '../../assets/images/planet-1.svg';
 import moon from '../../assets/images/planet-2.svg';
 import './planets.scss';
@@ -7,7 +8,6 @@ import TrackVisibility from 'react-on-screen';
 const Planets = ({ width, height, sun }) => {
 
     const sunStyles = { width: width, height: height };
-
     const earthOrbitStyles = { width: width + 400, height: height + 400 };
 
     const SunSystem = ({ isVisible }) => {
@@ -33,7 +33,7 @@ const Planets = ({ width, height, sun }) => {
     };
 
     return(
-        <TrackVisibility>
+        <TrackVisibility className="space" partialVisibility offset={200}>
             <SunSystem />
         </TrackVisibility>
     )
@@ -41,3 +41,9 @@ const Planets = ({ width, height, sun }) => {
 };
 
 export default Planets;
+
+Planets.propTypes = {
+    width: PropTypes.number.isRequired,
+    height: PropTypes.number.isRequired,
+    sun: PropTypes.string.isRequired
+};
