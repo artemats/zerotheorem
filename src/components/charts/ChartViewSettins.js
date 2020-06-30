@@ -77,12 +77,16 @@ export const viewSettings = (chartTitle, showLegend, margin = initialMargin, xTi
             paper_bgcolor: 'transparent',
             plot_bgcolor: 'transparent',
             bargroupgap: false,
-            bargap: bargap
+            bargap: bargap,
         },
         useResizeHandler: true,
         style: {
             width: "100%",
             height: "100%"
+        },
+        config: {
+            scrollZoom: true,
+            displayModeBar: false
         }
     }
 };

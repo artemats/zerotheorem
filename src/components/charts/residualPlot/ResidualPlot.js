@@ -59,6 +59,7 @@ class ResidualPlot extends Component {
                 layout={viewSettings('Residual Plot', false, {l: 30, r: 30, t: 45, b: 30}, '%y/%d/%m', '', 0).layout}
                 useResizeHandler={viewSettings().useResizeHandler}
                 style={viewSettings().style}
+                config={viewSettings().config}
             />
         )
 

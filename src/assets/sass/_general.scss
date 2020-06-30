@@ -408,9 +408,10 @@ p, li{
           background-color: $white;
           opacity: .03;
           border-radius: 5px;
+          pointer-events: none;
         }
         &.__lg{
-
+          height: 504px;
         }
     }
 }
@@ -575,4 +576,95 @@ p, li{
           height: 158%;
         }
     }
+}
+
+.stat{
+  padding: 53px 50px;
+    &-list{
+      display: flex;
+        &-item{
+          width: 50%;
+        }
+        &.__middle{
+          .stat-list-item{
+            width: 33.33%;
+          }
+        }
+    }
+    &-row{
+      display: flex;
+      align-items: center;
+      margin-bottom: 17px;
+        &:last-child{
+          margin-bottom: 0;
+        }
+        .stat{
+          &-value{
+            line-height: 1.5em;
+            font-size: 16px;
+            @extend .regular;
+            letter-spacing: .01em;
+          }
+          &-label{
+            margin-right: 34px;
+            margin-bottom: 0;
+          }
+        }
+    }
+    &-value{
+      @extend .bold;
+      font-size: 24px;
+      color: $yellow;
+      text-transform: uppercase;
+      line-height: 1em;
+      letter-spacing: 0;
+      position: relative;
+      display: flex;
+      align-items: center;
+        &-arrow{
+          position: relative;
+          margin-left: 15px;
+          width: 17px;
+          height: 17px;
+            &:before{
+              content: '';
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 0;
+              height: 0;
+              border-style: solid;
+            }
+            &.__up{
+              &:before{
+                border-width: 0 8.5px 10px 8.5px;
+                border-color: transparent transparent $green transparent;
+              }
+            }
+            &.__down{
+              &:before{
+                border-width: 10px 8.5px 0 8.5px;
+                border-color: $red transparent transparent transparent;
+              }
+            }
+        }
+    }
+    &-label{
+      line-height: 1.5em;
+      font-size: 16px;
+      @extend .regular;
+      letter-spacing: .01em;
+      margin-bottom: 25px;
+    }
+    @include d(1440){
+      padding: 53px 25px;
+    }
+}
+
+.hr{
+  border: none;
+  height: 2px;
+  background-color: #c3c3c3;
+  opacity: .11;
+  margin: 41px 0;
 }

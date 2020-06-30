@@ -107,6 +107,7 @@ class TrendPlot extends Component {
                 layout={viewSettings('', true, {l: 30, r: 30, t: 35, b: 30}, '%y/%d/%m', ).layout}
                 useResizeHandler={viewSettings().useResizeHandler}
                 style={viewSettings().style}
+                config={viewSettings().config}
             />
         )
 
