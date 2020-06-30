@@ -1,10 +1,10 @@
 import React, { Fragment, lazy, Suspense } from 'react';
 const TrendPlot = lazy(() => import("../../components/charts/trendPlot/TrendPlot"));
 const ResidualHistogram = lazy(() => import("../../components/charts/residualHistogram/ResudualHistogram"));
+const ResidualPlot = lazy(() => import("../../components/charts/residualPlot/ResidualPlot"));
 import CountdownTimer from "../../components/countdownTimer/CountdownTimer";
 import LoadingIndicator from "../../components/loadingIndicator/LoadingIndicator";
 import ErrorBoundry from "../../components/error-boundry/ErrorBoundry";
-import ResidualPlot from "../../components/charts/residualPlot/ResidualPlot";
 
 const Forecast = () => {
 
@@ -39,7 +39,9 @@ const Forecast = () => {
                         <div className="col-xl-3">
                             <div className="dashboard-box">
                                 <ErrorBoundry>
-                                    <ResidualPlot />
+                                    <Suspense fallback={<LoadingIndicator />}>
+                                        <ResidualPlot />
+                                    </Suspense>
                                 </ErrorBoundry>
                             </div>
                         </div>
