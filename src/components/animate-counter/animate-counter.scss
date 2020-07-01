@@ -5,12 +5,14 @@
     &-body{
       display: inline-flex;
       align-items: flex-end;
+      justify-content: flex-end;
+      //width: 298px;
         &-label{
           font-size: 40px;
-          margin: 0 9px 14px 0;
+          margin: 0 -20px 14px 0;
             @media only screen and (max-width: 1300px) {
               font-size: 32px;
-              margin: 0 9px 12px 0;
+              margin: 0 -15px 12px 0;
             }
             @media only screen and (max-width: 1200px) {
               font-size: 28px;
@@ -22,7 +24,7 @@
         &-value{
           font-size: 85px;
           line-height: 1.2em;
-          letter-spacing: -.05em;
+          //letter-spacing: -.05em;
             @media only screen and (max-width: 1440px) {
               font-size: 72px;
             }
@@ -35,6 +37,15 @@
             @media only screen and (max-width: 575px) {
               font-size: 52px;
             }
+        }
+        @media only screen and (max-width: 1440px) {
+          //width: 258px;
+        }
+        @media only screen and (max-width: 1200px) {
+          //width: 213px;
+        }
+        @media only screen and (max-width: 575px) {
+          //width: 184px;
         }
     }
     &-control{
@@ -49,6 +60,8 @@
           width: 26px;
           height: 18px;
           position: relative;
+          opacity: .5;
+          transition: opacity .4s ease;
             &:before{
               content: '';
               position: absolute;
@@ -57,17 +70,13 @@
               width: 0;
               height: 0;
               border-style: solid;
+              transition: border-color .4s ease;
             }
             &.__up{
               margin-bottom: 7px;
                 &:before{
                   border-width: 0 13px 18px 13px;
                   border-color: transparent transparent #00321c transparent;
-                }
-                &.active{
-                  &:before{
-                    border-color: transparent transparent #035832 transparent;
-                  }
                 }
                 @media only screen and (max-width: 1300px) {
                   margin-bottom: 3px;
@@ -88,11 +97,6 @@
                   border-width: 18px 13px 0 13px;
                   border-color: #6e2214 transparent transparent transparent;
                 }
-                &.active{
-                  &:before{
-                    border-color: #873223 transparent transparent transparent;
-                  }
-                }
                 @media only screen and (max-width: 1300px) {
                   margin-top: 3px;
                     &:before{
@@ -110,6 +114,22 @@
               width: 14px;
               height: 14px;
             }
+        }
+        &.up{
+          .counter-control-arrow.__up{
+            opacity: 1;
+              &:before {
+                border-color: transparent transparent #035832 transparent;
+              }
+          }
+        }
+        &.down{
+          .counter-control-arrow.__down{
+            opacity: 1;
+              &:before{
+                border-color: #873223 transparent transparent transparent;
+              }
+          }
         }
         @media only screen and (max-width: 1300px) {
           margin-left: 16px;
