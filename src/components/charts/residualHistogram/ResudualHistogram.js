@@ -1,32 +1,27 @@
 import React, { Component } from 'react';
 import WithApiService from '../../hoc/WithApiService';
+import { connect } from 'react-redux';
+import { fetchResidualHisSuccess, fetchResidualHisError } from '../../../store/charts/residualHistogram/actions';
 import Plot from '../../../../node_modules/react-plotly.js/react-plotly';
 import LoadingIndicator from "../../loadingIndicator/LoadingIndicator";
 import {viewSettings} from "../ChartViewSettins";
+import {isEmpty} from "../../globalFunctions/globalFunctions";
 
 class ResidualHistogram extends Component {
 
-    state = {
-        isLoading: true,
-        x: [],
-        y: []
-    };
-
     componentDidMount() {
-        const { api } = this.props;
-        api.getResidualHistogram()
-            .then(data => {
-                this.setState({
-                    isLoading: false,
-                    x: data.data.bins,
-                    y: data.data.frecuencies
+        const { api, fetchResidualHisSuccess, fetchResidualHisError, data } = this.props;
+        if(isEmpty(data)) {
+            api.getResidualHistogram()
+                .then(resHisData => {
+                    fetchResidualHisSuccess(resHisData)
                 })
-            })
-            .catch(error => console.error(error));
+                .catch(error => fetchResidualHisError(error));
+        }
     }
 
     render() {
-        const { isLoading, x, y } = this.state;
+        const { isLoading, data: { bins, frecuencies }  } = this.props;
         if(isLoading) {
             return <LoadingIndicator />
         }
@@ -35,8 +30,8 @@ class ResidualHistogram extends Component {
                 data={[
                     {
                         type: 'bar',
-                        x: x,
-                        y: y,
+                        x: bins,
+                        y: frecuencies,
                         marker: {
                             color: '#a78814',
                         }
@@ -49,7 +44,15 @@ class ResidualHistogram extends Component {
             />
         )
     }
-
 }
 
-export default WithApiService()(ResidualHistogram);
+const mapStateToProps = ({ residualHisReducer }) => {
+    return residualHisReducer;
+};
+
+const mapDispatchToProps = {
+    fetchResidualHisSuccess,
+    fetchResidualHisError
+};
+
+export default WithApiService()(connect(mapStateToProps, mapDispatchToProps)(ResidualHistogram));

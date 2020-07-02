@@ -14,8 +14,8 @@ class Blockchain extends Component {
 
         const { api } = this.props;
 
-        api.getBlockchain()
-            .then(data => console.log(data));
+        // api.getBlockchain()
+        //     .then(data => console.log(data));
 
     }
 

@@ -1,44 +1,31 @@
 import React, { Component } from 'react';
 import WithApiService from '../../hoc/WithApiService';
+import { connect } from 'react-redux';
+import { fetchResidualPlotSuccess, fetchResidualPlotError } from '../../../store/charts/residualPlot/actions';
 import LoadingIndicator from "../../loadingIndicator/LoadingIndicator";
 import Plot from '../../../../node_modules/react-plotly.js/react-plotly';
 import {viewSettings} from "../ChartViewSettins";
+import {isEmpty} from "../../globalFunctions/globalFunctions";
 
 class ResidualPlot extends Component {
 
-    state = {
-        isLoading: true,
-        date: [],
-        residual: []
-    };
-
     componentDidMount() {
 
-        const { api } = this.props;
-        const date = [];
-        const residual = [];
+        const { api, fetchResidualPlotSuccess, fetchResidualPlotError, data } = this.props;
 
-        api.getResidual()
-            .then(data => {
-                data.data.map(point => {
-                    date.push(point.date);
-                    residual.push(point.residual);
-                });
-            })
-            .then(() => {
-                this.setState({
-                    isLoading: false,
-                    date,
-                    residual
-                });
-            })
-            .catch(error => console.error(error));
+        if(isEmpty(data)) {
+            api.getResidual()
+                .then(resData => {
+                    fetchResidualPlotSuccess(resData);
+                })
+                .catch(error => fetchResidualPlotError(error));
+        }
 
     }
 
     render() {
 
-        const { isLoading, date, residual } = this.state;
+        const { isLoading, data: { date, residual } } = this.props;
 
         if(isLoading) {
             return <LoadingIndicator />
@@ -67,4 +54,13 @@ class ResidualPlot extends Component {
 
 }
 
-export default WithApiService()(ResidualPlot);
+const mapStateToProps = ({ residualPlotReducer }) => {
+    return residualPlotReducer;
+};
+
+const mapDispatchToProps = {
+    fetchResidualPlotSuccess,
+    fetchResidualPlotError
+};
+
+export default WithApiService()(connect(mapStateToProps, mapDispatchToProps)(ResidualPlot));

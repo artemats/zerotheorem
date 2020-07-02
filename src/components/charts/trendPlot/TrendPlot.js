@@ -1,56 +1,34 @@
 import React, { Component } from 'react';
 import WithApiService from '../../hoc/WithApiService';
+import { connect } from 'react-redux';
+import { fetchTrendSuccess, fetchTrendError } from '../../../store/charts/trend/actions';
 import LoadingIndicator from "../../loadingIndicator/LoadingIndicator";
 import Plot from '../../../../node_modules/react-plotly.js/react-plotly';
 import {viewSettings} from "../ChartViewSettins";
+import {isEmpty} from "../../globalFunctions/globalFunctions";
+import {fetchResidualPlotError} from "../../../store/charts/residualPlot/actions";
 
 class TrendPlot extends Component {
 
-    state = {
-        isLoading: true,
-        date: [],
-        prediction: [],
-        rmse: [],
-        upper_band: [],
-        lower_band: []
-    };
+
 
     componentDidMount() {
 
-        const { api } =  this.props;
-        const date = [];
-        const prediction = [];
-        const rmse = [];
-        const upper_band = [];
-        const lower_band = [];
+        const { api, fetchTrendSuccess, fetchTrendError, data } =  this.props;
 
-        api.getTrend()
-            .then(data => {
-                data.data.map(point => {
-                    date.push(point.date);
-                    prediction.push(point.prediction);
-                    rmse.push(point.rmse);
-                    upper_band.push(point.upper_band);
-                    lower_band.push(point.lower_band);
-                });
-            })
-            .then(() => {
-                this.setState({
-                    isLoading: false,
-                    date,
-                    prediction,
-                    rmse,
-                    upper_band,
-                    lower_band
-                });
-            })
-            .catch(error => console.error(error));
+        if(isEmpty(data)) {
+            api.getTrend()
+                .then(trendData => {
+                    fetchTrendSuccess(trendData);
+                })
+                .catch(error => fetchTrendError(error));
+        }
 
     }
 
     render() {
 
-        const { isLoading, date, prediction, rmse, upper_band, lower_band } = this.state;
+        const { isLoading, data: { date, prediction, rmse, upper_band, lower_band } } = this.props;
 
         if(isLoading) {
             return <LoadingIndicator />
@@ -115,4 +93,13 @@ class TrendPlot extends Component {
 
 }
 
-export default WithApiService()(TrendPlot);
+const mapStateToProps = ({ trendReducer }) => {
+    return trendReducer;
+};
+
+const mapDispatchToProps = {
+    fetchTrendSuccess,
+    fetchTrendError
+};
+
+export default WithApiService()(connect(mapStateToProps, mapDispatchToProps)(TrendPlot));
