@@ -2,6 +2,8 @@ import React, { Fragment, lazy, Suspense } from 'react';
 const TrendPlot = lazy(() => import("../../components/charts/trendPlot/TrendPlot"));
 const ResidualHistogram = lazy(() => import("../../components/charts/residualHistogram/ResudualHistogram"));
 const ResidualPlot = lazy(() => import("../../components/charts/residualPlot/ResidualPlot"));
+const QqPlot = lazy(() => import("../../components/charts/qqPlot/QqPlot"));
+const ProbabilityPlot = lazy(() => import("../../components/charts/probabilityPlot/ProbabilityPlot"));
 import CountdownTimer from "../../components/countdownTimer/CountdownTimer";
 import LoadingIndicator from "../../components/loadingIndicator/LoadingIndicator";
 import ErrorBoundry from "../../components/error-boundry/ErrorBoundry";
@@ -103,10 +105,22 @@ const Forecast = () => {
                             </div>
                         </div>
                         <div className="col-xl-3">
-                            <div className="dashboard-box"></div>
+                            <div className="dashboard-box">
+                                <ErrorBoundry>
+                                    <Suspense fallback={<LoadingIndicator />}>
+                                        <QqPlot />
+                                    </Suspense>
+                                </ErrorBoundry>
+                            </div>
                         </div>
                         <div className="col-xl-3">
-                            <div className="dashboard-box"></div>
+                            <div className="dashboard-box">
+                                <ErrorBoundry>
+                                    <Suspense fallback={<LoadingIndicator />}>
+                                        <ProbabilityPlot />
+                                    </Suspense>
+                                </ErrorBoundry>
+                            </div>
                         </div>
                     </div>
                     <div className="row">

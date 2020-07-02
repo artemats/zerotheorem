@@ -40,6 +40,16 @@ export default class ApiClient {
 
     };
 
+    getQqPlot = async () => {
+        const data = await this.getSources('/qqplot');
+        return this._transformQqPlotData(data);
+    };
+
+    getProbPlot = async () => {
+        const data = await this.getSources('/ppplot');
+        return this._transformProbabilityData(data);
+    };
+
     getBlockchain = async () => {
 
         // console.log(`${_baseURI}/api/qqplot`);
@@ -85,5 +95,21 @@ export default class ApiClient {
             frecuencies: resHisData.data.frecuencies
         };
     };
+
+    _transformQqPlotData = (qqPlotData) => {
+        return {
+            z_actual: qqPlotData.data.z_actual,
+            z_theorical: qqPlotData.data.z_theorical,
+            line: qqPlotData.line
+        }
+    };
+
+    _transformProbabilityData = (probData) => {
+        return {
+            prob_theorical: probData.data.prob_theorical,
+            prob_actual: probData.data.prob_actual,
+            line: probData.line
+        }
+    }
 
 }

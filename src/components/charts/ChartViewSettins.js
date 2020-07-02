@@ -1,6 +1,6 @@
 const initialMargin = {l: 30, r: 30, t: 80, b: 30};
 
-export const viewSettings = (chartTitle, showLegend, margin = initialMargin, xTickFormat, yTickFormat, bargap = 3) => {
+export const viewSettings = (chartTitle, showLegend, margin = initialMargin, xTickFormat, yTickFormat, bargap = 3, xTitle, yTitle) => {
     return {
         layout: {
             width: null,
@@ -34,7 +34,7 @@ export const viewSettings = (chartTitle, showLegend, margin = initialMargin, xTi
             xaxis: {
                 color: '#8f8f8f',
                 title: {
-                    text: '',
+                    text: xTitle,
                     font: {
                         family: 'Rubik',
                         size: 10,
@@ -56,7 +56,7 @@ export const viewSettings = (chartTitle, showLegend, margin = initialMargin, xTi
             yaxis: {
                 color: '#8f8f8f',
                 title: {
-                    text: '',
+                    text: yTitle,
                     font: {
                         family: 'Rubik',
                         size: 10,

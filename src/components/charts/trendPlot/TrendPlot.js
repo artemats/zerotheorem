@@ -82,7 +82,7 @@ class TrendPlot extends Component {
                         mode: 'lines',
                     }
                 ]}
-                layout={viewSettings('', true, {l: 30, r: 30, t: 35, b: 30}, '%y/%d/%m', ).layout}
+                layout={viewSettings('', true, {l: 45, r: 30, t: 35, b: 30}, '%y/%d/%m', '', 0, '', 'Price USD').layout}
                 useResizeHandler={viewSettings().useResizeHandler}
                 style={viewSettings().style}
                 config={viewSettings().config}
