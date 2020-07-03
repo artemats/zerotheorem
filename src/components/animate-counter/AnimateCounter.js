@@ -5,6 +5,8 @@ import './animate-counter.scss';
 
 class AnimateCounter extends Component{
 
+    valueInterval = 0;
+
     state = {
         value: this.props.value,
         currency: this.props.currency,
@@ -28,16 +30,11 @@ class AnimateCounter extends Component{
             direction,
             value: newValue
         });
-        setTimeout(() => {
-            this.setState({
-                value: newValue
-            });
-        }, 400);
-        setTimeout(() => {
-            this.setState({
-                direction: ''
-            })
-        }, 1500);
+        // setTimeout(() => {
+        //     this.setState({
+        //         direction: ''
+        //     });
+        // }, 1500);
     }
 
     numberWithDot(x) {

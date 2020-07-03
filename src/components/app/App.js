@@ -8,13 +8,11 @@ import Wtf from "../../pages/wtf/Wtf";
 import Resources from "../../pages/resources/Resources";
 import Forecast from "../../pages/forecast/Forecast";
 import Footer from "../footer/Footer";
+import Faq from "../../pages/faq/Faq";
 
 class App extends Component {
 
     render() {
-        // const { api } = this.props;
-        // api.getTrend()
-        //     .then(data => console.log(data));
 
         return(
             <div id="wrapper">
@@ -35,6 +33,9 @@ class App extends Component {
                         </Route>
                         <Route path="/forecast">
                             <Forecast />
+                        </Route>
+                        <Route path="/faq">
+                            <Faq />
                         </Route>
                     </Switch>
                     <Footer />

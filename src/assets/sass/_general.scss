@@ -80,6 +80,7 @@ p, li{
 .container{
   max-width: 1670px;
   width: 96%;
+  position: relative;
     @media only screen and (max-width: 991px) {
       width: 100%;
       padding-right: 28px;
@@ -667,4 +668,9 @@ p, li{
   background-color: #c3c3c3;
   opacity: .11;
   margin: 41px 0;
+}
+
+.hero{
+  padding: 300px 0 20px;
+  min-height: 100vh;
 }

@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
+import './faq.scss';
 
-const About = () => {
+const Faq = () => {
 
     return(
         <Fragment>
@@ -9,8 +10,7 @@ const About = () => {
                     <div className="row">
                         <div className="col-12">
                             <div className="hero-title">
-                                <p className="subtitle">0100100001000101010011000100110001001111</p>
-                                <h1 className="title-1">Our mission</h1>
+                                <h1 className="title-1">F A Q</h1>
                             </div>
                         </div>
                     </div>
@@ -21,4 +21,4 @@ const About = () => {
 
 };
 
-export default About;
+export default Faq;

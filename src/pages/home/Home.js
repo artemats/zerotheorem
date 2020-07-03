@@ -13,6 +13,7 @@ import LoadingIndicator from "../../components/loadingIndicator/LoadingIndicator
 import Planets from "../../components/planets/Planets";
 const HeroVideo = lazy(() => import("../../components/heroVideo/HeroVideo"));
 import heroCircle from '../../assets/images/hero-circle.svg';
+import HeroCharts from "../../components/heroChartsAnimate/HeroCharts";
 
 const Home = () => {
 
@@ -25,6 +26,7 @@ const Home = () => {
                 <img src={heroCircle} alt="" className="folder-circle" />
                 <div className="abstract __1" />
                 <div className="container">
+                    <HeroCharts />
                     <div className="row">
                         <div className="col-12">
                             <div className="folder-title">
@@ -102,28 +104,28 @@ const Home = () => {
                     </div>
                 </div>
             </section>
-            <section className="section forecast">
-                <div className="abstract __5" />
-                <div className="container">
-                    <div className="row">
-                        <div className="col-xl-7 offset-xl-1 order-md-2 col-lg-7 col-md-6">
-                            <div className="forecast-preview">
-                                <img src={forecastBanner} alt="Forecast" />
-                            </div>
-                        </div>
-                        <div className="col-xl-3 offset-xl-1 order-md-1 col-lg-5 col-md-6">
-                            <div className="forecast-content">
-                                <p className="title-1 with-border">Forecast</p>
-                                <AnimateCounter value={1000} currency="$" />
-                                <p>Depart do be so he enough talent. Sociable formerly six but handsome. Up do view time they shot. He concluded disposing provision</p>
-                                <Link to="/forecast" className="btn">
-                                    <span className="btn-title">Go to forecast</span>
-                                </Link>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+            {/*<section className="section forecast">*/}
+            {/*    <div className="abstract __5" />*/}
+            {/*    <div className="container">*/}
+            {/*        <div className="row">*/}
+            {/*            <div className="col-xl-7 offset-xl-1 order-md-2 col-lg-7 col-md-6">*/}
+            {/*                <div className="forecast-preview">*/}
+            {/*                    <img src={forecastBanner} alt="Forecast" />*/}
+            {/*                </div>*/}
+            {/*            </div>*/}
+            {/*            <div className="col-xl-3 offset-xl-1 order-md-1 col-lg-5 col-md-6">*/}
+            {/*                <div className="forecast-content">*/}
+            {/*                    <p className="title-1 with-border">Forecast</p>*/}
+            {/*                    <AnimateCounter value={1000} currency="$" />*/}
+            {/*                    <p>Depart do be so he enough talent. Sociable formerly six but handsome. Up do view time they shot. He concluded disposing provision</p>*/}
+            {/*                    <Link to="/forecast" className="btn">*/}
+            {/*                        <span className="btn-title">Go to forecast</span>*/}
+            {/*                    </Link>*/}
+            {/*                </div>*/}
+            {/*            </div>*/}
+            {/*        </div>*/}
+            {/*    </div>*/}
+            {/*</section>*/}
             <section className="section quant">
                 <div className="container">
                     <div className="row">

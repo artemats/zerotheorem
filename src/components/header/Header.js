@@ -16,7 +16,7 @@ const Header = () => {
     };
 
     const detectHeaderTheme = location => {
-        location === '/' ? setIsInnerPage(false) : setIsInnerPage(true);
+        location !== '/forecast' ? setIsInnerPage(false) : setIsInnerPage(true);
     };
 
     useEffect(() => {
