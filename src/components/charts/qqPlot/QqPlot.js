@@ -42,17 +42,17 @@ class QqPlot extends Component {
                         type: 'scatter',
                         mode: 'markers',
                     },
-                    // {
-                    //     x: line,
-                    //     y: line,
-                    //     name: 'Line',
-                    //     line: {
-                    //         color: '#deb513',
-                    //         width: 1
-                    //     },
-                    //     type: 'scatter',
-                    //     mode: 'lines',
-                    // }
+                    {
+                        x: line,
+                        y: line,
+                        name: 'Line',
+                        line: {
+                            color: '#deb513',
+                            width: 1
+                        },
+                        type: 'scatter',
+                        mode: 'lines',
+                    }
                 ]}
                 layout={viewSettings('QQ plot', false, {l: 45, r: 30, t: 35, b: 30}, '', '', 0, 'Theoretical Quantiles', 'Sample Quantiles').layout}
                 useResizeHandler={viewSettings().useResizeHandler}

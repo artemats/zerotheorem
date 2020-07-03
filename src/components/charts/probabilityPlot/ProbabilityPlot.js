@@ -23,8 +23,6 @@ class ProbabilityPlot extends Component {
 
         const { isLoading, data: { prob_theorical, prob_actual, line } } = this.props;
 
-        console.log(this.props);
-
         if(isLoading) {
             return <LoadingIndicator />
         }
