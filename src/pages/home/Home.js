@@ -30,12 +30,12 @@ const Home = () => {
                     <div className="row">
                         <div className="col-12">
                             <div className="folder-title">
-                                <h1 className="title-1 with-border">Quant lab</h1>
+                                <h1 className="title-1 with-border">Forecast</h1>
                             </div>
                             <AnimateCounter value={1000} currency="$" />
                             <div className="folder-action">
                                 <a href="#" className="btn">
-                                    <span className="btn-title">Login to Quant Lab</span>
+                                    <span className="btn-title">Going to Quant Lab</span>
                                 </a>
                             </div>
                         </div>
@@ -144,8 +144,8 @@ const Home = () => {
                                     <p>indness to he horrible reserved ye. Effect twenty indeed beyond for not had county. The use him without greatly can private. Increasing it unpleasant no of contrasted no continuing.</p>
                                 </div>
                                 <div className="quant-description-action">
-                                    <Link to="/forecast" className="btn">
-                                        <span className="btn-title">Go to forecast</span>
+                                    <Link to="/quant-lab" className="btn">
+                                        <span className="btn-title">Go to Quant Lab</span>
                                     </Link>
                                 </div>
                             </div>

@@ -41,17 +41,17 @@ class ProbabilityPlot extends Component {
                         type: 'scatter',
                         mode: 'markers',
                     },
-                    // {
-                    //     x: line,
-                    //     y: line,
-                    //     name: 'Line',
-                    //     line: {
-                    //         color: '#deb513',
-                    //         width: 1
-                    //     },
-                    //     type: 'scatter',
-                    //     mode: 'lines',
-                    // }
+                    {
+                        x: [-0.1, 1.1],
+                        y: [-0.1, 1.1],
+                        name: 'Line',
+                        line: {
+                            color: '#deb513',
+                            width: 1
+                        },
+                        type: 'scatter',
+                        mode: 'lines',
+                    }
                 ]}
                 layout={viewSettings('Probability Plot', false, {l: 45, r: 30, t: 35, b: 30}, '', '', 0, 'Theoretical Quantiles', 'Ordered Values').layout}
                 useResizeHandler={viewSettings().useResizeHandler}

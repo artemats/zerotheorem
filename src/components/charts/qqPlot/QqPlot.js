@@ -43,8 +43,8 @@ class QqPlot extends Component {
                         mode: 'markers',
                     },
                     {
-                        x: line,
-                        y: line,
+                        x: [-3.5, 3.5],
+                        y: [-3.5, 3.5],
                         name: 'Line',
                         line: {
                             color: '#deb513',

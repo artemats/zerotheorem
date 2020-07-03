@@ -6,7 +6,7 @@ import Home from "../../pages/home/Home";
 import About from "../../pages/about/About";
 import Wtf from "../../pages/wtf/Wtf";
 import Resources from "../../pages/resources/Resources";
-import Forecast from "../../pages/forecast/Forecast";
+import Forecast from "../../pages/forecast/QuantLab";
 import Footer from "../footer/Footer";
 import Faq from "../../pages/faq/Faq";
 
@@ -31,7 +31,7 @@ class App extends Component {
                         <Route path="/resources">
                             <Resources />
                         </Route>
-                        <Route path="/forecast">
+                        <Route path="/quant-lab">
                             <Forecast />
                         </Route>
                         <Route path="/faq">

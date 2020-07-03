@@ -9,7 +9,7 @@ import LoadingIndicator from "../../components/loadingIndicator/LoadingIndicator
 import ErrorBoundry from "../../components/error-boundry/ErrorBoundry";
 import Blockchain from "../../components/charts/blockchain/Blockchain";
 
-const Forecast = () => {
+const QuantLab = () => {
 
     return(
         <Fragment>
@@ -19,7 +19,7 @@ const Forecast = () => {
                         <div className="col-xl-7">
                             <div className="dashboard-title">
                                 <p className="subtitle">Statistics</p>
-                                <h1 className="title-1 dashboard-title-item">Baseline Valuation Model</h1>
+                                <h1 className="title-1 dashboard-title-item">Quant Lab</h1>
                             </div>
                         </div>
                         <div className="col-xl-5">
@@ -139,4 +139,4 @@ const Forecast = () => {
 
 };
 
-export default Forecast;
+export default QuantLab;

@@ -45,17 +45,17 @@ const Header = () => {
                                 <NavLink to="/about" className="link">About</NavLink>
                                 <NavLink to="/wtf" className="link ttu">Wtf...is zt?</NavLink>
                                 <NavLink to="/resources" className="link">Resources</NavLink>
-                                <NavLink to="/forecast" className="link">Forecast</NavLink>
-                                <a href="#" className="link icon-after">
-                                    Login
-                                    <span className="link-icon login" />
-                                </a>
+                                <NavLink to="/quant-lab" className="link">Quant Lab</NavLink>
+                                {/*<a href="#" className="link icon-after">*/}
+                                {/*    Login*/}
+                                {/*    <span className="link-icon login" />*/}
+                                {/*</a>*/}
                             </nav>
                             <div className="header-nav-mobile">
-                                <a href="#" className="link icon-after">
-                                    Login
-                                    <span className="link-icon login" />
-                                </a>
+                                {/*<a href="#" className="link icon-after">*/}
+                                {/*    Login*/}
+                                {/*    <span className="link-icon login" />*/}
+                                {/*</a>*/}
                                 <div className={`burger ${isOpenNav ? 'is-active' : ''}`} onClick={onToggleNav}>
                                     <div className="burger-box">
                                         <div className="burger-box-arrow" />
