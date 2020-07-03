@@ -4,10 +4,49 @@
     &-title{
       margin-bottom: 55px;
         .title-1{
+          position: relative;
             &:before{
               right: 37px;
               left: 17px;
             }
+            &:after{
+              content: '';
+              position: absolute;
+              bottom: -67px;
+              left: -27px;
+              width: 16px;
+              height: 16px;
+              background-repeat: no-repeat;
+              background-size: contain;
+              background-position: center;
+              background-image: url(../../assets/images/plus.svg);
+              pointer-events: none;
+            }
+            @media only screen and (max-width: 575px) {
+              &:after{
+                bottom: -47px;
+                left: -10px;
+              }
+            }
+        }
+    }
+    &-circle{
+      position: absolute;
+      top: -282px;
+      left: -245px;
+      width: 525px;
+      height: 525px;
+      opacity: .5;
+      pointer-events: none;
+        @media only screen and (max-width: 1440px) {
+          width: 480px;
+          height: 480px;
+        }
+        @media only screen and (max-width: 1200px) {
+          width: 400px;
+          height: 400px;
+          top: -242px;
+          left: -245px;
         }
     }
     .counter{

@@ -12,6 +12,7 @@ import Research from "../../components/research/Research";
 import LoadingIndicator from "../../components/loadingIndicator/LoadingIndicator";
 import Planets from "../../components/planets/Planets";
 const HeroVideo = lazy(() => import("../../components/heroVideo/HeroVideo"));
+import heroCircle from '../../assets/images/hero-circle.svg';
 
 const Home = () => {
 
@@ -21,6 +22,7 @@ const Home = () => {
                 <Suspense fallback={<LoadingIndicator />}>
                     <HeroVideo />
                 </Suspense>
+                <img src={heroCircle} alt="" className="folder-circle" />
                 <div className="abstract __1" />
                 <div className="container">
                     <div className="row">
