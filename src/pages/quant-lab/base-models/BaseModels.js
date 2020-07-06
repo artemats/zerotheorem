@@ -4,6 +4,7 @@ const ResidualHistogram = lazy(() => import("../../../components/charts/residual
 const ResidualPlot = lazy(() => import("../../../components/charts/residualPlot/ResidualPlot"));
 const QqPlot = lazy(() => import("../../../components/charts/qqPlot/QqPlot"));
 const ProbabilityPlot = lazy(() => import("../../../components/charts/probabilityPlot/ProbabilityPlot"));
+const MetricBox = lazy(() => import("../../../components/charts/metric-box/MetricBox"));
 import CountdownTimer from "../../../components/countdownTimer/CountdownTimer";
 import LoadingIndicator from "../../../components/loadingIndicator/LoadingIndicator";
 import ErrorBoundry from "../../../components/error-boundry/ErrorBoundry";
@@ -43,48 +44,12 @@ const BaseModels = () => {
                             </div>
                         </div>
                         <div className="col-xl-8">
-                            <div className="dashboard-box">
-                                <div className="stat">
-                                    <div className="stat-list __middle">
-                                        <div className="stat-list-item">
-                                            <div className="stat-row">
-                                                <p className="stat-label">RMSE:</p>
-                                                <div className="stat-value">XX</div>
-                                            </div>
-                                            <div className="stat-row">
-                                                <p className="stat-label">Stationary:</p>
-                                                <div className="stat-value">XX</div>
-                                            </div>
-                                        </div>
-                                        <div className="stat-list-item">
-                                            <div className="stat-row">
-                                                <p className="stat-label">MAPPE:</p>
-                                                <div className="stat-value">XX</div>
-                                            </div>
-                                            <div className="stat-row">
-                                                <p className="stat-label">Accuary:</p>
-                                                <div className="stat-value">XX</div>
-                                            </div>
-                                        </div>
-                                        <div className="stat-list-item">
-                                            <div className="stat-row">
-                                                <p className="stat-label">MADS:</p>
-                                                <div className="stat-value">XX</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <hr className="hr" />
-                                    <div className="stat-list">
-                                        <div className="stat-list-item">
-                                            <p className="stat-label">Forecasted Price:</p>
-                                            <p className="stat-value">$ 8.900 <span className="stat-value-arrow __down" /> </p>
-                                        </div>
-                                        <div className="stat-list-item">
-                                            <p className="stat-label">Forecasted Direction:</p>
-                                            <p className="stat-value">Up <span className="stat-value-arrow __up" /></p>
-                                        </div>
-                                    </div>
-                                </div>
+                            <div className="dashboard-box __stat">
+                                <ErrorBoundry>
+                                    <Suspense fallback={<LoadingIndicator />}>
+                                        <MetricBox />
+                                    </Suspense>
+                                </ErrorBoundry>
                             </div>
                         </div>
                         <div className="col-xl-4">

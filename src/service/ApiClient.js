@@ -54,9 +54,12 @@ export default class ApiClient {
 
         // console.log(`${_baseURI}/api/qqplot`);
         // return await this.getSources('/3D-1');
-        return await this.getSources('/qqplot');
-        // return await this.getSources('/ppplot');
+        return await this.getSources('/ppplot');
 
+    };
+
+    getMetric = async () => {
+        return await this.getSources('/metricbox');
     };
 
     _transformTrendData = (trendData) => {

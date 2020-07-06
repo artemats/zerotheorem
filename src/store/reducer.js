@@ -5,6 +5,7 @@ import { residualHisReducer } from './charts/residualHistogram/reducer';
 import { qqPlotReducer } from './charts/qqPlot/reducer';
 import { probabilityPlotReducer } from './charts/probabilityPlot/reducer';
 import { quantNavReducer } from './quant-nav/reducer';
+import { metricReducer } from './metric-box/reducer';
 
 export default combineReducers({
     quantNavReducer,
@@ -12,5 +13,6 @@ export default combineReducers({
     residualPlotReducer,
     residualHisReducer,
     qqPlotReducer,
-    probabilityPlotReducer
+    probabilityPlotReducer,
+    metricReducer
 });
