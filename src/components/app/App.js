@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import WithApiService from '../hoc/WithApiService';
 import Header from "../header/Header";
 import Home from "../../pages/home/Home";
 import About from "../../pages/about/About";
 import Wtf from "../../pages/wtf/Wtf";
 import Resources from "../../pages/resources/Resources";
-import Forecast from "../../pages/forecast/QuantLab";
+import Forecast from "../../pages/quant-lab/QuantLab";
 import Footer from "../footer/Footer";
 import Faq from "../../pages/faq/Faq";
 
@@ -46,4 +45,4 @@ class App extends Component {
 
 }
 
-export default WithApiService()(App);
+export default App;

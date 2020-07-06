@@ -34,9 +34,9 @@ const Home = () => {
                             </div>
                             <AnimateCounter value={1000} currency="$" />
                             <div className="folder-action">
-                                <a href="#" className="btn">
+                                <Link to="/quant-lab" className="btn">
                                     <span className="btn-title">Going to Quant Lab</span>
-                                </a>
+                                </Link>
                             </div>
                         </div>
                     </div>

@@ -5,9 +5,7 @@ const ErrorIndicator = ({ error }) => {
 
     console.log(error);
 
-    return (
-        <p>Error! - {error}</p>
-    )
+    return <p>Error! - {error}</p>
 
 };
 

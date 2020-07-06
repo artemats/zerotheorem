@@ -31,9 +31,39 @@
             }
         }
     }
+    .quant-nav{
+      display: none;
+    }
     &.inner-theme{
-      background-color: #000410;
+      //background-color: #000410;
       padding: 34px 0 32px;
+        .header-logo{
+          position: relative;
+            &:before{
+              content: '';
+              position: absolute;
+              bottom: 0;
+              left: 0;
+              width: 100%;
+              top: -34px;
+              background-color: #00030a;
+              z-index: -1;
+              pointer-events: none;
+            }
+        }
+        @media only screen and (max-width: 991px) {
+          .quant-nav{
+            display: block;
+            padding: 0 15px;
+            margin-top: -15px;
+              .link{
+                font-size: 12px;
+              }
+              li{
+                padding-bottom: 0;
+              }
+          }
+        }
     }
     @media only screen and (max-width: 1440px) {
       padding: 55px 0 20px;
@@ -57,6 +87,7 @@
         pointer-events: none;
         z-index: -9;
         transition: opacity .2s ease;
+        overflow-y: auto;
           .link{
             margin-left: 0;
             font-size: 14px;

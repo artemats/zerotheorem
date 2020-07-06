@@ -3,6 +3,7 @@ import { useHistory } from 'react-router-dom';
 import { Link, NavLink } from 'react-router-dom';
 import logo from '../../assets/images/zerOtheorem_logo.svg';
 import './header.scss';
+import QuantNav from "../quant-nav/QuantNav";
 
 const Header = () => {
 
@@ -15,14 +16,15 @@ const Header = () => {
         setIsOpenNav(!isOpenNav);
     };
 
-    const detectHeaderTheme = location => {
-        location !== '/forecast' ? setIsInnerPage(false) : setIsInnerPage(true);
+    const detectHeaderTheme = () => {
+        const pathName = history.location.pathname.split('/');
+        pathName[1] !== 'quant-lab' ? setIsInnerPage(false) : setIsInnerPage(true);
     };
 
     useEffect(() => {
-        history.listen((location) => {
+        history.listen(() => {
             setIsOpenNav(false);
-            detectHeaderTheme(location.pathname);
+            detectHeaderTheme();
         });
 
         detectHeaderTheme(history.location.pathname);
@@ -46,6 +48,7 @@ const Header = () => {
                                 <NavLink to="/wtf" className="link ttu">Wtf...is zt?</NavLink>
                                 <NavLink to="/resources" className="link">Resources</NavLink>
                                 <NavLink to="/quant-lab" className="link">Quant Lab</NavLink>
+                                <QuantNav url="/quant-lab" />
                                 {/*<a href="#" className="link icon-after">*/}
                                 {/*    Login*/}
                                 {/*    <span className="link-icon login" />*/}

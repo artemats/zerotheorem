@@ -1,0 +1,104 @@
+.quant{
+    &-lab-page {
+      padding: 114px 0 20px;
+        .hero-title{
+          @media only screen and (max-width: 1440px) {
+            margin-right: -100px;
+          }
+        }
+        @media only screen and (max-width: 767px) {
+          padding: 100px 0 20px;
+        }
+    }
+    &-tags{
+      background-color: rgba(255,255,255,.03);
+      height: 66px;
+      overflow: hidden;
+      margin-bottom: 73px;
+        &-list{
+          display: block;
+          white-space: nowrap;
+          overflow-x: auto;
+          padding: 18px 0 20px;
+            @media only screen and (max-width: 767px) {
+              padding: 11px 0 15px;
+            }
+        }
+        @media only screen and (max-width: 767px) {
+          margin-bottom: 40px;
+          height: 50px;
+        }
+    }
+    &-tag{
+      display: inline-block;
+      text-transform: uppercase;
+      font-size: 12px;
+      letter-spacing: .1em;
+      opacity: .7;
+      position: relative;
+      padding: 0 30px;
+        &:before{
+          content: '';
+          position: absolute;
+          right: 0;
+          top: 50%;
+          margin-top: -8px;
+          width: 1px;
+          height: 13px;
+          background-color: #ffffff;
+        }
+        &:last-child{
+          &:before{
+            display: none;
+          }
+        }
+        @media only screen and (max-width: 767px) {
+          padding: 0 20px;
+        }
+    }
+    &-nav{
+      padding: 25px 0;
+        li{
+          padding-bottom: 24px;
+            &:last-child{
+              padding-bottom: 0;
+            }
+        }
+        .link{
+          position: relative;
+            &:before{
+              content: '';
+              position: absolute;
+              left: -12px;
+              bottom: 4px;
+              background-color: #f3de1a;
+              opacity: .1;
+              height: 11px;
+              width: 0;
+              pointer-events: none;
+              transition: width .4s ease;
+            }
+            &.active{
+              //text-transform: uppercase;
+                &:before{
+                  width: 289px;
+                }
+                @media only screen and (max-width: 1440px) {
+                  &:before{
+                    width: 250px;
+                  }
+                }
+                @media only screen and (max-width: 1200px) {
+                  &:before{
+                    width: 200px;
+                  }
+                }
+                @media only screen and (max-width: 991px) {
+                  &:before{
+                    display: none;
+                  }
+                }
+            }
+        }
+    }
+}
