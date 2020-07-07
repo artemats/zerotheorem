@@ -20,7 +20,7 @@
       flex: 1;
       position: relative;
       border-bottom: 2px rgba(0,255,246,.15) solid;
-      transition: transform .4s linear;
+      transition: transform 1s ease;
         &-dot{
           position: absolute;
           width: 14px;
@@ -28,7 +28,7 @@
           border-radius: 50%;
           bottom: -7px;
           left: -7px;
-          transition: transform .4s linear;
+          transition: transform 1s ease;
             &:nth-child(2){
               display: none;
               left: auto;
@@ -54,7 +54,7 @@
           border-radius: 4px;
           width: 4px;
           opacity: .2;
-          transition: transform .4s linear;
+          transition: transform 1s ease;
         }
         &:after{
           display: none;
@@ -263,6 +263,50 @@
           }
         }
       }
+      &.theme-4{
+        .chart-item{
+          &:nth-child(1){
+            transform: skewY(-12deg) translateY(-111px);
+              .chart-item-dot,
+              &:before,
+              &:after {
+                transform: skewY(12deg);
+              }
+          }
+          &:nth-child(2){
+            transform: skewY(45deg) translateY(-50px);
+              .chart-item-dot,
+              &:before,
+              &:after {
+                transform: skewY(-45deg);
+              }
+          }
+          &:nth-child(3){
+            transform: skewY(-30deg) translateY(-19px);
+              .chart-item-dot,
+              &:before,
+              &:after {
+                transform: skewY(30deg);
+              }
+          }
+          &:nth-child(4){
+            transform: skewY(19deg) translateY(-34px);
+              .chart-item-dot,
+              &:before,
+              &:after {
+                transform: skewY(-19deg);
+              }
+          }
+          &:nth-child(5){
+            transform: skewY(-39deg) translateY(-68px);
+              .chart-item-dot,
+              &:before,
+              &:after {
+                transform: skewY(39deg);
+              }
+          }
+        }
+      }
     }
     &.__yellow{
       .chart-item{
@@ -445,6 +489,50 @@
               &:before,
               &:after {
                 transform: skewY(-12deg);
+              }
+          }
+        }
+      }
+      &.theme-4{
+        .chart-item{
+          &:nth-child(1){
+            transform: skewY(-16deg) translateY(64px);
+              .chart-item-dot,
+              &:before,
+              &:after {
+                transform: skewY(16deg);
+              }
+          }
+          &:nth-child(2){
+            transform: skewY(-38deg) translateY(-16px);
+              .chart-item-dot,
+              &:before,
+              &:after {
+                transform: skewY(38deg);
+              }
+          }
+          &:nth-child(3){
+            transform: skewY(-23deg) translateY(-104px);
+              .chart-item-dot,
+              &:before,
+              &:after {
+                transform: skewY(23deg);
+              }
+          }
+          &:nth-child(4){
+            transform: skewY(11deg) translateY(-118px);
+              .chart-item-dot,
+              &:before,
+              &:after {
+                transform: skewY(-11deg);
+              }
+          }
+          &:nth-child(5){
+            transform: skewY(30deg) translateY(-59px);
+              .chart-item-dot,
+              &:before,
+              &:after {
+                transform: skewY(-30deg);
               }
           }
         }
