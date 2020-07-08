@@ -1,0 +1,12 @@
+.faq{
+    &.hero{
+      padding-bottom: 127px;
+    }
+    .hero-title{
+        .title-border{
+            &:before{
+              left: -280px;
+            }
+        }
+    }
+}

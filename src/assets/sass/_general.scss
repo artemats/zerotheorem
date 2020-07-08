@@ -534,6 +534,37 @@ p, li{
           top: 160px;
         }
     }
+    &.__6{
+      width: 471px;
+      height: 65px;
+      left: 42.7%;
+      top: 163px;
+      background-image: url(../images/abstract/abstract-5.png);
+    }
+    &.__7{
+      top: 345px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-position: center top;
+      background-image: url(../images/abstract/abstract-faq.png);
+        @include d(1700){
+          top: 295px;
+        }
+        @include d(1600){
+          background-position: left top;
+          background-size: 120% auto;
+        }
+        @include d(1300){
+          top: 235px;
+        }
+        @include d(991){
+          top: 165px;
+        }
+        @include d(575){
+          background-size: 200% auto;
+        }
+    }
     &-circle{
       position: absolute;
       border-radius: 50%;
@@ -555,7 +586,7 @@ p, li{
           width: 353px;
           height: 353px;
           left: 0;
-          top: 41%;
+          top: 542px;
           opacity: .15;
           transform: translate(-66%,0);
           background: rgb(9,94,138);
@@ -563,6 +594,9 @@ p, li{
           background: -webkit-linear-gradient(left,  rgba(9,94,138,1) 0%,rgba(59,14,127,1) 100%);
           background: linear-gradient(to right,  rgba(9,94,138,1) 0%,rgba(59,14,127,1) 100%);
           filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#095e8a', endColorstr='#3b0e7f',GradientType=1 );
+        }
+        &.__3{
+
         }
     }
 }
@@ -740,15 +774,22 @@ p, li{
         }
     }
     &-title{
-      .title-1, h1{
-        padding: 5px 0;
-          @include d(1600){
-            font-size: 32px;
-          }
-          @include d(575){
-            font-size: 28px;
-          }
-      }
+      color: $white;
+        .title-2, h2{
+          color: inherit;
+        }
+        &-description{
+          margin-top: 36px;
+        }
+        .title-1, h1{
+          padding: 5px 0;
+            @include d(1600){
+              font-size: 32px;
+            }
+            @include d(575){
+              font-size: 28px;
+            }
+        }
     }
     &-nav{
       position: absolute;
@@ -762,6 +803,15 @@ p, li{
             }
         }
     }
+    @include d(1700){
+      padding: 320px 0 20px;
+    }
+    @include d(1300){
+      padding: 250px 0 20px;
+    }
+    @include d(991){
+      padding: 170px 0 20px;
+    }
 }
 
 .inner-page{
@@ -773,10 +823,10 @@ p, li{
       right: 0;
       bottom: 0;
       pointer-events: none;
-      background-repeat: no-repeat;
-      background-size: cover;
+      background-repeat: repeat-y;
+      background-size: 100% auto;
       background-position: center top;
-      background-image: url(../images/dashboard/inner-page-bg.png);
+      background-image: url(../images/dashboard/inner-page-bg-2.png);
     }
     .hero-title{
       .title-1, h1{
@@ -790,6 +840,13 @@ p, li{
         top: 28px;
         right: auto;
         left: -140px;
+          @include d(1600){
+            width: 550px;
+          }
+          @include d(1440){
+            width: 480px;
+            top: 17px;
+          }
       }
     }
 }

@@ -1,5 +1,6 @@
 .mission{
   padding: 0 0 100px;
+  position: relative;
     &-box{
       margin-top: 105px;
       max-width: 450px;
@@ -9,9 +10,13 @@
           content: attr(data-num);
           position: absolute;
           font-size: 500px;
-          opacity: .1;
+          opacity: .02;
           color: #e1e1e1;
-          font-family: "Akrobat";
+          font-family: "Akrobat", sans-serif;
+          top: 65%;
+          left: 0;
+          line-height: .8em;
+          pointer-events: none;
         }
         &-icon{
           position: relative;
@@ -40,7 +45,15 @@
       &:nth-child(even){
         .mission-box{
           padding-top: 270px;
+            &:before{
+              top: -9%;
+            }
         }
       }
     }
+}
+
+.model{
+  padding: 120px 0;
+  position: relative;
 }

@@ -8,6 +8,7 @@ import Resources from "../../pages/resources/Resources";
 import Forecast from "../../pages/quant-lab/QuantLab";
 import Footer from "../footer/Footer";
 import Faq from "../../pages/faq/Faq";
+import ScrollToTop from "../scroll-to-top/ScrollToTop";
 
 class App extends Component {
 
@@ -16,6 +17,7 @@ class App extends Component {
         return(
             <div id="wrapper">
                 <Router>
+                    <ScrollToTop />
                     <Header />
                     <Switch>
                         <Route exact path="/">

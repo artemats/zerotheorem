@@ -64,12 +64,16 @@ const About = () => {
                 </div>
             </div>
             <div className="model">
+                <div className="abstract __6" />
                 <div className="container">
                     <div className="row">
                         <div className="col-12">
                             <div className="hero-title">
                                 <p className="subtitle">useful</p>
                                 <h1 className="title-1 title-border">OUR FUNDING MODEL</h1>
+                                <div className="hero-title-description">
+                                    <p>“Our subscribers finance the research and development of future economic theory…”</p>
+                                </div>
                             </div>
                         </div>
                     </div>
