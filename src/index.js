@@ -18,9 +18,6 @@ const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk
 WebFont.load({
     google: {
         families: ['Spartan:100,400,500,700&display=swap', 'Rubik:300&display=swap']
-    },
-    custom: {
-        families: ['Akrobat']
     }
 });
 
