@@ -10,9 +10,19 @@ import { ContextProvider } from './components/context/Context';
 import './assets/sass/main.scss';
 import {composeWithDevTools} from "redux-devtools-extension";
 import ErrorBoundry from "./components/error-boundry/ErrorBoundry";
+import WebFont from 'webfontloader';
 
 const api = new ApiClient();
 const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk)));
+
+WebFont.load({
+    google: {
+        families: ['Spartan:100,400,500,700', 'Rubik:300']
+    },
+    custom: {
+        families: ['Akrobat']
+    }
+});
 
 ReactDOM.render(
     <Provider store={store}>

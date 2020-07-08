@@ -9,8 +9,9 @@
           content: attr(data-num);
           position: absolute;
           font-size: 500px;
-          opacity: .01;
+          opacity: .1;
           color: #e1e1e1;
+          font-family: "Akrobat";
         }
         &-icon{
           position: relative;
