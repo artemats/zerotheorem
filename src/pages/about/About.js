@@ -77,6 +77,21 @@ const About = () => {
                             </div>
                         </div>
                     </div>
+                    <div className="row">
+                        <div className="col-12">
+                            <div className="model-box">
+                                <div className="model-box-header">
+                                    <div className="model-box-header">
+                                        <p>Global Community</p>
+                                    </div>
+                                    <div className="model-box-header">
+                                        <p>Zero Theorem</p>
+                                    </div>
+                                </div>
+                                .model-box-
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

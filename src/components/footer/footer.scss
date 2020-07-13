@@ -1,6 +1,8 @@
 .footer{
   background-color: #000922;
   padding: 27px 0 0;
+  position: relative;
+  z-index: 1;
     &-logo{
       width: 234px;
       margin-top: 7px;

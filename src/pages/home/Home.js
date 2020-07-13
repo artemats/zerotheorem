@@ -8,7 +8,7 @@ import forecastBanner from '../../assets/images/home/forecast-banner.jpg';
 import quantBanner from '../../assets/images/home/quant-banner.jpg';
 import wtfSun from '../../assets/images/wtf-planet.svg';
 import aboutSun from '../../assets/images/about-planet.svg';
-import Research from "../../components/research/Research";
+import ResearchBox from "../../components/research-box/ResearchBox";
 import LoadingIndicator from "../../components/loadingIndicator/LoadingIndicator";
 import Planets from "../../components/planets/Planets";
 const HeroVideo = lazy(() => import("../../components/heroVideo/HeroVideo"));
@@ -73,7 +73,25 @@ const Home = () => {
                     </div>
                 </div>
             </section>
-            <Research />
+            <section className="section research">
+                <div className="abstract __3" />
+                <div className="container">
+                    <div className="row">
+                        <div className="col-12">
+                            <div className="research-title">
+                                <div className="title-plus" />
+                                <p className="subtitle">useful</p>
+                                <h2 className="title-2 title-border">Research</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col-12">
+                            <ResearchBox defaultTheme={false} />
+                        </div>
+                    </div>
+                </div>
+            </section>
             <section className="section content __right __about">
                 <div className="abstract __4" />
                 <Planets width={468} height={458} sun={aboutSun} />

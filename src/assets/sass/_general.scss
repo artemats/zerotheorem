@@ -392,6 +392,9 @@ p, li{
           text-align: left;
         }
     }
+    &-filter{
+      text-align: right;
+    }
     &-box{
       position: relative;
       border-radius: 5px;
@@ -415,6 +418,37 @@ p, li{
         &.__stat{
           @include d(991){
             height: auto;
+          }
+        }
+    }
+}
+
+.filter{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  padding: 10px 0 55px;
+    &-link{
+      margin-left: 112px;
+        &:nth-child(1){
+          margin-left: 0;
+        }
+        &:before{
+          content: '';
+          position: absolute;
+          bottom: 3px;
+          right: -12px;
+          width: 98px;
+          height: 11px;
+          background-color: #f3de1a;
+          opacity: .1;
+          transform: scaleX(0);
+          transition: transform .4s ease;
+          transform-origin: right;
+        }
+        &.active{
+          &:before{
+            transform: scaleX(1);
           }
         }
     }
@@ -563,6 +597,25 @@ p, li{
         }
         @include d(575){
           background-size: 200% auto;
+        }
+    }
+    &.__8{
+      bottom: -420px;
+      left: -54px;
+      width: 750px;
+      height: 590px;
+      background-position: right top;
+      background-size: contain;
+      background-image: url(../images/abstract/abstract-7.png);
+        @include d(1440){
+          width: 700px;
+          height: 540px;
+          bottom: -320px;
+        }
+        @include d(1200){
+          width: 600px;
+          height: 440px;
+          bottom: -280px;
         }
     }
     &-circle{

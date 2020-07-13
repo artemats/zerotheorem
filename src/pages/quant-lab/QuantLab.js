@@ -1,8 +1,9 @@
 import React from 'react';
 import { Switch, Route, useRouteMatch, Redirect } from 'react-router-dom';
 import './quant-lab.scss';
-import QuantNav from "../../components/quant-nav/QuantNav";
+import QuantNav from "./quant-nav/QuantNav";
 import BaseModels from "./base-models/BaseModels";
+import SatoshiStack from "./satoshi-stack/SatoshiStack";
 
 const QuantLab = () => {
 
@@ -39,7 +40,7 @@ const QuantLab = () => {
                                 <Redirect to={`${path}/base-models`} />
                             </Route>
                             <Route path={`${path}/satoshi-stack`}>
-                                <h2>Satoshi stack</h2>
+                                <SatoshiStack />
                             </Route>
                             <Route path={`${path}/base-models`}>
                                 <BaseModels />

@@ -9,6 +9,9 @@ import Forecast from "../../pages/quant-lab/QuantLab";
 import Footer from "../footer/Footer";
 import Faq from "../../pages/faq/Faq";
 import ScrollToTop from "../scroll-to-top/ScrollToTop";
+import PageNotFound from "../../pages/404/404";
+import Research from "../../pages/research/Research";
+import LiteratureReview from "../../pages/literature-review/LiteratureReview";
 
 class App extends Component {
 
@@ -37,6 +40,15 @@ class App extends Component {
                         </Route>
                         <Route path="/faq">
                             <Faq />
+                        </Route>
+                        <Route exact path="/research">
+                            <Research />
+                        </Route>
+                        <Route path="/research/:id">
+                            <LiteratureReview />
+                        </Route>
+                        <Route exact path="*">
+                            <PageNotFound />
                         </Route>
                     </Switch>
                     <Footer />

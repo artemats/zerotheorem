@@ -34,6 +34,61 @@
               width: 85vw;
             }
         }
+        &.__default{
+          padding: 100px 0 94px;
+          margin: 0;
+            .research-list-item{
+              width: 100%;
+              padding: 0;
+            }
+            .post{
+              background-color: rgba(255,255,255,.03);
+              margin-bottom: 28px;
+              border-radius: 5px;
+                &-content{
+                  text-align: center;
+                  color: #c3c3c3;
+                  padding: 38px 70px 20px;
+                  font-size: 16px;
+                    &-title{
+                      line-height: 1.5em;
+                      min-height: 48px;
+                    }
+                    &-subtitle{
+                      letter-spacing: .01em;
+                      line-height: 1.5em;
+                      text-transform: capitalize;
+                      margin-bottom: 0;
+                        @media only screen and (max-width: 1440px) {
+                          font-size: 14px;
+                          margin-bottom: 2px;
+                        }
+                    }
+                    @media only screen and (max-width: 1440px) {
+                      padding: 35px 50px 20px;
+                    }
+                    @media only screen and (max-width: 575px) {
+                      padding: 35px 20px 20px;
+                    }
+                }
+                .btn{
+                  max-width: 100%;
+                  margin-top: 16px;
+                }
+                @media only screen and (max-width: 1440px) {
+                  margin-top: 0;
+                }
+                @media only screen and (max-width: 767px) {
+                  margin-bottom: 25px;
+                }
+            }
+            @media only screen and (max-width: 1200px) {
+              padding: 35px 0 94px;
+            }
+            @media only screen and (max-width: 991px) {
+              overflow-x: hidden;
+            }
+        }
         @media only screen and (max-width: 1300px) {
           padding: 80px 0 30px;
         }

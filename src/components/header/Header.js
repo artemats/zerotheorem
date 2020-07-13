@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom';
 import { Link, NavLink } from 'react-router-dom';
 import logo from '../../assets/images/zerOtheorem_logo.svg';
 import './header.scss';
-import QuantNav from "../quant-nav/QuantNav";
+import QuantNav from "../../pages/quant-lab/quant-nav/QuantNav";
 
 const Header = () => {
 

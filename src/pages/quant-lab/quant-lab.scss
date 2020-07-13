@@ -1,6 +1,7 @@
 .quant{
     &-lab-page {
       padding: 114px 0 20px;
+      min-height: 200vh;
         &:before{
           content: '';
           position: absolute;
@@ -15,9 +16,9 @@
           background-image: url(../../assets/images/dashboard/bg.png);
         }
         .hero-title{
-          @media only screen and (max-width: 1440px) {
-            margin-right: -100px;
-          }
+            @media only screen and (max-width: 1440px) {
+              margin-right: -100px;
+            }
         }
         @media only screen and (max-width: 767px) {
           padding: 100px 0 20px;
