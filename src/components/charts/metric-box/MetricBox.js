@@ -40,25 +40,29 @@ class MetricBox extends Component {
                             <p className="stat-label">RMSE:</p>
                             <div className="stat-value">{rmse}</div>
                         </div>
-                        <div className="stat-row">
-                            <p className="stat-label">Stationary:</p>
-                            <div className="stat-value">XX</div>
-                        </div>
                     </div>
                     <div className="stat-list-item">
                         <div className="stat-row">
                             <p className="stat-label">MAPPE:</p>
                             <div className="stat-value">{mape}</div>
                         </div>
-                        <div className="stat-row">
-                            <p className="stat-label">Accuary:</p>
-                            <div className="stat-value">XX</div>
-                        </div>
                     </div>
                     <div className="stat-list-item">
                         <div className="stat-row">
                             <p className="stat-label">MADS:</p>
                             <div className="stat-value">{mads}</div>
+                        </div>
+                    </div>
+                    <div className="stat-list-item">
+                        <div className="stat-row">
+                            <p className="stat-label">Accuary:</p>
+                            <div className="stat-value">XX</div>
+                        </div>
+                    </div>
+                    <div className="stat-list-item full-width">
+                        <div className="stat-row">
+                            <p className="stat-label">Stationary:</p>
+                            <div className="stat-value">{stationary}</div>
                         </div>
                     </div>
                 </div>

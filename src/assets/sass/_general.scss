@@ -605,14 +605,15 @@ p, li{
   padding: 53px 50px;
     &-list{
       display: flex;
+      flex-wrap: wrap;
         &-item{
           width: 50%;
+          margin-bottom: 20px;
+            &.full-width{
+              flex: 1;
+            }
             @include d(575){
               width: 100%;
-              margin-bottom: 20px;
-                &:last-child{
-                  margin-bottom: 0;
-                }
             }
         }
         &.__middle{
