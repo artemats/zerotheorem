@@ -1,5 +1,6 @@
 import React from 'react';
 import ResearchBox from "../../components/research-box/ResearchBox";
+import './research.scss';
 
 const Research = () => {
 

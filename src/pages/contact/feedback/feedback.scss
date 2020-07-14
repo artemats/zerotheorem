@@ -1,0 +1,48 @@
+.feedback{
+  background-color: rgba(255,255,255,.03);
+  border-radius: 5px;
+  margin: 100px 0;
+  padding: 80px 0;
+    &-title{
+      text-transform: capitalize;
+    }
+    &-description{
+      font-size: 16px;
+      padding: 13px 0;
+        @media only screen and (max-width: 575px) {
+          p{
+            line-height: 1.8em;
+          }
+        }
+    }
+    &-fields{
+      padding: 14px 0;
+    }
+    &-action{
+      text-align: center;
+      padding: 48px 0 5px;
+        .btn.lg{
+          max-width: 388px;
+        }
+        @media only screen and (max-width: 575px) {
+          padding: 20px 0 0;
+        }
+    }
+    @media only screen and (max-width: 1200px) {
+      padding: 50px 30px;
+        .input-label{
+          min-height: 58px;
+        }
+    }
+    @media only screen and (max-width: 991px) {
+      margin: 50px 0 80px;
+    }
+    @media only screen and (max-width: 767px) {
+      .input-label{
+        min-height: 0;
+      }
+    }
+    @media only screen and (max-width: 480px) {
+      padding: 30px 14px;
+    }
+}

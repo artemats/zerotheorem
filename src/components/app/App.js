@@ -12,6 +12,7 @@ import ScrollToTop from "../scroll-to-top/ScrollToTop";
 import PageNotFound from "../../pages/404/404";
 import Research from "../../pages/research/Research";
 import LiteratureReview from "../../pages/literature-review/LiteratureReview";
+import Contact from "../../pages/contact/Contact";
 
 class App extends Component {
 
@@ -46,6 +47,9 @@ class App extends Component {
                         </Route>
                         <Route path="/research/:id">
                             <LiteratureReview />
+                        </Route>
+                        <Route path="/contact">
+                            <Contact />
                         </Route>
                         <Route exact path="*">
                             <PageNotFound />
