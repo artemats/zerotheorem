@@ -1,4 +1,6 @@
 import React, { Fragment } from 'react';
+import StackDistribution from "../../../components/charts/stackDistribution/StackDistribution";
+import ErrorBoundry from "../../../components/error-boundry/ErrorBoundry";
 
 const SatoshiStack = () => {
 
@@ -25,6 +27,9 @@ const SatoshiStack = () => {
                         </div>
                         <div className="col-xl-4">
                             <div className="dashboard-box">
+                                <ErrorBoundry>
+                                    <StackDistribution />
+                                </ErrorBoundry>
                             </div>
                         </div>
                         <div className="col-xl-4">
