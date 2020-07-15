@@ -4,8 +4,13 @@ import { connect } from 'react-redux';
 import { fetchMetricSuccess, fetchMetricError } from '../../../store/metric-box/actions';
 import {isEmpty} from "../../globalFunctions/globalFunctions";
 import LoadingIndicator from "../../loadingIndicator/LoadingIndicator";
+import LocalStorage from "../../localStorage/LocalStorage";
 
 class MetricBox extends Component {
+
+    state = {
+      forecastPriceDirection: 'down'
+    };
 
     componentDidMount() {
 
@@ -13,11 +18,26 @@ class MetricBox extends Component {
 
         if(isEmpty(data)) {
             api.getMetric()
-                .then(metricData => fetchMetricSuccess(metricData.data))
+                .then(metricData => {
+                    fetchMetricSuccess(metricData.data);
+                    this.detectDataWithLocalStorage(metricData.data.predicted_price);
+                })
                 .catch(error => fetchMetricError(error));
         }
 
     }
+
+    detectDataWithLocalStorage = (data) => {
+        const localStorage = new LocalStorage();
+        const localData = localStorage.getState('forecastPrice');
+        console.log('local - ', localData, 'new - ', data);
+        if(localData && localData > data) {
+            this.setState({
+                forecastPriceDirection: 'up'
+            });
+        }
+        localStorage.setState('forecastPrice', data);
+    };
 
     onForecastDirection = direction => {
         let dir = direction === -1 ? 'Down' : 'Up';
@@ -26,9 +46,10 @@ class MetricBox extends Component {
 
     render() {
 
-        const { isLoading, data: { stationary, mape, mads, predicted_direction, predicted_price, rmse } } = this.props;
+        const { isLoading, data } = this.props;
+        const { forecastPriceDirection } = this.state;
 
-        if(isLoading) {
+        if(isLoading || isEmpty(data)) {
             return <LoadingIndicator />
         }
 
@@ -38,19 +59,19 @@ class MetricBox extends Component {
                     <div className="stat-list-item">
                         <div className="stat-row">
                             <p className="stat-label">RMSE:</p>
-                            <div className="stat-value">{rmse}</div>
+                            <div className="stat-value">{data.rmse}</div>
                         </div>
                     </div>
                     <div className="stat-list-item">
                         <div className="stat-row">
                             <p className="stat-label">MAPPE:</p>
-                            <div className="stat-value">{mape}</div>
+                            <div className="stat-value">{data.mape}</div>
                         </div>
                     </div>
                     <div className="stat-list-item">
                         <div className="stat-row">
                             <p className="stat-label">MADS:</p>
-                            <div className="stat-value">{mads}</div>
+                            <div className="stat-value">{data.mads}</div>
                         </div>
                     </div>
                     <div className="stat-list-item">
@@ -62,7 +83,7 @@ class MetricBox extends Component {
                     <div className="stat-list-item full-width">
                         <div className="stat-row">
                             <p className="stat-label">Stationary:</p>
-                            <div className="stat-value">{stationary}</div>
+                            <div className="stat-value">{data.stationary}</div>
                         </div>
                     </div>
                 </div>
@@ -70,11 +91,13 @@ class MetricBox extends Component {
                 <div className="stat-list">
                     <div className="stat-list-item">
                         <p className="stat-label">Forecasted Price:</p>
-                        <p className="stat-value">$ {predicted_price.toFixed(2)} <span className="stat-value-arrow __down" /> </p>
+                        <p className="stat-value">$ {data.predicted_price.toFixed(2)}
+                            <span className={`stat-value-arrow __${forecastPriceDirection}`} />
+                        </p>
                     </div>
                     <div className="stat-list-item">
                         <p className="stat-label">Forecasted Direction:</p>
-                        {this.onForecastDirection(predicted_direction)}
+                        {this.onForecastDirection(data.predicted_direction)}
                     </div>
                 </div>
             </div>

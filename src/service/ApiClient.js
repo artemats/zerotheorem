@@ -52,9 +52,7 @@ export default class ApiClient {
 
     getBlockchain = async () => {
 
-        // console.log(`${_baseURI}/api/qqplot`);
-        // return await this.getSources('/3D-1');
-        return await this.getSources('/ppplot');
+        return await this.getSources('/3D-1');
 
     };
 
