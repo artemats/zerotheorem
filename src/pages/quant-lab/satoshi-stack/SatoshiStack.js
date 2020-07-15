@@ -1,6 +1,7 @@
-import React, { Fragment } from 'react';
-import StackDistribution from "../../../components/charts/stackDistribution/StackDistribution";
+import React, {Fragment, lazy, Suspense} from 'react';
+const StackDistribution = lazy(() => import("../../../components/charts/stackDistribution/StackDistribution"));
 import ErrorBoundry from "../../../components/error-boundry/ErrorBoundry";
+import LoadingIndicator from "../../../components/loadingIndicator/LoadingIndicator";
 
 const SatoshiStack = () => {
 
@@ -28,7 +29,9 @@ const SatoshiStack = () => {
                         <div className="col-xl-4">
                             <div className="dashboard-box">
                                 <ErrorBoundry>
-                                    <StackDistribution />
+                                    <Suspense fallback={<LoadingIndicator />}>
+                                        <StackDistribution />
+                                    </Suspense>
                                 </ErrorBoundry>
                             </div>
                         </div>
