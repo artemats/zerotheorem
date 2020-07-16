@@ -1,27 +1,26 @@
-import React, { useState } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
+import SlideToggle from 'react-slide-toggle';
 
 const AccordionBox = ({ data: { title, description, collapsed } }) => {
 
-    const [opened, setOpened] = useState(collapsed);
-
-    const onToggleCollapse = () => {
-        setOpened(!opened);
-        console.log(opened);
-    };
-
     return(
-        <div className={`accordion-box ${opened ? '' : 'is-active'}`}>
-            <div className="accordion-box-header" onClick={() => onToggleCollapse()}>
-                <div className="accordion-btn" />
-                <div className="accordion-title yellow regular">
-                    <p>{title}</p>
+        <SlideToggle
+            duration={500}
+            collapsed={collapsed}
+            render={({ toggle, setCollapsibleElement, range }) => (
+                <div className={`accordion-box ${range ? '' : 'is-active'}`}>
+                    <div className="accordion-box-header" onClick={toggle}>
+                        <div className="accordion-btn" />
+                        <div className="accordion-title yellow regular">
+                            <p>{title}</p>
+                        </div>
+                    </div>
+                    <div className="accordion-box-body" ref={setCollapsibleElement}>
+                        <div className="accordion-description" dangerouslySetInnerHTML={{ __html: description }} />
+                    </div>
                 </div>
-            </div>
-            <div className="accordion-box-body">
-                <div className="accordion-description" dangerouslySetInnerHTML={{ __html: description }} />
-            </div>
-        </div>
+            )} />
     )
 
 };
