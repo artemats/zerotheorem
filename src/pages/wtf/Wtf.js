@@ -62,18 +62,6 @@ const Wtf = () => {
                     </div>
                 </div>
             </div>
-            <div className="infrastructure">
-                <div className="container">
-                    <div className="row">
-                        <div className="col-12">
-                            <div className="hero-title">
-                                <p className="subtitle">WTF...IS ZT?</p>
-                                <h1 className="title-1 title-border">ZT Infrastructure</h1>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
         </section>
     )
 

@@ -30,13 +30,13 @@ class MetricBox extends Component {
     detectDataWithLocalStorage = (data) => {
         const localStorage = new LocalStorage();
         const localData = localStorage.getState('forecastPrice');
-        console.log('local - ', localData, 'new - ', data);
-        if(localData && localData > data) {
+        // console.log('local - ', localData, 'new - ', data);
+        if(localData && localData < data) {
             this.setState({
                 forecastPriceDirection: 'up'
             });
         }
-        // localStorage.setState('forecastPrice', data);
+        localStorage.setState('forecastPrice', data);
     };
 
     onForecastDirection = direction => {
