@@ -2,7 +2,7 @@ import React, { Fragment, lazy, Suspense } from 'react';
 import { Link } from 'react-router-dom';
 import AnimateCounter from "../../components/animate-counter/AnimateCounter";
 import './home.scss';
-import wtfBanner from '../../assets/images/home/wtf-banner.jpg';
+import infoBanner from '../../assets/images/home/wtf-banner.jpg';
 import aboutBanner from '../../assets/images/home/about-banner.jpg';
 import forecastBanner from '../../assets/images/home/forecast-banner.jpg';
 import quantBanner from '../../assets/images/home/quant-banner.jpg';
@@ -49,7 +49,7 @@ const Home = () => {
                     <div className="row">
                         <div className="col-xl-6 col-md-6">
                             <div className="content-preview">
-                                <img src={wtfBanner} alt="WTF...IS ZT?" />
+                                <img src={infoBanner} alt="Mission" />
                             </div>
                         </div>
                         <div className="col-xl-5 offset-xl-1 col-md-6">
@@ -57,14 +57,18 @@ const Home = () => {
                                 <div className="content-description-title">
                                     <div className="title-plus" />
                                     <p className="subtitle">Information</p>
-                                    <h2 className="title-2 title-border">WTF...IS ZT?</h2>
+                                    <h2 className="title-2 title-border">Mission</h2>
                                 </div>
                                 <div className="content-description-text">
+                                    <h3 className="title-3">1. Zero BIAS</h3>
                                     <p>Depart do be so he enough talent. Sociable formerly six but handsome. Up do view time they shot. He concluded disposing provision by questions as situation.</p>
-                                    <p>indness to he horrible reserved ye. Effect twenty indeed beyond for not had county. The use him without greatly can private. Increasing it unpleasant no of contrasted no continuing. Nothing colonel my no removed in weather. It dissimilar in up devonshire inhabiting.</p>
+                                    <h3 className="title-3">2. Zero Cost</h3>
+                                    <p>Indness to he horrible reserved ye. Effect twenty indeed beyond for not had county. The use him without greatly can private. Increasing it unpleasant no of contrasted no continuing.</p>
+                                    <h3 className="title-3">3. Zero Theorem</h3>
+                                    <p>Possession her thoroughly remarkably terminated man continuing. Removed greater to do ability. You shy shall while but wrote marry. Call why sake has sing pure.</p>
                                 </div>
                                 <div className="content-description-action">
-                                    <Link to="/wtf" className="btn lg">
+                                    <Link to="/about" className="btn lg">
                                         <div className="btn-title">Show More</div>
                                     </Link>
                                 </div>

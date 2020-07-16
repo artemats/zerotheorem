@@ -46,7 +46,7 @@ const Header = () => {
                         <div className="header-nav">
                             <SlideToggle
                                 duration={800}
-                                collapsed={false}
+                                collapsed={true}
                                 render={({ toggle, setCollapsibleElement }) => (
                                     <nav className={`nav ${isOpenNav ? 'is-active' : ''}`}>
                                         <ul className="nav-ul">
