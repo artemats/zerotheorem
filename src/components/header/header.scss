@@ -113,6 +113,11 @@
               font-size: 12px;
             }
           }
+          .has-sub{
+            .link{
+              margin-bottom: 5px;
+            }
+          }
       }
     }
     @media only screen and (max-width: 767px) {
@@ -165,6 +170,7 @@
             margin-left: 0;
           }
           @media only screen and (min-width: 992px) {
+            display: block !important;
             position: absolute;
             top: 100%;
             left: 50%;
@@ -178,7 +184,6 @@
           }
           @media only screen and (max-width: 991px) {
             padding: 0 15px;
-            margin-top: -15px;
               li{
                 padding: 0;
               }
@@ -215,7 +220,14 @@
           border-style: solid;
           border-width: 5px 4px 0 4px;
           border-color: #ffffff transparent transparent transparent;
+          transition: border-color .2s ease;
         }
+        @media only screen and (max-width: 991px) {
+          right: -15px;
+        }
+    }
+    @media only screen and (max-width: 991px) {
+      min-width: 95px;
     }
     @media only screen and (min-width: 992px), (any-hover: hover) {
       &:hover{
@@ -223,6 +235,11 @@
           transform: translate(-50%,0);
           opacity: 1;
           pointer-events: auto;
+        }
+        & > .has-sub-btn{
+          &:before{
+            border-color: #deb513 transparent transparent transparent;
+          }
         }
       }
     }

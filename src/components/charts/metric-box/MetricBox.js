@@ -36,7 +36,7 @@ class MetricBox extends Component {
                 forecastPriceDirection: 'up'
             });
         }
-        localStorage.setState('forecastPrice', data);
+        // localStorage.setState('forecastPrice', data);
     };
 
     onForecastDirection = direction => {

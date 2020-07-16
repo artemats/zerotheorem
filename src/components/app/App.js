@@ -30,9 +30,6 @@ class App extends Component {
                         <Route path="/about">
                             <About />
                         </Route>
-                        <Route path="/wtf">
-                            <Wtf />
-                        </Route>
                         <Route path="/resources">
                             <Resources />
                         </Route>
