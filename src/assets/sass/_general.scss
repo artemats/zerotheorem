@@ -292,6 +292,7 @@ p, li{
         opacity: .1;
         top: 22px;
         right: 54%;
+        pointer-events: none;
       }
       @include d(991) {
         &:before {
@@ -603,21 +604,21 @@ p, li{
       background-image: url(../images/abstract/abstract-5.png);
     }
     &.__7{
-      top: 345px;
+      top: 238px;
       left: 0;
       right: 0;
       bottom: 0;
       background-position: center top;
       background-image: url(../images/abstract/abstract-faq.png);
         @include d(1700){
-          top: 295px;
+          //top: 295px;
         }
         @include d(1600){
           background-position: left top;
           background-size: 120% auto;
         }
         @include d(1300){
-          top: 235px;
+          top: 185px;
         }
         @include d(991){
           top: 165px;
@@ -668,6 +669,29 @@ p, li{
       height: 100%;
       background-position: right top;
       background-image: url(../../assets/images/abstract/abstract-10.png);
+        @include d(991){
+          width: 160%;
+          top: -250px;
+          left: 0;
+        }
+    }
+    &.__11{
+      top: -108px;
+      left: -488px;
+      width: 110%;
+      height: 100%;
+      background-size: contain;
+      background-position: center top;
+      background-image: url(../../assets/images/abstract/abstract-11.png);
+    }
+    &.__12{
+      top: -175px;
+      left: -585px;
+      right: -412px;
+      bottom: 0;
+      background-size: contain;
+      background-position: center top;
+      background-image: url(../../assets/images/abstract/abstract-12.png);
     }
     &-circle{
       position: absolute;
@@ -685,6 +709,18 @@ p, li{
           background: linear-gradient(135deg,  rgba(247,255,0,1) 0%,rgba(180,0,255,1) 100%);
           filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7ff00', endColorstr='#b400ff',GradientType=1 );
           opacity: .1;
+            @include d(1800){
+              width: 640px;
+              height: 640px;
+            }
+            @include d(1440){
+              width: 540px;
+              height: 540px;
+            }
+            @include d(767){
+              width: 440px;
+              height: 440px;
+            }
         }
         &.__2{
           width: 353px;
@@ -700,7 +736,36 @@ p, li{
           filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#095e8a', endColorstr='#3b0e7f',GradientType=1 );
         }
         &.__3{
-
+          width: 718px;
+          height: 718px;
+          bottom: 0;
+          right: 0;
+          transform: translate(19%,50%);
+          background: rgb(247,255,0);
+          background: -moz-linear-gradient(-45deg,  rgba(247,255,0,1) 0%, rgba(180,0,255,1) 100%);
+          background: -webkit-linear-gradient(-45deg,  rgba(247,255,0,1) 0%,rgba(180,0,255,1) 100%);
+          background: linear-gradient(135deg,  rgba(247,255,0,1) 0%,rgba(180,0,255,1) 100%);
+          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7ff00', endColorstr='#b400ff',GradientType=1 );
+          opacity: .1;
+            @include d(1300){
+              transform: translate(40%,50%);
+            }
+            @include d(767){
+              width: 418px;
+              height: 418px;
+            }
+        }
+        &.__4{
+          width: 124px;
+          height: 124px;
+          left: 2.8%;
+          bottom: 36px;
+          background: rgb(180,0,255);
+          background: -moz-linear-gradient(-45deg,  rgba(180,0,255,1) 0%, rgba(0,144,255,1) 100%);
+          background: -webkit-linear-gradient(-45deg,  rgba(180,0,255,1) 0%,rgba(0,144,255,1) 100%);
+          background: linear-gradient(135deg,  rgba(180,0,255,1) 0%,rgba(0,144,255,1) 100%);
+          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b400ff', endColorstr='#0090ff',GradientType=1 );
+          opacity: .1;
         }
     }
 }
@@ -891,6 +956,38 @@ p, li{
         }
         &-description{
           margin-top: 45px;
+          position: relative;
+            &.__quote{
+              padding-bottom: 50px;
+                .quote{
+                    &-title{
+                      display: inline-block;
+                      position: relative;
+                        @include d(480){
+                          line-height: 1.8em;
+                        }
+                    }
+                    &-author{
+                      position: absolute;
+                      left: 80%;
+                      top: 100%;
+                      width: max-content;
+                        @include d(575){
+                          left: 0;
+                          position: relative;
+                          top: 0;
+                          margin-left: 100px;
+                          display: block;
+                          width: calc(100% - 100px);
+                          font-size: 12px;
+                        }
+                        @include d(480){
+                          margin-left: 20px;
+                          width: calc(100% - 20px);
+                        }
+                    }
+                }
+            }
         }
         .title-1, h1{
           padding: 5px 0;
@@ -898,7 +995,10 @@ p, li{
               font-size: 32px;
             }
             @include d(575){
-              font-size: 28px;
+              font-size: 25px;
+            }
+            @include d(480){
+              font-size: 26px;
             }
         }
     }

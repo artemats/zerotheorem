@@ -50,7 +50,7 @@ const About = () => {
                         <div className="col-12">
                             <div className="hero-title">
                                 <p className="subtitle">0100100001000101010011000100110001001111</p>
-                                <h1 className="title-1 title-border">Our mission</h1>
+                                <h3 className="title-1 title-border">Our mission</h3>
                             </div>
                         </div>
                     </div>
@@ -104,112 +104,259 @@ const About = () => {
                 </div>
             </div>
             <div className="infrastructure">
+                <div className="abstract-circle __1" />
+                <div className="abstract-circle __4" />
+                <div className="abstract __11" />
                 <div className="container">
                     <div className="row">
                         <div className="col-12">
                             <div className="hero-title">
                                 <p className="subtitle">WTF...IS ZT?</p>
-                                <h1 className="title-1 title-border">ZT Infrastructure</h1>
+                                <h3 className="title-1 title-border">ZT Infrastructure</h3>
                             </div>
                         </div>
                     </div>
                     <div className="row">
                         <div className="col-12">
-                            <div className="scheme">
-                                <div className="scheme-column">
-                                    <div className="scheme-box">
-                                        <div className="scheme-box-item __blue regular">
-                                            <p>BTC <br /> Market Indexes</p>
+                            <div className="scheme-wrap">
+                                <div className="scheme">
+                                    <div className="scheme-column">
+                                        <div className="scheme-box">
+                                            <div className="scheme-box-item __blue regular">
+                                                <p>BTC <br /> Market Indexes</p>
+                                            </div>
+                                            <div className="arrow right" />
                                         </div>
-                                        <div className="arrow right" />
+                                        <div className="scheme-box">
+                                            <div className="scheme-box-item __blue regular">
+                                                <p>Global Market Instruments</p>
+                                            </div>
+                                            <div className="arrow right" />
+                                        </div>
+                                        <div className="scheme-box">
+                                            <div className="scheme-box-item __blue regular">
+                                                <p>Blockchain <br /> Metrics</p>
+                                            </div>
+                                            <div className="arrow right" />
+                                        </div>
+                                        <div className="scheme-box">
+                                            <div className="scheme-box-item __blue regular">
+                                                <p>Macro-Economic Indicators</p>
+                                            </div>
+                                            <div className="arrow right" />
+                                        </div>
+                                        <div className="scheme-box">
+                                            <div className="scheme-box-item __blue regular">
+                                                <p>Alternative</p>
+                                            </div>
+                                            <div className="arrow right" />
+                                        </div>
                                     </div>
-                                    <div className="scheme-box">
-                                        <div className="scheme-box-item __blue regular">
-                                            <p>Global Market Instruments</p>
+                                    <div className="scheme-column">
+                                        <div className="scheme-box">
+                                            <div className="scheme-box-item __orange regular">
+                                                <p>Data <br />
+                                                    Curation
+                                                    <br />
+                                                    <br />
+                                                    &
+                                                    <br />
+                                                    <br />
+                                                    Feature <br />
+                                                    Engineering
+                                                </p>
+                                            </div>
+                                            <div className="arrow right" />
                                         </div>
-                                        <div className="arrow right" />
                                     </div>
-                                    <div className="scheme-box">
-                                        <div className="scheme-box-item __blue regular">
-                                            <p>Blockchain <br /> Metrics</p>
+                                    <div className="scheme-column">
+                                        <div className="scheme-box">
+                                            <div className="scheme-box-item __yellow regular">
+                                                <p>Multi-Model<br />
+                                                    Management
+                                                    <br />
+                                                    <br />
+                                                    &
+                                                    <br />
+                                                    <br />
+                                                    Optimization
+                                                </p>
+                                            </div>
+                                            <div className="data right">
+                                                <p>Train/Test <br /> /OPtimise</p>
+                                            </div>
                                         </div>
-                                        <div className="arrow right" />
                                     </div>
-                                    <div className="scheme-box">
-                                        <div className="scheme-box-item __blue regular">
-                                            <p>Macro-Economic Indicators</p>
+                                    <div className="scheme-column">
+                                        <div className="scheme-box detail top">
+                                            <div className="direction top right" />
+                                            <div className="direction right down" />
+                                            <div className="scheme-box-item __white regular">
+                                                <p><strong>Meta Model Learning</strong><br />
+                                                    Train/Test/Optimise</p>
+                                            </div>
                                         </div>
-                                        <div className="arrow right" />
+                                        <div className="scheme-box">
+                                            <div className="scheme-box-item __white regular">
+                                                <p>Baseline Model  1</p>
+                                            </div>
+                                            <div className="arrow right top" />
+                                            <div className="arrow left top" />
+                                            <div className="arrow arrow-left left bottom" />
+                                        </div>
+                                        <div className="scheme-box">
+                                            <div className="scheme-box-item __white regular">
+                                                <p>Baseline Model  2</p>
+                                            </div>
+                                            <div className="arrow right top" />
+                                            <div className="arrow left top" />
+                                            <div className="arrow arrow-left left bottom" />
+                                        </div>
+                                        <div className="scheme-box" />
+                                        <div className="scheme-box">
+                                            <div className="scheme-box-item __white regular">
+                                                <p>Baseline Model  3</p>
+                                            </div>
+                                            <div className="arrow right bottom" />
+                                            <div className="arrow left top" />
+                                            <div className="arrow arrow-left left bottom" />
+                                        </div>
+                                        <div className="scheme-box">
+                                            <div className="scheme-box-item __white regular">
+                                                <p>Baseline Model  n</p>
+                                            </div>
+                                            <div className="arrow right bottom" />
+                                            <div className="arrow left top" />
+                                            <div className="arrow arrow-left left bottom" />
+                                        </div>
+                                        <div className="scheme-box detail bottom">
+                                            <div className="direction left top" />
+                                            <div className="direction bottom left" />
+                                            <div className="scheme-box-item __white regular">
+                                                <p><strong>Meta Model Evaluation</strong><br />
+                                                    Baseline Ranking Scores & Performance Metrics</p>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div className="scheme-box">
-                                        <div className="scheme-box-item __blue regular">
-                                            <p>Alternative</p>
+                                    <div className="scheme-column">
+                                        <div className="scheme-box">
+                                            <div className="scheme-box-item __orange regular">
+                                                <p>Zero <br />
+                                                    Theorem
+                                                    <br />
+                                                    <br />
+                                                    [Reinforcement<br />
+                                                    Learner]
+                                                </p>
+                                            </div>
+                                            <div className="arrow right" />
+                                            <div className="data left">
+                                                <p>Forecast</p>
+                                            </div>
+                                            <div className="data right space">
+                                                <p>
+                                                    <span>Aggregated</span>
+                                                    <span>Forecast</span>
+                                                </p>
+                                            </div>
                                         </div>
-                                        <div className="arrow right" />
                                     </div>
                                 </div>
-                                <div className="scheme-column">
-                                    <div className="scheme-box">
-                                        <div className="scheme-box-item __orange regular">
-                                            <p>Data <br />
-                                                Curation
-                                                <br />
-                                                <br />
-                                                &
-                                                <br />
-                                                <br />
-                                                Feature <br />
-                                                Engineering
-                                            </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="manifesto">
+                <div className="abstract __12" />
+                <div className="container">
+                    <div className="row">
+                        <div className="col-12">
+                            <div className="hero-title">
+                                <p className="subtitle">We will make clear</p>
+                                <h3 className="title-1 title-border">OUR manifesto</h3>
+                            </div>
+                            <div className="hero-title-description __quote">
+                                <p className="quote-title">
+                                    “…Inspired by the Modelers’ Hippocratic Oath”
+                                    <span className="quote-author">By Dr. Emanuel Derman and Dr. Paul Wilmott</span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="manifesto-list">
+                        <div className="row">
+                            <div className="col-lg-8 offset-lg-3">
+                                <div className="manifesto-list-item">
+                                    <div className="manifesto-box" data-num="01">
+                                        <div className="manifesto-box-title">
+                                            <h3 className="title-3">Stochastic properties</h3>
                                         </div>
-                                        <div className="arrow right" />
+                                        <div className="manifesto-box-description">
+                                            <p>Even though we use a combination of statistical, econometric and machine learning methods to estimate value, we will never overlook the stochastic properties of reality for the pristine beauty of mathematical formulation</p>
+                                        </div>
                                     </div>
                                 </div>
-                                <div className="scheme-column">
-                                    <div className="scheme-box">
-                                        <div className="scheme-box-item __yellow regular">
-                                            <p>Multi-Model
-                                                Management
-                                                <br />
-                                                <br />
-                                                &
-                                                <br />
-                                                <br />
-                                                Optimization
-                                            </p>
+                            </div>
+                            <div className="col-lg-8 offset-lg-3">
+                                <div className="manifesto-list-item">
+                                    <div className="manifesto-box" data-num="02">
+                                        <div className="manifesto-box-title">
+                                            <h3 className="title-3">We will make clear</h3>
+                                        </div>
+                                        <div className="manifesto-box-description">
+                                            <p>We will make clear the assumptions, oversights and accuracy of our models to those who intent to use them and never claim that th ey have the full explanatory insights into real world market dynamics.</p>
                                         </div>
                                     </div>
                                 </div>
-                                <div className="scheme-column">
-                                    <div className="scheme-box">
-                                        <div className="scheme-box-item __white regular">
-                                            <p>Baseline Model  1</p>
+                            </div>
+                            <div className="col-lg-8 offset-lg-3">
+                                <div className="manifesto-list-item">
+                                    <div className="manifesto-box" data-num="03">
+                                        <div className="manifesto-box-title">
+                                            <h3 className="title-3">We understand</h3>
                                         </div>
-                                        <div className="arrow right top" />
-                                        <div className="arrow left top" />
-                                        <div className="arrow arrow-left left bottom" />
-                                    </div>
-                                    <div className="scheme-box">
-                                        <div className="scheme-box-item __white regular">
-                                            <p>Baseline Model  2</p>
+                                        <div className="manifesto-box-description">
+                                            <p>We understand that our models can provoke past, current and future economic theory and accept that our work may result in consequences on society that can be far beyond our own comprehension.</p>
                                         </div>
-                                        <div className="arrow right" />
-                                    </div>
-                                    <div className="scheme-box" />
-                                    <div className="scheme-box">
-                                        <div className="scheme-box-item __white regular">
-                                            <p>Baseline Model  3</p>
-                                        </div>
-                                        <div className="arrow right top" />
-                                    </div>
-                                    <div className="scheme-box">
-                                        <div className="scheme-box-item __white regular">
-                                            <p>Baseline Model  n</p>
-                                        </div>
-                                        <div className="arrow right" />
                                     </div>
                                 </div>
-                                <div className="scheme-column"></div>
+                            </div>
+                            <div className="col-lg-8 offset-lg-3">
+                                <div className="manifesto-list-item">
+                                    <div className="manifesto-box" data-num="04">
+                                        <div className="manifesto-box-title">
+                                            <h3 className="title-3">We commit</h3>
+                                        </div>
+                                        <div className="manifesto-box-description">
+                                            <p>We commit to continuously improving and evolving our models and will never claim that they are complete.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-lg-8 offset-lg-3">
+                                <div className="manifesto-list-item">
+                                    <div className="manifesto-box" data-num="05">
+                                        <div className="manifesto-box-title">
+                                            <h3 className="title-3">We dedicate</h3>
+                                        </div>
+                                        <div className="manifesto-box-description">
+                                            <p>We dedicate ourselves to expanding the current body of knowledge by providing our own academic research and releasing this information to the public at no cost.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="col-lg-8 offset-lg-3">
+                                <div className="manifesto-list-item">
+                                    <div className="manifesto-box" data-num="06">
+                                        <div className="manifesto-box-title">
+                                            <h3 className="title-3">We express</h3>
+                                        </div>
+                                        <div className="manifesto-box-description">
+                                            <p>We express specifically that our models or their outputs are not intended to be used as financial advice</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

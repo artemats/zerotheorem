@@ -9,7 +9,7 @@ const AccordionBox = ({ data: { title, description, collapsed } }) => {
             duration={500}
             collapsed={collapsed}
             render={({ toggle, setCollapsibleElement, range }) => (
-                <div className={`accordion-box ${range ? '' : 'is-active'}`}>
+                <div className={`accordion-box ${range ? 'is-active' : ''}`}>
                     <div className="accordion-box-header" onClick={toggle}>
                         <div className="accordion-btn" />
                         <div className="accordion-title yellow regular">
