@@ -132,6 +132,7 @@
         @media only screen and (max-width: 575px) {
           &:before{
             font-size: 160px;
+            opacity: .08;
           }
         }
     }
