@@ -85,7 +85,8 @@ class Feedback extends Component {
     };
 
     scrollToNode = (node) => {
-        node.scrollIntoView({ behavior: 'smooth' });
+        let currentTop = node.getBoundingClientRect().top + window.scrollY;
+        window.scrollTo(0, currentTop);
     };
 
 

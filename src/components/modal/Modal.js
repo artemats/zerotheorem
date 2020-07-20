@@ -5,8 +5,6 @@ import './modal.scss';
 
 const Modal = ({ isOpen, type, closeModal }) => {
 
-    console.log(isOpen, type, closeModal);
-
     if(!isOpen) {
         return null;
     }
