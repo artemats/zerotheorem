@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import './faq.scss';
 import Accordion from "../../components/accordion/Accordion";
 
@@ -33,22 +33,20 @@ const accordionData = [
 const Faq = () => {
 
     return(
-        <Fragment>
-            <section className="section hero inner-page faq">
-                <div className="abstract __7" />
-                <div className="abstract-circle __3" />
-                <div className="container">
-                    <div className="row">
-                        <div className="col-lg-9 offset-lg-1">
-                            <div className="hero-title">
-                                <h1 className="title-2 title-border">FAQ</h1>
-                            </div>
-                            <Accordion data={accordionData} />
+        <section className="section hero inner-page faq">
+            <div className="abstract __7" />
+            <div className="abstract-circle __3" />
+            <div className="container">
+                <div className="row">
+                    <div className="col-lg-9 offset-lg-1">
+                        <div className="hero-title">
+                            <h1 className="title-2 title-border">FAQ</h1>
                         </div>
+                        <Accordion data={accordionData} />
                     </div>
                 </div>
-            </section>
-        </Fragment>
+            </div>
+        </section>
     )
 
 };

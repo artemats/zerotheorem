@@ -14,6 +14,7 @@ import Research from "../../pages/research/Research";
 import LiteratureReview from "../../pages/literature-review/LiteratureReview";
 import Contact from "../../pages/contact/Contact";
 import Modal from "../modal/Modal";
+import BackTest from "../../pages/back-test/BackTest";
 
 class App extends Component {
 
@@ -48,6 +49,9 @@ class App extends Component {
                         </Route>
                         <Route path="/contact">
                             <Contact />
+                        </Route>
+                        <Route path="/back-test">
+                            <BackTest />
                         </Route>
                         <Route exact path="*">
                             <PageNotFound />

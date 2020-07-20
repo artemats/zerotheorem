@@ -117,7 +117,7 @@ const Home = () => {
                                     <p>indness to he horrible reserved ye. Effect twenty indeed beyond for not had county. The use him without greatly can private. Increasing it unpleasant no of contrasted no continuing. Nothing colonel my no removed in weather. It dissimilar in up devonshire inhabiting.</p>
                                 </div>
                                 <div className="content-description-action">
-                                    <Link to="/about" className="btn lg">
+                                    <Link to="/back-test" className="btn lg">
                                         <div className="btn-title">Show More</div>
                                     </Link>
                                 </div>
