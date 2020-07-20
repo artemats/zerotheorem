@@ -1,0 +1,120 @@
+.feedback{
+  background-color: rgba(255,255,255,.03);
+  border-radius: 5px;
+  margin: 100px 0 0;
+  //padding: 88px 0 73px;
+  padding: 88px 0 0;
+  font-size: 16px;
+  color: #dcdcdc;
+  height: 100%;
+    &-title{
+      text-transform: capitalize;
+    }
+    &-description{
+      font-size: 16px;
+      padding: 20px 0 10px;
+      @media only screen and (max-width: 575px) {
+        p{
+          line-height: 1.8em;
+        }
+      }
+      @media only screen and (max-width: 480px) {
+        padding: 15px 0 10px;
+      }
+    }
+    &-action{
+      text-align: center;
+      padding: 5px 0;
+      .btn.lg{
+        max-width: 388px;
+      }
+      @media only screen and (max-width: 575px) {
+        padding: 20px 0 0;
+      }
+    }
+    &-detail{
+      margin: 53px 0 13px;
+      p{
+        line-height: 1.4em;
+      }
+    }
+    &-more{
+      color: #a9a9a9;
+      font-size: 12px;
+      text-align: center;
+      padding: 33px 0 10px;
+    }
+    @media only screen and (max-width: 1300px) {
+      height: auto;
+      padding: 88px 0 73px;
+    }
+    @media only screen and (max-width: 1200px) {
+      padding: 50px 30px;
+    }
+    @media only screen and (max-width: 991px) {
+      margin: 50px 0 80px;
+    }
+    @media only screen and (max-width: 767px) {
+      .input-label{
+        min-height: 0;
+      }
+    }
+    @media only screen and (max-width: 480px) {
+      padding: 30px 14px;
+    }
+}
+
+.contact{
+  &-us{
+    @extend .feedback;
+    &-description{
+      @extend .feedback-description;
+    }
+    &-table{
+      padding: 80px 0 52px;
+      p{
+        color: inherit;
+        line-height: 1.5em;
+      }
+      a{
+        text-decoration: underline;
+        color: inherit;
+        letter-spacing: .03em;
+      }
+      @media only screen and (max-width: 575px) {
+        a{
+          word-break: break-all;
+        }
+      }
+      @media only screen and (max-width: 575px) {
+        padding: 50px 0 20px;
+      }
+    }
+    &-row{
+      display: flex;
+      align-items: center;
+      padding-bottom: 52px;
+      justify-content: space-between;
+        &:last-child{
+          padding-bottom: 0;
+        }
+        @media only screen and (max-width: 575px) {
+          padding-bottom: 20px;
+        }
+    }
+    &-box{
+      &:nth-child(2){
+        text-align: right;
+      }
+      @media only screen and (max-width: 480px) {
+        width: 50%;
+          &:nth-child(2){
+            text-align: left;
+          }
+      }
+    }
+    @media only screen and (max-width: 575px) {
+      font-size: 14px;
+    }
+  }
+}

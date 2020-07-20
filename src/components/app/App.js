@@ -13,6 +13,7 @@ import PageNotFound from "../../pages/404/404";
 import Research from "../../pages/research/Research";
 import LiteratureReview from "../../pages/literature-review/LiteratureReview";
 import Contact from "../../pages/contact/Contact";
+import Modal from "../modal/Modal";
 
 class App extends Component {
 
@@ -52,6 +53,7 @@ class App extends Component {
                             <PageNotFound />
                         </Route>
                     </Switch>
+                    <Modal />
                     <Footer />
                 </Router>
             </div>
