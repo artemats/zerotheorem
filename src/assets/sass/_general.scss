@@ -127,6 +127,7 @@ p, li{
   position: relative;
   letter-spacing: .03em;
   transition: color .2s ease;
+  white-space: nowrap;
     &-icon{
       position: absolute;
       top: 50%;
