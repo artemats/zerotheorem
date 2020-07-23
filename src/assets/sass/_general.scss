@@ -740,6 +740,17 @@ p, li{
           left: 0;
         }
     }
+    &.__16{
+      left: -381px;
+      right: -105px;
+      top: -65px;
+      bottom: -160px;
+      background-position: center;
+      background-image: url(../../assets/images/abstract/abstract-16.png);
+        @include d(1440){
+          top: -180px;
+        }
+    }
     &-circle{
       position: absolute;
       border-radius: 50%;
