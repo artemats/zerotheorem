@@ -6,7 +6,7 @@ export const viewSettings = (chartTitle, showLegend, margin = initialMargin, xTi
             width: null,
             height: null,
             font: {
-                family: 'Rubik'
+                family: 'Rubik, sans-serif'
             },
             title: {
                 text: chartTitle,
@@ -15,7 +15,7 @@ export const viewSettings = (chartTitle, showLegend, margin = initialMargin, xTi
                 font: {
                     size: 14,
                     color: '#ffffff',
-                    family: 'Rubik'
+                    family: 'Rubik, sans-serif'
                 },
             },
             autosize: true,
@@ -25,7 +25,7 @@ export const viewSettings = (chartTitle, showLegend, margin = initialMargin, xTi
                 x: 0,
                 y: 1.1,
                 font: {
-                    family: 'Rubik',
+                    family: 'Rubik, sans-serif',
                     size: 10,
                     color: '#f1f1f1'
                 }
@@ -36,7 +36,7 @@ export const viewSettings = (chartTitle, showLegend, margin = initialMargin, xTi
                 title: {
                     text: xTitle,
                     font: {
-                        family: 'Rubik',
+                        family: 'Rubik, sans-serif',
                         size: 10,
                         color: '#f1f1f1'
                     },
@@ -45,7 +45,7 @@ export const viewSettings = (chartTitle, showLegend, margin = initialMargin, xTi
                 tickfont: {
                     size: 9,
                     color: '#8f8f8f',
-                    family: 'Rubik'
+                    family: 'Rubik, sans-serif'
                 },
                 tickformat: xTickFormat,
                 showline: true,
@@ -58,7 +58,7 @@ export const viewSettings = (chartTitle, showLegend, margin = initialMargin, xTi
                 title: {
                     text: yTitle,
                     font: {
-                        family: 'Rubik',
+                        family: 'Rubik, sans-serif',
                         size: 10,
                         color: '#f1f1f1'
                     },
@@ -67,7 +67,7 @@ export const viewSettings = (chartTitle, showLegend, margin = initialMargin, xTi
                 tickfont: {
                     size: 9,
                     color: '#8f8f8f',
-                    family: 'Rubik'
+                    family: 'Rubik, sans-serif'
                 },
                 tickformat: yTickFormat,
                 showline: true,

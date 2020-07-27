@@ -1,17 +1,9 @@
-import React, { useEffect } from 'react';
-import WithApiService from '../hoc/WithApiService';
+import React from 'react';
 import PropTypes from 'prop-types';
 import './accordion.scss';
 import AccordionBox from "./AccordionBox";
 
-const Accordion = ({ data, api }) => {
-
-    useEffect(() => {
-
-        api.getBlockchain()
-            .then(data => console.log(data));
-
-    });
+const Accordion = ({ data }) => {
 
     return(
         <div className="accordion">
@@ -25,7 +17,7 @@ const Accordion = ({ data, api }) => {
 
 };
 
-export default WithApiService()(Accordion);
+export default Accordion;
 
 Accordion.propTypes = {
     data: PropTypes.array.isRequired
