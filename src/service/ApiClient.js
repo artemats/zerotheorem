@@ -1,4 +1,6 @@
 import {_baseURI, _token} from "../apiSettings";
+require('es6-promise').polyfill();
+require('isomorphic-fetch');
 
 export default class ApiClient {
 
