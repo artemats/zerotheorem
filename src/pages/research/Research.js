@@ -16,11 +16,7 @@ const Research = () => {
                         </div>
                     </div>
                 </div>
-                <div className="row">
-                    <div className="col-12">
-                        <ResearchBox defaultTheme={true} />
-                    </div>
-                </div>
+                <ResearchBox defaultTheme={true} />
             </div>
         </section>
     )

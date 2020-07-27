@@ -16,16 +16,16 @@
             }
         }
         &-body{
-          //height: 0;
-          //overflow: hidden;
-          //transition: height .4s ease;
+          height: 0;
+          overflow: hidden;
+          transition: height .4s ease;
         }
         &.is-active{
           margin-bottom: 50px;
             .accordion{
                 &-box-body{
                   //height: 308px;
-                  height: max-content;
+                  height: auto;
                 }
                 &-btn{
                   &:before{
