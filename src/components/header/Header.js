@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import { Link, NavLink } from 'react-router-dom';
-import logo from '../../assets/images/zerOtheorem_logo.svg';
+import logo from '../../assets/images/logo.png';
 import QuantNav from "../../pages/quant-lab/quant-nav/QuantNav";
 import './header.scss';
 
@@ -68,7 +68,7 @@ const Header = () => {
                                         </ul>
                                     </li>
                                     <li>
-                                        <NavLink to="/quant-lab" className="link">Quant Lab</NavLink>
+                                        <NavLink to="/quant-lab" className="link">Quantlab</NavLink>
                                         <QuantNav url="/quant-lab" />
                                     </li>
                                 </ul>
@@ -90,6 +90,15 @@ const Header = () => {
                                     </div>
                                 </div>
                             </div>
+                            {
+                                isInnerPage
+                                ?
+                                <div className="notification">
+                                    <div className="notification-icon" />
+                                    <span className="notification-count medium">9</span>
+                                </div>
+                                : null
+                            }
                         </div>
                     </div>
                 </div>

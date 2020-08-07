@@ -17,8 +17,8 @@ const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk
 
 WebFont.load({
     google: {
-        families: ['Spartan:100,400,500,700&display=swap', 'Rubik:300&display=swap']
-    }
+        families: ['Roboto:300', 'Raleway:400,500,600']
+    },
 });
 
 ReactDOM.render(

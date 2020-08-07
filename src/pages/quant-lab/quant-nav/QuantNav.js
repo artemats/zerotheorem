@@ -11,7 +11,10 @@ const QuantNav = ({ url, navData }) => {
                 navData.map((link, key) => {
                     return (
                         <li key={key}>
-                            <NavLink to={`${url}/${link.pathName}`} className="link">{link.title}</NavLink>
+                            <NavLink to={`${url}/${link.pathName}`} className="link">
+                                <span className="link-thumb"></span>
+                                <span className="link-title">{link.title}</span>
+                            </NavLink>
                         </li>
                     )
                 })

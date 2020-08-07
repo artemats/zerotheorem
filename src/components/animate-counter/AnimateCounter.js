@@ -48,7 +48,7 @@ class AnimateCounter extends Component{
             <div className="counter">
                 <div className="counter-body yellow">
                     <div className="counter-body-label medium">{currency}</div>
-                    <div className="counter-body-value thin">
+                    <div className="counter-body-value light">
                         <Odometer value={value} format="(.ddd).dd" duration={1000} />
                     </div>
                 </div>

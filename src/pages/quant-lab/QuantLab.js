@@ -1,67 +1,51 @@
 import React from 'react';
+import { connect } from 'react-redux';
 import { Switch, Route, useRouteMatch, Redirect } from 'react-router-dom';
 import './quant-lab.scss';
 import QuantNav from "./quant-nav/QuantNav";
 import BaseModels from "./base-models/BaseModels";
-import SatoshiStack from "./satoshi-stack/SatoshiStack";
 
-const QuantLab = () => {
+const QuantLab = ({ navData }) => {
 
     const { path, url } = useRouteMatch();
 
     return(
         <section className="section quant-lab-page">
-            <div className="quant-tags">
-                <div className="quant-tags-list">
-                    <p className="quant-tag" style={{ color: '#e26161' }}>SNP500/BTC [xx]</p>
-                    <p className="quant-tag" style={{ color: '#229b39' }}>DAX/BTC [xx]</p>
-                    <p className="quant-tag" style={{ color: '#e26161' }}>SNP500/BTC [xx]</p>
-                    <p className="quant-tag" style={{ color: '#229b39' }}>DAX/BTC [xx]</p>
-                    <p className="quant-tag" style={{ color: '#e26161' }}>SNP500/BTC [xx]</p>
-                    <p className="quant-tag" style={{ color: '#229b39' }}>DAX/BTC [xx]</p>
-                    <p className="quant-tag" style={{ color: '#e26161' }}>SNP500/BTC [xx]</p>
-                    <p className="quant-tag" style={{ color: '#229b39' }}>DAX/BTC [xx]</p>
-                </div>
-            </div>
             <div className="container">
                 <div className="row">
-                    <div className="col-lg-3">
+                    <div className="col-lg-2">
                         <div className="hero-nav">
-                            <div className="hero-title">
-                                <p className="subtitle">statistics</p>
-                                <h1 className="title-1">quant lab</h1>
-                            </div>
                             <QuantNav url={url} />
                         </div>
                     </div>
-                    <div className="col-12">
+                    <div className="col-xl-10">
+                        <div className="quant-header">
+
+                        </div>
                         <Switch>
                             <Route exact path={`${path}`}>
-                                <Redirect to={`${path}/base-models`} />
+                                <Redirect to={`${path}/${navData[0].pathName}`} />
                             </Route>
-                            <Route path={`${path}/satoshi-stack`}>
-                                <SatoshiStack />
+                            <Route path={`${path}/${navData[0].pathName}`}>
+                                <h2>Zt - forecast</h2>
                             </Route>
-                            <Route path={`${path}/base-models`}>
+                            <Route path={`${path}/${navData[1].pathName}`}>
                                 <BaseModels />
                             </Route>
-                            <Route path={`${path}/market-analysis`}>
-                                <h2>Market analysis</h2>
+                            <Route path={`${path}/${navData[2].pathName}`}>
+                                <h2>Stylized Attributes</h2>
                             </Route>
-                            <Route path={`${path}/macro-indicators`}>
-                                <h2>Macro indicators</h2>
+                            <Route path={`${path}/${navData[3].pathName}`}>
+                                <h2>Feature Exploration</h2>
                             </Route>
-                            <Route path={`${path}/evaluation`}>
-                                <h2>Evaluation</h2>
+                            <Route path={`${path}/${navData[4].pathName}`}>
+                                <h2>Market Metrics</h2>
                             </Route>
-                            <Route path={`${path}/library`}>
-                                <h2>Library</h2>
+                            <Route path={`${path}/${navData[5].pathName}`}>
+                                <h2>Global Correlations</h2>
                             </Route>
-                            <Route path={`${path}/data`}>
+                            <Route path={`${path}/${navData[6].pathName}`}>
                                 <h2>Data</h2>
-                            </Route>
-                            <Route path={`${path}/monthly-votes`}>
-                                <h2>Monthly votes</h2>
                             </Route>
                         </Switch>
                     </div>
@@ -72,4 +56,8 @@ const QuantLab = () => {
 
 };
 
-export default QuantLab;
+const mapStateToProps = ({ quantNavReducer }) => {
+  return quantNavReducer;
+};
+
+export default connect(mapStateToProps)(QuantLab);

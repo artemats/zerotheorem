@@ -1,21 +1,16 @@
-@font-face {
-  font-family: "Akrobat";
-  src: url("../../assets/fonts/Akrobatextrabold.woff") format("woff");
-}
-
 body{
   background-color: $black;
   color: $grey-light;
-  @extend .light;
+  @extend .regular;
   font-size: 14px;
 }
 
 h1{
   font-size: 42px;
-  @extend .bold;
   text-transform: uppercase;
   letter-spacing: .36em;
   line-height: 1.2em;
+  @extend .regular;
     @include d(1300){
       font-size: 40px;
     }
@@ -50,7 +45,6 @@ h1{
 
 h2{
   font-size: 32px;
-  @extend .bold;
   text-transform: uppercase;
   color: $yellow;
   letter-spacing: .36em;
@@ -88,7 +82,7 @@ p, li{
   font-size: inherit;
   font-family: inherit;
   line-height: 2.6em;
-  letter-spacing: .03em;
+  //letter-spacing: .03em;
 }
 
 #wrapper{
@@ -118,14 +112,14 @@ p, li{
 
 .link{
   font-size: 12px;
-  @extend .regular;
+  @extend .semi-bold;
   line-height: 2em;
   border: none;
   background-color: transparent;
   padding: 0;
-  color: $white;
+  color: #B2B3B5;
   position: relative;
-  letter-spacing: .03em;
+  //letter-spacing: .03em;
   transition: color .2s ease;
   white-space: nowrap;
     &-icon{
@@ -140,20 +134,25 @@ p, li{
       background-repeat: no-repeat;
       background-size: 20px;
       background-position: center;
-      &:before{
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        border-radius: 50%;
-        background-color: $yellow-button;
-        opacity: .3;
-      }
-      &.login{
-        background-image: url(../images/icons/login.svg);
-      }
+        &:before{
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          border-radius: 50%;
+          background-color: $yellow-button;
+          opacity: .3;
+        }
+        &.login{
+          background-image: url(../images/icons/login.svg);
+        }
+    }
+    &-thumb{
+      width: 40px;
+      height: 40px;
+      margin-right: 20px;
     }
     &.icon-after{
       padding-right: 42px;
@@ -414,6 +413,7 @@ p, li{
     &-timer{
       text-align: right;
       padding-bottom: 27px;
+      @extend .light;
         .subtitle{
           margin-bottom: 21px;
         }
@@ -486,7 +486,6 @@ p, li{
 .timer{
   color: #0f58b3;
   font-size: 36px;
-  @extend .bold;
     @include d(1400){
       font-size: 32px;
     }
@@ -887,7 +886,6 @@ p, li{
         }
     }
     &-value{
-      @extend .bold;
       font-size: 24px;
       color: $yellow;
       text-transform: uppercase;
@@ -1062,11 +1060,19 @@ p, li{
         }
     }
     &-nav{
-      position: absolute;
-      width: 100%;
-      z-index: 1;
+      position: relative;
+      height: 100%;
+      width: 204px;
+        &:before{
+          content: '';
+          position: absolute;
+          top: -150px;
+          right: 0;
+          bottom: 0;
+          width: 1px;
+          background-color: #4A4A4A;
+        }
         @include d(991){
-          position: relative;
           margin-bottom: 30px;
             .quant-nav{
               display: none;
@@ -1392,5 +1398,33 @@ p, li{
     }
     @include d(767){
       margin-right: 14px;
+    }
+}
+
+.notification{
+  position: relative;
+  width: 26px;
+  height: 26px;
+  margin: 0 8px 0 40px;
+    &-icon{
+      width: 100%;
+      height: 100%;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      background-image: url(../../assets/images/notification.svg);
+    }
+    &-count{
+      position: absolute;
+      bottom: -2px;
+      right: -9px;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background-color: #FFC600;
+      color: #121C21;
+      line-height: 16px;
+      text-align: center;
+      font-size: 12px;
     }
 }

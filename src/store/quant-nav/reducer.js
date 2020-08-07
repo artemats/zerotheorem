@@ -1,36 +1,32 @@
 const initialState = {
     navData: [
         {
-            title: 'Satoshi-Stack',
-            pathName: 'satoshi-stack'
+            title: 'Zt - Forecast',
+            pathName: 'zt-forecast',
         },
         {
-            title: 'Base models',
-            pathName: 'base-models'
+            title: 'Baseline Model',
+            pathName: 'baseline-model'
         },
         {
-            title: 'Market Analysis',
-            pathName: 'market-analysis'
+            title: 'Stylized Attributes',
+            pathName: 'stylized-attributes'
         },
         {
-            title: 'Macro-Indicators',
-            pathName: 'macro-indicators'
+            title: 'Feature Exploration',
+            pathName: 'feature-exploration'
         },
         {
-            title: 'Evaluation',
-            pathName: 'evaluation'
+            title: 'Market Metrics',
+            pathName: 'market-metrics'
         },
         {
-            title: 'Library',
-            pathName: 'library'
+            title: 'Global Correlations',
+            pathName: 'global-correlations'
         },
         {
             title: 'Data',
             pathName: 'data'
-        },
-        {
-            title: 'Monthly Votes',
-            pathName: 'monthly-votes'
         }
     ]
 };
