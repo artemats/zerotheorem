@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { NavLink } from "react-router-dom";
 import PropTypes from 'prop-types';
+import icon0 from '../../../assets/images/icons/forecast.svg';
 
 const QuantNav = ({ url, navData }) => {
 
@@ -12,7 +13,9 @@ const QuantNav = ({ url, navData }) => {
                     return (
                         <li key={key}>
                             <NavLink to={`${url}/${link.pathName}`} className="link">
-                                <span className="link-thumb"></span>
+                                <span className="link-thumb">
+                                    <img src={icon0} alt={key} />
+                                </span>
                                 <span className="link-title">{link.title}</span>
                             </NavLink>
                         </li>

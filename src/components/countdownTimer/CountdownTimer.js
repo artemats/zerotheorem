@@ -1,5 +1,6 @@
 import React from 'react';
-import Countdown from "react-countdown";
+import Countdown, { zeroPad } from "react-countdown";
+import './countdown-timer.scss';
 
 const CountdownTimer = () => {
 
@@ -9,9 +10,27 @@ const CountdownTimer = () => {
 
     };
 
+    const renderer = ({ days, hours, minutes, seconds }) => {
+        return (
+            <div className="timer-box light">
+                <div className="timer-box-item">{zeroPad(days)}<div className="timer-label semi-bold">Days</div></div>
+                <div className="timer-box-dots">:</div>
+                <div className="timer-box-item">{zeroPad(hours)}<div className="timer-label semi-bold">Hours</div></div>
+                <div className="timer-box-dots">:</div>
+                <div className="timer-box-item">{zeroPad(minutes)}<div className="timer-label semi-bold">Minutes</div></div>
+                <div className="timer-box-dots">:</div>
+                <div className="timer-box-item">{zeroPad(seconds)}<div className="timer-label semi-bold">Seconds</div></div>
+            </div>
+        );
+    };
+
     return (
         <div className="timer">
-            <Countdown date="2020-08-10T07:55:03" daysInHours={true} onComplete={onCompleteTimer} />
+            <p className="timer-title semi-bold">Time to Next Update</p>
+            <Countdown
+                date="2020-08-12T07:55:03"
+                renderer={renderer}
+                onComplete={onCompleteTimer} />
         </div>
     )
 

@@ -5,7 +5,6 @@ const ResidualPlot = lazy(() => import("../../../components/charts/residualPlot/
 const QqPlot = lazy(() => import("../../../components/charts/qqPlot/QqPlot"));
 const ProbabilityPlot = lazy(() => import("../../../components/charts/probabilityPlot/ProbabilityPlot"));
 const MetricBox = lazy(() => import("../../../components/charts/metric-box/MetricBox"));
-import CountdownTimer from "../../../components/countdownTimer/CountdownTimer";
 import LoadingIndicator from "../../../components/loadingIndicator/LoadingIndicator";
 import ErrorBoundry from "../../../components/error-boundry/ErrorBoundry";
 import './base-models.scss';
@@ -14,14 +13,6 @@ const BaseModels = () => {
 
     return(
         <Fragment>
-            <div className="row">
-                <div className="col-lg-12">
-                    <div className="dashboard-timer">
-                        <p className="subtitle">Time to next update</p>
-                        <CountdownTimer />
-                    </div>
-                </div>
-            </div>
             <div className="row">
                 <div className="col-12">
                     <div className="row">
@@ -61,7 +52,7 @@ const BaseModels = () => {
                                 </ErrorBoundry>
                             </div>
                         </div>
-                        <div className="col-xl-4">
+                        <div className="col-xl-6">
                             <div className="dashboard-box">
                                 <ErrorBoundry>
                                     <Suspense fallback={<LoadingIndicator />}>
@@ -70,7 +61,7 @@ const BaseModels = () => {
                                 </ErrorBoundry>
                             </div>
                         </div>
-                        <div className="col-xl-4">
+                        <div className="col-xl-6">
                             <div className="dashboard-box">
                                 <ErrorBoundry>
                                     <Suspense fallback={<LoadingIndicator />}>

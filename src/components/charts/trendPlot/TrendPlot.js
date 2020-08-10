@@ -54,7 +54,7 @@ class TrendPlot extends Component {
                         name: 'Rmse',
                         line: {
                             color: '#1f292a',
-                            width: 10
+                            width: 20
                         },
                         type: 'scatter',
                         mode: 'lines',
@@ -82,7 +82,7 @@ class TrendPlot extends Component {
                         mode: 'lines',
                     }
                 ]}
-                layout={viewSettings('', true, {l: 45, r: 30, t: 35, b: 30}, '%y/%d/%m', '', 0, '', 'Price USD').layout}
+                layout={viewSettings('Trend Plot', true, {l: 45, r: 30, t: 70, b: 30}, '%y/%d/%m', '', 0, '', 'Price USD').layout}
                 useResizeHandler={viewSettings().useResizeHandler}
                 style={viewSettings().style}
                 config={viewSettings().config}

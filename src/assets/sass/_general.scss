@@ -41,6 +41,11 @@ h1{
           font-size: 22px;
         }
     }
+    &.__dashboard{
+      text-transform: none;
+      font-size: 36px;
+      letter-spacing: 0;
+    }
 }
 
 h2{
@@ -153,6 +158,9 @@ p, li{
       width: 40px;
       height: 40px;
       margin-right: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
     &.icon-after{
       padding-right: 42px;
@@ -426,21 +434,11 @@ p, li{
     }
     &-box{
       position: relative;
-      border-radius: 5px;
-      height: 320px;
-      margin: 14px 0;
-        &:before{
-          content: '';
-          position: absolute;
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          background-color: $white;
-          opacity: .03;
-          border-radius: 5px;
-          pointer-events: none;
-        }
+      border-radius: 15px;
+      height: 400px;
+      padding: 20px 0;
+      margin-bottom: 28px;
+      border: 1px #4A4A4A solid;
         &.__lg{
           height: 504px;
         }
@@ -480,14 +478,6 @@ p, li{
             transform: scaleX(1);
           }
         }
-    }
-}
-
-.timer{
-  color: #0f58b3;
-  font-size: 36px;
-    @include d(1400){
-      font-size: 32px;
     }
 }
 
@@ -1066,7 +1056,7 @@ p, li{
         &:before{
           content: '';
           position: absolute;
-          top: -150px;
+          top: -125px;
           right: 0;
           bottom: 0;
           width: 1px;

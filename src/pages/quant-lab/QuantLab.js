@@ -4,6 +4,9 @@ import { Switch, Route, useRouteMatch, Redirect } from 'react-router-dom';
 import './quant-lab.scss';
 import QuantNav from "./quant-nav/QuantNav";
 import BaseModels from "./base-models/BaseModels";
+import CountdownTimer from "../../components/countdownTimer/CountdownTimer";
+import thumb from '../../assets/images/icons/forecast-2.svg';
+import dashPreview from '../../assets/images/quant-lab-abstract.png';
 
 const QuantLab = ({ navData }) => {
 
@@ -20,7 +23,16 @@ const QuantLab = ({ navData }) => {
                     </div>
                     <div className="col-xl-10">
                         <div className="quant-header">
-
+                            <div className="quant-header-title">
+                                <img src={thumb} alt="Zt - Forecast" className="quant-header-icon" />
+                                <h1 className="title-1 __dashboard">Zt - Forecast</h1>
+                            </div>
+                            <div className="quant-header-timer">
+                                <CountdownTimer />
+                            </div>
+                            <div className="quant-header-preview">
+                                <img src={dashPreview} alt="" />
+                            </div>
                         </div>
                         <Switch>
                             <Route exact path={`${path}`}>

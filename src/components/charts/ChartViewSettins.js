@@ -6,73 +6,76 @@ export const viewSettings = (chartTitle, showLegend, margin = initialMargin, xTi
             width: null,
             height: null,
             font: {
-                family: 'Rubik, sans-serif'
+                family: 'Raleway, sans-serif'
             },
             title: {
-                text: chartTitle,
-                x: 0.5,
-                y: 0.95,
+                text: '<b>' + chartTitle + '</b>',
+                x: 0.05,
+                y: 0.98,
                 font: {
-                    size: 14,
-                    color: '#ffffff',
-                    family: 'Rubik, sans-serif'
+                    size: 16,
+                    color: '#B2B3B5',
+                    family: 'Raleway, sans-serif',
+                    fontWeight: 600
                 },
             },
             autosize: true,
             showlegend: showLegend,
             legend: {
                 orientation: 'h',
-                x: 0,
-                y: 1.1,
+                x: -0.04,
+                y: 1.15,
                 font: {
-                    family: 'Rubik, sans-serif',
+                    family: 'Raleway, sans-serif',
                     size: 10,
-                    color: '#f1f1f1'
+                    color: '#B2B3B5'
                 }
             },
             margin: margin,
             xaxis: {
-                color: '#8f8f8f',
+                color: '#B2B3B5',
                 title: {
                     text: xTitle,
+                    standoff: 0,
                     font: {
-                        family: 'Rubik, sans-serif',
-                        size: 10,
-                        color: '#f1f1f1'
-                    },
-                    standoff: 0
+                        family: 'Raleway, sans-serif',
+                        size: 12,
+                        color: '#B2B3B5'
+                    }
                 },
                 tickfont: {
-                    size: 9,
-                    color: '#8f8f8f',
-                    family: 'Rubik, sans-serif'
+                    size: 10,
+                    color: '#B2B3B5',
+                    family: 'Raleway, sans-serif'
                 },
                 tickformat: xTickFormat,
-                showline: true,
-                linecolor: '#555456',
+                showline: false,
                 showgrid: true,
-                gridcolor: '#211e22',
+                zeroline: false,
+                linecolor: '#4A4A4A',
+                gridcolor: '#4A4A4A',
             },
             yaxis: {
-                color: '#8f8f8f',
+                color: '#B2B3B5',
                 title: {
                     text: yTitle,
-                    font: {
-                        family: 'Rubik, sans-serif',
-                        size: 10,
-                        color: '#f1f1f1'
-                    },
                     standoff: 0,
+                    font: {
+                        family: 'Raleway, sans-serif',
+                        size: 12,
+                        color: '#B2B3B5'
+                    }
                 },
                 tickfont: {
-                    size: 9,
-                    color: '#8f8f8f',
-                    family: 'Rubik, sans-serif'
+                    size: 10,
+                    color: '#B2B3B5',
+                    family: 'Raleway, sans-serif'
                 },
                 tickformat: yTickFormat,
-                showline: true,
-                linecolor: '#555456',
-                gridcolor: '#211e22'
+                showline: false,
+                zeroline: false,
+                linecolor: '#4A4A4A',
+                gridcolor: '#4A4A4A'
             },
             paper_bgcolor: 'transparent',
             plot_bgcolor: 'transparent',
