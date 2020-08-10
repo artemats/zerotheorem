@@ -4,14 +4,13 @@ import AnimateCounter from "../../components/animate-counter/AnimateCounter";
 import './home.scss';
 import infoBanner from '../../assets/images/home/wtf-banner.jpg';
 import aboutBanner from '../../assets/images/home/about-banner.jpg';
-import forecastBanner from '../../assets/images/home/forecast-banner.jpg';
 import quantBanner from '../../assets/images/home/quant-banner.jpg';
 import wtfSun from '../../assets/images/wtf-planet.svg';
 import aboutSun from '../../assets/images/about-planet.svg';
-import ResearchBox from "../../components/research-box/ResearchBox";
 import LoadingIndicator from "../../components/loadingIndicator/LoadingIndicator";
 import Planets from "../../components/planets/Planets";
 const HeroVideo = lazy(() => import("../../components/heroVideo/HeroVideo"));
+const ResearchBox = lazy(() => import("../../components/research-box/ResearchBox"));
 import heroCircle from '../../assets/images/hero-circle.svg';
 import HeroCharts from "../../components/heroChartsAnimate/HeroCharts";
 
@@ -91,7 +90,9 @@ const Home = () => {
                     </div>
                     <div className="row">
                         <div className="col-12">
-                            <ResearchBox defaultTheme={false} />
+                            <Suspense fallback={<LoadingIndicator />}>
+                                <ResearchBox defaultTheme={false} />
+                            </Suspense>
                         </div>
                     </div>
                 </div>
@@ -126,28 +127,6 @@ const Home = () => {
                     </div>
                 </div>
             </section>
-            {/*<section className="section forecast">*/}
-            {/*    <div className="abstract __5" />*/}
-            {/*    <div className="container">*/}
-            {/*        <div className="row">*/}
-            {/*            <div className="col-xl-7 offset-xl-1 order-md-2 col-lg-7 col-md-6">*/}
-            {/*                <div className="forecast-preview">*/}
-            {/*                    <img src={forecastBanner} alt="Forecast" />*/}
-            {/*                </div>*/}
-            {/*            </div>*/}
-            {/*            <div className="col-xl-3 offset-xl-1 order-md-1 col-lg-5 col-md-6">*/}
-            {/*                <div className="forecast-content">*/}
-            {/*                    <p className="title-1 with-border">Forecast</p>*/}
-            {/*                    <AnimateCounter value={1000} currency="$" />*/}
-            {/*                    <p>Depart do be so he enough talent. Sociable formerly six but handsome. Up do view time they shot. He concluded disposing provision</p>*/}
-            {/*                    <Link to="/forecast" className="btn">*/}
-            {/*                        <span className="btn-title">Go to forecast</span>*/}
-            {/*                    </Link>*/}
-            {/*                </div>*/}
-            {/*            </div>*/}
-            {/*        </div>*/}
-            {/*    </div>*/}
-            {/*</section>*/}
             <section className="section quant">
                 <div className="container">
                     <div className="row">
