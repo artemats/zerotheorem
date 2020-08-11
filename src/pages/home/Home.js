@@ -13,6 +13,7 @@ const HeroVideo = lazy(() => import("../../components/heroVideo/HeroVideo"));
 const ResearchBox = lazy(() => import("../../components/research-box/ResearchBox"));
 import heroCircle from '../../assets/images/hero-circle.svg';
 import HeroCharts from "../../components/heroChartsAnimate/HeroCharts";
+import ErrorBoundry from "../../components/error-boundry/ErrorBoundry";
 
 const Home = () => {
 
@@ -90,9 +91,11 @@ const Home = () => {
                     </div>
                     <div className="row">
                         <div className="col-12">
-                            <Suspense fallback={<LoadingIndicator />}>
-                                <ResearchBox defaultTheme={false} />
-                            </Suspense>
+                            <ErrorBoundry>
+                                <Suspense fallback={<LoadingIndicator />}>
+                                    <ResearchBox defaultTheme={false} />
+                                </Suspense>
+                            </ErrorBoundry>
                         </div>
                     </div>
                 </div>

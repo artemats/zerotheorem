@@ -4,9 +4,10 @@ import { Switch, Route, useRouteMatch, Redirect } from 'react-router-dom';
 import './quant-lab.scss';
 import QuantNav from "./quant-nav/QuantNav";
 import BaseModels from "./base-models/BaseModels";
-import CountdownTimer from "../../components/countdownTimer/CountdownTimer";
-import thumb from '../../assets/images/icons/forecast-2.svg';
-import dashPreview from '../../assets/images/quant-lab-abstract.png';
+import Forecast from "./forecast/Forecast";
+import QuantHeader from "./quant-header/QuantHeader";
+import StylizedAttributes from "./stylized-attributes/StylizedAttributes";
+import FeatureExploration from "./feature-exploration/FeatureExploration";
 
 const QuantLab = ({ navData }) => {
 
@@ -22,33 +23,22 @@ const QuantLab = ({ navData }) => {
                         </div>
                     </div>
                     <div className="col-xl-10">
-                        <div className="quant-header">
-                            <div className="quant-header-title">
-                                <img src={thumb} alt="Zt - Forecast" className="quant-header-icon" />
-                                <h1 className="title-1 __dashboard">Zt - Forecast</h1>
-                            </div>
-                            <div className="quant-header-timer">
-                                <CountdownTimer />
-                            </div>
-                            <div className="quant-header-preview">
-                                <img src={dashPreview} alt="" />
-                            </div>
-                        </div>
+                        <QuantHeader />
                         <Switch>
                             <Route exact path={`${path}`}>
                                 <Redirect to={`${path}/${navData[0].pathName}`} />
                             </Route>
                             <Route path={`${path}/${navData[0].pathName}`}>
-                                <h2>Zt - forecast</h2>
+                                <Forecast />
                             </Route>
                             <Route path={`${path}/${navData[1].pathName}`}>
                                 <BaseModels />
                             </Route>
                             <Route path={`${path}/${navData[2].pathName}`}>
-                                <h2>Stylized Attributes</h2>
+                                <StylizedAttributes />
                             </Route>
                             <Route path={`${path}/${navData[3].pathName}`}>
-                                <h2>Feature Exploration</h2>
+                                <FeatureExploration />
                             </Route>
                             <Route path={`${path}/${navData[4].pathName}`}>
                                 <h2>Market Metrics</h2>

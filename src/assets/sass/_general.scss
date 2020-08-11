@@ -161,6 +161,10 @@ p, li{
       display: flex;
       align-items: center;
       justify-content: center;
+      position: relative;
+        &-active{
+          display: none;
+        }
     }
     &.icon-after{
       padding-right: 42px;
@@ -170,12 +174,28 @@ p, li{
       }
     }
     @include hover(991){
-      &:hover{
-        color: $yellow;
-      }
+        &:hover{
+          color: $yellow;
+            .link-thumb{
+              &-active{
+                display: inline-block;
+              }
+              &-default{
+                display: none;
+              }
+            }
+        }
     }
     &.active{
       color: $yellow;
+        .link-thumb{
+          &-active{
+            display: inline-block;
+          }
+          &-default{
+            display: none;
+          }
+        }
     }
 }
 
@@ -443,9 +463,14 @@ p, li{
           height: 504px;
         }
         &.__stat{
-          @include d(991){
-            height: auto;
-          }
+          background: rgb(31,28,24);
+          background: -moz-linear-gradient(-45deg,  rgba(31,28,24,1) 0%, rgba(22,34,43,1) 100%);
+          background: -webkit-linear-gradient(-45deg,  rgba(31,28,24,1) 0%,rgba(22,34,43,1) 100%);
+          background: linear-gradient(135deg,  rgba(31,28,24,1) 0%,rgba(22,34,43,1) 100%);
+          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1f1c18', endColorstr='#16222b',GradientType=1 );
+            @include d(991){
+              height: auto;
+            }
         }
     }
 }
