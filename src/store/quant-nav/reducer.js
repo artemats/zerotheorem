@@ -70,7 +70,6 @@ export const quantNavReducer = (state = initialState, action) => {
     switch (action.type) {
 
         case LOAD_DASHBOARD_PAGE_SUCCESS:
-            console.log(action.payload);
             return {
                 ...state,
                 currentNavData: action.payload

@@ -31,7 +31,7 @@ class BaseModels extends Component {
                     <div className="col-12">
                         <div className="row">
                             <div className="col-xl-7">
-                                <div className="dashboard-box">
+                                <div className="dashboard-box __lg">
                                     <ErrorBoundry>
                                         <Suspense fallback={<LoadingIndicator />}>
                                             <TrendPlot />
@@ -58,7 +58,7 @@ class BaseModels extends Component {
                                 </div>
                             </div>
                             <div className="col-xl-5">
-                                <div className="dashboard-box">
+                                <div className="dashboard-box __mt">
                                     <ErrorBoundry>
                                         <Suspense fallback={<LoadingIndicator />}>
                                             <ResidualHistogram />
@@ -67,7 +67,7 @@ class BaseModels extends Component {
                                 </div>
                             </div>
                             <div className="col-xl-6">
-                                <div className="dashboard-box">
+                                <div className="dashboard-box __sm">
                                     <ErrorBoundry>
                                         <Suspense fallback={<LoadingIndicator />}>
                                             <ProbabilityPlot />
@@ -76,7 +76,7 @@ class BaseModels extends Component {
                                 </div>
                             </div>
                             <div className="col-xl-6">
-                                <div className="dashboard-box">
+                                <div className="dashboard-box __sm">
                                     <ErrorBoundry>
                                         <Suspense fallback={<LoadingIndicator />}>
                                             <QqPlot />

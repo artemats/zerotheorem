@@ -8,6 +8,9 @@ import Forecast from "./forecast/Forecast";
 import QuantHeader from "./quant-header/QuantHeader";
 import StylizedAttributes from "./stylized-attributes/StylizedAttributes";
 import FeatureExploration from "./feature-exploration/FeatureExploration";
+import MarketMetrics from "./market-metrics/MarketMetrics";
+import GlobalCorrelations from "./global-correlations/GlobalCorrelations";
+import Data from "./data/Data";
 
 const QuantLab = ({ navData }) => {
 
@@ -41,13 +44,13 @@ const QuantLab = ({ navData }) => {
                                 <FeatureExploration />
                             </Route>
                             <Route path={`${path}/${navData[4].pathName}`}>
-                                <h2>Market Metrics</h2>
+                                <MarketMetrics />
                             </Route>
                             <Route path={`${path}/${navData[5].pathName}`}>
-                                <h2>Global Correlations</h2>
+                                <GlobalCorrelations />
                             </Route>
                             <Route path={`${path}/${navData[6].pathName}`}>
-                                <h2>Data</h2>
+                                <Data />
                             </Route>
                         </Switch>
                     </div>

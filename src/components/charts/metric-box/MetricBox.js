@@ -30,13 +30,13 @@ class MetricBox extends Component {
     detectDataWithLocalStorage = (data) => {
         const localStorage = new LocalStorage();
         const localData = localStorage.getState('forecastPrice');
-        // console.log('local - ', localData, 'new - ', data);
+        console.log('local - ', localData, 'new - ', data);
         if(localData && localData < data) {
             this.setState({
                 forecastPriceDirection: 'up'
             });
         }
-        localStorage.setState('forecastPrice', data);
+        // localStorage.setState('forecastPrice', data);
     };
 
     onForecastDirection = direction => {
@@ -55,49 +55,52 @@ class MetricBox extends Component {
 
         return (
             <div className="stat">
-                <div className="stat-list __middle">
-                    <div className="stat-list-item">
-                        <div className="stat-row">
-                            <p className="stat-label">RMSE:</p>
-                            <div className="stat-value">{data.rmse}</div>
+                <p className="dashboard-box-title">Metric box</p>
+                <div className="stat-body">
+                    <div className="stat-list __middle">
+                        <div className="stat-list-item">
+                            <div className="stat-row">
+                                <p className="stat-label">RMSE:</p>
+                                <div className="stat-value">{data.rmse}</div>
+                            </div>
+                        </div>
+                        <div className="stat-list-item">
+                            <div className="stat-row">
+                                <p className="stat-label">MAPPE:</p>
+                                <div className="stat-value">{data.mape}</div>
+                            </div>
+                        </div>
+                        <div className="stat-list-item">
+                            <div className="stat-row">
+                                <p className="stat-label">MADS:</p>
+                                <div className="stat-value">{data.mads}</div>
+                            </div>
+                        </div>
+                        <div className="stat-list-item">
+                            <div className="stat-row">
+                                <p className="stat-label">Accuary:</p>
+                                <div className="stat-value">XX</div>
+                            </div>
+                        </div>
+                        <div className="stat-list-item full-width">
+                            <div className="stat-row">
+                                <p className="stat-label">Stationary:</p>
+                                <div className="stat-value">{data.stationary}</div>
+                            </div>
                         </div>
                     </div>
-                    <div className="stat-list-item">
-                        <div className="stat-row">
-                            <p className="stat-label">MAPPE:</p>
-                            <div className="stat-value">{data.mape}</div>
+                    <hr className="hr __vertical" />
+                    <div className="stat-list">
+                        <div className="stat-list-item">
+                            <p className="stat-label __default">Forecasted Price:</p>
+                            <p className="stat-value">$ {data.predicted_price.toFixed(2)}
+                                <span className={`stat-value-arrow __${forecastPriceDirection}`} />
+                            </p>
                         </div>
-                    </div>
-                    <div className="stat-list-item">
-                        <div className="stat-row">
-                            <p className="stat-label">MADS:</p>
-                            <div className="stat-value">{data.mads}</div>
+                        <div className="stat-list-item">
+                            <p className="stat-label __default">Forecasted Direction:</p>
+                            {this.onForecastDirection(data.predicted_direction)}
                         </div>
-                    </div>
-                    <div className="stat-list-item">
-                        <div className="stat-row">
-                            <p className="stat-label">Accuary:</p>
-                            <div className="stat-value">XX</div>
-                        </div>
-                    </div>
-                    <div className="stat-list-item full-width">
-                        <div className="stat-row">
-                            <p className="stat-label">Stationary:</p>
-                            <div className="stat-value">{data.stationary}</div>
-                        </div>
-                    </div>
-                </div>
-                <hr className="hr" />
-                <div className="stat-list">
-                    <div className="stat-list-item">
-                        <p className="stat-label">Forecasted Price:</p>
-                        <p className="stat-value">$ {data.predicted_price.toFixed(2)}
-                            <span className={`stat-value-arrow __${forecastPriceDirection}`} />
-                        </p>
-                    </div>
-                    <div className="stat-list-item">
-                        <p className="stat-label">Forecasted Direction:</p>
-                        {this.onForecastDirection(data.predicted_direction)}
                     </div>
                 </div>
             </div>
