@@ -12,9 +12,18 @@
       width: 241px;
       position: relative;
       z-index: 1;
-        //@media only screen and (max-width: 1200px) {
-        //  width: 200px;
-        //}
+        @media only screen and (max-width: 1400px) {
+          width: 222px;
+        }
+        @media only screen and (max-width: 1200px) {
+          width: 254px;
+        }
+        @media only screen and (max-width: 991px) {
+          width: 240px;
+        }
+        @media only screen and (max-width: 480px) {
+          width: 200px;
+        }
     }
     &-nav{
       display: flex;
@@ -75,20 +84,33 @@
               //}
           }
         }
-        @media only screen and (max-width: 991px) {
-          .quant-nav{
-            display: block;
-            padding: 0 15px;
-            margin-top: -15px;
-              .link{
-                font-size: 12px;
-                opacity: .7;
-              }
-              li{
-                padding-bottom: 0;
-              }
+          @media only screen and (max-width: 1400px) {
+            &:before{
+              left: 208px;
+            }
           }
-        }
+          @media only screen and (max-width: 1200px) {
+            &:before{
+              left: 238px;
+            }
+          }
+          @media only screen and (max-width: 991px) {
+            &:before{
+              display: none;
+            }
+            .quant-nav{
+              display: block;
+              padding: 0 15px;
+              margin-top: -15px;
+                .link{
+                  font-size: 12px;
+                  opacity: .7;
+                }
+                li{
+                  padding-bottom: 0;
+                }
+            }
+          }
     }
     @media only screen and (max-width: 1440px) {
       padding: 55px 0 20px;
@@ -107,7 +129,7 @@
         flex-direction: column;
         background-color: #00030a;
         align-items: flex-start;
-        padding: 100px 28px;
+        padding: 130px 28px 100px;
         opacity: 0;
         pointer-events: none;
         z-index: -9;
@@ -143,7 +165,7 @@
     }
     @media only screen and (max-width: 767px) {
       .nav{
-        padding: 100px 14px;
+        padding: 130px 14px 100px;
       }
     }
     @media only screen and (max-width: 480px) {

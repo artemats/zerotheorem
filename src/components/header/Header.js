@@ -77,6 +77,15 @@ const Header = () => {
                                 {/*    <span className="link-icon login" />*/}
                                 {/*</a>*/}
                             </nav>
+                            {
+                                isInnerPage
+                                    ?
+                                    <div className="notification">
+                                        <div className="notification-icon" />
+                                        <span className="notification-count medium">9</span>
+                                    </div>
+                                    : null
+                            }
                             <div className="header-nav-mobile">
                                 {/*<a href="#" className="link icon-after">*/}
                                 {/*    Login*/}
@@ -90,15 +99,6 @@ const Header = () => {
                                     </div>
                                 </div>
                             </div>
-                            {
-                                isInnerPage
-                                ?
-                                <div className="notification">
-                                    <div className="notification-icon" />
-                                    <span className="notification-count medium">9</span>
-                                </div>
-                                : null
-                            }
                         </div>
                     </div>
                 </div>

@@ -45,6 +45,9 @@ h1{
       text-transform: none;
       font-size: 36px;
       letter-spacing: 0;
+        @include d(480){
+          font-size: 24px;
+        }
     }
 }
 
@@ -163,6 +166,9 @@ p, li{
       justify-content: center;
       position: relative;
         &-active{
+          display: none;
+        }
+        @include d(991){
           display: none;
         }
     }
@@ -466,12 +472,21 @@ p, li{
         }
         &.__lg{
           height: 476px;
+            @include d(1200){
+              height: 376px;
+            }
         }
         &.__sm{
           height: 400px;
+            @include d(1200){
+              height: 376px;
+            }
         }
         &.__mt{
           margin-top: -98px;
+            @include d(1200){
+              margin-top: 0;
+            }
         }
         &.__stat{
           border: none;
@@ -861,6 +876,9 @@ p, li{
       display: flex;
       align-items: flex-start;
       padding: 7px 0;
+        @include d(575){
+          flex-direction: column;
+        }
     }
     &-list{
       display: flex;
@@ -869,12 +887,18 @@ p, li{
       padding-left: 25px;
         &-item{
           width: 100%;
-          margin-bottom: 30px;
             &.full-width{
               flex: 1;
             }
+            @include m(576){
+              margin-bottom: 30px;
+            }
             @include d(575){
+              width: 50%;
+            }
+            @include d(480){
               width: 100%;
+              margin-bottom: 30px;
             }
         }
         &.__middle{
@@ -887,9 +911,17 @@ p, li{
                   width: 100%;
                 }
             }
+            @include d(575){
+              padding: 15px 0;
+              max-width: 100%;
+            }
         }
         @include d(575){
-          flex-direction: column;
+          width: 100%;
+          padding: 35px 0 10px;
+        }
+        @include d(480){
+          padding: 35px 0 0;
         }
     }
     &-row{
@@ -934,7 +966,6 @@ p, li{
       position: relative;
       display: flex;
       align-items: center;
-      justify-content: center;
       white-space: nowrap;
         &-arrow{
           position: relative;
@@ -963,6 +994,9 @@ p, li{
               }
             }
         }
+        @include m(576){
+          justify-content: center;
+        }
         @include d(1300){
           font-size: 22px;
         }
@@ -973,9 +1007,11 @@ p, li{
       @extend .semi-bold;
       letter-spacing: .01em;
       margin-bottom: 15px;
-      text-align: center;
         &.__default{
           font-size: 12px;
+        }
+        @include m(576){
+          text-align: center;
         }
         @include d(1300){
           font-size: 14px;
@@ -986,6 +1022,12 @@ p, li{
     }
     @include d(1440){
       //padding: 53px 25px;
+    }
+    .hr.__vertical{
+      @include d(575){
+        width: 100%;
+        height: 2px;
+      }
     }
 }
 
@@ -1123,8 +1165,17 @@ p, li{
           width: 1px;
           background-color: #4A4A4A;
         }
+        @include d(1400){
+          width: 180px;
+        }
+        @include d(1200){
+          width: 214px;
+        }
         @include d(991){
-          margin-bottom: 30px;
+          height: auto;
+            &:before{
+              display: none;
+            }
             .quant-nav{
               display: none;
             }

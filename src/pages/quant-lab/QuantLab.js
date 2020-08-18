@@ -20,12 +20,12 @@ const QuantLab = ({ navData }) => {
         <section className="section quant-lab-page">
             <div className="container">
                 <div className="row">
-                    <div className="col-lg-2">
+                    <div className="col-xl-2 col-lg-3">
                         <div className="hero-nav">
                             <QuantNav url={url} />
                         </div>
                     </div>
-                    <div className="col-xl-10">
+                    <div className="col-xl-10 col-lg-9">
                         <QuantHeader />
                         <Switch>
                             <Route exact path={`${path}`}>
