@@ -15,11 +15,11 @@ import WebFont from 'webfontloader';
 const api = new ApiClient();
 const store = createStore(rootReducer, composeWithDevTools(applyMiddleware(thunk)));
 
-WebFont.load({
-    google: {
-        families: ['Roboto:300', 'Raleway:400,500,600']
-    },
-});
+// WebFont.load({
+//     google: {
+//         families: ['Roboto:300', 'Raleway:400,500,600']
+//     },
+// });
 
 ReactDOM.render(
     <Provider store={store}>
