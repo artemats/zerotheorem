@@ -2,9 +2,9 @@ const initialState = {
     data: [
         {
             preview: [
-                'https://images.pexels.com/photos/315788/pexels-photo-315788.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-                'https://images.pexels.com/photos/843700/pexels-photo-843700.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-                'https://images.pexels.com/photos/1263324/pexels-photo-1263324.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
+                'https://images.unsplash.com/photo-1518546305927-5a555bb7020d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
+                'https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
+                'https://images.unsplash.com/flagged/photo-1554386690-8627e1041100?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60'
             ],
             title: 'A Gated Recurrent Unit Approach to Bitcoin Price P-1',
             subtitle: 'Literature review',
@@ -12,9 +12,9 @@ const initialState = {
         },
         {
             preview: [
-                'https://images.pexels.com/photos/1097946/pexels-photo-1097946.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-                'https://images.pexels.com/photos/1099339/pexels-photo-1099339.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-                'https://images.pexels.com/photos/844125/pexels-photo-844125.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
+                'https://images.unsplash.com/photo-1543699539-33a389c5dcfe?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
+                'https://images.unsplash.com/photo-1591994843349-f415893b3a6b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
+                'https://images.unsplash.com/flagged/photo-1554386690-ddcab0b98d1d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60'
             ],
             title: 'Predicting Bitcoin Price Direction Exchange Rate U',
             subtitle: 'Literature review',
@@ -22,9 +22,9 @@ const initialState = {
         },
         {
             preview: [
-                'https://images.pexels.com/photos/844127/pexels-photo-844127.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-                'https://images.pexels.com/photos/3631991/pexels-photo-3631991.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-                'https://images.pexels.com/photos/1099296/pexels-photo-1099296.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
+                'https://images.unsplash.com/photo-1550565227-a6144af19c78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
+                'https://images.unsplash.com/photo-1563986768711-b3bde3dc821e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
+                'https://images.unsplash.com/photo-1550565118-3a14e8d0386f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60'
             ],
             title: 'The Economics of Bitcoin Price Formation',
             subtitle: 'Literature review',
@@ -32,9 +32,9 @@ const initialState = {
         },
         {
             preview: [
-                'https://images.pexels.com/photos/315788/pexels-photo-315788.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-                'https://images.pexels.com/photos/843700/pexels-photo-843700.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-                'https://images.pexels.com/photos/1263324/pexels-photo-1263324.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
+                'https://images.unsplash.com/photo-1550565227-a6144af19c78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
+                'https://images.unsplash.com/photo-1563986768711-b3bde3dc821e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
+                'https://images.unsplash.com/photo-1550565118-3a14e8d0386f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60'
             ],
             title: 'A Gated Recurrent Unit Approach to Bitcoin Price P-1',
             subtitle: 'Literature review',
@@ -42,9 +42,9 @@ const initialState = {
         },
         {
             preview: [
-                'https://images.pexels.com/photos/1097946/pexels-photo-1097946.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-                'https://images.pexels.com/photos/1099339/pexels-photo-1099339.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-                'https://images.pexels.com/photos/844125/pexels-photo-844125.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
+                'https://images.unsplash.com/photo-1550565227-a6144af19c78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
+                'https://images.unsplash.com/photo-1563986768711-b3bde3dc821e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
+                'https://images.unsplash.com/photo-1550565118-3a14e8d0386f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60'
             ],
             title: 'Predicting Bitcoin Price Direction Exchange Rate U',
             subtitle: 'Literature review',
@@ -52,9 +52,9 @@ const initialState = {
         },
         {
             preview: [
-                'https://images.pexels.com/photos/844127/pexels-photo-844127.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-                'https://images.pexels.com/photos/3631991/pexels-photo-3631991.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-                'https://images.pexels.com/photos/1099296/pexels-photo-1099296.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
+                'https://images.unsplash.com/photo-1550565227-a6144af19c78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
+                'https://images.unsplash.com/photo-1563986768711-b3bde3dc821e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
+                'https://images.unsplash.com/photo-1550565118-3a14e8d0386f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60'
             ],
             title: 'The Economics of Bitcoin Price Formation',
             subtitle: 'Literature review',
@@ -62,9 +62,9 @@ const initialState = {
         },
         {
             preview: [
-                'https://images.pexels.com/photos/315788/pexels-photo-315788.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-                'https://images.pexels.com/photos/843700/pexels-photo-843700.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-                'https://images.pexels.com/photos/1263324/pexels-photo-1263324.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
+                'https://images.unsplash.com/photo-1550565227-a6144af19c78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
+                'https://images.unsplash.com/photo-1563986768711-b3bde3dc821e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
+                'https://images.unsplash.com/photo-1550565118-3a14e8d0386f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60'
             ],
             title: 'A Gated Recurrent Unit Approach to Bitcoin Price P-1',
             subtitle: 'Literature review',
@@ -72,9 +72,9 @@ const initialState = {
         },
         {
             preview: [
-                'https://images.pexels.com/photos/1097946/pexels-photo-1097946.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-                'https://images.pexels.com/photos/1099339/pexels-photo-1099339.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-                'https://images.pexels.com/photos/844125/pexels-photo-844125.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
+                'https://images.unsplash.com/photo-1550565227-a6144af19c78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
+                'https://images.unsplash.com/photo-1563986768711-b3bde3dc821e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
+                'https://images.unsplash.com/photo-1550565118-3a14e8d0386f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60'
             ],
             title: 'Predicting Bitcoin Price Direction Exchange Rate U',
             subtitle: 'Literature review',
@@ -82,9 +82,9 @@ const initialState = {
         },
         {
             preview: [
-                'https://images.pexels.com/photos/844127/pexels-photo-844127.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-                'https://images.pexels.com/photos/3631991/pexels-photo-3631991.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-                'https://images.pexels.com/photos/1099296/pexels-photo-1099296.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
+                'https://images.unsplash.com/photo-1550565227-a6144af19c78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
+                'https://images.unsplash.com/photo-1563986768711-b3bde3dc821e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
+                'https://images.unsplash.com/photo-1550565118-3a14e8d0386f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60'
             ],
             title: 'The Economics of Bitcoin Price Formation',
             subtitle: 'Literature review',
@@ -92,9 +92,9 @@ const initialState = {
         },
         {
             preview: [
-                'https://images.pexels.com/photos/315788/pexels-photo-315788.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-                'https://images.pexels.com/photos/843700/pexels-photo-843700.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-                'https://images.pexels.com/photos/1263324/pexels-photo-1263324.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
+                'https://images.unsplash.com/photo-1550565227-a6144af19c78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
+                'https://images.unsplash.com/photo-1563986768711-b3bde3dc821e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
+                'https://images.unsplash.com/photo-1550565118-3a14e8d0386f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60'
             ],
             title: 'A Gated Recurrent Unit Approach to Bitcoin Price P-1',
             subtitle: 'Literature review',
@@ -102,9 +102,9 @@ const initialState = {
         },
         {
             preview: [
-                'https://images.pexels.com/photos/1097946/pexels-photo-1097946.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-                'https://images.pexels.com/photos/1099339/pexels-photo-1099339.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-                'https://images.pexels.com/photos/844125/pexels-photo-844125.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
+                'https://images.unsplash.com/photo-1550565227-a6144af19c78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
+                'https://images.unsplash.com/photo-1563986768711-b3bde3dc821e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
+                'https://images.unsplash.com/photo-1550565118-3a14e8d0386f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60'
             ],
             title: 'Predicting Bitcoin Price Direction Exchange Rate U',
             subtitle: 'Literature review',
@@ -112,9 +112,9 @@ const initialState = {
         },
         {
             preview: [
-                'https://images.pexels.com/photos/844127/pexels-photo-844127.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-                'https://images.pexels.com/photos/3631991/pexels-photo-3631991.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-                'https://images.pexels.com/photos/1099296/pexels-photo-1099296.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
+                'https://images.unsplash.com/photo-1550565227-a6144af19c78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
+                'https://images.unsplash.com/photo-1563986768711-b3bde3dc821e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
+                'https://images.unsplash.com/photo-1550565118-3a14e8d0386f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60'
             ],
             title: 'The Economics of Bitcoin Price Formation',
             subtitle: 'Literature review',
@@ -122,9 +122,9 @@ const initialState = {
         },
         {
             preview: [
-                'https://images.pexels.com/photos/315788/pexels-photo-315788.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-                'https://images.pexels.com/photos/843700/pexels-photo-843700.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-                'https://images.pexels.com/photos/1263324/pexels-photo-1263324.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
+                'https://images.unsplash.com/photo-1550565227-a6144af19c78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
+                'https://images.unsplash.com/photo-1563986768711-b3bde3dc821e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
+                'https://images.unsplash.com/photo-1550565118-3a14e8d0386f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60'
             ],
             title: 'A Gated Recurrent Unit Approach to Bitcoin Price P-1',
             subtitle: 'Literature review',
@@ -132,9 +132,9 @@ const initialState = {
         },
         {
             preview: [
-                'https://images.pexels.com/photos/1097946/pexels-photo-1097946.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-                'https://images.pexels.com/photos/1099339/pexels-photo-1099339.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-                'https://images.pexels.com/photos/844125/pexels-photo-844125.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
+                'https://images.unsplash.com/photo-1550565227-a6144af19c78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
+                'https://images.unsplash.com/photo-1563986768711-b3bde3dc821e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
+                'https://images.unsplash.com/photo-1550565118-3a14e8d0386f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60'
             ],
             title: 'Predicting Bitcoin Price Direction Exchange Rate U',
             subtitle: 'Literature review',
@@ -142,9 +142,9 @@ const initialState = {
         },
         {
             preview: [
-                'https://images.pexels.com/photos/844127/pexels-photo-844127.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-                'https://images.pexels.com/photos/3631991/pexels-photo-3631991.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-                'https://images.pexels.com/photos/1099296/pexels-photo-1099296.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
+                'https://images.unsplash.com/photo-1550565227-a6144af19c78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
+                'https://images.unsplash.com/photo-1563986768711-b3bde3dc821e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
+                'https://images.unsplash.com/photo-1550565118-3a14e8d0386f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60'
             ],
             title: 'The Economics of Bitcoin Price Formation',
             subtitle: 'Literature review',
@@ -152,9 +152,9 @@ const initialState = {
         },
         {
             preview: [
-                'https://images.pexels.com/photos/315788/pexels-photo-315788.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-                'https://images.pexels.com/photos/843700/pexels-photo-843700.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-                'https://images.pexels.com/photos/1263324/pexels-photo-1263324.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
+                'https://images.unsplash.com/photo-1550565227-a6144af19c78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
+                'https://images.unsplash.com/photo-1563986768711-b3bde3dc821e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
+                'https://images.unsplash.com/photo-1550565118-3a14e8d0386f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60'
             ],
             title: 'A Gated Recurrent Unit Approach to Bitcoin Price P-1',
             subtitle: 'Literature review',
@@ -162,9 +162,9 @@ const initialState = {
         },
         {
             preview: [
-                'https://images.pexels.com/photos/1097946/pexels-photo-1097946.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-                'https://images.pexels.com/photos/1099339/pexels-photo-1099339.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-                'https://images.pexels.com/photos/844125/pexels-photo-844125.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
+                'https://images.unsplash.com/photo-1550565227-a6144af19c78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
+                'https://images.unsplash.com/photo-1563986768711-b3bde3dc821e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
+                'https://images.unsplash.com/photo-1550565118-3a14e8d0386f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60'
             ],
             title: 'Predicting Bitcoin Price Direction Exchange Rate U',
             subtitle: 'Literature review',
@@ -172,9 +172,9 @@ const initialState = {
         },
         {
             preview: [
-                'https://images.pexels.com/photos/844127/pexels-photo-844127.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-                'https://images.pexels.com/photos/3631991/pexels-photo-3631991.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-                'https://images.pexels.com/photos/1099296/pexels-photo-1099296.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500'
+                'https://images.unsplash.com/photo-1550565227-a6144af19c78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
+                'https://images.unsplash.com/photo-1563986768711-b3bde3dc821e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
+                'https://images.unsplash.com/photo-1550565118-3a14e8d0386f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60'
             ],
             title: 'The Economics of Bitcoin Price Formation',
             subtitle: 'Literature review',
