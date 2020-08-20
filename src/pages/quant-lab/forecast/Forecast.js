@@ -40,47 +40,47 @@ class Forecast extends Component {
                         </div>
                         <div className="col-xl-5">
                             <div className="dashboard-box">
-                                <ErrorBoundry>
-                                    <Suspense fallback={<LoadingIndicator />}>
-                                        <ResidualPlot />
-                                    </Suspense>
-                                </ErrorBoundry>
+                                {/*<ErrorBoundry>*/}
+                                {/*    <Suspense fallback={<LoadingIndicator />}>*/}
+                                {/*        <ResidualPlot />*/}
+                                {/*    </Suspense>*/}
+                                {/*</ErrorBoundry>*/}
                             </div>
                         </div>
                         <div className="col-xl-7">
                             <div className="dashboard-box __stat">
-                                <ErrorBoundry>
-                                    <Suspense fallback={<LoadingIndicator />}>
-                                        <MetricBox />
-                                    </Suspense>
-                                </ErrorBoundry>
+                                {/*<ErrorBoundry>*/}
+                                {/*    <Suspense fallback={<LoadingIndicator />}>*/}
+                                {/*        <MetricBox />*/}
+                                {/*    </Suspense>*/}
+                                {/*</ErrorBoundry>*/}
                             </div>
                         </div>
                         <div className="col-xl-5">
                             <div className="dashboard-box __mt">
-                                <ErrorBoundry>
-                                    <Suspense fallback={<LoadingIndicator />}>
-                                        <ResidualHistogram />
-                                    </Suspense>
-                                </ErrorBoundry>
+                                {/*<ErrorBoundry>*/}
+                                {/*    <Suspense fallback={<LoadingIndicator />}>*/}
+                                {/*        <ResidualHistogram />*/}
+                                {/*    </Suspense>*/}
+                                {/*</ErrorBoundry>*/}
                             </div>
                         </div>
                         <div className="col-xl-6">
                             <div className="dashboard-box __sm">
-                                <ErrorBoundry>
-                                    <Suspense fallback={<LoadingIndicator />}>
-                                        <QqPlot />
-                                    </Suspense>
-                                </ErrorBoundry>
+                                {/*<ErrorBoundry>*/}
+                                {/*    <Suspense fallback={<LoadingIndicator />}>*/}
+                                {/*        <QqPlot />*/}
+                                {/*    </Suspense>*/}
+                                {/*</ErrorBoundry>*/}
                             </div>
                         </div>
                         <div className="col-xl-6">
                             <div className="dashboard-box __sm">
-                                <ErrorBoundry>
-                                    <Suspense fallback={<LoadingIndicator />}>
-                                        <ProbabilityPlot />
-                                    </Suspense>
-                                </ErrorBoundry>
+                                {/*<ErrorBoundry>*/}
+                                {/*    <Suspense fallback={<LoadingIndicator />}>*/}
+                                {/*        <ProbabilityPlot />*/}
+                                {/*    </Suspense>*/}
+                                {/*</ErrorBoundry>*/}
                             </div>
                         </div>
                     </div>
