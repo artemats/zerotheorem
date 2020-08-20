@@ -257,6 +257,36 @@ p, li{
           max-width: 240px;
         }
     }
+    &.sm{
+      height: 40px;
+      line-height: 38px;
+      background-color: $yellow;
+      border-color: $yellow;
+      border-radius: 5px;
+      font-size: 18px;
+      @extend .medium;
+      color: #121C21;
+      transition: background-color .2s ease;
+        &:before{
+          display: none;
+        }
+        @include hover(991){
+          &:hover{
+            background-color: #CFB024;
+          }
+        }
+        &.default{
+          border: none;
+          background-color: transparent;
+          color: $grey-light;
+          transition: color .2s ease;
+            @include hover(991){
+              &:hover{
+                color: $white;
+              }
+            }
+        }
+    }
     @include hover(991){
       &:hover{
         &:before{
@@ -462,13 +492,21 @@ p, li{
       position: relative;
       border-radius: 15px;
       height: 376px;
-      padding: 20px 0;
+      padding: 37px 0 10px;
       margin-bottom: 28px;
       border: 1px #4A4A4A solid;
         &-title{
           @extend .semi-bold;
           font-size: 16px;
           line-height: 1.8em;
+        }
+        &-filter{
+          position: absolute;
+          top: 30px;
+          right: 27px;
+            @include d(575){
+              top: 15px;
+            }
         }
         &.__lg{
           height: 476px;
@@ -887,9 +925,6 @@ p, li{
       padding-left: 25px;
         &-item{
           width: 100%;
-            &.full-width{
-              flex: 1;
-            }
             @include m(576){
               margin-bottom: 30px;
             }
@@ -907,6 +942,10 @@ p, li{
             .stat-list-item{
               width: 50%;
               margin-bottom: 20px;
+                &.full-width{
+                  width: 100%;
+                  //flex: 1;
+                }
                 @include d(575){
                   width: 100%;
                 }
@@ -1251,6 +1290,12 @@ p, li{
       position: relative;
       width: 100%;
       margin: 25px 0 10px;
+        &-title{
+          font-size: 12px;
+          @extend .semi-bold;
+          display: block;
+          margin-bottom: 10px;
+        }
         &:before{
           content: '';
           position: absolute;
@@ -1291,6 +1336,7 @@ p, li{
       padding-bottom: 20px;
       letter-spacing: .03em;
       max-width: 460px;
+      transition: color .2s ease;
         @include d(480){
           padding-bottom: 5px;
         }
@@ -1318,6 +1364,16 @@ p, li{
       opacity: 0;
       pointer-events: none;
       transition: opacity .2s ease;
+    }
+    &.sm{
+      height: 40px;
+      border: 1px #4A4A4A solid;
+      border-radius: 5px;
+      background-color: transparent;
+      font-size: 12px;
+      @extend .semi-bold;
+      color: $grey-light;
+      padding: 0 50px 0 20px;
     }
     @include d(575){
       height: 58px;

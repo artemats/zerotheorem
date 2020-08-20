@@ -37,7 +37,7 @@ class ResidualHistogram extends Component {
                         }
                     }
                 ]}
-                layout={viewSettings('Residual Histogram', false, {l: 30, r: 30, t: 45, b: 30} ).layout}
+                layout={viewSettings('Residual Histogram', false, {l: 30, r: 30, t: 95, b: 30} ).layout}
                 useResizeHandler={viewSettings().useResizeHandler}
                 style={viewSettings().style}
                 config={viewSettings().config}

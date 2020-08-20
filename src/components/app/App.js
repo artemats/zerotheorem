@@ -3,10 +3,8 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Header from "../header/Header";
 import Home from "../../pages/home/Home";
 import About from "../../pages/about/About";
-import Wtf from "../../pages/wtf/Wtf";
 import Resources from "../../pages/resources/Resources";
 import Forecast from "../../pages/quant-lab/QuantLab";
-import Footer from "../footer/Footer";
 import Faq from "../../pages/faq/Faq";
 import ScrollToTop from "../scroll-to-top/ScrollToTop";
 import PageNotFound from "../../pages/404/404";
@@ -15,6 +13,7 @@ import LiteratureReview from "../../pages/literature-review/LiteratureReview";
 import Contact from "../../pages/contact/Contact";
 import Modal from "../modal/Modal";
 import BackTest from "../../pages/back-test/BackTest";
+import Footer from "../footer/Footer";
 
 class App extends Component {
 
@@ -28,37 +27,44 @@ class App extends Component {
                     <Switch>
                         <Route exact path="/">
                             <Home />
+                            <Footer />
                         </Route>
                         <Route path="/about">
                             <About />
+                            <Footer />
                         </Route>
                         <Route path="/resources">
                             <Resources />
+                            <Footer />
                         </Route>
                         <Route path="/quant-lab">
                             <Forecast />
                         </Route>
                         <Route path="/faq">
                             <Faq />
+                            <Footer />
                         </Route>
                         <Route exact path="/research">
                             <Research />
+                            <Footer />
                         </Route>
                         <Route path="/research/:id">
                             <LiteratureReview />
+                            <Footer />
                         </Route>
                         <Route path="/contact">
                             <Contact />
+                            <Footer />
                         </Route>
                         <Route path="/back-test">
                             <BackTest />
+                            <Footer />
                         </Route>
                         <Route exact path="*">
                             <PageNotFound />
                         </Route>
                     </Switch>
                     <Modal />
-                    <Footer />
                 </Router>
             </div>
         )

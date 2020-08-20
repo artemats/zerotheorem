@@ -27,7 +27,7 @@ export const viewSettings = (chartTitle, showLegend, margin = initialMargin, xTi
                 y: 1.15,
                 font: {
                     family: 'Raleway, sans-serif',
-                    size: 10,
+                    size: 12,
                     color: '#B2B3B5'
                 }
             },
@@ -81,6 +81,9 @@ export const viewSettings = (chartTitle, showLegend, margin = initialMargin, xTi
             plot_bgcolor: 'transparent',
             bargroupgap: false,
             bargap: bargap,
+            modebar: {
+                bgcolor: 'transparent'
+            }
         },
         useResizeHandler: true,
         style: {
@@ -89,7 +92,38 @@ export const viewSettings = (chartTitle, showLegend, margin = initialMargin, xTi
         },
         config: {
             scrollZoom: true,
-            displayModeBar: false
+            displayModeBar: true,
+            modeBarButtonsToRemove: [
+                'zoom2d',
+                'pan2d',
+                'select2d',
+                'lasso2d',
+                // 'zoomIn2d',
+                // 'zoomOut2d',
+                'autoScale2d',
+                'resetScale2d',
+                'hoverClosestCartesian',
+                'hoverCompareCartesian',
+                'zoom3d',
+                'pan3d',
+                'resetCameraDefault3d',
+                'resetCameraLastSave3d',
+                'hoverClosest3d',
+                'orbitRotation',
+                'tableRotation',
+                'zoomInGeo',
+                'zoomOutGeo',
+                'resetGeo',
+                'hoverClosestGeo',
+                'toImage',
+                'sendDataToCloud',
+                'hoverClosestGl2d',
+                'hoverClosestPie',
+                'toggleHover',
+                'resetViews',
+                'toggleSpikelines',
+                'resetViewMapbox'
+            ]
         }
     }
 };

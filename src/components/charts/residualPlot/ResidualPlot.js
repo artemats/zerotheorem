@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import WithApiService from '../../hoc/WithApiService';
 import { connect } from 'react-redux';
 import { fetchResidualPlotSuccess, fetchResidualPlotError } from '../../../store/charts/residualPlot/actions';
@@ -6,6 +6,7 @@ import LoadingIndicator from "../../loadingIndicator/LoadingIndicator";
 import Plot from '../../../../node_modules/react-plotly.js/react-plotly';
 import {viewSettings} from "../ChartViewSettins";
 import {isEmpty} from "../../globalFunctions/globalFunctions";
+import DateFilter from "../date-filter/DateFilter";
 
 class ResidualPlot extends Component {
 
@@ -32,22 +33,24 @@ class ResidualPlot extends Component {
         }
 
         return(
-            <Plot
-                data={[
-                    {
-                        type: 'bar',
-                        x: date,
-                        y: residual,
-                        marker: {
-                            color: '#0f4487'
+            <Fragment>
+                <Plot
+                    data={[
+                        {
+                            type: 'bar',
+                            x: date,
+                            y: residual,
+                            marker: {
+                                color: '#0f4487'
+                            }
                         }
-                    }
-                ]}
-                layout={viewSettings('Residual Plot', false, {l: 30, r: 30, t: 45, b: 30}, '%y/%d/%m', '', 0, 'Date').layout}
-                useResizeHandler={viewSettings().useResizeHandler}
-                style={viewSettings().style}
-                config={viewSettings().config}
-            />
+                    ]}
+                    layout={viewSettings('Residual Plot', false, {l: 30, r: 30, t: 95, b: 30}, '%y/%d/%m', '', 0, '').layout}
+                    useResizeHandler={viewSettings().useResizeHandler}
+                    style={viewSettings().style}
+                    config={viewSettings().config}
+                />
+            </Fragment>
         )
 
     }

@@ -54,7 +54,7 @@ class QqPlot extends Component {
                         mode: 'lines',
                     }
                 ]}
-                layout={viewSettings('QQ plot', true, {l: 45, r: 30, t: 70, b: 30}, '', '', 0, 'Theoretical Quantiles', 'Sample Quantiles').layout}
+                layout={viewSettings('QQ plot', true, {l: 45, r: 30, t: 85, b: 30}, '', '', 0, '', '<b>Quante Quantiles</b>').layout}
                 useResizeHandler={viewSettings().useResizeHandler}
                 style={viewSettings().style}
                 config={viewSettings().config}

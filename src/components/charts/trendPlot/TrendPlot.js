@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import WithApiService from '../../hoc/WithApiService';
 import { connect } from 'react-redux';
 import { fetchTrendSuccess, fetchTrendError } from '../../../store/charts/trend/actions';
@@ -7,6 +7,7 @@ import Plot from '../../../../node_modules/react-plotly.js/react-plotly';
 import {viewSettings} from "../ChartViewSettins";
 import {isEmpty} from "../../globalFunctions/globalFunctions";
 import {fetchResidualPlotError} from "../../../store/charts/residualPlot/actions";
+import DateFilter from "../date-filter/DateFilter";
 
 class TrendPlot extends Component {
 
@@ -35,58 +36,61 @@ class TrendPlot extends Component {
         }
 
         return(
-            <Plot
-                data={[
-                    {
-                        x: date,
-                        y: prediction,
-                        name: 'Prediction',
-                        line: {
-                            color: '#0f5bb9',
-                            width: 6
+            <Fragment>
+                <Plot
+                    data={[
+                        {
+                            x: date,
+                            y: prediction,
+                            name: 'Prediction',
+                            line: {
+                                color: '#0f5bb9',
+                                width: 6
+                            },
+                            type: 'scatter',
+                            mode: 'lines',
                         },
-                        type: 'scatter',
-                        mode: 'lines',
-                    },
-                    {
-                        x: date,
-                        y: rmse,
-                        name: 'Rmse',
-                        line: {
-                            color: '#1f292a',
-                            width: 20
+                        {
+                            x: date,
+                            y: rmse,
+                            name: 'Rmse',
+                            line: {
+                                color: '#1f292a',
+                                width: 20
+                            },
+                            type: 'scatter',
+                            mode: 'lines',
                         },
-                        type: 'scatter',
-                        mode: 'lines',
-                    },
-                    {
-                        x: date,
-                        y: upper_band,
-                        name: 'Upper band',
-                        line: {
-                            color: '#deb513',
-                            width: 1
+                        {
+                            x: date,
+                            y: upper_band,
+                            name: 'Upper band',
+                            line: {
+                                color: '#deb513',
+                                width: 1
+                            },
+                            type: 'scatter',
+                            mode: 'lines',
                         },
-                        type: 'scatter',
-                        mode: 'lines',
-                    },
-                    {
-                        x: date,
-                        y: lower_band,
-                        name: 'Lower band',
-                        line: {
-                            color: '#FF4000',
-                            width: 1
-                        },
-                        type: 'scatter',
-                        mode: 'lines',
-                    }
-                ]}
-                layout={viewSettings('Trend Plot', true, {l: 45, r: 30, t: 70, b: 30}, '%y/%d/%m', '', 0, '', 'Price USD').layout}
-                useResizeHandler={viewSettings().useResizeHandler}
-                style={viewSettings().style}
-                config={viewSettings().config}
-            />
+                        {
+                            x: date,
+                            y: lower_band,
+                            name: 'Lower band',
+                            line: {
+                                color: '#FF4000',
+                                width: 1
+                            },
+                            type: 'scatter',
+                            mode: 'lines',
+                        }
+                    ]}
+                    layout={viewSettings('Trend Plot', true, {l: 45, r: 30, t: 95, b: 30}, '%y/%d/%m', '', 0, '', '<b>Price USD</b>').layout}
+                    useResizeHandler={viewSettings().useResizeHandler}
+                    style={viewSettings().style}
+                    config={viewSettings().config}
+                />
+            <DateFilter />
+            </Fragment>
         )
 
     }

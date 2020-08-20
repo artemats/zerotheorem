@@ -53,7 +53,7 @@ class ProbabilityPlot extends Component {
                         mode: 'lines',
                     }
                 ]}
-                layout={viewSettings('Probability Plot', true, {l: 45, r: 30, t: 70, b: 30}, '', '', 0, 'Theoretical Quantiles', 'Ordered Values').layout}
+                layout={viewSettings('Probability Plot', true, {l: 45, r: 30, t: 85, b: 30}, '', '', 0, '', '<b>Ordered Values</b>').layout}
                 useResizeHandler={viewSettings().useResizeHandler}
                 style={viewSettings().style}
                 config={viewSettings().config}
