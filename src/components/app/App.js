@@ -13,7 +13,7 @@ import LiteratureReview from "../../pages/literature-review/LiteratureReview";
 import Contact from "../../pages/contact/Contact";
 import Modal from "../modal/Modal";
 import BackTest from "../../pages/back-test/BackTest";
-import Footer from "../footer/Footer";
+// import Footer from "../footer/Footer";
 
 class App extends Component {
 
@@ -27,38 +27,30 @@ class App extends Component {
                     <Switch>
                         <Route exact path="/">
                             <Home />
-                            <Footer />
                         </Route>
                         <Route path="/about">
                             <About />
-                            <Footer />
                         </Route>
                         <Route path="/resources">
                             <Resources />
-                            <Footer />
                         </Route>
                         <Route path="/quant-lab">
                             <Forecast />
                         </Route>
                         <Route path="/faq">
                             <Faq />
-                            <Footer />
                         </Route>
                         <Route exact path="/research">
                             <Research />
-                            <Footer />
                         </Route>
                         <Route path="/research/:id">
                             <LiteratureReview />
-                            <Footer />
                         </Route>
                         <Route path="/contact">
                             <Contact />
-                            <Footer />
                         </Route>
                         <Route path="/back-test">
                             <BackTest />
-                            <Footer />
                         </Route>
                         <Route exact path="*">
                             <PageNotFound />

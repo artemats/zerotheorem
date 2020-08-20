@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import './date-filter.scss';
 
 const DateFilter = () => {
 
