@@ -17,6 +17,7 @@ export default class ApiClient {
 
         if(!response.ok) {
             // throw new Error(`Could don't fetch ${url} received ${response.status}`);
+            console.error(`Could don't fetch ${url} received ${response.status}`);
             return response.status;
         }
 
