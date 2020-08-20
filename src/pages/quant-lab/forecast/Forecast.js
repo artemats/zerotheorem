@@ -31,11 +31,11 @@ class Forecast extends Component {
                     <div className="row">
                         <div className="col-xl-7">
                             <div className="dashboard-box __lg">
-                                <ErrorBoundry>
-                                    <Suspense fallback={<LoadingIndicator />}>
-                                        <TrendPlot />
-                                    </Suspense>
-                                </ErrorBoundry>
+                                {/*<ErrorBoundry>*/}
+                                {/*    <Suspense fallback={<LoadingIndicator />}>*/}
+                                {/*        <TrendPlot />*/}
+                                {/*    </Suspense>*/}
+                                {/*</ErrorBoundry>*/}
                             </div>
                         </div>
                         <div className="col-xl-5">
