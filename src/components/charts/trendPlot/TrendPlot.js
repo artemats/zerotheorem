@@ -89,7 +89,6 @@ class TrendPlot extends Component {
                     style={viewSettings().style}
                     config={viewSettings().config}
                 />
-            <DateFilter />
             </Fragment>
         )
 
