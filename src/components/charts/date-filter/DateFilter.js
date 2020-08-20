@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import './date-filter.scss';
 
 const DateFilter = () => {
@@ -17,10 +17,6 @@ const DateFilter = () => {
     const handleOnChange = (event) => {
         setPeriod(event.target.value);
     };
-
-    useEffect(() => {
-       console.log(period);
-    });
 
     return(
         <div className="dashboard-box-filter">

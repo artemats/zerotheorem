@@ -6,7 +6,6 @@ import LoadingIndicator from "../../loadingIndicator/LoadingIndicator";
 import Plot from '../../../../node_modules/react-plotly.js/react-plotly';
 import {viewSettings} from "../ChartViewSettins";
 import {isEmpty} from "../../globalFunctions/globalFunctions";
-import DateFilter from "../date-filter/DateFilter";
 
 class ResidualPlot extends Component {
 
