@@ -10,20 +10,29 @@ import DateFilter from "../date-filter/DateFilter";
 
 class TrendPlot extends Component {
 
-
+    constructor(props) {
+        super(props);
+        this.onChangeFilter = this.onChangeFilter.bind(this);
+    }
 
     componentDidMount() {
-
         const { api, fetchTrendSuccess, fetchTrendError, data } =  this.props;
-
         if(isEmpty(data)) {
-            api.getTrend()
+            api.getTrend('2020-08-14')
                 .then(trendData => {
                     fetchTrendSuccess(trendData);
                 })
                 .catch(error => fetchTrendError(error));
         }
+    }
 
+    onChangeFilter(startDate) {
+        const { api, fetchTrendSuccess, fetchTrendError } =  this.props;
+        api.getTrend(startDate)
+            .then(trendData => {
+                fetchTrendSuccess(trendData);
+            })
+            .catch(error => fetchTrendError(error));
     }
 
     render() {
@@ -88,7 +97,7 @@ class TrendPlot extends Component {
                     style={viewSettings().style}
                     config={viewSettings().config}
                 />
-                <DateFilter />
+                <DateFilter onSubmit={this.onChangeFilter} />
             </Fragment>
         )
 

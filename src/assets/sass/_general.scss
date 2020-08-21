@@ -220,6 +220,7 @@ p, li{
   position: relative;
   white-space: nowrap;
   overflow: hidden;
+  cursor: pointer;
     &-title{
       position: relative;
       z-index: 1;
@@ -1630,34 +1631,35 @@ p, li{
       transform: translateY(-5px);
       z-index: -1;
       transition: opacity .2s ease, transform .2s ease;
-      &-list{
-        background-color: #121C21;
-        border: 1px #4A4A4A solid;
-        border-radius: 5px;
-        padding: 30px 20px;
-        max-width: 254px;
-        width: 100vw;
-      }
-      .input{
-        &-container{
-          margin: 10px 0;
+        &-list{
+          background-color: #121C21;
+          border: 1px #4A4A4A solid;
+          border-radius: 5px;
+          padding: 30px 20px;
+          max-width: 254px;
+          width: 100vw;
         }
-        &-label{
-          padding: 0;
-          font-size: 12px;
-          @media only screen and (min-width: 991px), (any-hover: hover) {
-            &:hover {
-              color: #CFB024;
+        .input{
+          &-container{
+            margin: 7px 0;
+            display: inline-block;
+          }
+          &-label{
+            padding: 0;
+            font-size: 12px;
+            @media only screen and (min-width: 991px), (any-hover: hover) {
+              &:hover {
+                color: #CFB024;
+              }
             }
           }
-        }
-        &-check{
-          &:checked{
-            & ~ .input-label{
-              color: #FFC600;
+          &-check{
+            &:checked{
+              & ~ .input-label{
+                color: #FFC600;
+              }
             }
           }
-        }
       }
     }
     &-action{
@@ -1670,6 +1672,13 @@ p, li{
       height: 1px;
       opacity: 1;
       margin: 7px 0;
+    }
+    &-btn{
+      cursor: pointer;
+      display: inline-block;
+        &.active{
+          color: $yellow;
+        }
     }
     &.is-active{
       z-index: 9;
@@ -1687,5 +1696,52 @@ p, li{
           transform: translateY(0);
         }
       }
+    }
+}
+
+.react-datepicker{
+  background-color: #121c21;
+  border: 1px solid #4a4a4a;
+  border-radius: 5px;
+  @extend .semi-bold;
+    &__header{
+      background-color: #121c21;
+      border: none;
+    }
+    &__day-name,
+    &__day,
+    &__time-name,
+    &__current-month,
+    &__month-text,
+    &__quarter-text,
+    &__year-text{
+      color: $grey-light;
+
+    }
+    &__day{
+        &--selected{
+          background-color: $yellow;
+          color: $black;
+        }
+        &:hover{
+          background-color: $yellow;
+          color: $black;
+        }
+    }
+    &__day--keyboard-selected{
+      background-color: $yellow;
+      color: $black;
+    }
+}
+
+.react-datepicker-popper[data-placement^="top"]{
+    .react-datepicker__triangle{
+      border-top-color: #121c21;
+    }
+}
+
+.react-datepicker-popper[data-placement^="bottom"] {
+    .react-datepicker__triangle{
+      border-bottom-color: #121c21;
     }
 }

@@ -6,21 +6,33 @@ import LoadingIndicator from "../../loadingIndicator/LoadingIndicator";
 import Plot from '../../../../node_modules/react-plotly.js/react-plotly';
 import {viewSettings} from "../ChartViewSettins";
 import {isEmpty} from "../../globalFunctions/globalFunctions";
+import DateFilter from "../date-filter/DateFilter";
 
 class ResidualPlot extends Component {
 
+    constructor(props) {
+        super(props);
+        this.onChangeFilter = this.onChangeFilter.bind(this);
+    }
+
     componentDidMount() {
-
         const { api, fetchResidualPlotSuccess, fetchResidualPlotError, data } = this.props;
-
         if(isEmpty(data)) {
-            api.getResidual()
+            api.getResidual('2020-08-14')
                 .then(resData => {
                     fetchResidualPlotSuccess(resData);
                 })
                 .catch(error => fetchResidualPlotError(error));
         }
+    }
 
+    onChangeFilter(startDate) {
+        const { api, fetchResidualPlotSuccess, fetchResidualPlotError } = this.props;
+        api.getResidual(startDate)
+            .then(resData => {
+                fetchResidualPlotSuccess(resData);
+            })
+            .catch(error => fetchResidualPlotError(error));
     }
 
     render() {
@@ -49,6 +61,7 @@ class ResidualPlot extends Component {
                     style={viewSettings().style}
                     config={viewSettings().config}
                 />
+                <DateFilter onSubmit={this.onChangeFilter} />
             </Fragment>
         )
 

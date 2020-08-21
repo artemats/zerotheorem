@@ -2,6 +2,8 @@ import {FETCh_TREND_ERROR, FETCH_TREND_SUCCESS} from "../../constants";
 
 const initialState = {
     data: {},
+    startFrom: null,
+    finishedTo: null,
     isLoading: true,
     error: null
 };

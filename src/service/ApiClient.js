@@ -25,13 +25,13 @@ export default class ApiClient {
 
     }
 
-    getTrend = async () => {
-        const data = await this.getSources('/trend?start_date=2020-07-15');
+    getTrend = async (startFrom, finishedTo) => {
+        const data = await this.getSources(`/trend?start_date=${startFrom}`);
         return this._transformTrendData(data);
     };
 
-    getResidual = async () => {
-        const data = await this.getSources('/residual?start_date=2020-07-15');
+    getResidual = async (startFrom, finishedTo) => {
+        const data = await this.getSources(`/residual?start_date=${startFrom}`);
         return this._transformResidualData(data);
 
     };
