@@ -6,7 +6,9 @@ import LoadingIndicator from "../../loadingIndicator/LoadingIndicator";
 import Plot from '../../../../node_modules/react-plotly.js/react-plotly';
 import {viewSettings} from "../ChartViewSettins";
 import {isEmpty} from "../../globalFunctions/globalFunctions";
-import DateFilter from "../date-filter/DateFilter";
+import DateFilter from "../../date-filter/DateFilter";
+import {lastWeek, _today} from "../../globalFunctions/detectDate";
+import {transformDateFormat} from "../../globalFunctions/transformDateFormat";
 
 class TrendPlot extends Component {
 
@@ -18,7 +20,7 @@ class TrendPlot extends Component {
     componentDidMount() {
         const { api, fetchTrendSuccess, fetchTrendError, data } =  this.props;
         if(isEmpty(data)) {
-            api.getTrend('2020-08-14')
+            api.getTrend(transformDateFormat(lastWeek()))
                 .then(trendData => {
                     fetchTrendSuccess(trendData);
                 })
@@ -97,7 +99,11 @@ class TrendPlot extends Component {
                     style={viewSettings().style}
                     config={viewSettings().config}
                 />
-                <DateFilter onSubmit={this.onChangeFilter} />
+                <DateFilter
+                    onSubmit={this.onChangeFilter}
+                    defaultStartDate={lastWeek()}
+                    defaultFinishedDate={_today}
+                    defaultPeriod={0} />
             </Fragment>
         )
 

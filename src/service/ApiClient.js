@@ -37,7 +37,7 @@ export default class ApiClient {
     };
 
     getResidualHistogram = async () => {
-        const data = await this.getSources('/residual-histogram?start_date=2020-07-15');
+        const data = await this.getSources('/residual-histogram');
         return this._transformResidualHisData(data);
 
     };

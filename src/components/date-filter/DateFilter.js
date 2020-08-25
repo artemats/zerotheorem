@@ -1,15 +1,48 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import DatePicker from 'react-datepicker';
+import { useOnClickOutside } from "../globalFunctions/globalFunctions";
+import {transformDateFormat} from "../globalFunctions/transformDateFormat";
+import {lastMonths, lastWeek, lastYear, _today} from "../globalFunctions/detectDate";
 
-const today = new Date();
+const periods = [
+    {
+        id: 'week',
+        title: 'Last Week',
+        isActive: true,
+    },
+    {
+        id: 'month',
+        title: 'Last Month',
+        isActive: false
+    },
+    {
+        id: 'quarter',
+        title: 'Last Quarter',
+        isActive: false
+    },
+    {
+        id: 'half_year',
+        title: 'Last Half Year',
+        isActive: false
+    },
+    {
+        id: 'year',
+        title: 'Last Year',
+        isActive: false
+    }
+];
 const btnClasses = 'input-label dropdown-btn semi-bold';
 
-const DateFilter = ({ onSubmit }) => {
+const DateFilter = ({ onSubmit, defaultStartDate, defaultFinishedDate, defaultPeriod }) => {
 
     const [isOpen, setIsOpen] = useState(false);
-    const [period, setPeriod] = useState('week');
-    const [startDate, setStartDate] = useState(today);
-    const [finishedDate, setFinishedDate] = useState(today);
+    const [period, setPeriod] = useState(periods[defaultPeriod] || periods[0]);
+    const [startDate, setStartDate] = useState(defaultStartDate || lastWeek);
+    const [finishedDate, setFinishedDate] = useState(defaultFinishedDate || _today);
+    const dropdownRef = useRef();
+
+    useOnClickOutside(dropdownRef, () => handleCloseSelect());
 
     const handleToggleSelect = () => {
         setIsOpen(!isOpen);
@@ -20,106 +53,83 @@ const DateFilter = ({ onSubmit }) => {
     };
 
     const getLastWeek = () => {
-        let todayForWeek = new Date();
-        let lastWeek = todayForWeek.getDate() - 7;
-        // return new Date(today.setDate(lastWeek));
-        setStartDate(new Date(todayForWeek.setDate(lastWeek)));
-        setFinishedDate(today);
-        setPeriod('week');
+        setStartDate(lastWeek());
+        setFinishedDate(_today);
+        setPeriod({...periods[0], isActive: true});
     };
 
     const getLastMonths = (count) => {
-        let todayForMonth = new Date();
-        let period = 'month';
-        let lastMonth = todayForMonth.getMonth() - count;
-        // return new Date(today.setMonth(lastMonth));
-        setStartDate(new Date(todayForMonth.setMonth(lastMonth)));
-        setFinishedDate(today);
+        let period = null;
+        setStartDate(lastMonths(count));
+        setFinishedDate(_today);
         if(count === 3) {
-            period = 'quarter';
+            period = {...periods[2], isActive: true};
         } else if(count === 6) {
-            period = 'half_year';
+            period = {...periods[3], isActive: true};
         } else {
-            period = 'month';
+            period = {...periods[1], isActive: true};
         }
         setPeriod(period);
     };
 
     const getLastYear = () => {
-      let todayForYear = new Date();
-      let lastYear = todayForYear.getFullYear() - 1;
-      // return new Date(today.setFullYear(lastYear));
-        setStartDate(new Date(todayForYear.setFullYear(lastYear)));
-        setFinishedDate(today);
-        setPeriod('year');
-    };
-
-    const toFormatDate = (date = today, separator = '-') => {
-        let dd = date.getDate();
-        let mm = date.getMonth() + 1;
-        let yyyy = date.getFullYear();
-        dd < 10 ? dd = '0' + dd : dd;
-        mm < 10 ? mm = '0' + mm : mm;
-        return yyyy + separator + mm + separator + dd;
+        setStartDate(lastYear());
+        setFinishedDate(_today);
+        setPeriod({...periods[4], isActive: true});
     };
 
     const onChangeSetStartDate = (date) => {
         setStartDate(date);
-        setPeriod('');
+        setPeriod({...period, title: `From ${transformDateFormat(date, '.')} to ${transformDateFormat(finishedDate, '.')}`});
     };
 
     const onChangeSetFinishedDate = (date) => {
         setFinishedDate(date);
-        setPeriod('');
+        setPeriod({...period, title: `From ${transformDateFormat(startDate, '.')} to ${transformDateFormat(date, '.')}`});
     };
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        onSubmit(toFormatDate(startDate), toFormatDate(finishedDate));
+        onSubmit(transformDateFormat(startDate), transformDateFormat(finishedDate));
         setIsOpen(false);
     };
 
     useEffect(() => {
-        // console.log('last year - ', getLastYear());
-        // console.log('last half year - ', getLastMonths(6));
-        // console.log('last quarter - ', getLastMonths(3));
-        // console.log('last month - ', getLastMonths(1));
-        // console.log('last week - ', getLastWeek());
-        // console.log('today - ', today);
+       // console.log('select period - ', selectedPeriod);
     });
 
     return(
         <div className="dashboard-box-filter">
             <div className={`dropdown ${isOpen ? 'is-active': ''}`}>
                 <div className="dropdown-header" onClick={handleToggleSelect}>
-                    <span className="dropdown-header-title semi-bold">Last Week</span>
+                    <span className="dropdown-header-title semi-bold">{period.title}</span>
                 </div>
-                <div className="dropdown-select">
+                <div className="dropdown-select" ref={dropdownRef}>
                     <form onSubmit={handleSubmit}>
                         <div className="dropdown-select-list">
                             <div className="input-container">
                                 <span
-                                    className={`${btnClasses} ${period === 'week' ? 'active' : ''}`}
+                                    className={`${btnClasses} ${period.id === 'week' ? 'active' : ''}`}
                                     onClick={() => getLastWeek()}>Last Week</span>
                             </div>
                             <div className="input-container">
                                 <span
-                                    className={`${btnClasses} ${period === 'month' ? 'active' : ''}`}
+                                    className={`${btnClasses} ${period.id === 'month' ? 'active' : ''}`}
                                     onClick={() => getLastMonths(1)}>Last Month</span>
                             </div>
                             <div className="input-container">
                                 <span
-                                    className={`${btnClasses} ${period === 'quarter' ? 'active' : ''}`}
+                                    className={`${btnClasses} ${period.id === 'quarter' ? 'active' : ''}`}
                                     onClick={() => getLastMonths(3)}>Last Quarter</span>
                             </div>
                             <div className="input-container">
                                 <span
-                                    className={`${btnClasses} ${period === 'half_year' ? 'active' : ''}`}
+                                    className={`${btnClasses} ${period.id === 'half_year' ? 'active' : ''}`}
                                     onClick={() => getLastMonths(6)}>Last Half Year</span>
                             </div>
                             <div className="input-container">
                                 <span
-                                    className={`${btnClasses} ${period === 'year' ? 'active' : ''}`}
+                                    className={`${btnClasses} ${period.id === 'year' ? 'active' : ''}`}
                                     onClick={() => getLastYear()}>Last Year</span>
                             </div>
                             <hr className="hr dropdown-divider" />
@@ -154,3 +164,10 @@ const DateFilter = ({ onSubmit }) => {
 };
 
 export default DateFilter;
+
+DatePicker.propTypes = {
+    onSubmit: PropTypes.func,
+    defaultStartDate: PropTypes.string,
+    defaultFinishedDate: PropTypes.string,
+    defaultPeriod: PropTypes.string
+};
