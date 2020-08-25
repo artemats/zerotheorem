@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { fetchTrendSuccess, fetchTrendError } from '../../../store/charts/trend/actions';
 import LoadingIndicator from "../../loadingIndicator/LoadingIndicator";
 import Plot from '../../../../node_modules/react-plotly.js/react-plotly';
-import {viewSettings} from "../ChartViewSettins";
+import {viewSettingsConfig, viewSettingsLayout} from "../ChartViewSettins";
 import {isEmpty} from "../../globalFunctions/globalFunctions";
 import DateFilter from "../../date-filter/DateFilter";
 import {lastWeek, _today} from "../../globalFunctions/detectDate";
@@ -94,10 +94,10 @@ class TrendPlot extends Component {
                             mode: 'lines',
                         }
                     ]}
-                    layout={viewSettings('Trend Plot', true, {l: 45, r: 30, t: 95, b: 30}, '%y/%d/%m', '', 0, '', '<b>Price USD</b>').layout}
-                    useResizeHandler={viewSettings().useResizeHandler}
-                    style={viewSettings().style}
-                    config={viewSettings().config}
+                    layout={viewSettingsLayout('Trend Plot', true, {l: 45, r: 30, t: 95, b: 30}, '%y/%d/%m', '', 0, '', '<b>Price USD</b>').layout}
+                    useResizeHandler={viewSettingsLayout().useResizeHandler}
+                    style={viewSettingsLayout().style}
+                    config={viewSettingsConfig().config}
                 />
                 <DateFilter
                     onSubmit={this.onChangeFilter}

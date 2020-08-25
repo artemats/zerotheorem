@@ -3,7 +3,7 @@ import WithApiService from '../../hoc/WithApiService';
 import { connect } from 'react-redux';
 import { fetchProbPlotSuccess, fetchProbPlotError } from '../../../store/charts/probabilityPlot/actions';
 import LoadingIndicator from "../../loadingIndicator/LoadingIndicator";
-import {viewSettings} from "../ChartViewSettins";
+import {viewSettingsConfig, viewSettingsLayout} from "../ChartViewSettins";
 import Plot from "react-plotly.js";
 import {isEmpty} from "../../globalFunctions/globalFunctions";
 
@@ -53,10 +53,10 @@ class ProbabilityPlot extends Component {
                         mode: 'lines',
                     }
                 ]}
-                layout={viewSettings('Probability Plot', true, {l: 45, r: 30, t: 85, b: 30}, '', '', 0, '', '<b>Ordered Values</b>').layout}
-                useResizeHandler={viewSettings().useResizeHandler}
-                style={viewSettings().style}
-                config={viewSettings().config}
+                layout={viewSettingsLayout('Probability Plot', true, {l: 45, r: 30, t: 85, b: 30}, '', '', 0, '', '<b>Ordered Values</b>').layout}
+                useResizeHandler={viewSettingsLayout().useResizeHandler}
+                style={viewSettingsLayout().style}
+                config={viewSettingsConfig().config}
             />
         )
 

@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { fetchQqPlotSuccess, fetchQqPlotError } from '../../../store/charts/qqPlot/actions';
 import {isEmpty} from "../../globalFunctions/globalFunctions";
 import LoadingIndicator from "../../loadingIndicator/LoadingIndicator";
-import {viewSettings} from "../ChartViewSettins";
+import {viewSettingsConfig, viewSettingsLayout} from "../ChartViewSettins";
 import Plot from "react-plotly.js";
 
 class QqPlot extends Component {
@@ -54,10 +54,10 @@ class QqPlot extends Component {
                         mode: 'lines',
                     }
                 ]}
-                layout={viewSettings('QQ plot', true, {l: 45, r: 30, t: 85, b: 30}, '', '', 0, '', '<b>Quante Quantiles</b>').layout}
-                useResizeHandler={viewSettings().useResizeHandler}
-                style={viewSettings().style}
-                config={viewSettings().config}
+                layout={viewSettingsLayout('QQ plot', true, {l: 45, r: 30, t: 85, b: 30}, '', '', 0, '', '<b>Quante Quantiles</b>').layout}
+                useResizeHandler={viewSettingsLayout().useResizeHandler}
+                style={viewSettingsLayout().style}
+                config={viewSettingsConfig().config}
             />
         )
 

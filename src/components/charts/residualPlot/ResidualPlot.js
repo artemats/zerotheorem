@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import { fetchResidualPlotSuccess, fetchResidualPlotError } from '../../../store/charts/residualPlot/actions';
 import LoadingIndicator from "../../loadingIndicator/LoadingIndicator";
 import Plot from '../../../../node_modules/react-plotly.js/react-plotly';
-import {viewSettings} from "../ChartViewSettins";
+import {viewSettingsConfig, viewSettingsLayout} from "../ChartViewSettins";
 import {isEmpty} from "../../globalFunctions/globalFunctions";
 import DateFilter from "../../date-filter/DateFilter";
 
@@ -56,10 +56,10 @@ class ResidualPlot extends Component {
                             }
                         }
                     ]}
-                    layout={viewSettings('Residual Plot', false, {l: 30, r: 30, t: 95, b: 30}, '%y/%d/%m', '', 0, '').layout}
-                    useResizeHandler={viewSettings().useResizeHandler}
-                    style={viewSettings().style}
-                    config={viewSettings().config}
+                    layout={viewSettingsLayout('Residual Plot', false, {l: 30, r: 30, t: 95, b: 30}, '%y/%d/%m', '', 0, '').layout}
+                    useResizeHandler={viewSettingsLayout().useResizeHandler}
+                    style={viewSettingsLayout().style}
+                    config={viewSettingsConfig().config}
                 />
                 <DateFilter onSubmit={this.onChangeFilter} />
             </Fragment>

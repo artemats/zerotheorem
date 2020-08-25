@@ -1,6 +1,6 @@
 const initialMargin = {l: 30, r: 30, t: 80, b: 30};
 
-export const viewSettings = (chartTitle, showLegend, margin = initialMargin, xTickFormat, yTickFormat, bargap = 3, xTitle, yTitle) => {
+export const viewSettingsLayout = (chartTitle, showLegend, margin = initialMargin, xTickFormat, yTickFormat, bargap = 0.2, xTitle, yTitle, barMode = 'group', barNorm = '', yGrid = true, xGrid = true) => {
     return {
         layout: {
             width: null,
@@ -50,8 +50,8 @@ export const viewSettings = (chartTitle, showLegend, margin = initialMargin, xTi
                 },
                 tickformat: xTickFormat,
                 showline: false,
-                showgrid: true,
                 zeroline: false,
+                showgrid: xGrid,
                 linecolor: '#4A4A4A',
                 gridcolor: '#4A4A4A',
             },
@@ -74,6 +74,7 @@ export const viewSettings = (chartTitle, showLegend, margin = initialMargin, xTi
                 tickformat: yTickFormat,
                 showline: false,
                 zeroline: false,
+                showgrid: yGrid,
                 linecolor: '#4A4A4A',
                 gridcolor: '#4A4A4A'
             },
@@ -83,16 +84,23 @@ export const viewSettings = (chartTitle, showLegend, margin = initialMargin, xTi
             bargap: bargap,
             modebar: {
                 bgcolor: 'transparent'
-            }
+            },
+            barmode: barMode,
+            barnorm: barNorm
         },
         useResizeHandler: true,
         style: {
             width: "100%",
             height: "100%"
-        },
+        }
+    }
+};
+
+export const viewSettingsConfig = (displayModeBar) => {
+    return {
         config: {
             scrollZoom: true,
-            displayModeBar: true,
+            displayModeBar: displayModeBar,
             modeBarButtonsToRemove: [
                 'zoom2d',
                 'pan2d',
