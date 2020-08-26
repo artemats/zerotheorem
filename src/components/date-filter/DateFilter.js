@@ -38,6 +38,7 @@ const DateFilter = ({ onSubmit, defaultStartDate, defaultFinishedDate, defaultPe
 
     const [isOpen, setIsOpen] = useState(false);
     const [period, setPeriod] = useState(periods[defaultPeriod] || periods[0]);
+    const [selectedPeriod, setSelectedPeriod] = useState(period);
     const [startDate, setStartDate] = useState(defaultStartDate || lastWeek);
     const [finishedDate, setFinishedDate] = useState(defaultFinishedDate || _today);
     const dropdownRef = useRef();
@@ -50,12 +51,13 @@ const DateFilter = ({ onSubmit, defaultStartDate, defaultFinishedDate, defaultPe
 
     const handleCloseSelect = () => {
       setIsOpen(false);
+      setSelectedPeriod(period);
     };
 
     const getLastWeek = () => {
         setStartDate(lastWeek());
         setFinishedDate(_today);
-        setPeriod({...periods[0], isActive: true});
+        setSelectedPeriod({...periods[0], isActive: true});
     };
 
     const getLastMonths = (count) => {
@@ -69,68 +71,69 @@ const DateFilter = ({ onSubmit, defaultStartDate, defaultFinishedDate, defaultPe
         } else {
             period = {...periods[1], isActive: true};
         }
-        setPeriod(period);
+        setSelectedPeriod(period);
     };
 
     const getLastYear = () => {
         setStartDate(lastYear());
         setFinishedDate(_today);
-        setPeriod({...periods[4], isActive: true});
+        setSelectedPeriod({...periods[4], isActive: true});
     };
 
     const onChangeSetStartDate = (date) => {
         setStartDate(date);
-        setPeriod({...period, title: `From ${transformDateFormat(date, '.')} to ${transformDateFormat(finishedDate, '.')}`});
+        setSelectedPeriod({...period, id: '', title: `From ${transformDateFormat(date, '.')} to ${transformDateFormat(finishedDate, '.')}`});
     };
 
     const onChangeSetFinishedDate = (date) => {
         setFinishedDate(date);
-        setPeriod({...period, title: `From ${transformDateFormat(startDate, '.')} to ${transformDateFormat(date, '.')}`});
+        setSelectedPeriod({...period, id: '', title: `From ${transformDateFormat(startDate, '.')} to ${transformDateFormat(date, '.')}`});
     };
 
     const handleSubmit = (event) => {
         event.preventDefault();
+        setPeriod(selectedPeriod);
         onSubmit(transformDateFormat(startDate), transformDateFormat(finishedDate));
         setIsOpen(false);
     };
 
     useEffect(() => {
-       // console.log('select period - ', selectedPeriod);
+       // console.log(dropdownRef.current.getBoundingClientRect().y);
     });
 
     return(
         <div className="dashboard-box-filter">
             <div className={`dropdown ${isOpen ? 'is-active': ''}`}>
                 <div className="dropdown-header" onClick={handleToggleSelect}>
-                    <span className="dropdown-header-title semi-bold">{period.title}</span>
+                    <span className="dropdown-header-title semi-bold">{selectedPeriod.title}</span>
                 </div>
                 <div className="dropdown-select" ref={dropdownRef}>
                     <form onSubmit={handleSubmit}>
                         <div className="dropdown-select-list">
                             <div className="input-container">
                                 <span
-                                    className={`${btnClasses} ${period.id === 'week' ? 'active' : ''}`}
-                                    onClick={() => getLastWeek()}>Last Week</span>
+                                    className={`${btnClasses} ${selectedPeriod.id === 'week' ? 'active' : ''}`}
+                                    onClick={() => getLastWeek()}>{periods[0].title}</span>
                             </div>
                             <div className="input-container">
                                 <span
-                                    className={`${btnClasses} ${period.id === 'month' ? 'active' : ''}`}
-                                    onClick={() => getLastMonths(1)}>Last Month</span>
+                                    className={`${btnClasses} ${selectedPeriod.id === 'month' ? 'active' : ''}`}
+                                    onClick={() => getLastMonths(1)}>{periods[1].title}</span>
                             </div>
                             <div className="input-container">
                                 <span
-                                    className={`${btnClasses} ${period.id === 'quarter' ? 'active' : ''}`}
-                                    onClick={() => getLastMonths(3)}>Last Quarter</span>
+                                    className={`${btnClasses} ${selectedPeriod.id === 'quarter' ? 'active' : ''}`}
+                                    onClick={() => getLastMonths(3)}>{periods[2].title}</span>
                             </div>
                             <div className="input-container">
                                 <span
-                                    className={`${btnClasses} ${period.id === 'half_year' ? 'active' : ''}`}
-                                    onClick={() => getLastMonths(6)}>Last Half Year</span>
+                                    className={`${btnClasses} ${selectedPeriod.id === 'half_year' ? 'active' : ''}`}
+                                    onClick={() => getLastMonths(6)}>{periods[3].title}</span>
                             </div>
                             <div className="input-container">
                                 <span
-                                    className={`${btnClasses} ${period.id === 'year' ? 'active' : ''}`}
-                                    onClick={() => getLastYear()}>Last Year</span>
+                                    className={`${btnClasses} ${selectedPeriod.id === 'year' ? 'active' : ''}`}
+                                    onClick={() => getLastYear()}>{periods[4].title}</span>
                             </div>
                             <hr className="hr dropdown-divider" />
                             <div className="input-container">
