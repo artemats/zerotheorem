@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react'
 import Plot from '../../../../node_modules/react-plotly.js/react-plotly';
 import {viewSettingsConfig, viewSettingsLayout} from "../ChartViewSettins";
+import DateFilter from "../../date-filter/DateFilter";
 
 const BaselineModel2 = () => {
 
@@ -32,6 +33,7 @@ const BaselineModel2 = () => {
                 style={viewSettingsLayout().style}
                 config={viewSettingsConfig(false).config}
             />
+            <DateFilter />
         </Fragment>
     )
 

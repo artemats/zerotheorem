@@ -505,9 +505,43 @@ p, li{
           position: absolute;
           top: 30px;
           right: 27px;
+          display: inline-block;
+          text-align: left;
             @include d(575){
               top: 15px;
             }
+        }
+        &-rotate{
+          position: absolute;
+          bottom: 95px;
+          right: 28px;
+          text-transform: capitalize;
+          font-size: 12px;
+          text-align: center;
+          @extend .semi-bold;
+          padding-top: 54px;
+            &:before{
+              content: '';
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 30px;
+              background-repeat: no-repeat;
+              background-size: contain;
+              background-position: center;
+              background-image: url(../../assets/images/icons/rotate.svg);
+            }
+        }
+        &-detail{
+          position: absolute;
+          right: 35px;
+          top: 198px;
+          display: flex;
+          flex-direction: column;
+        }
+        &.__xl{
+          height: 576px;
         }
         &.__lg{
           height: 476px;
@@ -538,6 +572,27 @@ p, li{
             @include d(991){
               height: auto;
             }
+        }
+        &.__table{
+          height: auto;
+          padding: 20px 0 0;
+        }
+    }
+}
+
+.axis{
+    &-detail{
+      text-transform: uppercase;
+      font-size: 14px;
+      white-space: nowrap;
+      @extend .semi-bold;
+      margin-bottom: 14px;
+        &:last-child{
+          margin-bottom: 0;
+        }
+        &-value{
+          color: $yellow;
+          margin-left: 10px;
         }
     }
 }
@@ -1453,110 +1508,76 @@ p, li{
 }
 
 .table{
-    &-wrap{
-      position: relative;
-      padding: 66px 0 30px;
-    }
+  @extend .semi-bold;
+  text-align: left;
     &-scroll{
-        @include d(991){
-          overflow-x: auto;
-          margin-right: -28px;
-          margin-left: -28px;
-          padding-left: 28px;
-        }
-        @include d(767){
-          margin-right: -14px;
-          margin-left: -14px;
-          padding-left: 14px;
-        }
+      overflow-y: hidden;
+      overflow-x: auto;
     }
-    th{
-      font-size: 12px;
-      @extend .regular;
-      padding: 12px 0;
-      color: rgba(195,195,195,.46);
-      border: none;
-      //border-bottom: 1px rgba(195,195,195,.16) solid;
-      text-align: left;
-      border-bottom: 28px transparent solid;
-      position: relative;
-        &:before{
-          content: '';
-          position: absolute;
-          left: 0;
-          right: 0;
-          height: 1px;
-          bottom: 0;
-          background-color: rgba(195,195,195,.16);
-        }
-        &:nth-child(1){
-          padding-left: 65px;
-            @include d(1200){
-              padding-left: 25px;
+    &-header{
+      display: flex;
+      align-items: center;
+      padding: 0 23px 26px;
+        &-box{
+          flex: 1;
+            &:last-child{
+              text-align: right;
             }
         }
-        @include d(991){
-          font-size: 12px;
+        @include d(1300){
+          padding: 0 20px 20px;
         }
-        @include d(767){
-          border-bottom-width: 14px;
+    }
+    &-body{
+        &-title{
+          text-align: left;
+          font-size: 16px;
+        }
+        @include d(1200){
+          width: 880px;
+        }
+    }
+    .dashboard-box-filter{
+      position: relative;
+      top: 0;
+      right: 0;
+    }
+    th{
+      font-weight: 600;
+      font-size: 14px;
+      color: $yellow;
+      padding: 20px 32px;
+      border: 1px #4A4A4A solid;
+      border-right: none;
+        &:nth-child(1){
+          border-left: none;
+        }
+        @include d(1300){
+          padding: 20px;
         }
     }
     td{
-      font-size: 14px;
-      letter-spacing: .05em;
-      text-align: left;
-      //background-color: rgba(255,255,255,.03);
-      padding: 31px 0;
-      border: none;
-      border-bottom: 10px transparent solid;
-      position: relative;
-        &:before{
-          content: '';
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 76px;
-          background-color: rgba(255,255,255,.03);
-        }
-        &:nth-child(1){
-          padding-left: 65px;
-            &:before{
-              border-radius: 5px 0 0 5px;
-            }
-            @include d(1200){
-              padding-left: 25px;
-            }
-        }
+      font-size: 12px;
+      padding: 10px 32px;
+      border-right: 1px #4A4A4A solid;
         &:last-child{
-          &:before{
-            border-radius: 0 5px 5px 0;
-          }
+          border-right: none;
         }
-        @include d(991){
-          font-size: 12px;
-          padding: 20px 0;
-            &:before{
-              height: 53px;
+        @include d(1300){
+          padding: 10px 20px;
+        }
+    }
+    tr{
+        &:last-child{
+            td{
+              padding-bottom: 30px;
             }
         }
-        @include d(767){
-          border-bottom-width: 5px;
-        }
     }
-    .green{
-      color: #229b39;
-    }
-    .red{
-      color: #e26161;
-    }
-    @include d(991){
-      width: 950px;
-      margin-right: 28px;
-    }
-    @include d(767){
-      margin-right: 14px;
+    .num{
+      font-size: 16px;
+      width: 100%;
+      text-align: center;
     }
 }
 

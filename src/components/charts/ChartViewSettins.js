@@ -96,7 +96,7 @@ export const viewSettingsLayout = (chartTitle, showLegend, margin = initialMargi
     }
 };
 
-export const viewSettingsConfig = (displayModeBar) => {
+export const viewSettingsConfig = (displayModeBar = true) => {
     return {
         config: {
             scrollZoom: true,

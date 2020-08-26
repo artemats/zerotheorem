@@ -46,9 +46,31 @@
           display: inline-flex;
           align-items: center;
           white-space: normal;
+          width: 100%;
             &-title{
               @media only screen and (min-width: 992px) {
                 max-width: 90px;
+              }
+            }
+            @media only screen and (min-width: 992px) {
+              &:before{
+                content: '';
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: -3px;
+                width: 4px;
+                height: 0;
+                border-radius: 0 5px 5px 0;
+                background-color: #FFC600;
+                z-index: -1;
+                transition: height .4s ease;
+              }
+              &.active{
+                &:before{
+                  height: 100%;
+                  transition: height .8s ease;
+                }
               }
             }
         }

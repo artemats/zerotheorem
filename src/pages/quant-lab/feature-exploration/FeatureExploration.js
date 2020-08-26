@@ -1,7 +1,10 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment, lazy, Suspense } from 'react';
 import { connect } from 'react-redux';
 import { loadDashboardPageSuccess } from '../../../store/quant-nav/actions';
 import thumb from '../../../assets/images/icons/feature-exploration.svg';
+import ErrorBoundry from "../../../components/error-boundry/ErrorBoundry";
+import LoadingIndicator from "../../../components/loadingIndicator/LoadingIndicator";
+const Blockchain = lazy(() => import("../../../components/charts/blockchain/Blockchain"));
 
 class FeatureExploration extends Component {
 
@@ -18,9 +21,23 @@ class FeatureExploration extends Component {
     render() {
 
         return(
-            <div>
-                <h1>Feature Exploration</h1>
-            </div>
+            <Fragment>
+                <div className="row">
+                    <div className="col-12">
+                        <div className="row">
+                            <div className="col-xl-6">
+                                <div className="dashboard-box __xl">
+                                    <ErrorBoundry>
+                                        <Suspense fallback={<LoadingIndicator />}>
+                                            <Blockchain />
+                                        </Suspense>
+                                    </ErrorBoundry>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </Fragment>
         )
 
     }

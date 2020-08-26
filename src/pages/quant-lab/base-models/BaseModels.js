@@ -5,6 +5,7 @@ import thumb from "../../../assets/images/icons/baseline-model.svg";
 import './base-models.scss';
 import LoadingIndicator from "../../../components/loadingIndicator/LoadingIndicator";
 import ErrorBoundry from "../../../components/error-boundry/ErrorBoundry";
+import DateFilter from "../../../components/date-filter/DateFilter";
 const StackDistribution = lazy(() => import("../../../components/charts/stackDistribution/StackDistribution"));
 const BaselineModel2 = lazy(() => import("../../../components/charts/baseline-model-2/BaselineModel2"));
 
@@ -42,6 +43,83 @@ class BaseModels extends Component {
                                             <BaselineModel2 />
                                         </Suspense>
                                     </ErrorBoundry>
+                                </div>
+                            </div>
+                            <div className="col-12">
+                                <div className="dashboard-box __stat __table">
+                                    <div className="table">
+                                        <div className="table-header">
+                                            <div className="table-header-box">
+                                                <span className="table-body-title">Table title</span>
+                                            </div>
+                                            <div className="table-header-box">
+                                                <DateFilter />
+                                            </div>
+                                        </div>
+                                        <div className="table-scroll">
+                                            <table className="table-body">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Ranking</th>
+                                                        <th>Rank</th>
+                                                        <th>Author</th>
+                                                        <th>Forecast</th>
+                                                        <th>Direction</th>
+                                                        <th>RMSE</th>
+                                                        <th>MAPE</th>
+                                                        <th>MADS</th>
+                                                        <th>R<sub>2</sub></th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>Model 1</td>
+                                                        <td><span className="num">1</span></td>
+                                                        <td>John Smith</td>
+                                                        <td>Lorem Impsum</td>
+                                                        <td>Lorem Impsum</td>
+                                                        <td>Lorem Impsum</td>
+                                                        <td>Lorem Impsum</td>
+                                                        <td>Lorem Impsum</td>
+                                                        <td>Lorem Impsum</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Model 2</td>
+                                                        <td><span className="num">2</span></td>
+                                                        <td>John Smith</td>
+                                                        <td>Lorem Impsum</td>
+                                                        <td>Lorem Impsum</td>
+                                                        <td>Lorem Impsum</td>
+                                                        <td>Lorem Impsum</td>
+                                                        <td>Lorem Impsum</td>
+                                                        <td>Lorem Impsum</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Model 3</td>
+                                                        <td><span className="num">3</span></td>
+                                                        <td>John Smith</td>
+                                                        <td>Lorem Impsum</td>
+                                                        <td>Lorem Impsum</td>
+                                                        <td>Lorem Impsum</td>
+                                                        <td>Lorem Impsum</td>
+                                                        <td>Lorem Impsum</td>
+                                                        <td>Lorem Impsum</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Model 4</td>
+                                                        <td><span className="num">4</span></td>
+                                                        <td>John Smith</td>
+                                                        <td>Lorem Impsum</td>
+                                                        <td>Lorem Impsum</td>
+                                                        <td>Lorem Impsum</td>
+                                                        <td>Lorem Impsum</td>
+                                                        <td>Lorem Impsum</td>
+                                                        <td>Lorem Impsum</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
