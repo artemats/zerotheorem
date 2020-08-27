@@ -41,6 +41,10 @@ const DateFilter = ({ onSubmit, defaultStartDate, defaultFinishedDate, defaultPe
     const [selectedPeriod, setSelectedPeriod] = useState(period);
     const [startDate, setStartDate] = useState(defaultStartDate || lastWeek);
     const [finishedDate, setFinishedDate] = useState(defaultFinishedDate || _today);
+    const [finalDates, setFinalDates] = useState({
+       startDate: defaultStartDate || lastWeek(),
+       finishedDate: defaultFinishedDate || _today
+    });
     const dropdownRef = useRef();
 
     useOnClickOutside(dropdownRef, () => handleCloseSelect());
@@ -52,6 +56,8 @@ const DateFilter = ({ onSubmit, defaultStartDate, defaultFinishedDate, defaultPe
     const handleCloseSelect = () => {
         setIsOpen(false);
         setSelectedPeriod(period);
+        setStartDate(finalDates.startDate);
+        setFinishedDate(finalDates.finishedDate);
     };
 
     const getLastWeek = () => {
@@ -95,10 +101,12 @@ const DateFilter = ({ onSubmit, defaultStartDate, defaultFinishedDate, defaultPe
         setPeriod(selectedPeriod);
         onSubmit(transformDateFormat(startDate), transformDateFormat(finishedDate));
         setIsOpen(false);
+        setFinalDates({startDate: startDate, finishedDate: finishedDate});
     };
 
     useEffect(() => {
        // console.log(dropdownRef.current.getBoundingClientRect().y);
+       //  console.log('final - ', finalDates);
     });
 
     return(
