@@ -577,6 +577,37 @@ p, li{
           height: auto;
           padding: 20px 0 0;
         }
+        &.__panel{
+          height: auto;
+          width: 100%;
+          padding: 33px 40px 27px;
+        }
+    }
+    &-panel{
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+        &-item{
+          flex: 1;
+          @extend .semi-bold;
+          white-space: nowrap;
+            .yellow{
+              margin-left: 8px;
+            }
+            @include d(1200){
+              width: 25%;
+              flex: none;
+            }
+            @include d(767){
+              width: 33.33%;
+            }
+            @include d(480){
+              width: 50%;
+            }
+            @include d(400){
+              width: 100%;
+            }
+        }
     }
 }
 

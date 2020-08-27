@@ -9,6 +9,7 @@ import {isEmpty} from "../../globalFunctions/globalFunctions";
 import DateFilter from "../../date-filter/DateFilter";
 import {lastWeek, _today} from "../../globalFunctions/detectDate";
 import {transformDateFormat} from "../../globalFunctions/transformDateFormat";
+import {fetchData} from "../../globalFunctions/fetchData";
 
 class TrendPlot extends Component {
 
@@ -20,21 +21,13 @@ class TrendPlot extends Component {
     componentDidMount() {
         const { api, fetchTrendSuccess, fetchTrendError, data } =  this.props;
         if(isEmpty(data)) {
-            api.getTrend(transformDateFormat(lastWeek()))
-                .then(trendData => {
-                    fetchTrendSuccess(trendData);
-                })
-                .catch(error => fetchTrendError(error));
+            fetchData(api.getTrend, fetchTrendSuccess, fetchTrendError, transformDateFormat(lastWeek()));
         }
     }
 
     onChangeFilter(startDate) {
         const { api, fetchTrendSuccess, fetchTrendError } =  this.props;
-        api.getTrend(startDate)
-            .then(trendData => {
-                fetchTrendSuccess(trendData);
-            })
-            .catch(error => fetchTrendError(error));
+        fetchData(api.getTrend, fetchTrendSuccess, fetchTrendError, startDate);
     }
 
     render() {

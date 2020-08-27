@@ -1,4 +1,4 @@
-import React, { Component, Fragment, lazy, Suspense } from 'react';
+import React, { Component, lazy, Suspense } from 'react';
 import { connect } from 'react-redux';
 import { loadDashboardPageSuccess } from '../../../store/quant-nav/actions';
 import thumb from '../../../assets/images/icons/forecast-2.svg';
@@ -26,68 +26,66 @@ class Forecast extends Component {
     render() {
 
         return(
-            <Fragment>
-                <div className="row">
-                    <div className="col-12">
-                        <div className="row">
-                            <div className="col-xl-7">
-                                <div className="dashboard-box __lg">
-                                    <ErrorBoundry>
-                                        <Suspense fallback={<LoadingIndicator />}>
-                                            <TrendPlot />
-                                        </Suspense>
-                                    </ErrorBoundry>
-                                </div>
+            <div className="row">
+                <div className="col-12">
+                    <div className="row">
+                        <div className="col-xl-7">
+                            <div className="dashboard-box __lg">
+                                <ErrorBoundry>
+                                    <Suspense fallback={<LoadingIndicator />}>
+                                        <TrendPlot />
+                                    </Suspense>
+                                </ErrorBoundry>
                             </div>
-                            <div className="col-xl-5">
-                                <div className="dashboard-box">
-                                    <ErrorBoundry>
-                                        <Suspense fallback={<LoadingIndicator />}>
-                                            <ResidualPlot />
-                                        </Suspense>
-                                    </ErrorBoundry>
-                                </div>
+                        </div>
+                        <div className="col-xl-5">
+                            <div className="dashboard-box">
+                                <ErrorBoundry>
+                                    <Suspense fallback={<LoadingIndicator />}>
+                                        <ResidualPlot />
+                                    </Suspense>
+                                </ErrorBoundry>
                             </div>
-                            <div className="col-xl-7">
-                                <div className="dashboard-box __stat">
-                                    <ErrorBoundry>
-                                        <Suspense fallback={<LoadingIndicator />}>
-                                            <MetricBox />
-                                        </Suspense>
-                                    </ErrorBoundry>
-                                </div>
+                        </div>
+                        <div className="col-xl-7">
+                            <div className="dashboard-box __stat">
+                                <ErrorBoundry>
+                                    <Suspense fallback={<LoadingIndicator />}>
+                                        <MetricBox />
+                                    </Suspense>
+                                </ErrorBoundry>
                             </div>
-                            <div className="col-xl-5">
-                                <div className="dashboard-box __mt">
-                                    <ErrorBoundry>
-                                        <Suspense fallback={<LoadingIndicator />}>
-                                            <ResidualHistogram />
-                                        </Suspense>
-                                    </ErrorBoundry>
-                                </div>
+                        </div>
+                        <div className="col-xl-5">
+                            <div className="dashboard-box __mt">
+                                <ErrorBoundry>
+                                    <Suspense fallback={<LoadingIndicator />}>
+                                        <ResidualHistogram />
+                                    </Suspense>
+                                </ErrorBoundry>
                             </div>
-                            <div className="col-xl-6">
-                                <div className="dashboard-box __sm">
-                                    <ErrorBoundry>
-                                        <Suspense fallback={<LoadingIndicator />}>
-                                            <QqPlot />
-                                        </Suspense>
-                                    </ErrorBoundry>
-                                </div>
+                        </div>
+                        <div className="col-xl-6">
+                            <div className="dashboard-box __sm">
+                                <ErrorBoundry>
+                                    <Suspense fallback={<LoadingIndicator />}>
+                                        <QqPlot />
+                                    </Suspense>
+                                </ErrorBoundry>
                             </div>
-                            <div className="col-xl-6">
-                                <div className="dashboard-box __sm">
-                                    <ErrorBoundry>
-                                        <Suspense fallback={<LoadingIndicator />}>
-                                            <ProbabilityPlot />
-                                        </Suspense>
-                                    </ErrorBoundry>
-                                </div>
+                        </div>
+                        <div className="col-xl-6">
+                            <div className="dashboard-box __sm">
+                                <ErrorBoundry>
+                                    <Suspense fallback={<LoadingIndicator />}>
+                                        <ProbabilityPlot />
+                                    </Suspense>
+                                </ErrorBoundry>
                             </div>
                         </div>
                     </div>
                 </div>
-            </Fragment>
+            </div>
         )
 
     }

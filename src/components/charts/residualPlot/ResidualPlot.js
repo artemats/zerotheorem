@@ -7,6 +7,9 @@ import Plot from '../../../../node_modules/react-plotly.js/react-plotly';
 import {viewSettingsConfig, viewSettingsLayout} from "../ChartViewSettins";
 import {isEmpty} from "../../globalFunctions/globalFunctions";
 import DateFilter from "../../date-filter/DateFilter";
+import {fetchData} from "../../globalFunctions/fetchData";
+import {transformDateFormat} from "../../globalFunctions/transformDateFormat";
+import {lastWeek} from "../../globalFunctions/detectDate";
 
 class ResidualPlot extends Component {
 
@@ -18,21 +21,18 @@ class ResidualPlot extends Component {
     componentDidMount() {
         const { api, fetchResidualPlotSuccess, fetchResidualPlotError, data } = this.props;
         if(isEmpty(data)) {
-            api.getResidual('2020-08-14')
-                .then(resData => {
-                    fetchResidualPlotSuccess(resData);
-                })
-                .catch(error => fetchResidualPlotError(error));
+            fetchData(api.getResidual, fetchResidualPlotSuccess, fetchResidualPlotError, transformDateFormat(lastWeek()));
+            // api.getResidual('2020-08-14')
+            //     .then(resData => {
+            //         fetchResidualPlotSuccess(resData);
+            //     })
+            //     .catch(error => fetchResidualPlotError(error));
         }
     }
 
     onChangeFilter(startDate) {
         const { api, fetchResidualPlotSuccess, fetchResidualPlotError } = this.props;
-        api.getResidual(startDate)
-            .then(resData => {
-                fetchResidualPlotSuccess(resData);
-            })
-            .catch(error => fetchResidualPlotError(error));
+        fetchData(api.getResidual, fetchResidualPlotSuccess, fetchResidualPlotError, startDate);
     }
 
     render() {

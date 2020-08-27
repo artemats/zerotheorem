@@ -50,20 +50,18 @@ const DateFilter = ({ onSubmit, defaultStartDate, defaultFinishedDate, defaultPe
     };
 
     const handleCloseSelect = () => {
-      setIsOpen(false);
-      setSelectedPeriod(period);
+        setIsOpen(false);
+        setSelectedPeriod(period);
     };
 
     const getLastWeek = () => {
+        setSelectedPeriod({...periods[0], isActive: true});
         setStartDate(lastWeek());
         setFinishedDate(_today);
-        setSelectedPeriod({...periods[0], isActive: true});
     };
 
     const getLastMonths = (count) => {
         let period = null;
-        setStartDate(lastMonths(count));
-        setFinishedDate(_today);
         if(count === 3) {
             period = {...periods[2], isActive: true};
         } else if(count === 6) {
@@ -71,13 +69,15 @@ const DateFilter = ({ onSubmit, defaultStartDate, defaultFinishedDate, defaultPe
         } else {
             period = {...periods[1], isActive: true};
         }
+        setStartDate(lastMonths(count));
+        setFinishedDate(_today);
         setSelectedPeriod(period);
     };
 
     const getLastYear = () => {
+        setSelectedPeriod({...periods[4], isActive: true});
         setStartDate(lastYear());
         setFinishedDate(_today);
-        setSelectedPeriod({...periods[4], isActive: true});
     };
 
     const onChangeSetStartDate = (date) => {
@@ -102,12 +102,12 @@ const DateFilter = ({ onSubmit, defaultStartDate, defaultFinishedDate, defaultPe
     });
 
     return(
-        <div className="dashboard-box-filter">
+        <div className="dashboard-box-filter" ref={dropdownRef}>
             <div className={`dropdown ${isOpen ? 'is-active': ''}`}>
                 <div className="dropdown-header" onClick={handleToggleSelect}>
                     <span className="dropdown-header-title semi-bold">{selectedPeriod.title}</span>
                 </div>
-                <div className="dropdown-select" ref={dropdownRef}>
+                <div className="dropdown-select">
                     <form onSubmit={handleSubmit}>
                         <div className="dropdown-select-list">
                             <div className="input-container">

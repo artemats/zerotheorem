@@ -14,7 +14,8 @@ class ResidualHistogram extends Component {
         if(isEmpty(data)) {
             api.getResidualHistogram()
                 .then(resHisData => {
-                    fetchResidualHisSuccess(resHisData)
+                    fetchResidualHisSuccess(resHisData);
+                    console.log(resHisData);
                 })
                 .catch(error => fetchResidualHisError(error));
         }
