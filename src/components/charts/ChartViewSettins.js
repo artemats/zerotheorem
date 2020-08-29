@@ -1,12 +1,15 @@
 const initialMargin = {l: 30, r: 30, t: 80, b: 30};
 
-export const viewSettingsLayout = (chartTitle, showLegend, margin = initialMargin, xTickFormat, yTickFormat, bargap = 0.2, xTitle, yTitle, barMode = 'group', barNorm = '', yGrid = true, xGrid = true) => {
+export const viewSettingsLayout = (chartTitle, showLegend, margin = initialMargin, xTickFormat, yTickFormat, bargap = 0.2, xTitle, yTitle, barMode = 'group', barNorm = '', yGrid = true, xGrid = true, annotations) => {
     return {
         layout: {
             width: null,
             height: null,
             font: {
-                family: 'Raleway, sans-serif'
+                family: 'Raleway, sans-serif',
+                color: '#B2B3B5',
+                size: 12,
+                fontWeight: 600
             },
             title: {
                 text: '<b>' + chartTitle + '</b>',
@@ -86,7 +89,8 @@ export const viewSettingsLayout = (chartTitle, showLegend, margin = initialMargi
                 bgcolor: 'transparent'
             },
             barmode: barMode,
-            barnorm: barNorm
+            barnorm: barNorm,
+            annotations: annotations
         },
         useResizeHandler: true,
         style: {
