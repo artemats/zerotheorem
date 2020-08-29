@@ -137,3 +137,35 @@
       padding-bottom: 70px;
     }
 }
+
+.data{
+    &-banner{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-radius: 15px;
+      border: 1px #4A4A4A solid;
+      padding: 40px 98px;
+    }
+    &-view{
+      border-radius: 15px;
+      border: 1px #4A4A4A solid;
+      min-height: 564px;
+      margin-bottom: 30px;
+    }
+    &-list{
+      margin: 0 -16px;
+      display: flex;
+      flex-wrap: wrap;
+        &-item{
+          border-radius: 15px;
+          border: 1px #4A4A4A solid;
+          height: 166px;
+          margin: 0 16px 30px;
+          width: calc(50% - 32px);
+        }
+    }
+    .btn{
+      max-width: 188px;
+    }
+}

@@ -267,13 +267,14 @@ p, li{
       font-size: 18px;
       @extend .medium;
       color: #121C21;
-      transition: background-color .2s ease;
+      transition: background-color .2s ease, border-color .2s ease;
         &:before{
           display: none;
         }
         @include hover(991){
           &:hover{
             background-color: #CFB024;
+            border-color: #CFB024;
           }
         }
         &.default{
