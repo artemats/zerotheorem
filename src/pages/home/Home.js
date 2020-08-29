@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import AnimateCounter from "../../components/animate-counter/AnimateCounter";
 import './home.scss';
 import infoBanner from '../../assets/images/home/wtf-banner.jpg';
+import infoBannerWebp from '../../assets/images/home/wtf-banner.webp';
 import aboutBanner from '../../assets/images/home/about-banner.jpg';
 import quantBanner from '../../assets/images/home/quant-banner.jpg';
 import wtfSun from '../../assets/images/wtf-planet.svg';
@@ -49,7 +50,10 @@ const Home = () => {
                     <div className="row">
                         <div className="col-xl-6 col-md-6">
                             <div className="content-preview">
-                                <img src={infoBanner} alt="Mission" />
+                                <picture>
+                                    <source srcSet={infoBannerWebp} type="image/webp" />
+                                    <img src={infoBanner} alt="Mission" />
+                                </picture>
                             </div>
                         </div>
                         <div className="col-xl-5 offset-xl-1 col-md-6">
