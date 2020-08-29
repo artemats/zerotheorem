@@ -5,7 +5,9 @@ import './home.scss';
 import infoBanner from '../../assets/images/home/wtf-banner.jpg';
 import infoBannerWebp from '../../assets/images/home/wtf-banner.webp';
 import aboutBanner from '../../assets/images/home/about-banner.jpg';
+import aboutBannerWebp from '../../assets/images/home/about-banner.webp';
 import quantBanner from '../../assets/images/home/quant-banner.jpg';
+import quantBannerWebp from '../../assets/images/home/quant-banner.webp';
 import wtfSun from '../../assets/images/wtf-planet.svg';
 import aboutSun from '../../assets/images/about-planet.svg';
 import LoadingIndicator from "../../components/loadingIndicator/LoadingIndicator";
@@ -111,7 +113,10 @@ const Home = () => {
                     <div className="row">
                         <div className="col-xl-6 offset-xl-1 order-md-2 col-md-6">
                             <div className="content-preview">
-                                <img src={aboutBanner} alt="Back testing" />
+                                <picture>
+                                    <source srcSet={aboutBannerWebp} type="image/webp" />
+                                    <img src={aboutBanner} alt="Back testing" />
+                                </picture>
                             </div>
                         </div>
                         <div className="col-xl-5 order-md-1 col-md-6">
@@ -139,7 +144,10 @@ const Home = () => {
                     <div className="row">
                         <div className="col-xl-5 offset-xl-1 col-md-6">
                             <div className="quant-preview">
-                                <img src={quantBanner} alt="Quant Lab" />
+                                <picture>
+                                    <source srcSet={quantBannerWebp} type="image/webp" />
+                                    <img src={quantBanner} alt="Quant Lab" />
+                                </picture>
                             </div>
                         </div>
                         <div className="col-xl-5 offset-xl-1 col-md-6">
