@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import { loadDashboardPageSuccess } from "../../../store/quant-nav/actions";
 import thumb from "../../../assets/images/icons/data.svg";
 import DataBanner from "../../../components/data-banner/DataBanner";
+import DataDownloads from "../../../components/data-downloads/DataDownloads";
 
 class Data extends Component {
 
@@ -22,18 +23,17 @@ class Data extends Component {
                 <div className="row">
                     <div className="col-xl-6">
                         <div className="data-view">
-
+                            <div className="data-view-content">
+                                <p className="data-view-subtitle semi-bold">In Order To Download Our Historical Data</p>
+                                <p className="data-view-title regular">Please Fill Out Our Feedback Form</p>
+                                <button className="btn sm">
+                                    <span className="btn-title">Get Start</span>
+                                </button>
+                            </div>
                         </div>
                     </div>
                     <div className="col-xl-6">
-                        <div className="data-list">
-                            <div className="data-list-item">
-
-                            </div>
-                            <div className="data-list-item">
-
-                            </div>
-                        </div>
+                        <DataDownloads />
                     </div>
                 </div>
                 <div className="row">

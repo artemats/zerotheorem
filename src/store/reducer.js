@@ -8,6 +8,7 @@ import { quantNavReducer } from './quant-nav/reducer';
 import { metricReducer } from './metric-box/reducer';
 import { researchReducer } from './research/reducer';
 import { modalReducer } from './modal/reducer';
+import { dataReducer } from './data/reducer';
 
 export default combineReducers({
     quantNavReducer,
@@ -18,5 +19,6 @@ export default combineReducers({
     probabilityPlotReducer,
     metricReducer,
     researchReducer,
-    modalReducer
+    modalReducer,
+    dataReducer
 });
