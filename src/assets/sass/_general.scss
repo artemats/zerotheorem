@@ -318,7 +318,7 @@ p, li{
           border: none;
           background-color: transparent;
           color: $grey-light;
-          transition: color .2s ease;
+          transition: color .2s ease, background-color .2s ease;
             @include hover(991){
               &:hover{
                 color: $white;
@@ -359,6 +359,44 @@ p, li{
                   }
                 }
             }
+        }
+    }
+    &.control{
+      height: 74px;
+      font-size: 18px;
+      border: 1px #4A4A4A solid;
+        &.disabled{
+          pointer-events: none;
+        }
+        &.bg{
+          background-color: #0F58B3;
+          color: $white;
+            &:before{
+              display: none;
+            }
+            @include hover(991){
+              &:hover{
+                background-color: #3F6E8F;
+              }
+            }
+            &:active{
+              background-color: transparent;
+              color: $grey-light;
+            }
+        }
+        svg{
+          fill: currentColor;
+        }
+        &:before{
+          background-color: $white;
+          opacity: 0;
+        }
+        @include hover(991){
+          &:hover{
+            &:before{
+              opacity: .08;
+            }
+          }
         }
     }
     @include hover(991){

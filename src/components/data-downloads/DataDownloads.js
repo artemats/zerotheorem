@@ -15,17 +15,17 @@ class DataDownloads extends Component {
         })
     }
 
-    handleDetectButton = (box, isDisabled) => {
-        if(isDisabled) {
+    handleDetectButton = (box, enableDownloads) => {
+        if(enableDownloads) {
             return (
-                <button className="btn sm border disabled">
+                <button className="btn sm border" onClick={() => console.log(box.url)}>
                     <span className="btn-title semi-bold">{box.buttonTitle}</span>
                     <span className="btn-icon download" />
                 </button>
             )
         }
         return (
-            <button className="btn sm border" onClick={() => console.log(box.url)}>
+            <button className="btn sm border disabled">
                 <span className="btn-title semi-bold">{box.buttonTitle}</span>
                 <span className="btn-icon download" />
             </button>
@@ -34,7 +34,7 @@ class DataDownloads extends Component {
 
     render() {
         const { downloads } = this.state;
-        const { isDisabled } = this.props;
+        const { enableDownloads } = this.props;
 
         if (!downloads.length) {
             return <LoadingIndicator />
@@ -47,7 +47,7 @@ class DataDownloads extends Component {
                         return (
                             <div className="data-list-item" key={key}>
                                 <p className="data-download-title" dangerouslySetInnerHTML={{ __html: box.title }} />
-                                {this.handleDetectButton(box, isDisabled)}
+                                {this.handleDetectButton(box, enableDownloads)}
                             </div>
                         )
                     })
