@@ -398,6 +398,10 @@ p, li{
             }
           }
         }
+        @include d(480){
+          height: 62px;
+          font-size: 16px;
+        }
     }
     @include hover(991){
       &:hover{

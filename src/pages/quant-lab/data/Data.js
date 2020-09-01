@@ -3,6 +3,8 @@ import { connect } from "react-redux";
 import { loadDashboardPageSuccess } from "../../../store/quant-nav/actions";
 import { nextDataStep, prevDataStep, toggleDownloads } from '../../../store/data/actions';
 import thumb from "../../../assets/images/icons/data.svg";
+import bannerStart from '../../../assets/images/data/banner-start.jpg';
+import bannerStep from '../../../assets/images/data/banner-step.jpg';
 import DataBanner from "../../../components/data-banner/DataBanner";
 import DataDownloads from "../../../components/data-downloads/DataDownloads";
 import DataStart from "../../../components/data-steps/DataStart";
@@ -48,9 +50,10 @@ class Data extends Component {
     };
 
     handleDetectEventButton = (nextDataStep,  step) => {
+        const { toggleDownloads } = this.props;
         if(step >= 6){
             return (
-                <button className="btn control bg" onClick={() => console.log('submit')}>
+                <button className="btn control bg" onClick={() => toggleDownloads(true)}>
                     <span className="btn-title">Submit</span>
                     <svg width="6" height="10" viewBox="0 0 6 10" xmlns="http://www.w3.org/2000/svg">
                         <path d="M0 8.5488L3.36124 5.18022L0 1.81165L1.03479 0.776855L5.43816 5.18022L1.03479 9.58359L0 8.5488Z" />
@@ -76,12 +79,14 @@ class Data extends Component {
             <div className="data">
                 <div className="row">
                     <div className="col-xl-6">
-                        <div className="data-view">
+                        <div className="data-view" style={{backgroundImage: `url(${step === 0 ? bannerStart : bannerStep})`}}>
                             <div className={`data-view-nav ${disabledForStart}`}>
                                 {
                                     nav.map((num, key) => {
                                         return (
-                                            <span className={`num semi-bold ${num === step ? 'active' : ''}`} key={key}>{num}</span>
+                                            <span className={`num semi-bold ${num === step ? 'active' : ''}`} key={key}>
+                                                <span className="num-title">{num}</span>
+                                            </span>
                                         )
                                     })
                                 }
