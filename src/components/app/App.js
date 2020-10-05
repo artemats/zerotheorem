@@ -32,27 +32,34 @@ class App extends Component {
                         </Route>
                         <Route path="/about">
                             <About />
+                            <Footer />
                         </Route>
                         <Route path="/resources">
                             <Resources />
+                            <Footer />
                         </Route>
                         <Route path="/quant-lab">
                             <Forecast />
                         </Route>
                         <Route path="/faq">
                             <Faq />
+                            <Footer />
                         </Route>
                         <Route exact path="/research">
                             <Research />
+                            <Footer />
                         </Route>
                         <Route path="/research/:id">
                             <LiteratureReview />
+                            <Footer />
                         </Route>
                         <Route path="/contact">
                             <Contact />
+                            <Footer />
                         </Route>
                         <Route path="/back-test">
                             <BackTest />
+                            <Footer />
                         </Route>
                         <Route exact path="*">
                             <PageNotFound />

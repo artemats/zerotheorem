@@ -28,7 +28,7 @@ const CountdownTimer = () => {
         <div className="timer">
             <p className="timer-title semi-bold">Time to Next Update</p>
             <Countdown
-                date="2020-09-02T08:00:00"
+                date="2020-09-06T08:00:00"
                 renderer={renderer}
                 onComplete={onCompleteTimer} />
         </div>

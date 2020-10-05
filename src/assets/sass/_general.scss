@@ -1,16 +1,15 @@
 body{
   background-color: $black;
-  color: $grey-light;
+  color: $white;
   @extend .regular;
-  font-size: 14px;
+  font-size: 16px;
 }
 
 h1{
-  font-size: 42px;
-  text-transform: uppercase;
-  letter-spacing: .36em;
+  font-size: 90px;
+  letter-spacing: -.03em;
   line-height: 1.2em;
-  @extend .regular;
+  @extend .extra-bold;
     @include d(1300){
       font-size: 40px;
     }
@@ -53,10 +52,10 @@ h1{
 }
 
 h2{
-  font-size: 32px;
-  text-transform: uppercase;
-  color: $yellow;
-  letter-spacing: .36em;
+  font-size: 80px;
+  color: $white;
+  letter-spacing: .02em;
+  @extend .extra-bold;
     @include d(1300){
       font-size: 30px;
     }
@@ -87,10 +86,24 @@ h3{
     }
 }
 
+h5{
+  font-size: 25px;
+  @extend .extra-bold;
+  color: $white;
+  letter-spacing: .04em;
+}
+
+h6{
+  font-size: 20px;
+  @extend .semi-bold;
+  line-height: 1.2em;
+  letter-spacing: .018em;
+}
+
 p, li{
   font-size: inherit;
   font-family: inherit;
-  line-height: 2.6em;
+  line-height: 1.625em;
   //letter-spacing: .03em;
 }
 
@@ -121,14 +134,14 @@ p, li{
 
 .link{
   font-size: 12px;
-  @extend .semi-bold;
+  @extend .regular;
   line-height: 2em;
   border: none;
   background-color: transparent;
   padding: 0;
-  color: #B2B3B5;
+  color: $white;
   position: relative;
-  //letter-spacing: .03em;
+  letter-spacing: .03em;
   transition: color .2s ease;
   white-space: nowrap;
     &-icon{
@@ -209,19 +222,22 @@ p, li{
 .btn{
   height: 70px;
   line-height: 70px;
-  border: 1px $white solid;
-  font-size: 14px;
-  @extend .medium;
-  background-color: transparent;
-  color: $grey-button;
+  border: 1px $yellow solid;
+  font-size: 18px;
+  background-color: $yellow;
+  color: $black;
   padding: 0;
   text-align: center;
-  max-width: 310px;
+  max-width: 318px;
   width: 100%;
   position: relative;
   white-space: nowrap;
   overflow: hidden;
   cursor: pointer;
+  @extend .semi-bold;
+  border-radius: 5px;
+  letter-spacing: .018em;
+  transition: background-color .2s ease, color .2s ease;
     &-title{
       position: relative;
       z-index: 1;
@@ -265,18 +281,6 @@ p, li{
         opacity: 0;
       }
     }
-    &:before{
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-color: $yellow-button;
-      opacity: .1;
-      transition: opacity .2s ease;
-      pointer-events: none;
-    }
     &.lg{
       height: 60px;
       line-height: 60px;
@@ -302,7 +306,6 @@ p, li{
       border-color: $yellow;
       border-radius: 5px;
       font-size: 18px;
-      @extend .medium;
       color: #121C21;
       transition: background-color .2s ease, border-color .2s ease, color .2s ease;
         &:before{
@@ -405,9 +408,8 @@ p, li{
     }
     @include hover(991){
       &:hover{
-        &:before{
-          opacity: .3;
-        }
+        background-color: transparent;
+        color: $white;
       }
     }
     @include d(1300){
@@ -446,11 +448,11 @@ p, li{
 
 .subtitle{
   text-transform: uppercase;
-  color: $grey;
+  color: $grey-light;
   @extend .regular;
-  letter-spacing: .75em;
-  font-size: 12px;
-  margin-bottom: 17px;
+  letter-spacing: .71em;
+  font-size: 14px;
+  margin-bottom: 22px;
     @include d(1200){
       line-height: 1.6em;
     }
@@ -593,7 +595,6 @@ p, li{
     &-timer{
       text-align: right;
       padding-bottom: 27px;
-      @extend .light;
         .subtitle{
           margin-bottom: 21px;
         }
@@ -1484,7 +1485,6 @@ p, li{
   height: 60px;
   padding: 0 20px;
   color: $white;
-  @extend .light;
   font-size: 16px;
   border: 1px #1b1e21 solid;
   transition: border-color .2s ease;
@@ -1635,7 +1635,6 @@ p, li{
     }
     &-title{
       font-size: 14px;
-      @extend .medium;
       letter-spacing: .025em;
       position: relative;
       z-index: 1;

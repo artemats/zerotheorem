@@ -1,77 +1,18 @@
 .folder{
-  text-align: center;
-  padding: 450px 0 200px;
-    &-title{
-      margin-bottom: 55px;
-        .title-1{
-          position: relative;
-            &:before{
-              right: 37px;
-              left: 17px;
-            }
-            &:after{
-              content: '';
-              position: absolute;
-              bottom: -67px;
-              left: -27px;
-              width: 16px;
-              height: 16px;
-              background-repeat: no-repeat;
-              background-size: contain;
-              background-position: center;
-              background-image: url(../../assets/images/plus.svg);
-              pointer-events: none;
-            }
-            @media only screen and (max-width: 575px) {
-              &:after{
-                bottom: -47px;
-                left: -10px;
-              }
-            }
+  padding: 277px 0 200px;
+    &-content{
+        &-title{
+          margin-bottom: 73px;
+        }
+        &-subtitle{
+          margin-bottom: 48px;
         }
     }
-    &-circle{
-      position: absolute;
-      top: -282px;
-      left: -245px;
-      width: 525px;
-      height: 525px;
-      opacity: .5;
-      pointer-events: none;
-        @media only screen and (max-width: 1440px) {
-          width: 480px;
-          height: 480px;
-        }
-        @media only screen and (max-width: 1200px) {
-          width: 400px;
-          height: 400px;
-          top: -242px;
-          left: -245px;
-        }
+    &-counter{
+      padding-right: 70px;
     }
-    .counter{
-      margin-bottom: 218px;
-        @media only screen and (max-width: 1440px) {
-          margin-bottom: 150px;
-        }
-        @media only screen and (max-width: 1200px) {
-          margin-bottom: 120px;
-        }
-        @media only screen and (max-width: 575px) {
-          margin-bottom: 70px;
-        }
-    }
-    @media only screen and (max-width: 1440px) {
-      padding: 350px 0 150px;
-    }
-    @media only screen and (max-width: 1300px) {
-      padding: 280px 0 130px;
-    }
-    @media only screen and (max-width: 767px) {
-      padding: 240px 0 110px;
-    }
-    @media only screen and (max-width: 575px) {
-      padding: 200px 0 110px;
+    .subtitle{
+      margin-bottom: 29px;
     }
 }
 
@@ -340,5 +281,44 @@
     }
     @media only screen and (max-width: 1200px) {
       padding: 110px 0 80px;
+    }
+}
+
+.philosophy{
+  padding: 132px 0;
+    &-list{
+      display: flex;
+      justify-content: space-between;
+    }
+    &-box{
+      margin-top: 177px;
+      max-width: 385px;
+        &-icon{
+          height: 75px;
+          width: 75px;
+          display: block;
+          text-align: left;
+          margin-bottom: 35px;
+            img{
+              object-fit: contain;
+            }
+        }
+        &-title{
+          position: relative;
+          padding-left: 30px;
+            &:before{
+              content: '';
+              position: absolute;
+              top: 12px;
+              left: 0;
+              width: 8px;
+              height: 8px;
+              border-radius: 50%;
+              background-color: #deb513;
+            }
+        }
+        &-description{
+          margin-top: 16px;
+        }
     }
 }

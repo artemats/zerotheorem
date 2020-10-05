@@ -45,16 +45,22 @@ class AnimateCounter extends Component{
 
         const { value, currency, direction } = this.state;
         return(
-            <div className="counter">
-                <div className="counter-body yellow">
-                    <div className="counter-body-label medium">{currency}</div>
-                    <div className="counter-body-value light">
-                        <Odometer value={value} format="(.ddd).dd" duration={1000} />
+            <div>
+                <div className="counter">
+                    <div className="counter-body">
+                        <div className="counter-body-label regular">{currency}</div>
+                        <div className="counter-body-value regular">
+                            <Odometer value={value} format="(.ddd).dd" duration={1000} />
+                        </div>
+                    </div>
+                    <div className={`counter-control ${direction}`}>
+                        <div className="counter-control-arrow __up" />
+                        <div className="counter-control-arrow __down" />
                     </div>
                 </div>
-                <div className={`counter-control ${direction}`}>
-                    <div className="counter-control-arrow __up" />
-                    <div className="counter-control-arrow __down" />
+                <div className="counter-description">
+                    <p>Zero Theorem forecast
+                        <span>for 08/25/2020</span></p>
                 </div>
             </div>
         )

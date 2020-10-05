@@ -2,14 +2,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 190px;
     &-body{
       display: inline-flex;
       align-items: flex-end;
       justify-content: flex-end;
-      //width: 298px;
         &-label{
-          font-size: 40px;
-          margin: 0 0 14px 0;
+          font-size: 77px;
+          margin-bottom: 7px;
             @media only screen and (max-width: 1300px) {
               font-size: 32px;
               margin: 0 0 12px 0;
@@ -22,21 +22,8 @@
             }
         }
         &-value{
-          font-size: 85px;
+          font-size: 77px;
           line-height: 1.2em;
-          //letter-spacing: -.05em;
-            @media only screen and (max-width: 1440px) {
-              font-size: 72px;
-            }
-            @media only screen and (max-width: 1300px) {
-              font-size: 64px;
-            }
-            @media only screen and (max-width: 1200px) {
-              font-size: 60px;
-            }
-            @media only screen and (max-width: 575px) {
-              font-size: 52px;
-            }
         }
         @media only screen and (max-width: 1440px) {
           //width: 258px;
@@ -55,12 +42,12 @@
       align-items: center;
       justify-content: center;
       margin-left: 22px;
-      margin-top: -20px;
+      margin-top: -3px;
         &-arrow{
-          width: 26px;
-          height: 18px;
+          width: 14px;
+          height: 8px;
           position: relative;
-          opacity: .5;
+          //opacity: .5;
           transition: opacity .4s ease;
             &:before{
               content: '';
@@ -73,53 +60,25 @@
               transition: border-color .4s ease;
             }
             &.__up{
-              margin-bottom: 7px;
+              margin-bottom: 5px;
                 &:before{
-                  border-width: 0 13px 18px 13px;
+                  border-width: 0 7px 8px 7px;
                   border-color: transparent transparent #00321c transparent;
-                }
-                @media only screen and (max-width: 1300px) {
-                  margin-bottom: 3px;
-                    &:before{
-                      border-width: 0 11px 16px 11px;
-                    }
-                }
-                @media only screen and (max-width: 575px) {
-                  margin-bottom: 1px;
-                    &:before{
-                      border-width: 0 6px 11px 6px;
-                    }
                 }
             }
             &.__down{
-              margin-top: 7px;
+              margin-top: 5px;
                 &:before{
-                  border-width: 18px 13px 0 13px;
+                  border-width: 8px 7px 0 7px;
                   border-color: #6e2214 transparent transparent transparent;
                 }
-                @media only screen and (max-width: 1300px) {
-                  margin-top: 3px;
-                    &:before{
-                      border-width: 16px 11px 0 11px;
-                    }
-                }
-                @media only screen and (max-width: 575px) {
-                  margin-top: 1px;
-                    &:before{
-                      border-width: 11px 6px 0 6px;
-                    }
-                }
-            }
-            @media only screen and (max-width: 575px) {
-              width: 14px;
-              height: 14px;
             }
         }
         &.up{
           .counter-control-arrow.__up{
             opacity: 1;
               &:before {
-                border-color: transparent transparent #035832 transparent;
+                border-color: transparent transparent #00a651 transparent;
               }
           }
         }
@@ -127,7 +86,7 @@
           .counter-control-arrow.__down{
             opacity: 1;
               &:before{
-                border-color: #873223 transparent transparent transparent;
+                border-color: #f01e02 transparent transparent transparent;
               }
           }
         }
@@ -137,6 +96,19 @@
         }
         @media only screen and (max-width: 575px) {
           margin-top: -10px;
+        }
+    }
+    &-description{
+      text-align: center;
+      font-size: 14px;
+      text-transform: uppercase;
+        p{
+          letter-spacing: .41em;
+        }
+        span{
+          letter-spacing: 1.08em;
+          display: block;
+          margin-top: 5px;
         }
     }
 }

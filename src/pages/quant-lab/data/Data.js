@@ -29,6 +29,7 @@ class Data extends Component {
     }
 
     handleSwitchStep = (step) => {
+        console.log('start switch');
         switch (step) {
             case 0:
                 return <DataStart />;

@@ -2,75 +2,77 @@ import React, { Fragment, lazy, Suspense } from 'react';
 import { Link } from 'react-router-dom';
 import AnimateCounter from "../../components/animate-counter/AnimateCounter";
 import './home.scss';
-import infoBanner from '../../assets/images/home/wtf-banner.jpg';
 import aboutBanner from '../../assets/images/home/about-banner.jpg';
 import quantBanner from '../../assets/images/home/quant-banner.jpg';
-import wtfSun from '../../assets/images/wtf-planet.svg';
-import aboutSun from '../../assets/images/about-planet.svg';
 import LoadingIndicator from "../../components/loadingIndicator/LoadingIndicator";
-import Planets from "../../components/planets/Planets";
-const HeroVideo = lazy(() => import("../../components/heroVideo/HeroVideo"));
 const ResearchBox = lazy(() => import("../../components/research-box/ResearchBox"));
-import heroCircle from '../../assets/images/hero-circle.svg';
-import HeroCharts from "../../components/heroChartsAnimate/HeroCharts";
 import ErrorBoundry from "../../components/error-boundry/ErrorBoundry";
+import philosophyIcon1 from '../../assets/images/icons/replace.svg';
+import philosophyIcon2 from '../../assets/images/icons/orbit.svg';
+import philosophyIcon3 from '../../assets/images/icons/3d-modeling.svg';
 
 const Home = () => {
 
     return(
         <Fragment>
             <section className="section folder">
-                <Suspense fallback={<LoadingIndicator />}>
-                    <HeroVideo />
-                </Suspense>
-                <img src={heroCircle} alt="" className="folder-circle" />
-                <div className="abstract __1" />
                 <div className="container">
-                    <HeroCharts />
                     <div className="row">
-                        <div className="col-12">
-                            <div className="folder-title">
-                                <h1 className="title-1 with-border">Forecast</h1>
-                            </div>
-                            <AnimateCounter value={1000} currency="$" />
-                            <div className="folder-action">
+                        <div className="col-xl-8">
+                            <div className="folder-content">
+                                <p className="subtitle">Welcome</p>
+                                <div className="folder-content-title">
+                                    <h1 className="title-1">The Convergence of AI, Blockchain Technology And Quantitative Finance</h1>
+                                </div>
+                                <div className="folder-content-subtitle">
+                                    <h6 className="title-6">Want to look at models to know the price dynamics?</h6>
+                                </div>
                                 <Link to="/quant-lab" className="btn">
-                                    <span className="btn-title">Going to Quant Lab</span>
+                                    <span className="btn-title">Go to Forecast</span>
                                 </Link>
+                            </div>
+                        </div>
+                        <div className="col-xl-4">
+                            <div className="folder-counter">
+                                <AnimateCounter value={1000} currency="$" />
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
-            <section className="section content __wtf">
-                <div className="abstract __2" />
-                <Planets width={281} height={275} sun={wtfSun} />
+            <section className="section philosophy">
                 <div className="container">
                     <div className="row">
-                        <div className="col-xl-6 col-md-6">
-                            <div className="content-preview">
-                                <img src={infoBanner} alt="Mission" />
+                        <div className="col-12">
+                            <p className="subtitle">More about</p>
+                            <div className="philosophy-title">
+                                <h2 className="title-2">Investment Philosophy</h2>
                             </div>
                         </div>
-                        <div className="col-xl-5 offset-xl-1 col-md-6">
-                            <div className="content-description">
-                                <div className="content-description-title">
-                                    <div className="title-plus" />
-                                    <p className="subtitle">Information</p>
-                                    <h2 className="title-2 title-border">Mission</h2>
+                    </div>
+                    <div className="row">
+                        <div className="col-12">
+                            <div className="philosophy-list">
+                                <div className="philosophy-box">
+                                    <div className="philosophy-box-icon">
+                                        <img src={philosophyIcon1} alt="Zero Substitution" />
+                                    </div>
+                                    <h5 className="title-5 philosophy-box-title">1. Zero Substitution</h5>
+                                    <p className="philosophy-box-description">...”game theoretical principles that suggest BTC dominance to absorb value from weaker substitutes”</p>
                                 </div>
-                                <div className="content-description-text">
-                                    <h3 className="title-3">1. Zero BIAS</h3>
-                                    <p>Depart do be so he enough talent. Sociable formerly six but handsome. Up do view time they shot. He concluded disposing provision by questions as situation.</p>
-                                    <h3 className="title-3">2. Zero Cost</h3>
-                                    <p>Indness to he horrible reserved ye. Effect twenty indeed beyond for not had county. The use him without greatly can private. Increasing it unpleasant no of contrasted no continuing.</p>
-                                    <h3 className="title-3">3. Zero Theorem</h3>
-                                    <p>Possession her thoroughly remarkably terminated man continuing. Removed greater to do ability. You shy shall while but wrote marry. Call why sake has sing pure.</p>
+                                <div className="philosophy-box">
+                                    <div className="philosophy-box-icon">
+                                        <img src={philosophyIcon2} alt="Zero Entropy" />
+                                    </div>
+                                    <h5 className="title-5 philosophy-box-title">2. Zero Entropy</h5>
+                                    <p className="philosophy-box-description">…”trading Strategy focuses on risk minimization by targeting temporary price dislocations and extracting market inefficiencies”</p>
                                 </div>
-                                <div className="content-description-action">
-                                    <Link to="/about" className="btn lg">
-                                        <div className="btn-title">Show More</div>
-                                    </Link>
+                                <div className="philosophy-box">
+                                    <div className="philosophy-box-icon">
+                                        <img src={philosophyIcon3} alt="Zero Interference" />
+                                    </div>
+                                    <h5 className="title-5 philosophy-box-title">3. Zero Interference</h5>
+                                    <p className="philosophy-box-description">….“Trusting statistical methods and allowing autonomous trade execution without any human interference or intervention”</p>
                                 </div>
                             </div>
                         </div>
@@ -101,8 +103,6 @@ const Home = () => {
                 </div>
             </section>
             <section className="section content __right __about">
-                <div className="abstract __4" />
-                <Planets width={468} height={458} sun={aboutSun} />
                 <div className="container">
                     <div className="row">
                         <div className="col-xl-6 offset-xl-1 order-md-2 col-md-6">

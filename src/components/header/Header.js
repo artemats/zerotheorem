@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useHistory } from 'react-router-dom';
 import { Link, NavLink } from 'react-router-dom';
-import logo from '../../assets/images/logo.png';
+import logo from '../../assets/images/zerOtheorem_logo.svg';
 import QuantNav from "../../pages/quant-lab/quant-nav/QuantNav";
 import './header.scss';
 
