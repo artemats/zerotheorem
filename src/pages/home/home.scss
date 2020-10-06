@@ -90,18 +90,20 @@
 }
 
 .why{
-  padding: 108px 0;
+  padding: 108px 0 50px;
     &-title{
       padding-top: 10px;
     }
     &-list{
       column-count: 2;
-      padding: 0 125px;
+      padding: 0 75px 0 125px;
+      margin-top: -60px;
         &-box{
           display: inline-block;
           width: 100%;
+          margin-bottom: 145px;
             &:nth-child(1){
-              margin-top: 147px;
+              margin-top: 208px;
             }
         }
     }

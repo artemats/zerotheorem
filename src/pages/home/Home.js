@@ -12,6 +12,9 @@ import philosophyIcon2 from '../../assets/images/icons/orbit.svg';
 import philosophyIcon3 from '../../assets/images/icons/3d-modeling.svg';
 import incentivesBanner from '../../assets/images/home/incentives-banner.png';
 import whyUsIcon1 from '../../assets/images/home/why-us/1.png';
+import whyUsIcon2 from '../../assets/images/home/why-us/2.svg';
+import whyUsIcon3 from '../../assets/images/home/why-us/3.svg';
+import whyUsIcon4 from '../../assets/images/home/why-us/4.svg';
 
 const Home = () => {
 
@@ -319,20 +322,62 @@ const Home = () => {
                                         </div>
                                     </div>
                                 </div>
+                                <div className="why-list-box">
+                                    <div className="why-item">
+                                        <div className="why-item-icon">
+                                            <img src={whyUsIcon2} alt="We understand" />
+                                        </div>
+                                        <div className="why-item-content">
+                                            <h4 className="title-4">We understand</h4>
+                                            <p>We understand that our models can provoke past, current and future economic theory and accept that our work may result in consequences on society that can be far beyond our own comprehension.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="why-list-box">
+                                    <div className="why-item">
+                                        <div className="why-item-icon">
+                                            <img src={whyUsIcon3} alt="We will make clear " />
+                                        </div>
+                                        <div className="why-item-content">
+                                            <h4 className="title-4">We will make clear </h4>
+                                            <p>We will make clear the assumptions, oversights and accuracy of our models to those who intent to use them and never claim that th ey have the full explanatory insights into real world market dynamics. </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="why-list-box">
+                                    <div className="why-item">
+                                        <div className="why-item-icon">
+                                            <img src={whyUsIcon4} alt="We commit" />
+                                        </div>
+                                        <div className="why-item-content">
+                                            <h4 className="title-4">We commit</h4>
+                                            <p>We will make clear the assumptions, oversights and accuracy of our models to those who intent to use them and never claim that th ey have the full explanatory insights into real world market dynamics.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="why-list-box">
+                                    <div className="why-item">
+                                        <div className="why-item-icon">
+                                            <img src={whyUsIcon4} alt="We commit" />
+                                        </div>
+                                        <div className="why-item-content">
+                                            <h4 className="title-4">We will make clear</h4>
+                                            <p>We commit to continuously improving and evolving our models and will never claim that they arecomplete. </p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>
             <section className="section research">
-                <div className="abstract __3" />
                 <div className="container">
                     <div className="row">
                         <div className="col-12">
                             <div className="research-title">
-                                <div className="title-plus" />
-                                <p className="subtitle">useful</p>
-                                <h2 className="title-2 title-border">Research</h2>
+                                <p className="subtitle">This is us</p>
+                                <h3 className="title-2">Research</h3>
                             </div>
                         </div>
                     </div>

@@ -1,5 +1,5 @@
 .research{
-  padding: 136px 0 48px;
+  padding: 31px 0 48px;
     &-title{
       position: relative;
         .title-plus{
@@ -18,10 +18,10 @@
     }
     &-list{
       display: flex;
-      margin: 0 -8px;
-      padding: 112px 0;
+      margin: 0 -40px;
+      padding: 150px 0;
         &-item{
-          padding: 0 8px;
+          padding: 0 42px;
           width: 33.33%;
             @media only screen and (max-width: 991px) {
               display: inline-block;
@@ -56,7 +56,7 @@
         }
     }
     .subtitle{
-      margin-bottom: 27px;
+      margin-bottom: 36px;
     }
     .title-border{
         &:before{

@@ -2,6 +2,7 @@ const path = require('path');
 const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
+const Dotenv = require('dotenv-webpack');
 
 module.exports = {
     entry: ["babel-polyfill", "./src/index.js"],
@@ -80,6 +81,11 @@ module.exports = {
         historyApiFallback: true,
         // https: true
     },
+    resolve: {
+        alias: {
+            Images: path.resolve(__dirname, 'src/assets/images/'),
+        }
+    },
     plugins: [
         new ExtractTextPlugin({
             filename: 'styles.css',
@@ -97,13 +103,10 @@ module.exports = {
             template: path.join(__dirname, "./src/index.html"),
             favicon: './src/favicon.ico'
         }),
-        // new PreloadWebpackPlugin({
-        //     rel: 'preload',
-        //     include: 'allAssets'
-        // })
+        new Dotenv()
     ],
     mode: 'production',
     optimization: {
         minimizer: [new TerserPlugin({ /* additional options here */ })],
-    },
+    }
 };
