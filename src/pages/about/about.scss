@@ -55,7 +55,7 @@
   position: relative;
   display: flex;
   margin: 0 -36px;
-  padding: 160px 70px 160px 0;
+  padding: 160px 0;
     &-column{
       display: flex;
       flex-direction: column;
@@ -70,7 +70,7 @@
       height: 100%;
       color: #c3c3c3;
         &-item{
-          min-height: 105px;
+          min-height: 86px;
           height: 100%;
           border-radius: 10px;
           position: relative;
@@ -104,7 +104,7 @@
                   opacity: .3;
                 }
                 p{
-                  max-width: 160px;
+                  max-width: 180px;
                   margin: 0 auto;
                 }
             }
@@ -129,10 +129,11 @@
               }
             }
             &.__white{
-              &:before{
-                background-color: #ffffff;
-                opacity: .03;
-              }
+              min-height: 160px;
+                &:before{
+                  background-color: #ffffff;
+                  opacity: .03;
+                }
             }
             @media only screen and (max-width: 1600px) {
               font-size: 12px;
@@ -156,6 +157,9 @@
             &.bottom{
               bottom: 0;
               transform: translateY(100%);
+            }
+            &.double{
+              width: 200%;
             }
         }
         @media only screen and (max-width: 1200px) {
@@ -256,22 +260,36 @@
               }
             }
         }
+        &-center{
+          left: 50%;
+          margin-left: -20px;
+        }
+        &-bottom{
+            &:before{
+              top: 20px;
+              left: 12px;
+            }
+            &:after{
+              top: 20px;
+              left: 18px;
+            }
+        }
     }
     .data{
       position: absolute;
       background-color: rgba(255,255,255,.03);
-      border-radius: 40px;
-      width: 52px;
-      top: 16px;
+      border-radius: 10px;
+      width: 40px;
+      top: -178px;
       bottom: 16px;
       text-align: center;
         &.right{
           right: 0;
-          margin-right: -26px;
+          margin-right: -20px;
         }
         &.left{
           left: 0;
-          margin-left: -26px;
+          margin-left: -20px;
         }
         &.space{
           padding-top: 20px;
@@ -292,8 +310,9 @@
           align-items: center;
           justify-content: center;
           line-height: 1.714em;
-          height: 100%;
+          height: 190px;
           width: 100%;
+          padding: 10px 0;
         }
         @media only screen and (max-width: 1200px) {
           width: 42px;

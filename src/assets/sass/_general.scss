@@ -55,6 +55,7 @@ h2{
   font-size: 80px;
   color: $white;
   letter-spacing: .02em;
+  line-height: 1.2em;
   @extend .extra-bold;
     @include d(1300){
       font-size: 30px;
@@ -68,6 +69,12 @@ h2{
     @include d(480){
       font-size: 22px;
     }
+}
+
+h4{
+  font-size: 28px;
+  @extend .bold;
+  line-height: 1.321em;
 }
 
 h3{
@@ -104,6 +111,7 @@ p, li{
   font-size: inherit;
   font-family: inherit;
   line-height: 1.625em;
+  letter-spacing: .025em;
   //letter-spacing: .03em;
 }
 
@@ -111,6 +119,17 @@ p, li{
   position: relative;
   width: 100%;
   overflow: hidden;
+}
+
+.pattern{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: repeat;
+  background-size: 140px;
+  background-image: url(../images/pattern.jpg);
 }
 
 .container{
@@ -276,10 +295,14 @@ p, li{
         }
     }
     &.__border{
-      border-radius: 4px;
-      &:before{
-        opacity: 0;
-      }
+      background-color: transparent;
+      color: $white;
+        @include hover(991){
+          &:hover{
+            background-color: $yellow;
+            color: $black;
+          }
+        }
     }
     &.lg{
       height: 60px;
@@ -779,335 +802,21 @@ p, li{
   position: absolute;
   background-repeat: no-repeat;
   pointer-events: none;
-    &.__1{
-      top: 0;
-      left: -150px;
-      right: -96px;
-      bottom: 86px;
-      background-position: center;
-      background-size: contain;
-      background-image: url(../images/abstract/abstract-1.png);
-        @include d(1700){
-          background-size: auto 45%;
-        }
-        @include d(1440){
-          bottom: 55px;
-        }
-    }
-    &.__2{
-      top: -70px;
-      right: -320px;
-      bottom: 64px;
+    &-1{
+      opacity: .17;
+      top: 65px;
       left: 0;
-      background-position: bottom right;
-      background-image: url(../images/abstract/abstract-2.png);
-      background-size: auto 150%;
-        @include d(1440){
-          background-size: auto 120%;
-        }
-        @include d(991){
-          right: -390px;
-        }
-        @include d(767){
-          bottom: 20px;
-          right: -130px;
-          background-size: contain;
-        }
+      width: 786px;
+      height: 400px;
+      background-image: url(../images/abstract/chart-1.png);
     }
-    &.__3{
-      left: 31%;
-      top: 82px;
-      right: -233px;
-      bottom: 0;
-      background-position: left top;
-      background-size: 100% auto;
-      background-image: url(../images/abstract/abstract-3.png);
-      z-index: 1;
-        @include d(1700){
-          background-position: left 30px;
-        }
-        @include d(1440){
-          background-size: 130% auto;
-          background-position: left top;
-        }
-        @include d(991){
-          background-size: 170% auto;
-          left: 37%;
-          top: 93px;
-        }
-        @include d(575){
-          top: 0;
-        }
-    }
-    &.__4{
-      top: 37px;
-      left: 1%;
-      right: 0;
-      height: 142%;
-      background-position: left top;
-      background-size: contain;
-      background-image: url(../images/abstract/abstract-4.png);
-        @include d(767){
-          background-position: center bottom;
-          background-size: 100% auto;
-          height: 100%;
-        }
-        @include d(575){
-          background-size: 570px auto;
-        }
-    }
-    &.__5{
-      top: -17%;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 2542px;
-      height: 1549px;
-      background-position: left top;
-      background-size: contain;
-      background-image: url(../images/abstract/abstract-6.png);
-        @include d(1700){
-          width: 2442px;
-          height: 1449px;
-        }
-        @include d(767){
-          width: 1942px;
-          height: 949px;
-          top: 250px;
-        }
-        @include d(480){
-          width: 1042px;
-          height: 549px;
-          top: 160px;
-        }
-    }
-    &.__6{
-      width: 471px;
-      height: 65px;
-      left: 42.7%;
-      top: 163px;
-      background-image: url(../images/abstract/abstract-5.png);
-    }
-    &.__7{
-      top: 238px;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      background-position: center top;
-      background-image: url(../images/abstract/abstract-faq.png);
-        @include d(1700){
-          //top: 295px;
-        }
-        @include d(1600){
-          background-position: left top;
-          background-size: 120% auto;
-        }
-        @include d(1300){
-          top: 185px;
-        }
-        @include d(991){
-          top: 165px;
-        }
-        @include d(575){
-          background-size: 200% auto;
-        }
-    }
-    &.__8{
-      bottom: -420px;
-      left: -54px;
-      width: 750px;
-      height: 590px;
-      background-position: right top;
-      background-size: contain;
-      background-image: url(../images/abstract/abstract-7.png);
-        @include d(1440){
-          width: 700px;
-          height: 540px;
-          bottom: -320px;
-        }
-        @include d(1200){
-          width: 600px;
-          height: 440px;
-          bottom: -280px;
-        }
-    }
-    &.__9{
-      left: -152px;
-      top: 1px;
-      right: -120px;
-      bottom: -378px;
-      background-size: contain;
-      background-position: center top;
-      background-image: url(../images/abstract/abstract-8.png);
-        @include d(1200){
-          right: -320px;
-          bottom: -400px;
-        }
-        @include d(767){
-          display: none;
-        }
-    }
-    &.__10{
-      top: -150px;
-      left: -80px;
-      width: 100%;
-      height: 100%;
-      background-position: right top;
-      background-image: url(../../assets/images/abstract/abstract-10.png);
-        @include d(991){
-          width: 160%;
-          top: -250px;
-          left: 0;
-        }
-    }
-    &.__11{
-      top: -108px;
-      left: -488px;
-      width: 110%;
-      height: 100%;
-      background-size: contain;
-      background-position: center top;
-      background-image: url(../../assets/images/abstract/abstract-11.png);
-    }
-    &.__12{
-      top: -175px;
-      left: -585px;
-      right: -412px;
-      bottom: 0;
-      background-size: contain;
-      background-position: center top;
-      background-image: url(../../assets/images/abstract/abstract-12.png);
-    }
-    &.__13{
-      top: 310px;
-      left: 8px;
-      width: 100%;
-      height: 100%;
-      background-position: left top;
-      background-image: url(../../assets/images/abstract/abstract-13.png);
-        @include d(1300){
-          top: 234px;
-        }
-        @include d(991){
-          top: 190px;
-        }
-    }
-    &.__14{
-      bottom: 0;
-      right: 0;
-      width: 100%;
-      height: 100%;
-      transform: translate(5.6%,15.4%);
-      background-position: right bottom;
-      background-image: url(../../assets/images/abstract/abstract-14.png);
-        @include d(1300){
-          transform: translate(28%,15.4%);
-        }
-        @include d(991){
-          display: none;
-        }
-    }
-    &.__15{
-      width: 100%;
-      height: 100%;
-      top: 31px;
-      left: -240px;
-      background-position: left top;
-      background-image: url(../images/abstract/abstract-15.png);
-        @include d(1300){
-          top: -10px;
-          background-size: 160% auto;
-        }
-        @include d(991){
-          top: -25px;
-          background-size: 1500px auto;
-          left: 0;
-        }
-    }
-    &.__16{
-      left: -381px;
-      right: -105px;
-      top: -65px;
-      bottom: -160px;
-      background-position: center;
-      background-image: url(../../assets/images/abstract/abstract-16.png);
-        @include d(1440){
-          top: -180px;
-        }
-    }
-    &-circle{
-      position: absolute;
-      border-radius: 50%;
-      pointer-events: none;
-        &.__1{
-          width: 940px;
-          height: 940px;
-          top: 0;
-          right: 0;
-          transform: translate(39%,-32%);
-          background: rgb(247,255,0);
-          background: -moz-linear-gradient(-45deg,  rgba(247,255,0,1) 0%, rgba(180,0,255,1) 100%);
-          background: -webkit-linear-gradient(-45deg,  rgba(247,255,0,1) 0%,rgba(180,0,255,1) 100%);
-          background: linear-gradient(135deg,  rgba(247,255,0,1) 0%,rgba(180,0,255,1) 100%);
-          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7ff00', endColorstr='#b400ff',GradientType=1 );
-          opacity: .1;
-            @include d(1800){
-              width: 640px;
-              height: 640px;
-            }
-            @include d(1440){
-              width: 540px;
-              height: 540px;
-            }
-            @include d(767){
-              width: 440px;
-              height: 440px;
-            }
-        }
-        &.__2{
-          width: 353px;
-          height: 353px;
-          left: 0;
-          top: 542px;
-          opacity: .15;
-          transform: translate(-66%,0);
-          background: rgb(9,94,138);
-          background: -moz-linear-gradient(left,  rgba(9,94,138,1) 0%, rgba(59,14,127,1) 100%);
-          background: -webkit-linear-gradient(left,  rgba(9,94,138,1) 0%,rgba(59,14,127,1) 100%);
-          background: linear-gradient(to right,  rgba(9,94,138,1) 0%,rgba(59,14,127,1) 100%);
-          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#095e8a', endColorstr='#3b0e7f',GradientType=1 );
-        }
-        &.__3{
-          width: 718px;
-          height: 718px;
-          bottom: 0;
-          right: 0;
-          transform: translate(19%,50%);
-          background: rgb(247,255,0);
-          background: -moz-linear-gradient(-45deg,  rgba(247,255,0,1) 0%, rgba(180,0,255,1) 100%);
-          background: -webkit-linear-gradient(-45deg,  rgba(247,255,0,1) 0%,rgba(180,0,255,1) 100%);
-          background: linear-gradient(135deg,  rgba(247,255,0,1) 0%,rgba(180,0,255,1) 100%);
-          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f7ff00', endColorstr='#b400ff',GradientType=1 );
-          opacity: .1;
-            @include d(1300){
-              transform: translate(40%,50%);
-            }
-            @include d(767){
-              width: 418px;
-              height: 418px;
-            }
-        }
-        &.__4{
-          width: 124px;
-          height: 124px;
-          left: 2.8%;
-          bottom: 36px;
-          background: rgb(180,0,255);
-          background: -moz-linear-gradient(-45deg,  rgba(180,0,255,1) 0%, rgba(0,144,255,1) 100%);
-          background: -webkit-linear-gradient(-45deg,  rgba(180,0,255,1) 0%,rgba(0,144,255,1) 100%);
-          background: linear-gradient(135deg,  rgba(180,0,255,1) 0%,rgba(0,144,255,1) 100%);
-          filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b400ff', endColorstr='#0090ff',GradientType=1 );
-          opacity: .1;
-        }
+    &-2{
+      top: 22.6%;
+      right: -55px;
+      width: 491px;
+      height: 441px;
+      background-position: right center;
+      background-image: url(../images/home/incentives-banner-2.png);
     }
 }
 

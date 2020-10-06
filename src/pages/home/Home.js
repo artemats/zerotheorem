@@ -10,11 +10,14 @@ import ErrorBoundry from "../../components/error-boundry/ErrorBoundry";
 import philosophyIcon1 from '../../assets/images/icons/replace.svg';
 import philosophyIcon2 from '../../assets/images/icons/orbit.svg';
 import philosophyIcon3 from '../../assets/images/icons/3d-modeling.svg';
+import incentivesBanner from '../../assets/images/home/incentives-banner.png';
+import whyUsIcon1 from '../../assets/images/home/why-us/1.png';
 
 const Home = () => {
 
     return(
         <Fragment>
+            <div className="pattern" />
             <section className="section folder">
                 <div className="container">
                     <div className="row">
@@ -41,6 +44,7 @@ const Home = () => {
                 </div>
             </section>
             <section className="section philosophy">
+                <div className="abstract abstract-1" />
                 <div className="container">
                     <div className="row">
                         <div className="col-12">
@@ -73,6 +77,247 @@ const Home = () => {
                                     </div>
                                     <h5 className="title-5 philosophy-box-title">3. Zero Interference</h5>
                                     <p className="philosophy-box-description">….“Trusting statistical methods and allowing autonomous trade execution without any human interference or intervention”</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section className="section incentives">
+                <div className="abstract abstract-2" />
+                <div className="container">
+                    <div className="row">
+                        <div className="col-lg-6">
+                            <div className="incentives-banner">
+                                <img src={incentivesBanner} alt="" />
+                            </div>
+                        </div>
+                        <div className="col-lg-6">
+                            <div className="incentives-content">
+                                <p className="subtitle">Our incentives</p>
+                                <div className="incentives-content-title">
+                                    <h2 className="title-2">Explore our Research and Performance Reports</h2>
+                                </div>
+                                <div className="incentives-content-description">
+                                    <p>What is behind Zero Theorem Quant Lab?</p>
+                                </div>
+                                <Link to="/" className="btn __border">
+                                    <div className="btn-title">Check</div>
+                                </Link>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section className="section approach">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-lg-6">
+                            <p className="subtitle">We will make clear</p>
+                            <div className="approach-title">
+                                <h3 className="title-2">Zero Theorem Scientific Approach</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col-12">
+                            <div className="scheme-wrap">
+                                <div className="scheme">
+                                    <div className="scheme-column">
+                                        <div className="scheme-box detail top">
+                                            <div className="scheme-box-item __white semi-bold">
+                                                <p>Data <br /> Collection</p>
+                                            </div>
+                                        </div>
+                                        <div className="scheme-box">
+                                            <div className="scheme-box-item __blue semi-bold">
+                                                <p>BTC <br /> Market Indexes</p>
+                                            </div>
+                                            <div className="arrow right" />
+                                        </div>
+                                        <div className="scheme-box">
+                                            <div className="scheme-box-item __blue semi-bold">
+                                                <p>Global Market Instruments</p>
+                                            </div>
+                                            <div className="arrow right" />
+                                        </div>
+                                        <div className="scheme-box">
+                                            <div className="scheme-box-item __blue semi-bold">
+                                                <p>Blockchain <br /> Metrics</p>
+                                            </div>
+                                            <div className="arrow right" />
+                                        </div>
+                                        <div className="scheme-box">
+                                            <div className="scheme-box-item __blue semi-bold">
+                                                <p>Macro-Economic Indicators</p>
+                                            </div>
+                                            <div className="arrow right" />
+                                        </div>
+                                        <div className="scheme-box">
+                                            <div className="scheme-box-item __blue semi-bold">
+                                                <p>Alternative</p>
+                                            </div>
+                                            <div className="arrow right" />
+                                        </div>
+                                    </div>
+                                    <div className="scheme-column">
+                                        <div className="scheme-box detail top double">
+                                            <div className="scheme-box-item __white semi-bold">
+                                                <p>Academic Model<br /> Construction</p>
+                                            </div>
+                                        </div>
+                                        <div className="scheme-box">
+                                            <div className="scheme-box-item __orange semi-bold">
+                                                <p>Data <br />
+                                                    Curation
+                                                    <br />
+                                                    <br />
+                                                    &
+                                                    <br />
+                                                    <br />
+                                                    Feature <br />
+                                                    Engineering
+                                                </p>
+                                            </div>
+                                            <div className="arrow right" />
+                                        </div>
+                                    </div>
+                                    <div className="scheme-column">
+                                        <div className="scheme-box">
+                                            <div className="scheme-box-item __yellow semi-bold">
+                                                <p>Multi-Model
+                                                    <br />
+                                                    <br />
+                                                    Management
+                                                    <br />
+                                                    <br />
+                                                    &
+                                                    <br />
+                                                    <br />
+                                                    Optimization
+                                                </p>
+                                            </div>
+                                            <div className="data right">
+                                                <p>Train/Test/Optimise</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="scheme-column">
+                                        <div className="scheme-box detail top">
+                                            <div className="scheme-box-item __white semi-bold">
+                                                <p>Theoretical <br /> Learning Cycle</p>
+                                            </div>
+                                        </div>
+                                        <div className="scheme-box">
+                                            <div className="scheme-box-item __blue semi-bold">
+                                                <p>Baseline Model  1</p>
+                                            </div>
+                                            <div className="arrow right" />
+                                            <div className="arrow left top" />
+                                            <div className="arrow arrow-left left bottom" />
+                                        </div>
+                                        <div className="scheme-box">
+                                            <div className="scheme-box-item __blue semi-bold">
+                                                <p>Baseline Model  2</p>
+                                            </div>
+                                            <div className="arrow right" />
+                                            <div className="arrow left top" />
+                                            <div className="arrow arrow-left left bottom" />
+                                        </div>
+                                        <div className="scheme-box">
+                                            <div className="scheme-box-item __blue semi-bold">
+                                                <p>Baseline Model  3</p>
+                                            </div>
+                                            <div className="arrow right" />
+                                            <div className="arrow left top" />
+                                            <div className="arrow arrow-left left bottom" />
+                                        </div>
+                                        <div className="scheme-box">
+                                            <div className="scheme-box-item __blue semi-bold">
+                                                <p>Baseline Model  n</p>
+                                            </div>
+                                            <div className="arrow right" />
+                                            <div className="arrow left top" />
+                                            <div className="arrow arrow-left left bottom" />
+                                        </div>
+                                    </div>
+                                    <div className="scheme-column">
+                                        <div className="scheme-box detail top double">
+                                            <div className="scheme-box-item __white semi-bold">
+                                                <p>Practical <br /> Learning Cycle</p>
+                                            </div>
+                                        </div>
+                                        <div className="scheme-box">
+                                            <div className="scheme-box-item __orange regular">
+                                                <p>Zero <br />
+                                                    Theorem
+                                                    <br />
+                                                    <br />
+                                                    [AI]
+                                                </p>
+                                            </div>
+                                            <div className="data left">
+                                                <p>Forecasts</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div className="scheme-column">
+                                        <div className="scheme-box">
+                                            <div className="scheme-box-item __blue semi-bold">
+                                                <p>TRADE DECISION <br />
+                                                    Directional (up/down)</p>
+                                            </div>
+                                            <div className="arrow left" />
+                                        </div>
+                                        <div className="scheme-box">
+                                            <div className="arrow arrow-center arrow-bottom" />
+                                        </div>
+                                        <div className="scheme-box">
+                                            <div className="scheme-box-item __blue semi-bold">
+                                                <p>ENVIRONMENT<br />
+                                                    BTC Exchange</p>
+                                            </div>
+                                        </div>
+                                        <div className="scheme-box">
+                                            <div className="arrow arrow-center arrow-bottom" />
+                                        </div>
+                                        <div className="scheme-box">
+                                            <div className="scheme-box-item __blue semi-bold">
+                                                <p>STATE & REWARD<br />
+                                                    Performance</p>
+                                            </div>
+                                            <div className="arrow arrow-left left" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section className="section why">
+                <div className="container">
+                    <div className="row">
+                        <div className="col-12">
+                            <p className="subtitle">We will make clear</p>
+                            <div className="why-title">
+                                <h3 className="title-2">So, Why Us</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col-12">
+                            <div className="why-list">
+                                <div className="why-list-box">
+                                    <div className="why-item">
+                                        <div className="why-item-icon">
+                                            <img src={whyUsIcon1} alt="Stochastic properties" />
+                                        </div>
+                                        <div className="why-item-content">
+                                            <h4 className="title-4">Stochastic properties</h4>
+                                            <p>Even though we use a combination of statistical, econometric and machine learning methods to estimate value, we will never overlook the stochastic properties of reality for the pristine beauty of mathematical formulation.</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
