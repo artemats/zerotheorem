@@ -1,13 +1,13 @@
 import React, {Component, Fragment, lazy, Suspense} from 'react';
 import { connect } from 'react-redux';
-import { loadDashboardPageSuccess } from '../../../store/quant-nav/actions';
-import thumb from "../../../assets/images/icons/baseline-model.svg";
+import { loadDashboardPageSuccess } from 'Store/quant-nav/actions';
+import thumb from "Images/icons/baseline-model.svg";
 import './base-models.scss';
-import LoadingIndicator from "../../../components/loadingIndicator/LoadingIndicator";
-import ErrorBoundry from "../../../components/error-boundry/ErrorBoundry";
-import DateFilter from "../../../components/date-filter/DateFilter";
-const StackDistribution = lazy(() => import("../../../components/charts/stackDistribution/StackDistribution"));
-const BaselineModel2 = lazy(() => import("../../../components/charts/baseline-model-2/BaselineModel2"));
+import LoadingIndicator from "Components/loadingIndicator/LoadingIndicator";
+import ErrorBoundry from "Components/error-boundry/ErrorBoundry";
+import DateFilter from "Components/date-filter/DateFilter";
+const StackDistribution = lazy(() => import("Charts/stackDistribution/StackDistribution"));
+const BaselineModel2 = lazy(() => import("Charts/baseline-model-2/BaselineModel2"));
 
 class BaseModels extends Component {
 

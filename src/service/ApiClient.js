@@ -1,4 +1,5 @@
-import {_baseURI, _token} from "../apiSettings";
+const _baseURI = process.env.REACT_APP_API_URL;
+const _token = process.env.REACT_APP_API_TOKEN;
 require('es6-promise').polyfill();
 require('isomorphic-fetch');
 

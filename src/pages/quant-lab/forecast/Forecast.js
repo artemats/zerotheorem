@@ -1,15 +1,15 @@
 import React, { Component, lazy, Suspense } from 'react';
 import { connect } from 'react-redux';
-import { loadDashboardPageSuccess } from '../../../store/quant-nav/actions';
-import thumb from '../../../assets/images/icons/forecast-2.svg';
-import LoadingIndicator from "../../../components/loadingIndicator/LoadingIndicator";
-import ErrorBoundry from "../../../components/error-boundry/ErrorBoundry";
-const ProbabilityPlot = lazy(() => import("../../../components/charts/probabilityPlot/ProbabilityPlot"));
-const QqPlot = lazy(() => import("../../../components/charts/qqPlot/QqPlot"));
-const ResidualHistogram = lazy(() => import("../../../components/charts/residualHistogram/ResudualHistogram"));
-const MetricBox = lazy(() => import("../../../components/charts/metric-box/MetricBox"));
-const ResidualPlot = lazy(() => import("../../../components/charts/residualPlot/ResidualPlot"));
-const TrendPlot = lazy(() => import("../../../components/charts/trendPlot/TrendPlot"));
+import { loadDashboardPageSuccess } from 'Store/quant-nav/actions';
+import thumb from 'Images/icons/forecast-2.svg';
+import LoadingIndicator from "Components/loadingIndicator/LoadingIndicator";
+import ErrorBoundry from "Components/error-boundry/ErrorBoundry";
+const ProbabilityPlot = lazy(() => import("Charts/probabilityPlot/ProbabilityPlot"));
+const QqPlot = lazy(() => import("Charts/qqPlot/QqPlot"));
+const ResidualHistogram = lazy(() => import("Charts/residualHistogram/ResudualHistogram"));
+const MetricBox = lazy(() => import("Charts/metric-box/MetricBox"));
+const ResidualPlot = lazy(() => import("Charts/residualPlot/ResidualPlot"));
+const TrendPlot = lazy(() => import("Charts/trendPlot/TrendPlot"));
 
 class Forecast extends Component {
 

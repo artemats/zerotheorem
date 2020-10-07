@@ -1,20 +1,20 @@
 import React, { Fragment, lazy, Suspense } from 'react';
 import { Link } from 'react-router-dom';
-import AnimateCounter from "../../components/animate-counter/AnimateCounter";
+import AnimateCounter from "Components/animate-counter/AnimateCounter";
 import './home.scss';
-import aboutBanner from '../../assets/images/home/about-banner.jpg';
-import quantBanner from '../../assets/images/home/quant-banner.jpg';
-import LoadingIndicator from "../../components/loadingIndicator/LoadingIndicator";
-const ResearchBox = lazy(() => import("../../components/research-box/ResearchBox"));
-import ErrorBoundry from "../../components/error-boundry/ErrorBoundry";
-import philosophyIcon1 from '../../assets/images/icons/replace.svg';
-import philosophyIcon2 from '../../assets/images/icons/orbit.svg';
-import philosophyIcon3 from '../../assets/images/icons/3d-modeling.svg';
-import incentivesBanner from '../../assets/images/home/incentives-banner.png';
-import whyUsIcon1 from '../../assets/images/home/why-us/1.png';
-import whyUsIcon2 from '../../assets/images/home/why-us/2.svg';
-import whyUsIcon3 from '../../assets/images/home/why-us/3.svg';
-import whyUsIcon4 from '../../assets/images/home/why-us/4.svg';
+import aboutBanner from 'Images/home/about-banner.jpg';
+import quantBanner from 'Images/home/quant-banner.jpg';
+import LoadingIndicator from "Components/loadingIndicator/LoadingIndicator";
+const ResearchBox = lazy(() => import("Components/research-box/ResearchBox"));
+import ErrorBoundry from "Components/error-boundry/ErrorBoundry";
+import philosophyIcon1 from 'Images/icons/replace.svg';
+import philosophyIcon2 from 'Images/icons/orbit.svg';
+import philosophyIcon3 from 'Images/icons/3d-modeling.svg';
+import incentivesBanner from 'Images/home/incentives-banner.png';
+import whyUsIcon1 from 'Images/home/why-us/1.png';
+import whyUsIcon2 from 'Images/home/why-us/2.svg';
+import whyUsIcon3 from 'Images/home/why-us/3.svg';
+import whyUsIcon4 from 'Images/home/why-us/4.svg';
 
 const Home = () => {
 
