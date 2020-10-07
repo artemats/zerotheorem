@@ -20,14 +20,14 @@ const Footer = () => {
                                 <NavLink to="/about" className="link">About</NavLink>
                                 <NavLink to="/faq" className="link">FAQ</NavLink>
                                 <NavLink to="/resources" className="link">Resources</NavLink>
-                                <NavLink to="/quant-lab" className="link">Quant Lab</NavLink>
+                                <NavLink to="/quant-lab" className="link">Quantlab</NavLink>
                             </nav>
                         </div>
                     </div>
                 </div>
-            </div>
-            <div className="footer-copyright">
-                <p className="copyright">All rights reserved. Made by <a href="http://studiopresto.com/" target="_blank">Presto</a> &copy;2020</p>
+                <div className="footer-copyright">
+                    <p className="copyright regular">Copyright &copy;2020 Zero Theorem. All rights reserved. Made by <a href="http://studiopresto.com/" target="_blank">Presto</a></p>
+                </div>
             </div>
         </footer>
     )

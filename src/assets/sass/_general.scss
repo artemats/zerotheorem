@@ -10,35 +10,38 @@ h1{
   letter-spacing: -.03em;
   line-height: 1.2em;
   @extend .extra-bold;
+    @include d(1800){
+      font-size: 82px;
+    }
+    @include d(1700){
+      font-size: 76px;
+    }
+    @include d(1600){
+      font-size: 72px;
+    }
+    @include d(1500){
+      font-size: 68px;
+    }
+    @include d(1440){
+      font-size: 64px;
+    }
     @include d(1300){
-      font-size: 40px;
+      font-size: 62px;
     }
     @include d(1200){
-      font-size: 38px;
+      font-size: 56px;
+    }
+    @include d(991){
+      font-size: 54px;
     }
     @include d(767){
-      font-size: 34px;
+      font-size: 48px;
     }
     @include d(575){
-      font-size: 32px;
+      font-size: 42px;
     }
     @include d(480){
-      font-size: 28px;
-    }
-    &.__lg{
       font-size: 36px;
-        @include d(1200){
-          font-size: 32px;
-        }
-        @include d(767){
-          font-size: 28px;
-        }
-        @include d(575){
-          font-size: 26px;
-        }
-        @include d(480){
-          font-size: 22px;
-        }
     }
     &.__dashboard{
       text-transform: none;
@@ -57,24 +60,33 @@ h2{
   letter-spacing: .02em;
   line-height: 1.2em;
   @extend .extra-bold;
+    @include d(1800){
+      font-size: 72px;
+    }
+    @include d(1700){
+      font-size: 68px;
+    }
+    @include d(1500){
+      font-size: 62px;
+    }
+    @include d(1440){
+      font-size: 58px;
+    }
     @include d(1300){
-      font-size: 30px;
+      font-size: 54px;
     }
     @include d(1200){
-      font-size: 28px;
+      font-size: 50px;
     }
     @include d(767){
-      font-size: 24px;
+      font-size: 42px;
+    }
+    @include d(575){
+      font-size: 38px;
     }
     @include d(480){
-      font-size: 22px;
+      font-size: 32px;
     }
-}
-
-h4{
-  font-size: 28px;
-  @extend .bold;
-  line-height: 1.321em;
 }
 
 h3{
@@ -93,11 +105,32 @@ h3{
     }
 }
 
+h4{
+  font-size: 28px;
+  @extend .bold;
+  line-height: 1.321em;
+    @include d(1440){
+      font-size: 26px;
+    }
+    @include d(1200){
+      font-size: 24px;
+    }
+    @include d(480){
+      font-size: 22px;
+    }
+}
+
 h5{
   font-size: 25px;
   @extend .extra-bold;
   color: $white;
   letter-spacing: .04em;
+    @include d(1200){
+      font-size: 22px;
+    }
+    @include d(480){
+      font-size: 20px;
+    }
 }
 
 h6{
@@ -105,6 +138,12 @@ h6{
   @extend .semi-bold;
   line-height: 1.2em;
   letter-spacing: .018em;
+    @include d(991){
+      font-size: 18px;
+    }
+    @include d(480){
+      font-size: 16px;
+    }
 }
 
 p, li{
@@ -449,6 +488,7 @@ p, li{
       height: 58px;
       line-height: 58px;
       max-width: 250px;
+      font-size: 16px;
     }
     @include d(480){
       height: 54px;
@@ -476,6 +516,9 @@ p, li{
   letter-spacing: .71em;
   font-size: 14px;
   margin-bottom: 22px;
+    @include d(1300){
+      font-size: 12px;
+    }
     @include d(1200){
       line-height: 1.6em;
     }
@@ -547,10 +590,6 @@ p, li{
       height: 1px;
       background-color: #2b2e33;
     }
-}
-
-.copyright{
-  opacity: .5;
 }
 
 .burger{
@@ -808,15 +847,41 @@ p, li{
       left: 0;
       width: 786px;
       height: 400px;
+      background-size: contain;
       background-image: url(../images/abstract/chart-1.png);
+        @include d(1700){
+          max-width: 786px;
+          width: 45vw;
+        }
+        @include d(575){
+          width: 90vw;
+        }
     }
     &-2{
       top: 22.6%;
       right: -55px;
-      width: 491px;
+      max-width: 491px;
+      width: 26vw;
       height: 441px;
       background-position: right center;
+      background-size: contain;
       background-image: url(../images/home/incentives-banner-2.png);
+        @include d(1200){
+          top: 12%;
+        }
+        @include d(991){
+          top: auto;
+          bottom: 10%;
+          width: 40vw;
+        }
+        @include d(767){
+          bottom: 182px;
+          width: 55vw;
+        }
+        @include d(480){
+          bottom: 130px;
+          width: 65vw;
+        }
     }
 }
 

@@ -2,8 +2,6 @@ import React, { Fragment, lazy, Suspense } from 'react';
 import { Link } from 'react-router-dom';
 import AnimateCounter from "Components/animate-counter/AnimateCounter";
 import './home.scss';
-import aboutBanner from 'Images/home/about-banner.jpg';
-import quantBanner from 'Images/home/quant-banner.jpg';
 import LoadingIndicator from "Components/loadingIndicator/LoadingIndicator";
 const ResearchBox = lazy(() => import("Components/research-box/ResearchBox"));
 import ErrorBoundry from "Components/error-boundry/ErrorBoundry";
@@ -15,6 +13,8 @@ import whyUsIcon1 from 'Images/home/why-us/1.png';
 import whyUsIcon2 from 'Images/home/why-us/2.svg';
 import whyUsIcon3 from 'Images/home/why-us/3.svg';
 import whyUsIcon4 from 'Images/home/why-us/4.svg';
+import faqBanner from 'Images/home/faq-banner.png';
+import FaqAccordion from "../faq/FaqAccordion";
 
 const Home = () => {
 
@@ -24,7 +24,12 @@ const Home = () => {
             <section className="section folder">
                 <div className="container">
                     <div className="row">
-                        <div className="col-xl-8">
+                        <div className="col-lg-4 order-lg-2">
+                            <div className="folder-counter">
+                                <AnimateCounter value={1000} currency="$" />
+                            </div>
+                        </div>
+                        <div className="col-lg-8 order-lg-1">
                             <div className="folder-content">
                                 <p className="subtitle">Welcome</p>
                                 <div className="folder-content-title">
@@ -36,11 +41,6 @@ const Home = () => {
                                 <Link to="/quant-lab" className="btn">
                                     <span className="btn-title">Go to Forecast</span>
                                 </Link>
-                            </div>
-                        </div>
-                        <div className="col-xl-4">
-                            <div className="folder-counter">
-                                <AnimateCounter value={1000} currency="$" />
                             </div>
                         </div>
                     </div>
@@ -99,7 +99,7 @@ const Home = () => {
                             <div className="incentives-content">
                                 <p className="subtitle">Our incentives</p>
                                 <div className="incentives-content-title">
-                                    <h2 className="title-2">Explore our Research and Performance Reports</h2>
+                                    <p className="title-2">Explore our Research and Performance Reports</p>
                                 </div>
                                 <div className="incentives-content-description">
                                     <p>What is behind Zero Theorem Quant Lab?</p>
@@ -115,7 +115,7 @@ const Home = () => {
             <section className="section approach">
                 <div className="container">
                     <div className="row">
-                        <div className="col-lg-6">
+                        <div className="col-xl-6 col-lg-8">
                             <p className="subtitle">We will make clear</p>
                             <div className="approach-title">
                                 <h3 className="title-2">Zero Theorem Scientific Approach</h3>
@@ -378,6 +378,9 @@ const Home = () => {
                             <div className="research-title">
                                 <p className="subtitle">This is us</p>
                                 <h3 className="title-2">Research</h3>
+                                <Link to="/research" className="btn __border">
+                                    <div className="btn-title">Find Out More</div>
+                                </Link>
                             </div>
                         </div>
                     </div>
@@ -392,56 +395,33 @@ const Home = () => {
                     </div>
                 </div>
             </section>
-            <section className="section content __right __about">
+            <section className="section faq">
                 <div className="container">
                     <div className="row">
-                        <div className="col-xl-6 offset-xl-1 order-md-2 col-md-6">
-                            <div className="content-preview">
-                                <img src={aboutBanner} alt="Back testing" />
+                        <div className="col-lg-5">
+                            <div className="faq-title">
+                                <p className="title-2">Frequently Asked Questions</p>
+                            </div>
+                            <div className="faq-banner">
+                                <img src={faqBanner} alt="Frequently Asked Questions" />
                             </div>
                         </div>
-                        <div className="col-xl-5 order-md-1 col-md-6">
-                            <div className="content-description">
-                                <div className="content-description-title">
-                                    <p className="subtitle">About</p>
-                                    <h2 className="title-2 title-border">Back testing</h2>
-                                </div>
-                                <div className="content-description-text">
-                                    <p>Depart do be so he enough talent. Sociable formerly six but handsome. Up do view time they shot. He concluded disposing provision by questions as situation.</p>
-                                    <p>indness to he horrible reserved ye. Effect twenty indeed beyond for not had county. The use him without greatly can private. Increasing it unpleasant no of contrasted no continuing. Nothing colonel my no removed in weather. It dissimilar in up devonshire inhabiting.</p>
-                                </div>
-                                <div className="content-description-action">
-                                    <Link to="/back-test" className="btn lg">
-                                        <div className="btn-title">Show More</div>
-                                    </Link>
-                                </div>
-                            </div>
+                        <div className="col-lg-7">
+                            <FaqAccordion />
                         </div>
                     </div>
                 </div>
             </section>
-            <section className="section quant">
+            <section className="section lab">
                 <div className="container">
                     <div className="row">
-                        <div className="col-xl-5 offset-xl-1 col-md-6">
-                            <div className="quant-preview">
-                                <img src={quantBanner} alt="Quant Lab" />
-                            </div>
-                        </div>
-                        <div className="col-xl-5 offset-xl-1 col-md-6">
-                            <div className="quant-description">
-                                <div className="quant-description-title">
-                                    <h2 className="title-2 title-border">Quant Lab</h2>
-                                </div>
-                                <div className="quant-description-text">
-                                    <p>Depart do be so he enough talent. Sociable formerly six but handsome. Up do view time they shot. He concluded disposing provision by questions as situation.</p>
-                                    <p>indness to he horrible reserved ye. Effect twenty indeed beyond for not had county. The use him without greatly can private. Increasing it unpleasant no of contrasted no continuing.</p>
-                                </div>
-                                <div className="quant-description-action">
-                                    <Link to="/quant-lab" className="btn">
-                                        <span className="btn-title">Go to Quant Lab</span>
-                                    </Link>
-                                </div>
+                        <div className="col-12">
+                            <div className="lab-box">
+                                <p className="subtitle">Quant lab</p>
+                                <h2 className="title-2">How for down the rabbit hole are you willing to go?</h2>
+                                <Link to="/quant-lab" className="btn">
+                                    <span className="btn-title">Go to Forecast</span>
+                                </Link>
                             </div>
                         </div>
                     </div>

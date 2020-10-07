@@ -1,11 +1,10 @@
 .footer{
-  background-color: #000922;
-  padding: 27px 0 0;
+  padding: 27px 0 87px;
   position: relative;
   z-index: 1;
     &-logo{
       width: 234px;
-      margin-top: 7px;
+      margin-top: -7px;
         @media only screen and (max-width: 1200px) {
           width: 200px;
           margin-top: 0;
@@ -18,11 +17,17 @@
         }
     }
     &-copyright{
-      text-align: center;
-      background-color: #000217;
+      text-align: right;
+      opacity: .72;
       font-size: 12px;
-      margin-top: 20px;
+      margin-top: 50px;
       padding: 6px 0;
+        .copyright{
+          letter-spacing: .034em;
+        }
+        @media only screen and (max-width: 575px) {
+          text-align: left;
+        }
     }
     &-nav{
       display: flex;
@@ -47,9 +52,6 @@
           @media only screen and (max-width: 991px) {
             margin-left: 35px;
           }
-          @media only screen and (max-width: 767px) {
-            margin-left: 10px;
-          }
           @media only screen and (max-width: 480px) {
             margin-left: 0;
             margin-bottom: 15px;
@@ -71,5 +73,8 @@
         display: flex;
         flex-direction: column;
       }
+    }
+    @media only screen and (max-width: 575px) {
+      padding: 30px 0;
     }
 }

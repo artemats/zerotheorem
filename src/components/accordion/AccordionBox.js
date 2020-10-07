@@ -9,7 +9,7 @@ const AccordionBox = ({ data: { title, description, collapsed } }) => {
         <div className={`accordion-box ${isCollapsed ? '' : 'is-active'}`}>
             <div className="accordion-box-header" onClick={() => setIsCollapsed(!isCollapsed)}>
                 <div className="accordion-btn" />
-                <div className="accordion-title yellow regular">
+                <div className="accordion-title title-4 yellow">
                     <p>{title}</p>
                 </div>
             </div>

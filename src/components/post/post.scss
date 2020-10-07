@@ -1,7 +1,11 @@
+@import '~Sass/base/mixins';
+@import '~Sass/base/variables';
+
 .post{
   border-radius: 10px;
   display: block;
-  border: 2px rgba(255,255,255,.1) solid;
+  border: 2px rgba(255,255,255,0) solid;
+  transition: border-color .4s ease, transform .4s ease;
     &-preview{
       height: 324px;
       overflow: hidden;
@@ -16,9 +20,25 @@
           object-fit: cover;
           object-position: center;
         }
+        @media only screen and (max-width: 1440px) {
+          height: 270px;
+        }
+        @media only screen and (max-width: 1200px) {
+          height: 220px;
+        }
+        @include d(575){
+          height: 45vw;
+        }
     }
     &-content{
-      padding: 35px 30px;
+      padding: 30px 46px 55px;
+        &-title{
+          margin-top: 25px;
+          transition: all .4s ease;
+            &.title-4{
+              margin-top: 25px;
+            }
+        }
         &-subtitle,
         .subtitle{
           margin-bottom: 12px;
@@ -32,24 +52,35 @@
         &-description{
           display: -webkit-box;
           -webkit-box-orient: vertical;
-          -webkit-line-clamp: 3;
+          -webkit-line-clamp: 1;
           overflow: hidden;
           margin-top: 22px;
+          opacity: .7;
             @media only screen and (max-width: 1440px) {
               margin-top: 12px;
             }
         }
-        @media only screen and (max-width: 1440px) {
-          padding: 40px 35px 35px 40px;
+        &-date{
+          opacity: .7;
         }
-        @media only screen and (max-width: 1200px) {
-          padding: 30px 25px 30px 30px;
+        @media only screen and (max-width: 1440px) {
+          padding: 40px 25px;
         }
         @media only screen and (max-width: 991px) {
           white-space: normal;
         }
-        @media only screen and (max-width: 480px) {
-          padding: 25px 15px 20px 20px;
+        @media only screen and (max-width: 575px) {
+          padding: 20px 10px;
         }
+    }
+    @include hover(991){
+      &:hover{
+        border-color: rgba(255,255,255,.1);
+        transform: translateY(-60px);
+          .post-content-title{
+            color: $yellow;
+            text-decoration: underline;
+          }
+      }
     }
 }

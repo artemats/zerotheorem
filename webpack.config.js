@@ -86,7 +86,8 @@ module.exports = {
             Images: path.resolve(__dirname, 'src/assets/images/'),
             Components: path.resolve(__dirname, 'src/components/'),
             Charts: path.resolve(__dirname, 'src/components/charts/'),
-            Store: path.resolve(__dirname, 'src/store/')
+            Store: path.resolve(__dirname, 'src/store/'),
+            Sass: path.resolve(__dirname, 'src/assets/sass/'),
         }
     },
     plugins: [

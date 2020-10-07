@@ -135,14 +135,12 @@
                   opacity: .03;
                 }
             }
-            @media only screen and (max-width: 1600px) {
+            @media only screen and (max-width: 1800px) {
+              font-size: 14px;
+            }
+            @media only screen and (max-width: 1440px) {
               font-size: 12px;
-            }
-            @media only screen and (max-width: 1500px) {
               padding: 5px 10px;
-            }
-            @media only screen and (max-width: 1200px) {
-              min-height: 80px;
             }
         }
         &.detail{
@@ -315,9 +313,6 @@
           padding: 10px 0;
         }
         @media only screen and (max-width: 1200px) {
-          width: 42px;
-          top: 5px;
-          bottom: 5px;
             &.left{
               margin-left: -21px;
             }

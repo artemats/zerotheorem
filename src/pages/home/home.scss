@@ -1,18 +1,51 @@
+@import "~Sass/base/mixins";
+
 .folder{
   padding: 277px 0 200px;
     &-content{
         &-title{
           margin-bottom: 73px;
+            @include d(1800){
+              max-width: 85%;
+            }
+            @include d(1700){
+              max-width: 90%;
+            }
+            @include d(1600){
+              max-width: 95%;
+            }
+            @include d(1440){
+              margin-bottom: 50px;
+            }
+            @include d(1300){
+              max-width: 100%;
+            }
+            @include d(480){
+              margin-bottom: 25px;
+            }
         }
         &-subtitle{
           margin-bottom: 48px;
+            @include d(480){
+              margin-bottom: 50px;
+              opacity: .7;
+            }
+        }
+        @include d(991){
+          padding-top: 120px;
         }
     }
     &-counter{
       padding-right: 70px;
+        @include d(1500){
+          padding-right: 0;
+        }
     }
     .subtitle{
       margin-bottom: 29px;
+    }
+    @include d(991){
+      padding: 220px 0 100px;
     }
 }
 
@@ -24,6 +57,9 @@
     &-list{
       display: flex;
       justify-content: space-between;
+        @include d(991){
+          flex-wrap: wrap;
+        }
     }
     &-box{
       margin-top: 177px;
@@ -36,6 +72,14 @@
           margin-bottom: 35px;
             img{
               object-fit: contain;
+            }
+            @include d(1200){
+              height: 60px;
+              width: 60px;
+            }
+            @include d(480){
+              height: 50px;
+              width: 50px;
             }
         }
         &-title{
@@ -51,10 +95,36 @@
               border-radius: 50%;
               background-color: #deb513;
             }
+            @include d(1200){
+              &:before{
+                top: 10px;
+              }
+            }
+            @include d(480){
+              &:before{
+                top: 8px;
+              }
+            }
         }
         &-description{
           margin-top: 16px;
         }
+        @include d(1300){
+          padding-right: 40px;
+        }
+        @include d(991){
+          margin-top: 100px;
+          width: 100%;
+          max-width: 100%;
+          padding-right: 0;
+        }
+        @include d(575){
+          margin-top: 60px;
+          margin-bottom: 50px;
+        }
+    }
+    @include d(480){
+      padding: 110px 0 50px;
     }
 }
 
@@ -62,7 +132,15 @@
   padding: 226px 0;
     &-banner{
       max-width: 760px;
+      width: 40vw;
       margin-left: -22px;
+        @include d(1800){
+          margin-left: 0;
+        }
+        @include d(991){
+          margin: 0 auto;
+          width: 80vw;
+        }
     }
     &-content{
       padding: 9px 0;
@@ -74,7 +152,31 @@
         &-description{
           font-size: 18px;
           margin-bottom: 40px;
+            @include d(575){
+              font-size: 16px;
+            }
+            @include d(480){
+              max-width: 75%;
+            }
         }
+        @include d(1500){
+          max-width: 30vw;
+        }
+        @include d(1440){
+          max-width: 35vw;
+        }
+        @include d(991){
+          max-width: 90%;
+        }
+        @include d(767){
+          max-width: 450px;
+        }
+        @include d(575){
+          max-width: 320px;
+        }
+    }
+    @include d(1200){
+      padding: 100px 0 180px;
     }
 }
 
@@ -86,6 +188,9 @@
     .scheme{
       padding: 225px 0 100px;
       margin-top: 55px;
+        @include d(991){
+          margin-top: 0;
+        }
     }
 }
 
@@ -95,16 +200,39 @@
       padding-top: 10px;
     }
     &-list{
-      column-count: 2;
       padding: 0 75px 0 125px;
-      margin-top: -60px;
         &-box{
           display: inline-block;
           width: 100%;
           margin-bottom: 145px;
             &:nth-child(1){
               margin-top: 208px;
+                @include d(1300){
+                  margin-top: 170px;
+                }
             }
+            @include d(1300){
+              margin-bottom: 130px;
+            }
+            @include d(767){
+              margin-bottom: 70px;
+                &:nth-child(1){
+                  margin-top: 0;
+                }
+            }
+        }
+        @include m(768){
+          column-count: 2;
+          margin-top: -60px;
+        }
+        @include d(1500){
+          padding: 0 60px;
+        }
+        @include d(1440){
+          padding: 0;
+        }
+        @include d(767){
+          padding-top: 70px;
         }
     }
     &-item{
@@ -114,6 +242,15 @@
           height: 62px;
           flex: 1;
           margin-top: 2px;
+            @include d(991){
+              max-width: 55px;
+              height: 55px;
+            }
+            @include d(480){
+              margin-bottom: 20px;
+              width: 50px;
+              height: 50px;
+            }
         }
         &-content{
           flex: 1;
@@ -123,7 +260,53 @@
             }
             p{
               max-width: 410px;
+                @include d(767){
+                  max-width: 100%;
+                }
+            }
+            @include d(1200){
+              padding-left: 30px;
+            }
+            @include d(480){
+              padding-left: 0;
             }
         }
+        @include d(480){
+          flex-direction: column;
+        }
+    }
+    @include d(480){
+      padding: 60px 0 50px;
+    }
+}
+
+.lab{
+  padding: 305px 0 343px;
+    &-box{
+      text-align: center;
+      max-width: 750px;
+      margin: 0 auto;
+        .subtitle{
+          margin-bottom: 41px;
+        }
+        .btn{
+          max-width: 402px;
+          margin-top: 60px;
+        }
+        @include d(1440){
+          max-width: 700px;
+        }
+        @include d(1300){
+          max-width: 650px;
+        }
+        @include d(991){
+          max-width: 85%;
+        }
+    }
+    @include d(1440){
+      padding: 270px 0 320px;
+    }
+    @include d(1200){
+      padding: 220px 0 280px;
     }
 }

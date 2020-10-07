@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import PropTypes from 'prop-types';
 import Odometer from 'react-odometerjs';
 import './animate-counter.scss';
@@ -45,7 +45,7 @@ class AnimateCounter extends Component{
 
         const { value, currency, direction } = this.state;
         return(
-            <div>
+            <Fragment>
                 <div className="counter">
                     <div className="counter-body">
                         <div className="counter-body-label regular">{currency}</div>
@@ -62,7 +62,7 @@ class AnimateCounter extends Component{
                     <p>Zero Theorem forecast
                         <span>for 08/25/2020</span></p>
                 </div>
-            </div>
+            </Fragment>
         )
 
     }

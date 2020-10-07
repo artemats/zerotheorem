@@ -1,3 +1,5 @@
+@import "~Sass/base/mixins";
+
 .counter{
   display: flex;
   justify-content: center;
@@ -10,20 +12,34 @@
         &-label{
           font-size: 77px;
           margin-bottom: 7px;
-            @media only screen and (max-width: 1300px) {
-              font-size: 32px;
-              margin: 0 0 12px 0;
+            @include d(1500){
+              font-size: 68px;
             }
-            @media only screen and (max-width: 1200px) {
-              font-size: 28px;
+            @include d(991){
+              font-size: 58px;
             }
-            @media only screen and (max-width: 575px) {
-              font-size: 22px;
+            @include d(767){
+              font-size: 48px;
+            }
+            @include d(480){
+              font-size: 36px;
             }
         }
         &-value{
           font-size: 77px;
           line-height: 1.2em;
+           @include d(1500){
+              font-size: 68px;
+            }
+            @include d(991){
+              font-size: 58px;
+            }
+            @include d(767){
+              font-size: 50px;
+            }
+            @include d(480){
+              font-size: 42px;
+            }
         }
         @media only screen and (max-width: 1440px) {
           //width: 258px;
@@ -92,10 +108,6 @@
         }
         @media only screen and (max-width: 1300px) {
           margin-left: 16px;
-          margin-top: -12px;
-        }
-        @media only screen and (max-width: 575px) {
-          margin-top: -10px;
         }
     }
     &-description{
@@ -110,5 +122,23 @@
           display: block;
           margin-top: 5px;
         }
+        @include d(1500){
+          font-size: 12px;
+        }
+        @include d(1440){
+          margin-top: 10px;
+        }
+        @include d(991){
+          font-size: 10px;
+        }
+    }
+    @include d(1700){
+      margin-top: 130px;
+    }
+    @include d(1440){
+      margin-top: 110px;
+    }
+    @include d(991){
+      margin-top: 0;
     }
 }

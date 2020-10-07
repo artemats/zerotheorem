@@ -1,7 +1,10 @@
+@import "~Sass/base/mixins";
+
 .research{
   padding: 31px 0 48px;
     &-title{
       position: relative;
+      padding-right: 300px;
         .title-plus{
           left: -55px;
           top: 33%;
@@ -15,6 +18,19 @@
               left: -15px;
             }
         }
+        .btn{
+          position: absolute;
+          right: 0;
+          bottom: 4px;
+            @include d(767){
+              position: relative;
+              bottom: 0;
+              margin-top: 40px;
+            }
+        }
+        @include d(767){
+          padding-right: 0;
+        }
     }
     &-list{
       display: flex;
@@ -23,6 +39,12 @@
         &-item{
           padding: 0 42px;
           width: 33.33%;
+            @media only screen and (max-width: 1500px) {
+              padding: 0 25px;
+            }
+            @media only screen and (max-width: 1440px) {
+              padding: 0 15px;
+            }
             @media only screen and (max-width: 991px) {
               display: inline-block;
               width: 360px;
@@ -37,11 +59,12 @@
         &.__default{
           display: block;
         }
-        @media only screen and (max-width: 1300px) {
-          padding: 80px 0 30px;
+        @media only screen and (max-width: 1500px) {
+          margin: 0 -25px;
         }
-        @media only screen and (max-width: 1200px) {
-          padding: 50px 0 30px;
+        @media only screen and (max-width: 1440px) {
+          margin: 0 -15px;
+          padding: 150px 0 100px;
         }
         @media only screen and (max-width: 991px) {
           display: block;
@@ -50,9 +73,12 @@
           margin-right: -28px;
           padding-right: 20px;
         }
-        @media only screen and (max-width: 991px) {
+        @media only screen and (max-width: 767px) {
           margin-right: -14px;
           padding-right: 6px;
+        }
+        @include d(767){
+          padding-top: 50px;
         }
     }
     .subtitle{
@@ -80,5 +106,8 @@
             height: 23px;
           }
         }
+    }
+    @include d(480){
+      padding: 40px 0;
     }
 }
