@@ -15,6 +15,8 @@ import faqBanner from 'Images/home/faq-banner.png';
 import FaqAccordion from "../faq/FaqAccordion";
 import ErrorBoundry from "Components/error-boundry/ErrorBoundry";
 import LoadingIndicator from "Components/loadingIndicator/LoadingIndicator";
+import investmentBannerPng from 'Images/abstract/chart-1.png';
+import investmentBannerWebp from 'Images/abstract/chart-1.webp';
 
 const Home = () => {
 
@@ -47,7 +49,13 @@ const Home = () => {
                 </div>
             </section>
             <section className="section philosophy">
-                <div className="abstract abstract-1" />
+                <div className="abstract abstract-1">
+                    <picture>
+                        <source srcSet={investmentBannerWebp} type="image/webp" />
+                        <source srcSet={investmentBannerPng} type="image/png" />
+                        <img src={investmentBannerPng} alt="Investment Philosophy" />
+                    </picture>
+                </div>
                 <div className="container">
                     <div className="row">
                         <div className="col-12">

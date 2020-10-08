@@ -847,8 +847,8 @@ p, li{
       left: 0;
       width: 786px;
       height: 400px;
-      background-size: contain;
-      background-image: url(../images/abstract/chart-1.png);
+      //background-size: contain;
+      //background-image: url(../images/abstract/chart-1.png);
         @include d(1700){
           max-width: 786px;
           width: 45vw;
