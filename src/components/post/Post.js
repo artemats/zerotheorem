@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import {toURLTransform} from "../globalFunctions/globalFunctions";
-import './post.scss';
+// import './post.scss';
 
 const Post = ({ post: { preview, title, date, timeRead, description } }) => {
 

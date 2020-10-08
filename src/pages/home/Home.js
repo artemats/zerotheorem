@@ -1,8 +1,8 @@
-import React, { Fragment} from 'react';
+import React, { Fragment, lazy, Suspense } from 'react';
 import { Link } from 'react-router-dom';
 import AnimateCounter from "Components/animate-counter/AnimateCounter";
 import './home.scss';
-import ResearchBox from "Components/research-box/ResearchBox";
+const ResearchBox = lazy(() => import("Components/research-box/ResearchBox"));
 import philosophyIcon1 from 'Images/icons/replace.svg';
 import philosophyIcon2 from 'Images/icons/orbit.svg';
 import philosophyIcon3 from 'Images/icons/3d-modeling.svg';
@@ -13,6 +13,8 @@ import whyUsIcon3 from 'Images/home/why-us/3.svg';
 import whyUsIcon4 from 'Images/home/why-us/4.svg';
 import faqBanner from 'Images/home/faq-banner.png';
 import FaqAccordion from "../faq/FaqAccordion";
+import ErrorBoundry from "Components/error-boundry/ErrorBoundry";
+import LoadingIndicator from "Components/loadingIndicator/LoadingIndicator";
 
 const Home = () => {
 
@@ -384,7 +386,11 @@ const Home = () => {
                     </div>
                     <div className="row">
                         <div className="col-12">
-                            <ResearchBox />
+                            <ErrorBoundry>
+                                <Suspense fallback={<LoadingIndicator />}>
+                                    <ResearchBox />
+                                </Suspense>
+                            </ErrorBoundry>
                         </div>
                     </div>
                 </div>

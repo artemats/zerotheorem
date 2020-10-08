@@ -14,7 +14,6 @@ import Contact from "../../pages/contact/Contact";
 import Modal from "../modal/Modal";
 import BackTest from "../../pages/back-test/BackTest";
 import Footer from "../footer/Footer";
-// import Footer from "../footer/Footer";
 
 class App extends Component {
 
@@ -23,7 +22,7 @@ class App extends Component {
         return(
             <div id="wrapper">
                 <Router>
-                    {/*<ScrollToTop />*/}
+                    <ScrollToTop />
                     <Header />
                     <Switch>
                         <Route exact path="/">
