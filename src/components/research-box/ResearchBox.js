@@ -5,29 +5,29 @@ import './research-box.scss';
 import Post from "../post/Post";
 import PostDefault from "../post-default/PostDefault";
 
-const ResearchBox = ({ defaultTheme, data }) => {
+const ResearchBox = ({ data }) => {
 
-    if(defaultTheme) {
-
-        return (
-            <div className="research-list __default">
-                <div className="row">
-                    {
-                        data.map((post, key) => {
-                            return (
-                                <div className="col-xl-4 col-lg-6 col-md-6" key={key}>
-                                    <div className="research-list-item">
-                                        <PostDefault post={post} />
-                                    </div>
-                                </div>
-                            )
-                        })
-                    }
-                </div>
-            </div>
-        )
-
-    }
+    // if(defaultTheme) {
+    //
+    //     return (
+    //         <div className="research-list __default">
+    //             <div className="row">
+    //                 {
+    //                     data.map((post, key) => {
+    //                         return (
+    //                             <div className="col-xl-4 col-lg-6 col-md-6" key={key}>
+    //                                 <div className="research-list-item">
+    //                                     <PostDefault post={post} />
+    //                                 </div>
+    //                             </div>
+    //                         )
+    //                     })
+    //                 }
+    //             </div>
+    //         </div>
+    //     )
+    //
+    // }
 
     return(
         <div className="research-list">
@@ -52,5 +52,5 @@ const mapStateToProps = ({ researchReducer }) => {
 export default connect(mapStateToProps)(ResearchBox);
 
 ResearchBox.propTypes = {
-    defaultTheme: PropTypes.bool.isRequired
+    data: PropTypes.array
 };

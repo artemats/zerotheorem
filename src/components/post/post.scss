@@ -1,6 +1,3 @@
-@import '~Sass/base/mixins';
-@import '~Sass/base/variables';
-
 .post{
   border-radius: 10px;
   display: block;
@@ -26,7 +23,7 @@
         @media only screen and (max-width: 1200px) {
           height: 220px;
         }
-        @include d(575){
+        @media only screen and (max-width: 575px) {
           height: 45vw;
         }
     }
@@ -73,12 +70,12 @@
           padding: 20px 10px;
         }
     }
-    @include hover(991){
+    @media only screen and (min-width: 991px), (any-hover: hover) {
       &:hover{
         border-color: rgba(255,255,255,.1);
         transform: translateY(-60px);
           .post-content-title{
-            color: $yellow;
+            color: #deb513;
             text-decoration: underline;
           }
       }

@@ -1217,19 +1217,19 @@ p, li{
 }
 
 .inner-page{
-    &:before{
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      pointer-events: none;
-      background-repeat: repeat-y;
-      background-size: 100% auto;
-      background-position: center top;
-      background-image: url(../images/dashboard/inner-page-bg-2.png);
-    }
+    //&:before{
+    //  content: '';
+    //  position: absolute;
+    //  top: 0;
+    //  left: 0;
+    //  right: 0;
+    //  bottom: 0;
+    //  pointer-events: none;
+    //  background-repeat: repeat-y;
+    //  background-size: 100% auto;
+    //  background-position: center top;
+    //  background-image: url(../images/dashboard/inner-page-bg-2.png);
+    //}
     .hero-title{
       .title-1, h1{
         padding: 0;

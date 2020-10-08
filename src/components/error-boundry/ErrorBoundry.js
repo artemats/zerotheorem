@@ -19,13 +19,7 @@ class ErrorBoundry extends Component{
 
         const { hasError, error } = this.state;
 
-        if(hasError) {
-
-            return <ErrorIndicator error={error} />
-
-        }
-
-        return this.props.children
+        return hasError ? <ErrorIndicator error={error} /> : this.props.children;
 
     }
 

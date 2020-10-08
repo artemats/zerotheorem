@@ -5,7 +5,6 @@ import './post.scss';
 
 const Post = ({ post: { preview, title, date, timeRead, description } }) => {
 
-
     return(
         <Link to={`/research/${toURLTransform(title)}`} className="post">
             <div className="post-preview">
