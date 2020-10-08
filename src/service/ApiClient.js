@@ -1,3 +1,5 @@
+import TransformData from "./TransformData";
+
 const _baseURI = process.env.REACT_APP_API_URL;
 const _token = process.env.REACT_APP_API_TOKEN;
 require('es6-promise').polyfill();
@@ -17,9 +19,7 @@ export default class ApiClient {
         });
 
         if(!response.ok) {
-            // throw new Error(`Could don't fetch ${url} received ${response.status}`);
-            console.error(`Could don't fetch ${url} received ${response.status}`);
-            return response.status;
+            throw new Error(`Could don't fetch ${url} received ${response.status}`);
         }
 
         return await response.json();
@@ -28,7 +28,7 @@ export default class ApiClient {
 
     getTrend = async (startFrom, finishedTo) => {
         const data = await this.getSources(`/trend?start_date=${startFrom}`);
-        return this._transformTrendData(data);
+        return TransformData.trend(data);
     };
 
     getResidual = async (startFrom, finishedTo) => {
@@ -53,33 +53,27 @@ export default class ApiClient {
         return this._transformProbabilityData(data);
     };
 
-    getBlockchain = async () => {
-
-        return await this.getSources('/3D-1');
-
-    };
-
     getMetric = async () => {
         return await this.getSources('/metricbox');
     };
 
-    _transformTrendData = (trendData) => {
-        const data = {
-            date: [],
-            prediction: [],
-            rmse: [],
-            upper_band: [],
-            lower_band: []
-        };
-        trendData.data.map(point => {
-            data.date.push(point.date);
-            data.prediction.push(point.prediction);
-            data.rmse.push(point.rmse);
-            data.upper_band.push(point.upper_band);
-            data.lower_band.push(point.lower_band);
-        });
-        return data;
-    };
+    // _transformTrendData = (trendData) => {
+    //     const data = {
+    //         date: [],
+    //         prediction: [],
+    //         rmse: [],
+    //         upper_band: [],
+    //         lower_band: []
+    //     };
+    //     trendData.data.map(point => {
+    //         data.date.push(point.date);
+    //         data.prediction.push(point.prediction);
+    //         data.rmse.push(point.rmse);
+    //         data.upper_band.push(point.upper_band);
+    //         data.lower_band.push(point.lower_band);
+    //     });
+    //     return data;
+    // };
 
     _transformResidualData = (resData) => {
         const data = {

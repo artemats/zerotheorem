@@ -345,9 +345,10 @@
     }
     &-list{
       display: flex;
+      flex-wrap: wrap;
       margin: 0 -40px;
       padding: 150px 0;
-      &-item{
+        &-item{
         padding: 0 42px;
         width: 33.33%;
         @media only screen and (max-width: 1500px) {
@@ -367,9 +368,15 @@
           width: 85vw;
         }
       }
-      &.__default{
-        display: block;
-      }
+        &-default{
+          padding: 116px 0 0;
+            .research-list-item{
+              margin-bottom: 122px;
+            }
+            & ~ .pagination{
+              margin-top: -25px;
+            }
+        }
       @media only screen and (max-width: 1500px) {
         margin: 0 -25px;
       }
@@ -454,46 +461,44 @@
     }
     &-content{
       padding: 30px 46px 55px;
-      &-title{
-        margin-top: 25px;
-        transition: all .4s ease;
-        &.title-4{
+        &-title{
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 3;
+          overflow: hidden;
           margin-top: 25px;
+          transition: all .4s ease;
+            &.title-4{
+              margin-top: 25px;
+            }
         }
-      }
-      &-subtitle,
-      .subtitle{
-        margin-bottom: 12px;
-      }
-      &-title{
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp: 2;
-        overflow: hidden;
-      }
-      &-description{
-        display: -webkit-box;
-        -webkit-box-orient: vertical;
-        -webkit-line-clamp: 1;
-        overflow: hidden;
-        margin-top: 22px;
-        opacity: .7;
+        &-subtitle,
+        .subtitle{
+          margin-bottom: 12px;
+        }
+        &-description{
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 1;
+          overflow: hidden;
+          margin-top: 22px;
+          opacity: .7;
+          @media only screen and (max-width: 1440px) {
+            margin-top: 12px;
+          }
+        }
+        &-date{
+          opacity: .7;
+        }
         @media only screen and (max-width: 1440px) {
-          margin-top: 12px;
+          padding: 40px 25px;
         }
-      }
-      &-date{
-        opacity: .7;
-      }
-      @media only screen and (max-width: 1440px) {
-        padding: 40px 25px;
-      }
-      @media only screen and (max-width: 991px) {
-        white-space: normal;
-      }
-      @media only screen and (max-width: 575px) {
-        padding: 20px 10px;
-      }
+        @media only screen and (max-width: 991px) {
+          white-space: normal;
+        }
+        @media only screen and (max-width: 575px) {
+          padding: 20px 10px;
+        }
     }
     @media only screen and (min-width: 991px), (any-hover: hover) {
       &:hover{

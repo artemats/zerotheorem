@@ -52,6 +52,13 @@ h1{
           font-size: 24px;
         }
     }
+    &.__md{
+
+      text-transform: uppercase;
+      color: $yellow;
+      font-size: 94px;
+      letter-spacing: 0.36em;
+    }
 }
 
 h2{
@@ -1059,8 +1066,7 @@ p, li{
 }
 
 .hero{
-  //padding: 366px 0 20px;
-  padding: 270px 0 160px;
+  padding: 328px 0 160px;
   min-height: 100vh;
     &-video {
       position: absolute;
@@ -1257,6 +1263,7 @@ p, li{
   font-size: 16px;
   border: 1px #1b1e21 solid;
   transition: border-color .2s ease;
+  @extend .semi-bold;
     &-container{
       position: relative;
       width: 100%;
@@ -1678,5 +1685,128 @@ p, li{
 .react-datepicker-popper[data-placement^="bottom"] {
     .react-datepicker__triangle{
       border-bottom-color: #121c21;
+    }
+}
+
+.tags{
+  display: flex;
+  align-items: center;
+    &-item{
+      color: $white;
+      max-width: 352px;
+      width: 100vw;
+      border: 1px transparent solid;
+      border-radius: 5px;
+      height: 62px;
+      line-height: 62px;
+      text-align: center;
+      text-transform: capitalize;
+      text-decoration: underline;
+      padding: 0;
+      background-color: transparent;
+      transition: all .2s ease;
+        &.active{
+          border-color: $yellow;
+          color: $yellow;
+          text-decoration: none;
+            @include hover(991){
+              &:hover{
+                background-color: $yellow;
+                color: $black;
+              }
+            }
+        }
+        @include hover(991){
+          &:hover{
+            color: $yellow;
+          }
+        }
+    }
+}
+
+.search{
+  position: relative;
+    &-btn{
+      position: absolute;
+      top: 25px;
+      left: 55px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      background-image: url(~Images/icons/search.svg);
+      border: none;
+      background-color: transparent;
+      padding: 0;
+      width: 16px;
+      height: 16px;
+    }
+    .input{
+      background-color: transparent;
+      border: none;
+      border-bottom: 1px $yellow solid;
+      height: 62px;
+      padding-left: 90px;
+        &-container{
+          margin: 0;
+            &:before{
+              display: none;
+            }
+        }
+        &::-webkit-input-placeholder {
+          color: $white;
+        }
+        &::-moz-placeholder {
+          color: $white;
+        }
+        &:-ms-input-placeholder {
+          color: $white;
+        }
+        &:-moz-placeholder {
+          color: $white;
+        }
+    }
+}
+
+.pagination{
+  display: flex;
+  justify-content: space-between;
+    &-nums{
+      display: flex;
+      align-items: center;
+        &-item{
+          background-color: transparent;
+          border-radius: 50%;
+          border: 1px transparent solid;
+          height: 40px;
+          width: 40px;
+          line-height: 38px;
+          color: $white;
+          padding: 0;
+          font-size: 24px;
+          margin-right: 10px;
+          text-align: center;
+          display: inline-block;
+          transition: all .2s ease;
+            &.active{
+              border-color: $yellow;
+              font-size: 18px;
+            }
+            &.collapsed{
+              width: 20px;
+              margin-left: -10px;
+              margin-right: 0;
+            }
+            &:last-child{
+              margin-right: 0;
+            }
+            @include hover(991){
+              &:not(.collapsed):hover{
+                color: $yellow;
+              }
+            }
+        }
+    }
+    .btn{
+      max-width: 214px;
     }
 }
