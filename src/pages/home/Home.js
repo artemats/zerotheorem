@@ -6,12 +6,16 @@ const ResearchBox = lazy(() => import("Components/research-box/ResearchBox"));
 import philosophyIcon1 from 'Images/icons/replace.svg';
 import philosophyIcon2 from 'Images/icons/orbit.svg';
 import philosophyIcon3 from 'Images/icons/3d-modeling.svg';
-import incentivesBanner from 'Images/home/incentives-banner.png';
+import incentivesBannerPng from 'Images/home/incentives-banner.png';
+import incentivesBannerWebp from 'Images/home/incentives-banner.webp';
+import incentivesPreviewPng from 'Images/home/incentives-banner-2.png';
+import incentivesPreviewWebp from 'Images/home/incentives-banner-2.webp';
 import whyUsIcon1 from 'Images/home/why-us/1.png';
 import whyUsIcon2 from 'Images/home/why-us/2.svg';
 import whyUsIcon3 from 'Images/home/why-us/3.svg';
 import whyUsIcon4 from 'Images/home/why-us/4.svg';
-import faqBanner from 'Images/home/faq-banner.png';
+import faqBannerPng from 'Images/home/faq-banner.png';
+import faqBannerWebp from 'Images/home/faq-banner.webp';
 import FaqAccordion from "../faq/FaqAccordion";
 import ErrorBoundry from "Components/error-boundry/ErrorBoundry";
 import LoadingIndicator from "Components/loadingIndicator/LoadingIndicator";
@@ -95,12 +99,22 @@ const Home = () => {
                 </div>
             </section>
             <section className="section incentives">
-                <div className="abstract abstract-2" />
+                <div className="abstract abstract-2">
+                    <picture>
+                        <source srcSet={incentivesPreviewWebp} type="image/webp" />
+                        <source srcSet={incentivesPreviewPng} type="image/png" />
+                        <img src={incentivesPreviewPng} alt="IOur incentives" />
+                    </picture>
+                </div>
                 <div className="container">
                     <div className="row">
                         <div className="col-lg-6">
                             <div className="incentives-banner">
-                                <img src={incentivesBanner} alt="" />
+                                <picture>
+                                    <source srcSet={incentivesBannerWebp} type="image/webp" />
+                                    <source srcSet={incentivesBannerPng} type="image/png" />
+                                    <img src={incentivesBannerPng} alt="Our incentives" />
+                                </picture>
                             </div>
                         </div>
                         <div className="col-lg-6">
@@ -411,7 +425,11 @@ const Home = () => {
                                 <p className="title-2">Frequently Asked Questions</p>
                             </div>
                             <div className="faq-banner">
-                                <img src={faqBanner} alt="Frequently Asked Questions" />
+                                <picture>
+                                    <source srcSet={faqBannerWebp} type="image/webp" />
+                                    <source srcSet={faqBannerPng} type="image/png" />
+                                    <img src={faqBannerPng} alt="Frequently Asked Questions" />
+                                </picture>
                             </div>
                         </div>
                         <div className="col-lg-7">

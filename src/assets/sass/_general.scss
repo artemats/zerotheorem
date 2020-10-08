@@ -847,8 +847,6 @@ p, li{
       left: 0;
       width: 786px;
       height: 400px;
-      //background-size: contain;
-      //background-image: url(../images/abstract/chart-1.png);
         @include d(1700){
           max-width: 786px;
           width: 45vw;
@@ -863,23 +861,20 @@ p, li{
       max-width: 491px;
       width: 26vw;
       height: 441px;
-      background-position: right center;
-      background-size: contain;
-      background-image: url(../images/home/incentives-banner-2.png);
         @include d(1200){
-          top: 12%;
+          top: 18%;
         }
         @include d(991){
           top: auto;
-          bottom: 10%;
+          bottom: 2%;
           width: 40vw;
         }
         @include d(767){
-          bottom: 182px;
+          bottom: 110px;
           width: 55vw;
         }
         @include d(480){
-          bottom: 130px;
+          bottom: 50px;
           width: 65vw;
         }
     }
