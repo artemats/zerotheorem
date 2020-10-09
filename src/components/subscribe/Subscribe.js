@@ -1,7 +1,13 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { openModal } from 'Store/modal/actions';
+import { useFormik } from 'formik';
+import * as Yup from 'yup';
 import './subscribe.scss';
+
+const subscribeSchema = Yup.object().shape({
+    email: Yup.string().email('Invalid email').required('Email is required'),
+});
 
 const Subscribe = ({ openModal }) => {
 
@@ -23,40 +29,26 @@ const Subscribe = ({ openModal }) => {
             value: 'Education'
         }
     ]);
-    const [subscriber, setSubscriber] = useState(
-        {
-            type: '',
+
+    const formik = useFormik({
+        initialValues: {
             email: '',
-        }
-    );
-
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        if(handleCheckEmail()) {
+            type: 'all',
+        },
+        validationSchema: subscribeSchema,
+        onSubmit: values => {
+            console.log(values);
             openModal('done');
-            setSubscriber({
-                email: ''
-            });
-        }
-    };
-
-    const handleOnChange = (event) => {
-        setSubscriber({
-            ...subscriber,
-            [event.target.name]: event.target.value
-        });
-    };
-
-    const handleCheckEmail = () => {
-        return !(subscriber.email.length <= 0 || !subscriber.email.includes('@'));
-    };
+            formik.resetForm();
+        },
+    });
 
     return (
         <section className="section subscribe">
             <div className="container">
                 <div className="row">
                     <div className="col-12">
-                        <form onSubmit={handleSubmit}>
+                        <form onSubmit={formik.handleSubmit}>
                             <div className="subscribe-box">
                                 <p className="subtitle">Quant lab</p>
                                 <p className="title-2">Subscribe to Our Blog</p>
@@ -71,7 +63,7 @@ const Subscribe = ({ openModal }) => {
                                                         name="type"
                                                         value={type.value}
                                                         className="input-check"
-                                                        onChange={handleOnChange}
+                                                        onChange={formik.handleChange}
                                                     />
                                                     <div className="input-check-icon" />
                                                     <div className="input-check-title">{type.title}</div>
@@ -82,16 +74,17 @@ const Subscribe = ({ openModal }) => {
                                 </div>
                                 <div className="input-container input-container-row">
                                     <input
-                                        type="email"
+                                        type="text"
                                         name="email"
                                         className="input"
                                         placeholder="E-mail"
-                                        value={subscriber.email}
-                                        onChange={handleOnChange}
+                                        value={formik.values.email}
+                                        onChange={formik.handleChange}
                                         />
-                                    <button className={`btn ${handleCheckEmail() ? '' : 'disabled'}`}>
+                                    <button className="btn" type="submit">
                                         <span className="btn-title">Send</span>
                                     </button>
+                                    <span className="input-error">{formik.errors.email}</span>
                                 </div>
                             </div>
                         </form>

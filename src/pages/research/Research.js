@@ -4,6 +4,7 @@ import star from 'Images/icons/star.svg';
 import './research.scss';
 import Post from "Components/post/Post";
 import Subscribe from "Components/subscribe/Subscribe";
+import ErrorBoundry from "Components/error-boundry/ErrorBoundry";
 
 const Research = ({ data }) => {
 
@@ -87,7 +88,9 @@ const Research = ({ data }) => {
                     </div>
                 </div>
             </section>
-            <Subscribe />
+            <ErrorBoundry>
+                <Subscribe />
+            </ErrorBoundry>
         </Fragment>
     )
 

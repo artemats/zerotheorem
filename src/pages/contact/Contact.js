@@ -1,6 +1,7 @@
 import React from 'react';
 import './contact.scss';
 import Feedback from "./feedback/Feedback";
+import ErrorBoundry from "Components/error-boundry/ErrorBoundry";
 
 const Contact = () => {
 
@@ -19,7 +20,9 @@ const Contact = () => {
                 </div>
                 <div className="row">
                     <div className="col-lg-6">
-                        <Feedback />
+                        <ErrorBoundry>
+                            <Feedback />
+                        </ErrorBoundry>
                     </div>
                     <div className="col-lg-6">
                         <div className="contact-us">

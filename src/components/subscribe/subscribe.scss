@@ -41,6 +41,16 @@
                 margin: 0 auto;
               }
             }
+            &-error{
+              right: auto;
+              left: 20px;
+              top: auto;
+              bottom: -35px;
+                @include d(480){
+                  bottom: auto;
+                  top: -30px;
+                }
+            }
             @include d(480){
               border-radius: 5px;
               margin-right: 0;

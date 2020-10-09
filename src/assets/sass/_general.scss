@@ -1422,9 +1422,15 @@ p, li{
       right: 0;
       color: #cf5944;
       letter-spacing: .03em;
-      opacity: 0;
+      //opacity: 0;
       pointer-events: none;
       transition: opacity .2s ease;
+        &:empty{
+          display: none;
+        }
+        @include d(480){
+          font-size: 14px;
+        }
     }
     &.sm{
       height: 40px;

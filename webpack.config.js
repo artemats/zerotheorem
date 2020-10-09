@@ -98,7 +98,7 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             minify: {
-                collapseWhitespace: true,
+                collapseWhitespace: false,
                 removeComments: true,
                 removeRedundantAttributes: true,
                 useShortDoctype: true,
