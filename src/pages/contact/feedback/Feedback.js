@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import { connect } from 'react-redux';
-import { openModal } from '../../../store/modal/actions';
+import { openModal } from 'Store/modal/actions';
 
 class Feedback extends Component {
 
@@ -58,19 +58,14 @@ class Feedback extends Component {
         }
 
         if(nameError || emailError || institutionError) {
-
             this.setState({
                nameError,
                emailError,
                institutionError
             });
-
             return false;
-
         }
-
         return true;
-
     };
 
     handleClearFields = () => {
@@ -173,12 +168,8 @@ class Feedback extends Component {
 
 }
 
-const mapStateToProps = (state) => {
-    return state;
-};
-
 const mapDispatchToProps = {
    openModal
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Feedback);
+export default connect(null, mapDispatchToProps)(Feedback);

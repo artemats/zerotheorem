@@ -502,6 +502,11 @@ p, li{
           font-size: 16px;
         }
     }
+    &.disabled{
+      background-color: $yellow-disabled;
+      border-color: $yellow-disabled;
+      pointer-events: none;
+    }
     @include hover(991){
       &:hover{
         background-color: transparent;
