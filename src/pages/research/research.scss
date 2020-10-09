@@ -1,4 +1,5 @@
 @import "~Sass/base/variables";
+@import "~Sass/base/mixins";
 
 .research {
     &-banner{
@@ -45,14 +46,51 @@
               margin: 25px 0 48px;
               line-height: 1.4em;
               font-size: 48px;
+                @include d(1600){
+                  font-size: 46px;
+                }
+                @include d(1500){
+                  font-size: 42px;
+                }
+                @include d(1440){
+                  font-size: 40px;
+                }
+                @include d(1200){
+                  font-size: 38px;
+                }
+                @include d(991){
+                  font-size: 36px;
+                }
+                @include d(767){
+                  font-size: 32px;
+                }
+                @include d(575){
+                  font-size: 26px;
+                }
+                @include d(480){
+                  font-size: 22px;
+                }
             }
         }
         &-description{
           opacity: .7;
         }
-    }
-    &-tags{
-
+        @include d(1440){
+          padding: 80px 20px;
+          margin: 70px 0;
+          min-height: 520px;
+        }
+        @include d(991){
+          padding: 60px 20px;
+          min-height: 450px;
+        }
+        @include d(767){
+          min-height: 100px;
+          margin: 40px 0 70px;
+        }
+        @include d(480){
+          padding: 50px 10px;
+        }
     }
     &-search{
       display: flex;
@@ -60,6 +98,12 @@
         .search{
           max-width: 365px;
           width: 100%;
+            @include d(991){
+              max-width: 100%;
+            }
+        }
+        @include d(991){
+          margin-bottom: 50px;
         }
     }
 }

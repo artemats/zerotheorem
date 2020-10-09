@@ -17,6 +17,42 @@ class TransformData {
         });
         return data;
     };
+
+    static residualPlot(residualData) {
+        const data = {
+            date: [],
+            residual: []
+        };
+        residualData.data.map(point => {
+            data.date.push(point.date);
+            data.residual.push(point.residual);
+        });
+        return data;
+    }
+
+    static residualHistogram(residualData) {
+        return {
+            bins: residualData.data.bins,
+            frecuencies: residualData.data.frecuencies
+        };
+    }
+
+    static qqPlot(qqPlotData) {
+        return {
+            z_actual: qqPlotData.data.z_actual,
+            z_theorical: qqPlotData.data.z_theorical,
+            line: qqPlotData.line
+        }
+    }
+
+    static probabilityPlot(probabilityData) {
+        return {
+            prob_theorical: probabilityData.data.prob_theorical,
+            prob_actual: probabilityData.data.prob_actual,
+            line: probabilityData.line
+        }
+    }
+
 }
 
 export default TransformData;

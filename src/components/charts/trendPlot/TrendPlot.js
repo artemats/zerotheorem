@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import WithApiService from '../../hoc/WithApiService';
 import { connect } from 'react-redux';
-import { fetchTrendSuccess, fetchTrendError } from '../../../store/charts/trend/actions';
+import { fetchTrendSuccess, fetchTrendError } from 'Store/charts/trend/actions';
 import LoadingIndicator from "../../loadingIndicator/LoadingIndicator";
 import Plot from '../../../../node_modules/react-plotly.js/react-plotly';
 import {viewSettingsConfig, viewSettingsLayout} from "../ChartViewSettins";

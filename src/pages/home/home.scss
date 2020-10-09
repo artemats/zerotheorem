@@ -351,52 +351,91 @@
         &-item{
         padding: 0 42px;
         width: 33.33%;
+          @media only screen and (max-width: 1500px) {
+            padding: 0 25px;
+          }
+          @media only screen and (max-width: 1440px) {
+            padding: 0 15px;
+          }
+          @media only screen and (max-width: 991px) {
+            display: inline-block;
+            width: 360px;
+          }
+          @media only screen and (max-width: 767px) {
+            width: 320px;
+          }
+          @media only screen and (max-width: 480px) {
+            width: 85vw;
+          }
+      }
         @media only screen and (max-width: 1500px) {
-          padding: 0 25px;
+          margin: 0 -25px;
         }
         @media only screen and (max-width: 1440px) {
-          padding: 0 15px;
+          margin: 0 -15px;
+          padding: 150px 0 100px;
         }
         @media only screen and (max-width: 991px) {
-          display: inline-block;
-          width: 360px;
+          display: block;
+          white-space: nowrap;
+          overflow-x: auto;
+          margin-right: -28px;
+          padding-right: 20px;
         }
         @media only screen and (max-width: 767px) {
-          width: 320px;
+          margin-right: -14px;
+          padding-right: 6px;
         }
-        @media only screen and (max-width: 480px) {
-          width: 85vw;
+        @media only screen and (max-width: 767px) {
+          padding-top: 50px;
         }
-      }
         &-default{
-          padding: 116px 0 0;
-            .research-list-item{
-              margin-bottom: 122px;
-            }
-            & ~ .pagination{
-              margin-top: -25px;
-            }
-        }
-      @media only screen and (max-width: 1500px) {
-        margin: 0 -25px;
-      }
-      @media only screen and (max-width: 1440px) {
-        margin: 0 -15px;
-        padding: 150px 0 100px;
-      }
-      @media only screen and (max-width: 991px) {
-        display: block;
-        white-space: nowrap;
-        overflow-x: auto;
-        margin-right: -28px;
-        padding-right: 20px;
-      }
-      @media only screen and (max-width: 767px) {
-        margin-right: -14px;
-        padding-right: 6px;
-      }
-      @media only screen and (max-width: 767px) {
-        padding-top: 50px;
+        padding: 116px 0 0;
+          .research-list-item{
+            margin-bottom: 122px;
+              @include d(1300){
+                margin-bottom: 90px;
+              }
+              @include d(991){
+                width: 50%;
+              }
+              @include d(575){
+                width: 100%;
+              }
+              @include d(480){
+                margin-bottom: 60px;
+              }
+          }
+          .post{
+              &-content-title{
+                -webkit-line-clamp: 3;
+                  @include d(575){
+                    display: block;
+                  }
+              }
+              &-preview{
+                  @include d(991){
+                    height: 32vw;
+                  }
+                  @include d(575){
+                    height: 55vw;
+                  }
+              }
+          }
+          & ~ .pagination{
+            margin-top: -25px;
+          }
+          @include d(1440){
+            padding: 116px 0 50px;
+          }
+          @include d(991){
+            display: flex;
+            white-space: normal;
+            overflow: hidden;
+          }
+          @include d(480){
+            padding: 60px 0 50px;
+          }
       }
     }
     .subtitle{
@@ -464,7 +503,7 @@
         &-title{
           display: -webkit-box;
           -webkit-box-orient: vertical;
-          -webkit-line-clamp: 3;
+          -webkit-line-clamp: 2;
           overflow: hidden;
           margin-top: 25px;
           transition: all .4s ease;
