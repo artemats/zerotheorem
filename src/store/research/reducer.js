@@ -1,3 +1,5 @@
+import {TOGGLE_TAG} from "Store/constants";
+
 const initialState = {
     data: [
         {
@@ -10,7 +12,8 @@ const initialState = {
             title: 'Bitcoin price prediction using machine learning',
             date: 'Aug 29',
             timeRead: '4 min',
-            description: 'Ayodeji Awosika in Forge'
+            description: 'Ayodeji Awosika in Forge',
+            tags: ['Literature Review', 'Research']
         },
         {
             banner: 'https://images.unsplash.com/photo-1602096678880-48b2c4640bd3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1951&q=80',
@@ -23,6 +26,7 @@ const initialState = {
             date: 'Aug 29',
             timeRead: '4 min',
             description: 'Mallqui and Fernandes (2018) used machine learning techniques to predict the price direction as well as the maximum, minimum and closing prices of daily Bitcoin exchange rate',
+            tags: ['Performance reports']
         },
         {
             banner: 'https://images.unsplash.com/photo-1602096678880-48b2c4640bd3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1951&q=80',
@@ -35,6 +39,7 @@ const initialState = {
             date: 'Aug 29',
             timeRead: '4 min',
             description: 'In the past, several studies have identified the factors affecting Bitcoin’s price to include market fundamentals (supply and demand), the attractiveness of investors, and global',
+            tags: ['Literature Review']
         },
         {
             banner: 'https://images.unsplash.com/photo-1602096678880-48b2c4640bd3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1951&q=80',
@@ -47,6 +52,7 @@ const initialState = {
             date: 'Aug 29',
             timeRead: '4 min',
             description: 'Traditional neural networks have shortcomings in effectively using prior information for future predictions of Bitcoin price. Therefore, Dutta et al. (2020) investigated a framework',
+            tags: ['Research']
         },
         {
             banner: 'https://images.unsplash.com/photo-1602096678880-48b2c4640bd3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1951&q=80',
@@ -59,6 +65,7 @@ const initialState = {
             date: 'Aug 29',
             timeRead: '4 min',
             description: 'Mallqui and Fernandes (2018) used machine learning techniques to predict the price direction as well as the maximum, minimum and closing prices of daily Bitcoin exchange rate',
+            tags: ['Performance', 'Research']
         },
         {
             banner: 'https://images.unsplash.com/photo-1602096678880-48b2c4640bd3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1951&q=80',
@@ -71,6 +78,7 @@ const initialState = {
             date: 'Aug 29',
             timeRead: '4 min',
             description: 'In the past, several studies have identified the factors affecting Bitcoin’s price to include market fundamentals (supply and demand), the attractiveness of investors, and global',
+            tags: ['Literature Review', 'Performance']
         },
         {
             banner: 'https://images.unsplash.com/photo-1602096678880-48b2c4640bd3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1951&q=80',
@@ -83,6 +91,7 @@ const initialState = {
             date: 'Aug 29',
             timeRead: '4 min',
             description: 'Traditional neural networks have shortcomings in effectively using prior information for future predictions of Bitcoin price. Therefore, Dutta et al. (2020) investigated a framework',
+            tags: ['Research']
         },
         {
             banner: 'https://images.unsplash.com/photo-1602096678880-48b2c4640bd3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1951&q=80',
@@ -95,6 +104,7 @@ const initialState = {
             date: 'Aug 29',
             timeRead: '4 min',
             description: 'Mallqui and Fernandes (2018) used machine learning techniques to predict the price direction as well as the maximum, minimum and closing prices of daily Bitcoin exchange rate',
+            tags: ['Literature Review']
         },
         {
             banner: 'https://images.unsplash.com/photo-1602096678880-48b2c4640bd3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1951&q=80',
@@ -107,6 +117,7 @@ const initialState = {
             date: 'Aug 29',
             timeRead: '4 min',
             description: 'In the past, several studies have identified the factors affecting Bitcoin’s price to include market fundamentals (supply and demand), the attractiveness of investors, and global',
+            tags: ['Performance Reports']
         },
         {
             banner: 'https://images.unsplash.com/photo-1602096678880-48b2c4640bd3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1951&q=80',
@@ -119,6 +130,7 @@ const initialState = {
             date: 'Aug 29',
             timeRead: '4 min',
             description: 'Traditional neural networks have shortcomings in effectively using prior information for future predictions of Bitcoin price. Therefore, Dutta et al. (2020) investigated a framework',
+            tags: ['Research']
         },
         {
             banner: 'https://images.unsplash.com/photo-1602096678880-48b2c4640bd3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1951&q=80',
@@ -131,6 +143,7 @@ const initialState = {
             date: 'Aug 29',
             timeRead: '4 min',
             description: 'Mallqui and Fernandes (2018) used machine learning techniques to predict the price direction as well as the maximum, minimum and closing prices of daily Bitcoin exchange rate',
+            tags: ['Literature Review', 'Performance Reports']
         },
         {
             banner: 'https://images.unsplash.com/photo-1602096678880-48b2c4640bd3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1951&q=80',
@@ -143,6 +156,7 @@ const initialState = {
             date: 'Aug 29',
             timeRead: '4 min',
             description: 'In the past, several studies have identified the factors affecting Bitcoin’s price to include market fundamentals (supply and demand), the attractiveness of investors, and global',
+            tags: ['Literature Review']
         },
         {
             banner: 'https://images.unsplash.com/photo-1602096678880-48b2c4640bd3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1951&q=80',
@@ -155,6 +169,7 @@ const initialState = {
             date: 'Aug 29',
             timeRead: '4 min',
             description: 'Traditional neural networks have shortcomings in effectively using prior information for future predictions of Bitcoin price. Therefore, Dutta et al. (2020) investigated a framework',
+            tags: ['Research']
         },
         {
             banner: 'https://images.unsplash.com/photo-1602096678880-48b2c4640bd3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1951&q=80',
@@ -167,6 +182,7 @@ const initialState = {
             date: 'Aug 29',
             timeRead: '4 min',
             description: 'Mallqui and Fernandes (2018) used machine learning techniques to predict the price direction as well as the maximum, minimum and closing prices of daily Bitcoin exchange rate',
+            tags: ['Performance Reports']
         },
         {
             banner: 'https://images.unsplash.com/photo-1602096678880-48b2c4640bd3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1951&q=80',
@@ -179,6 +195,7 @@ const initialState = {
             date: 'Aug 29',
             timeRead: '4 min',
             description: 'In the past, several studies have identified the factors affecting Bitcoin’s price to include market fundamentals (supply and demand), the attractiveness of investors, and global',
+            tags: ['Literature Review', 'Research']
         },
         {
             banner: 'https://images.unsplash.com/photo-1602096678880-48b2c4640bd3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1951&q=80',
@@ -191,6 +208,7 @@ const initialState = {
             date: 'Aug 29',
             timeRead: '4 min',
             description: 'Traditional neural networks have shortcomings in effectively using prior information for future predictions of Bitcoin price. Therefore, Dutta et al. (2020) investigated a framework',
+            tags: ['Literature Review', 'Performance Reports']
         },
         {
             banner: 'https://images.unsplash.com/photo-1602096678880-48b2c4640bd3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1951&q=80',
@@ -203,6 +221,7 @@ const initialState = {
             date: 'Aug 29',
             timeRead: '4 min',
             description: 'Mallqui and Fernandes (2018) used machine learning techniques to predict the price direction as well as the maximum, minimum and closing prices of daily Bitcoin exchange rate',
+            tags: ['Literature Review', 'Performance Reports', 'Research']
         },
         {
             banner: 'https://images.unsplash.com/photo-1602096678880-48b2c4640bd3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1951&q=80',
@@ -215,16 +234,38 @@ const initialState = {
             date: 'Aug 29',
             timeRead: '4 min',
             description: 'In the past, several studies have identified the factors affecting Bitcoin’s price to include market fundamentals (supply and demand), the attractiveness of investors, and global',
+            tags: []
         },
     ],
-    isLoading: true,
+    tags: [
+        {
+            id: 0,
+            title: 'Literature Review',
+            isActive: false
+        },
+        {
+            id: 1,
+            title: 'Performance Reports',
+            isActive: false
+        },
+        {
+            id: 2,
+            title: 'Research',
+            isActive: false
+        },
+    ],
+    searchTerm: '',
+    isLoading: false,
     error: null
 };
 
 export const researchReducer = (state = initialState, action) => {
 
     switch (action.type) {
-
+        case TOGGLE_TAG:
+            const tag = state.tags[action.payload];
+            const newTag = {...tag, isActive: !tag.isActive};
+            return {...state, tags: [...state.tags.slice(0, action.payload), newTag, ...state.tags.slice(action.payload + 1) ]};
         default:
             return state;
     }

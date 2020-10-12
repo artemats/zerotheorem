@@ -2,12 +2,8 @@ import React, { useState } from 'react';
 import { connect } from 'react-redux';
 import { openModal } from 'Store/modal/actions';
 import { useFormik } from 'formik';
-import * as Yup from 'yup';
 import './subscribe.scss';
-
-const subscribeSchema = Yup.object().shape({
-    email: Yup.string().email('Invalid email').required('Email is required'),
-});
+import { subscribeSchema } from "Components/validationSchema/ValidationSchema";
 
 const Subscribe = ({ openModal }) => {
 

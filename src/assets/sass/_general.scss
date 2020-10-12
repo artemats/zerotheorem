@@ -1806,6 +1806,7 @@ p, li{
       padding: 0;
       background-color: transparent;
       transition: all .2s ease;
+      margin-right: 5px;
         &.active{
           border-color: $yellow;
           color: $yellow;
@@ -1816,6 +1817,9 @@ p, li{
                 color: $black;
               }
             }
+        }
+        &:last-child{
+          margin-right: 0;
         }
         @include hover(991){
           &:hover{
@@ -1831,6 +1835,8 @@ p, li{
         }
         @include d(480){
           max-width: 100%;
+          margin-right: 0;
+          margin-bottom: 5px;
         }
     }
     @include d(480){

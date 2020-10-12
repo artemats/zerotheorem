@@ -88,6 +88,7 @@ module.exports = {
             Charts: path.resolve(__dirname, 'src/components/charts/'),
             Store: path.resolve(__dirname, 'src/store/'),
             Sass: path.resolve(__dirname, 'src/assets/sass/'),
+            Constants: path.resolve(__dirname, 'src/constants/Constants'),
         }
     },
     plugins: [

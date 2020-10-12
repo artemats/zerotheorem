@@ -2,13 +2,7 @@ import React, { Fragment } from 'react';
 import { connect } from 'react-redux';
 import { openModal } from 'Store/modal/actions';
 import { useFormik } from 'formik';
-import * as Yup from 'yup';
-
-const feedbackSchema = Yup.object().shape({
-    name: Yup.string().required('Name is required'),
-    email: Yup.string().email('Invalid email').required('Email is required'),
-    institution: Yup.string().required('Institution is required'),
-});
+import { feedbackSchema } from "Components/validationSchema/ValidationSchema";
 
 const Feedback = ({ openModal }) => {
 
