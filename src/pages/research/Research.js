@@ -6,11 +6,11 @@ import Subscribe from "Components/subscribe/Subscribe";
 import ErrorBoundry from "Components/error-boundry/ErrorBoundry";
 import ResearchPagination from "./pagination/ResearchPagination";
 import ResearchThumbnail from "./thumbnail/ResearchThumbnail";
-import ResearchFilter from "./filters/ResearchFilter";
+import ResearchSearch from "./search/ResearchSearch";
+import ResearchTags from "./tags/ResearchTags";
 
 const Research = ({ data, tags }) => {
 
-    console.log(tags);
     const [limit, setLimit] = useState(9);
     const [offset, setOffset] = useState(9);
     const [posts, setPosts] = useState(data);
@@ -30,9 +30,18 @@ const Research = ({ data, tags }) => {
                     <ErrorBoundry>
                         <ResearchThumbnail thumb={thumbPost} />
                     </ErrorBoundry>
-                    <ErrorBoundry>
-                        <ResearchFilter />
-                    </ErrorBoundry>
+                    <div className="row">
+                        <div className="col-lg-4 order-lg-2">
+                            <ErrorBoundry>
+                                <ResearchSearch />
+                            </ErrorBoundry>
+                        </div>
+                        <div className="col-lg-8 order-lg-1">
+                            <ErrorBoundry>
+                                <ResearchTags />
+                            </ErrorBoundry>
+                        </div>
+                    </div>
                     <div className="row">
                         <div className="col-12">
                             <div className="research-list research-list-default">

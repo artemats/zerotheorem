@@ -1,4 +1,4 @@
-import {TOGGLE_TAG} from "Store/constants";
+import {FILTER_BY_SEARCH, TOGGLE_TAG} from "Store/constants";
 
 const initialState = {
     data: [
@@ -9,7 +9,7 @@ const initialState = {
                 'https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60',
                 'https://images.unsplash.com/flagged/photo-1554386690-8627e1041100?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60'
             ],
-            title: 'Bitcoin price prediction using machine learning',
+            title: 'Bitcoin price prediction using machine learning arte',
             date: 'Aug 29',
             timeRead: '4 min',
             description: 'Ayodeji Awosika in Forge',
@@ -254,7 +254,6 @@ const initialState = {
             isActive: false
         },
     ],
-    searchTerm: '',
     isLoading: false,
     error: null
 };
@@ -266,6 +265,11 @@ export const researchReducer = (state = initialState, action) => {
             const tag = state.tags[action.payload];
             const newTag = {...tag, isActive: !tag.isActive};
             return {...state, tags: [...state.tags.slice(0, action.payload), newTag, ...state.tags.slice(action.payload + 1) ]};
+        case FILTER_BY_SEARCH:
+            // const filteredPosts = [...state.data.filter(post => post.title.toLowerCase().includes(action.payload.toLowerCase()))];
+            console.log('search term - ', action.payload);
+            // console.log('filtered posts - ', filteredPosts);
+            return {...state, data: action.payload};
         default:
             return state;
     }

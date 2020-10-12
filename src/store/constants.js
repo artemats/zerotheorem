@@ -36,3 +36,4 @@ export const ENABLE_DOWNLOADS = 'ENABLE_DOWNLOADS';
 
 // RESEARCH //
 export const TOGGLE_TAG = 'TOGGLE_TAG';
+export const FILTER_BY_SEARCH = 'FILTER_BY_SEARCH';
