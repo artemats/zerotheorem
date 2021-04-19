@@ -1,4 +1,4 @@
-import React, { useState, Fragment } from 'react';
+import React, { useState, useEffect, Fragment } from 'react';
 import { connect } from 'react-redux';
 import './research.scss';
 import Post from "Components/post/Post";
@@ -13,9 +13,13 @@ const Research = ({ data, tags }) => {
 
     const [limit, setLimit] = useState(9);
     const [offset, setOffset] = useState(9);
-    const [posts, setPosts] = useState(data);
-    const [limitedPosts, setLimitedPosts] = useState(posts.slice(0, offset));
-    const thumbPost = posts[0];
+    // const [posts, setPosts] = useState(data);
+    // const [limitedPosts, setLimitedPosts] = useState(data.slice(0, offset));
+    const thumbPost = data[0];
+
+    useEffect(() => {
+
+    });
 
     return(
         <Fragment>
@@ -47,7 +51,7 @@ const Research = ({ data, tags }) => {
                             <div className="research-list research-list-default">
                                 <ErrorBoundry>
                                     {
-                                        limitedPosts.map((post, key) => {
+                                        data.map((post, key) => {
                                             return(
                                                 <div className="research-list-item" key={key}>
                                                     <Post post={post} />

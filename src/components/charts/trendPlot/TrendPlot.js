@@ -34,6 +34,8 @@ class TrendPlot extends Component {
 
         const { isLoading, data: { date, prediction, rmse, upper_band, lower_band } } = this.props;
 
+        console.log(this.props.data);
+
         if(isLoading) {
             return <LoadingIndicator />
         }
